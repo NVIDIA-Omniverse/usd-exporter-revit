@@ -1,0 +1,9 @@
+[log]
+# Log file path using token substitution
+# ${logs} = %USERPROFILE%/.revit_usd_export_plugin/logs/Revit-{version}/RevitUsdExportPlugin-{version}
+# ${revit_usd_export_core_start_time} = timestamp when the plugin started (YYYYMMDD_HHMMSS)
+file = "${logs}/${revit_usd_export_core_start_time}.log"
+
+# Default log level
+level = "Info"
+

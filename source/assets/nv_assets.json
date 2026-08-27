@@ -1,0 +1,3862 @@
+[
+  {
+    "Name": "Boat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Boat.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Cline.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Cline.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Gilbert.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Gilbert.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Industrial.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Industrial.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Roland.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Roland.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Steam.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Conference/Steam.usd",
+    "Bucket": "Conference"
+  },
+  {
+    "Name": "Curved_Full.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/Curved_Full.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "Curved_Half.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/Curved_Half.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "L_Desk.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/L_Desk.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "Modern.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/Modern.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "ModularCurved.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/ModularCurved.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "Salon.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Reception/Salon.usd",
+    "Bucket": "Reception"
+  },
+  {
+    "Name": "Anora.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Anora.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Basic.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Basic.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Birch_HighbackSeat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Birch_HighbackSeat.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Birch_LowBackSeat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Birch_LowBackSeat.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Cooper.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Cooper.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Danny.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Danny.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Elliot.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Elliot.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Kettle_Seat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Kettle_Seat.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Mathews.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Mathews.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Monarch.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Monarch.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Newman.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Newman.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Peach.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Peach.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Petite_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Petite_Chair.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Petite_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Petite_Loveseat.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Phineas.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Phineas.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Playhouse.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Playhouse.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Rave.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Rave.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Reginald.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Reginald.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Reidmeyer.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Reidmeyer.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Soba.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Soba.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Stackable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Stackable.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Steelbook.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Steelbook.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Waiting.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Waiting.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "WaitingBench.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/WaitingBench.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "WillowBench.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/WillowBench.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "Zinnie.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Zinnie.usd",
+    "Bucket": "Seating"
+  },
+  {
+    "Name": "CapriceBackless_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/CapriceBackless_A.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceBackless_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/CapriceBackless_B.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceBackless_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/CapriceBackless_C.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceBackless_Yin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/CapriceBackless_Yin.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "Caprice_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/Caprice_A.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "Caprice_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/Caprice_B.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "Caprice_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/Caprice_C.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "Caprice_Yin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Caprice/Caprice_Yin.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "Jobba_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Jobba/Jobba_Chair.usd",
+    "Bucket": "Jobba"
+  },
+  {
+    "Name": "Jobba_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Jobba/Jobba_Loveseat.usd",
+    "Bucket": "Jobba"
+  },
+  {
+    "Name": "Jobba_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Jobba/Jobba_Sofa.usd",
+    "Bucket": "Jobba"
+  },
+  {
+    "Name": "Zag_Backless.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Zag/Zag_Backless.usd",
+    "Bucket": "Zag"
+  },
+  {
+    "Name": "Zag_Corner.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Zag/Zag_Corner.usd",
+    "Bucket": "Zag"
+  },
+  {
+    "Name": "Zag_Middle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Seating/Zag/Zag_Middle.usd",
+    "Bucket": "Zag"
+  },
+  {
+    "Name": "Dentist.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Dentist.usd",
+    "Bucket": "Storage"
+  },
+  {
+    "Name": "WhiteHome01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/WhiteHome01.usd",
+    "Bucket": "Storage"
+  },
+  {
+    "Name": "WhiteHome02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/WhiteHome02.usd",
+    "Bucket": "Storage"
+  },
+  {
+    "Name": "WhiteHome03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/WhiteHome03.usd",
+    "Bucket": "Storage"
+  },
+  {
+    "Name": "Contemporary_Hutch.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_Hutch.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_LaterialFile.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_LaterialFile.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_LockedStorage.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_LockedStorage.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_LowFullDesk.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_LowFullDesk.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_LowHalfDesk.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_LowHalfDesk.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_OpenStorage.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_OpenStorage.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_RiseFull.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_RiseFull.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_RiseShort.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_RiseShort.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Contemporary_StorageCube.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Contemporary/Contemporary_StorageCube.usd",
+    "Bucket": "Contemporary"
+  },
+  {
+    "Name": "Standard_HalfUnit.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_HalfUnit.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Standard_LargeDoors.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_LargeDoors.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Standard_LargeUnit.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_LargeUnit.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Standard_SmallDoor_Single.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_SmallDoor_Single.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Standard_SmallDoors.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_SmallDoors.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Standard_SmallUnit.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Storage/Standard/Standard_SmallUnit.usd",
+    "Bucket": "Standard"
+  },
+  {
+    "Name": "Danny.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Danny.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "Hexagon.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Hexagon.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "Kettle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Kettle.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "OakTableLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/OakTableLarge.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "OakTableSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/OakTableSmall.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "Peach.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Peach.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "Willow.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Willow.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "CapriceTable_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Caprice/CapriceTable_A.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceTable_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Caprice/CapriceTable_B.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceTable_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Caprice/CapriceTable_C.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "CapriceTable_Yin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Commercial/Tables/Caprice/CapriceTable_Yin.usd",
+    "Bucket": "Caprice"
+  },
+  {
+    "Name": "MarkingLines.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Buildings/Warehouse/MarkingLines.usd",
+    "Bucket": "Warehouse"
+  },
+  {
+    "Name": "Warehouse01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Buildings/Warehouse/Warehouse01.usd",
+    "Bucket": "Warehouse"
+  },
+  {
+    "Name": "Cardbox_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_A1.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_A2.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_A3.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_B1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_B1.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_B2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_B2.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_B3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_B3.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_C1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_C1.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_C2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_C2.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_C3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_C3.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_D1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_D1.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_D2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_D2.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "Cardbox_D3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Cardboard/Cardbox_D3.usd",
+    "Bucket": "Cardboard"
+  },
+  {
+    "Name": "WoodenCrate_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_A1.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "WoodenCrate_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_A2.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "WoodenCrate_B1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_B1.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "WoodenCrate_B2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_B2.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "WoodenCrate_C1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_C1.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "WoodenCrate_D1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Containers/Wooden/WoodenCrate_D1.usd",
+    "Bucket": "Wooden"
+  },
+  {
+    "Name": "Pallet_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Pallets/Pallet_A1.usd",
+    "Bucket": "Pallets"
+  },
+  {
+    "Name": "Pallet_B1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Pallets/Pallet_B1.usd",
+    "Bucket": "Pallets"
+  },
+  {
+    "Name": "Pallet_C1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Pallets/Pallet_C1.usd",
+    "Bucket": "Pallets"
+  },
+  {
+    "Name": "Pallets_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/Pallets_A1.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "Pallets_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/Pallets_A2.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "Pallets_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/Pallets_A3.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "Pallets_A4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/Pallets_A4.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "Pallets_A5.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/Pallets_A5.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A1.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A2.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A3.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A4.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A5.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A5.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A6.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A6.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "WarehousePile_A7.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Piles/WarehousePile_A7.usd",
+    "Bucket": "Piles"
+  },
+  {
+    "Name": "RackLarge_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A1.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A2.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A3.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A4.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A5.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A5.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A6.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A6.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A7.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A7.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A8.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A8.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLarge_A9.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLarge_A9.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A1.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A2.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A3.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A4.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A5.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A5.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A6.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A6.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A7.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A7.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A8.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A8.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackLong_A9.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackLong_A9.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A1.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A2.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A3.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A4.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A5.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A5.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A6.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A6.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A7.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A7.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A8.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A8.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "RackSmall_A9.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Racks/RackSmall_A9.usd",
+    "Bucket": "Racks"
+  },
+  {
+    "Name": "CornerRail_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/CornerRail_A1.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "MetalFencing_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/MetalFencing_A1.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "MetalFencing_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/MetalFencing_A2.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "MetalFencing_A3.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/MetalFencing_A3.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "RampLong_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/RampLong_A1.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "RampShort_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Railing/RampShort_A1.usd",
+    "Bucket": "Railing"
+  },
+  {
+    "Name": "RackLargeEmpty_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackLargeEmpty_A1.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "RackLargeEmpty_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackLargeEmpty_A2.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "RackLongEmpty_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackLongEmpty_A1.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "RackLongEmpty_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackLongEmpty_A2.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "RackSmallEmpty_A1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackSmallEmpty_A1.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "RackSmallEmpty_A2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Shelves/RackSmallEmpty_A2.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "IsaacWarehouse.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Industrial/Stages/IsaacWarehouse.usd",
+    "Bucket": "Stages"
+  },
+  {
+    "Name": "dishwasher_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Dishwashers/dishwasher_A.usd",
+    "Bucket": "Dishwashers"
+  },
+  {
+    "Name": "CeilingFan.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Fans/CeilingFan.usd",
+    "Bucket": "Fans"
+  },
+  {
+    "Name": "microwave.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Microwaves/microwave.usd",
+    "Bucket": "Microwaves"
+  },
+  {
+    "Name": "stove.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Oven/stove.usd",
+    "Bucket": "Oven"
+  },
+  {
+    "Name": "wall_oven.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Oven/wall_oven.usd",
+    "Bucket": "Oven"
+  },
+  {
+    "Name": "fridge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Refrigerators/fridge.usd",
+    "Bucket": "Refrigerators"
+  },
+  {
+    "Name": "venthood.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Appliances/Vents/venthood.usd",
+    "Bucket": "Vents"
+  },
+  {
+    "Name": "BookStack_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/BookStack_01.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "BookStack_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/BookStack_02.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_01.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_02.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_11.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_11.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_15.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_15.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_16.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_16.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_21.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_21.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_22.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_22.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_33.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_33.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_51.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_51.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_60.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_60.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_61.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_61.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_66.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_66.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_77.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_77.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_86.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_86.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_88.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_88.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_99.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_99.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_Colors.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_Colors.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_GetKnowPPU.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_GetKnowPPU.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_Greener.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_Greener.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_Holodeck.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_Holodeck.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_IntroOmni.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_IntroOmni.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_Marbles.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_Marbles.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Book_Spelling.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Book_Spelling.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "Encyclopedia01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Encyclopedia01.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OV_CreateBook_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OV_CreateBook_01.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OV_CreateBook_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OV_CreateBook_02.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OV_CreateBook_03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OV_CreateBook_03.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OV_CreateBook_04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OV_CreateBook_04.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OV_CreateBook_05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OV_CreateBook_05.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OmniConnect2015.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OmniConnect2015.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OmniConnect2016.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OmniConnect2016.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "OmniConnect2017.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/OmniConnect2017.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "PhotoAlbum_Closed.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/PhotoAlbum_Closed.usd",
+    "Bucket": "Books"
+  },
+  {
+    "Name": "BronzeLantern.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/BronzeLantern.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "WallCandleLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/WallCandleLarge.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "WallCandleSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/WallCandleSmall.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "WoodenCHLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/WoodenCHLarge.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "WoodenCHMedium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/WoodenCHMedium.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "WoodenCHSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/CandleHolders/WoodenCHSmall.usd",
+    "Bucket": "CandleHolders"
+  },
+  {
+    "Name": "AlarmClock_Retro.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/AlarmClock_Retro.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "Clock_Hucksbee.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/Clock_Hucksbee.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "Grandfather_Clock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/Grandfather_Clock.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "Industrial_Clock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/Industrial_Clock.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "MantelClock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/MantelClock.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "MetalClock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/MetalClock.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "OversizedClock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Clocks/OversizedClock.usd",
+    "Bucket": "Clocks"
+  },
+  {
+    "Name": "Coaster_Hexagon.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Coasters/Coaster_Hexagon.usd",
+    "Bucket": "Coasters"
+  },
+  {
+    "Name": "CrabbyPenHolder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/DeskDecor/CrabbyPenHolder.usd",
+    "Bucket": "DeskDecor"
+  },
+  {
+    "Name": "HippoOrganizer.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/DeskDecor/HippoOrganizer.usd",
+    "Bucket": "DeskDecor"
+  },
+  {
+    "Name": "GlobeBar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Globes/GlobeBar.usd",
+    "Bucket": "Globes"
+  },
+  {
+    "Name": "BlackandBrassBowl_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/BlackandBrassBowl_Large.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "BlackandBrassBowl_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/BlackandBrassBowl_Small.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "BrassBowl_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/BrassBowl_Large.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "BrassBowl_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/BrassBowl_Medium.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "Brass_Bowl_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/Brass_Bowl_Small.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "DecorativeBowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/DecorativeBowl.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "DecorativeBowlLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/DecorativeBowlLarge.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "square_plate.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Kitchenware/square_plate.usd",
+    "Bucket": "Kitchenware"
+  },
+  {
+    "Name": "Magazine01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Magazines/Magazine01.usd",
+    "Bucket": "Magazines"
+  },
+  {
+    "Name": "MagazineStack01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Magazines/MagazineStack01.usd",
+    "Bucket": "Magazines"
+  },
+  {
+    "Name": "MagazineStack02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Magazines/MagazineStack02.usd",
+    "Bucket": "Magazines"
+  },
+  {
+    "Name": "OpenMagazine.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Magazines/OpenMagazine.usd",
+    "Bucket": "Magazines"
+  },
+  {
+    "Name": "AntiqueMirror.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Mirrors/AntiqueMirror.usd",
+    "Bucket": "Mirrors"
+  },
+  {
+    "Name": "MirrorRound.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Mirrors/MirrorRound.usd",
+    "Bucket": "Mirrors"
+  },
+  {
+    "Name": "FancyFrame01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FancyFrame01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Square01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Square01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Square02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Square02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Square03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Square03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Square04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Square04.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Square05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Square05.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Tall01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Tall01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Tall02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Tall02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Tall03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Tall03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Tall04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Tall04.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Tall05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Tall05.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Wide01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Wide01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Wide02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Wide02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Wide03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Wide03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Wide04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Wide04.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPicture_Wide05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPicture_Wide05.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPoster.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPoster.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPoster02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPoster02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FramedPoster03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FramedPoster03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FunHouse_Poster01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FunHouse_Poster01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FunHouse_Poster02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FunHouse_Poster02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "FunHouse_Poster03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/FunHouse_Poster03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Painting_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/Painting_01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Painting_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/Painting_02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Painting_03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/Painting_03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Painting_04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/Painting_04.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "PictureFrame02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/PictureFrame02.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "PictureFrame03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/PictureFrame03.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "PictureFrame04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/PictureFrame04.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Poster_Holodeck.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/Poster_Holodeck.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "StillLife01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Pictures/StillLife01.usd",
+    "Bucket": "Pictures"
+  },
+  {
+    "Name": "Dimmer_1Gang.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/PowerOutlets/Dimmer_1Gang.usd",
+    "Bucket": "PowerOutlets"
+  },
+  {
+    "Name": "Outlet_1gang.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/PowerOutlets/Outlet_1gang.usd",
+    "Bucket": "PowerOutlets"
+  },
+  {
+    "Name": "Blue_Rugs.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Rugs/Blue_Rugs.usd",
+    "Bucket": "Rugs"
+  },
+  {
+    "Name": "Rug_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Rugs/Rug_01.usd",
+    "Bucket": "Rugs"
+  },
+  {
+    "Name": "4Tier_Fountain.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/4Tier_Fountain.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "AbstractBike.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/AbstractBike.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "AbstractBird.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/AbstractBird.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "AbstractBull.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/AbstractBull.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "AbstractElephant.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/AbstractElephant.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "BridgeBookend.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/BridgeBookend.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "ChamferBox.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/ChamferBox.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "CopperScales.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/CopperScales.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "Cube_Wireframe.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/Cube_Wireframe.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_09.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_09.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_11.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_11.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_14.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_14.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_17.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_17.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_20.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_20.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DecorativeDisk_23.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DecorativeDisk_23.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "DiscSculpture.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/DiscSculpture.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "FlattenedSphere.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/FlattenedSphere.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "GeoSphere_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/GeoSphere_Large.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "GeoSphere_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/GeoSphere_Medium.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "GeoSphere_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/GeoSphere_Small.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "GoldenBowlLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/GoldenBowlLarge.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "GoldenBowlSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/GoldenBowlSmall.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "HearNoEvil_Skull.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/HearNoEvil_Skull.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "Kiwi.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/Kiwi.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "MetalLinks.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/MetalLinks.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "ObeliskLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/ObeliskLarge.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "ObeliskMedium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/ObeliskMedium.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "ObeliskSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/ObeliskSmall.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "OldBike.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/OldBike.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "OvalMask.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/OvalMask.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "SailBoat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/SailBoat.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "SeeNoEvil_Skull.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/SeeNoEvil_Skull.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "SpeakNoEvil_Skull.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/SpeakNoEvil_Skull.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "SquareMask.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/SquareMask.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "WoodenBird_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/WoodenBird_Medium.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "WoodenBird_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/WoodenBird_Small.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "WoodenBird_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/WoodenBird_Tall.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "WoodenRing.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Sculptures/WoodenRing.usd",
+    "Bucket": "Sculptures"
+  },
+  {
+    "Name": "CornerShelf_Square.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Shelves/CornerShelf_Square.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "CornerShelf_Vera.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Shelves/CornerShelf_Vera.usd",
+    "Bucket": "Shelves"
+  },
+  {
+    "Name": "ArmentoRider.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/ArmentoRider.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "BuddhaStatue.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/BuddhaStatue.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "Dancers.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/Dancers.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "MarbleBust01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/MarbleBust01.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "OmniverseLogo.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/OmniverseLogo.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "OmniverseLogoLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/OmniverseLogoLarge.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "Sad_CTD.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/Sad_CTD.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "SolFigurine.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Statues/SolFigurine.usd",
+    "Bucket": "Statues"
+  },
+  {
+    "Name": "DecorativeWoodenBowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/DecorativeWoodenBowl.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "Lemon_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/Lemon_01.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "Lemon_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/Lemon_02.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "Orange_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/Orange_01.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "Orange_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/Orange_02.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "Orange_03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/Orange_03.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "PumpkinLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/PumpkinLarge.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "PumpkinSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/PumpkinSmall.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "ServingTray.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/ServingTray.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "WoodenTray_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/WoodenTray_Large.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "WoodenTray_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Tchotchkes/WoodenTray_Medium.usd",
+    "Bucket": "Tchotchkes"
+  },
+  {
+    "Name": "AbstractFace_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/AbstractFace_Small.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Abstract_Face.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Abstract_Face.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "AntiquelVase.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/AntiquelVase.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "AntiquelVaseSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/AntiquelVaseSmall.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Bowl_Footed.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Bowl_Footed.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "BrassVase.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/BrassVase.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "CellVase01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/CellVase01.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "CellVase02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/CellVase02.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "CellVase03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/CellVase03.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "CellVase04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/CellVase04.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "CellVase05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/CellVase05.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Earthenware01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Earthenware01.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Earthenware02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Earthenware02.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Earthenware03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Earthenware03.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Knit.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Knit.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Prime2Layer.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Prime2Layer.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Prime3Layer.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Prime3Layer.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Prime_DoubleGourd.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Prime_DoubleGourd.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Prime_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Prime_Large.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "RecycledGlassVase_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/RecycledGlassVase_Large.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "RecycledGlassVase_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/RecycledGlassVase_Medium.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "RecycledGlassVase_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/RecycledGlassVase_Small.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Seahorn.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Seahorn.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Vase_Cylinder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Vase_Cylinder.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Vase_D.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Vase_D.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Vase_Torus.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/Vase_Torus.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "japan_vase.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/japan_vase.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "pitcher.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Vases/pitcher.usd",
+    "Bucket": "Vases"
+  },
+  {
+    "Name": "Beach.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/WallSculptures/Beach.usd",
+    "Bucket": "WallSculptures"
+  },
+  {
+    "Name": "Bull_Sculpture.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/WallSculptures/Bull_Sculpture.usd",
+    "Bucket": "WallSculptures"
+  },
+  {
+    "Name": "Wood_Wall_Art.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/WallSculptures/Wood_Wall_Art.usd",
+    "Bucket": "WallSculptures"
+  },
+  {
+    "Name": "CurtainRod_OrbEnds.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/WindowDressing/CurtainRod_OrbEnds.usd",
+    "Bucket": "WindowDressing"
+  },
+  {
+    "Name": "Camera01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/Cameras/Camera01.usd",
+    "Bucket": "Cameras"
+  },
+  {
+    "Name": "GEFORCE_GTX1080.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/GPU/GEFORCE_GTX1080.usd",
+    "Bucket": "GPU"
+  },
+  {
+    "Name": "RTX2080Ti.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/GPU/RTX2080Ti.usd",
+    "Bucket": "GPU"
+  },
+  {
+    "Name": "ShieldTV.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/Nvidia_Shield/ShieldTV.usd",
+    "Bucket": "Nvidia_Shield"
+  },
+  {
+    "Name": "Shield_Controller.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/Nvidia_Shield/Shield_Controller.usd",
+    "Bucket": "Nvidia_Shield"
+  },
+  {
+    "Name": "Speaker_Outdoor.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/Speakers/Speaker_Outdoor.usd",
+    "Bucket": "Speakers"
+  },
+  {
+    "Name": "TV_Wall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Electronics/Televisions/TV_Wall.usd",
+    "Bucket": "Televisions"
+  },
+  {
+    "Name": "9Ball_Rack.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/9Ball_Rack.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "ArcadeMachine.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/ArcadeMachine.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "BilliardBalls.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/BilliardBalls.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "BilliardTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/BilliardTable.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Billiard_Brush.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Billiard_Brush.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Billiard_Chalk.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Billiard_Chalk.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Billiard_CueStick.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Billiard_CueStick.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Billiard_Rack.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Billiard_Rack.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "DartBoard.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/DartBoard.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "DartBoard_Eraser.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/DartBoard_Eraser.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Dart_GreenStripe.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Dart_GreenStripe.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Dart_Zebra.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/Dart_Zebra.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "FoosballTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/FoosballTable.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "PingPong_Table.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/GameRoom/PingPong_Table.usd",
+    "Bucket": "GameRoom"
+  },
+  {
+    "Name": "Ball_Walnut.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/Ball_Walnut.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "BubbleMarble_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/BubbleMarble_01.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "BubbleMarble_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/BubbleMarble_02.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "D20.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/D20.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "NewtonsCradle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/NewtonsCradle.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "RubixCube.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/RubixCube.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "Solid_Marble.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/Solid_Marble.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "SwirlMarble.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/SwirlMarble.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "Thing_FlipFlop.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/Thing_FlipFlop.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "TwistMarble.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/TwistMarble.usd",
+    "Bucket": "Games"
+  },
+  {
+    "Name": "ChessSet_FullSet.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/ChessSet_FullSet.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Bishop.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Bishop.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Board.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Board.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_King.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_King.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Knight.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Knight.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Pawn.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Pawn.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Queen.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Queen.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "Chess_Rook.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/ChessSet/Chess_Rook.usd",
+    "Bucket": "ChessSet"
+  },
+  {
+    "Name": "D10.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D10.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "D12.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D12.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "D20.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D20.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "D4.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D4.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "D6.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D6.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "D8.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/D8.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "Percentage.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Games/DiceSet/Percentage.usd",
+    "Bucket": "DiceSet"
+  },
+  {
+    "Name": "WaterGun.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Entertainment/Toys/WaterGun.usd",
+    "Bucket": "Toys"
+  },
+  {
+    "Name": "DoorHandle_Left.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Fixtures/DoorHandle_Left.usd",
+    "Bucket": "Fixtures"
+  },
+  {
+    "Name": "DoorHandle_Right.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Fixtures/DoorHandle_Right.usd",
+    "Bucket": "Fixtures"
+  },
+  {
+    "Name": "stawberry.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Berries/stawberry.usd",
+    "Bucket": "Berries"
+  },
+  {
+    "Name": "blue_tin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Boxed/blue_tin.usd",
+    "Bucket": "Boxed"
+  },
+  {
+    "Name": "mustard_jar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Boxed/mustard_jar.usd",
+    "Bucket": "Boxed"
+  },
+  {
+    "Name": "oil_tin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Boxed/oil_tin.usd",
+    "Bucket": "Boxed"
+  },
+  {
+    "Name": "salt_box.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Boxed/salt_box.usd",
+    "Bucket": "Boxed"
+  },
+  {
+    "Name": "GummyBear.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Candy/GummyBear.usd",
+    "Bucket": "Candy"
+  },
+  {
+    "Name": "GummyWorm01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Candy/GummyWorm01.usd",
+    "Bucket": "Candy"
+  },
+  {
+    "Name": "GummyWorm02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Candy/GummyWorm02.usd",
+    "Bucket": "Candy"
+  },
+  {
+    "Name": "GummyWorm03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Candy/GummyWorm03.usd",
+    "Bucket": "Candy"
+  },
+  {
+    "Name": "GummyWorm04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Candy/GummyWorm04.usd",
+    "Bucket": "Candy"
+  },
+  {
+    "Name": "MasonJar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Containers/MasonJar.usd",
+    "Bucket": "Containers"
+  },
+  {
+    "Name": "TinCan.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Containers/TinCan.usd",
+    "Bucket": "Containers"
+  },
+  {
+    "Name": "Apple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Apple.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "Avocado01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Avocado01.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "Kiwi01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Kiwi01.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "Lime01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Lime01.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "Lychee01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Lychee01.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "Pomegranate01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Fruit/Pomegranate01.usd",
+    "Bucket": "Fruit"
+  },
+  {
+    "Name": "RedOnion.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Food/Vegetables/RedOnion.usd",
+    "Bucket": "Vegetables"
+  },
+  {
+    "Name": "MapleBarStool.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/BarStools/MapleBarStool.usd",
+    "Bucket": "BarStools"
+  },
+  {
+    "Name": "bar_stool.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/BarStools/bar_stool.usd",
+    "Bucket": "BarStools"
+  },
+  {
+    "Name": "Daybed.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Beds/Daybed.usd",
+    "Bucket": "Beds"
+  },
+  {
+    "Name": "Clayton.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Clayton.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Clayton_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Clayton_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Costello.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Costello.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Delmar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Delmar.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Dogtown.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Dogtown.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Fenton.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Fenton.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Fenton_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Fenton_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Ferguson.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Ferguson.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Ferguson_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Ferguson_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Ladue.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Ladue.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Ladue_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Ladue_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Rockhill.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Rockhill.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Rockhill_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/Rockhill_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "TetriminoShelf.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/TetriminoShelf.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "TetriminoShelf_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Bookshelves/TetriminoShelf_Var01.usd",
+    "Bucket": "Bookshelves"
+  },
+  {
+    "Name": "Armchair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Armchair.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Bevo.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Bevo.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Bevo_Ottoman.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Bevo_Ottoman.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Chair_Array.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Chair_Array.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Chair_Desk.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Chair_Desk.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Chair_Wire.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Chair_Wire.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Meramec_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Meramec_Chair.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Sappington_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Sappington_Chair.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Sedie_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Chairs/Sedie_Chair.usd",
+    "Bucket": "Chairs"
+  },
+  {
+    "Name": "Make.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/CoffeeTables/Make.usd",
+    "Bucket": "CoffeeTables"
+  },
+  {
+    "Name": "Midtown.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/CoffeeTables/Midtown.usd",
+    "Bucket": "CoffeeTables"
+  },
+  {
+    "Name": "Desk_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Desks/Desk_01.usd",
+    "Bucket": "Desks"
+  },
+  {
+    "Name": "DesPeres_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/DesPeres/DesPeres_Chair.usd",
+    "Bucket": "DesPeres"
+  },
+  {
+    "Name": "DesPeres_Table.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/DesPeres/DesPeres_Table.usd",
+    "Bucket": "DesPeres"
+  },
+  {
+    "Name": "EastRural_Bench.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/EastRural/EastRural_Bench.usd",
+    "Bucket": "EastRural"
+  },
+  {
+    "Name": "EastRural_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/EastRural/EastRural_Chair.usd",
+    "Bucket": "EastRural"
+  },
+  {
+    "Name": "EastRural_Table.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/EastRural/EastRural_Table.usd",
+    "Bucket": "EastRural"
+  },
+  {
+    "Name": "Jennings_Bench.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/Jennings/Jennings_Bench.usd",
+    "Bucket": "Jennings"
+  },
+  {
+    "Name": "Jennings_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/Jennings/Jennings_Chair.usd",
+    "Bucket": "Jennings"
+  },
+  {
+    "Name": "Jennings_Table.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/DiningSets/Jennings/Jennings_Table.usd",
+    "Bucket": "Jennings"
+  },
+  {
+    "Name": "Ellendale.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/EndTables/Ellendale.usd",
+    "Bucket": "EndTables"
+  },
+  {
+    "Name": "Festus01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/EndTables/Festus01.usd",
+    "Bucket": "EndTables"
+  },
+  {
+    "Name": "Appleseed_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_Chair.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_CoffeeTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_CoffeeTable.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_CoffeeTable_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_CoffeeTable_Var01.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_EndTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_EndTable.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_EndTable_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_EndTable_Var01.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_LivingRoom_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_LivingRoom_Var01.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_Loveseat.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_Sofa.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_SofaTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_SofaTable.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Appleseed_SofaTable_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Appleseed/Appleseed_SofaTable_Var01.usd",
+    "Bucket": "Appleseed"
+  },
+  {
+    "Name": "Crestwood_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Crestwood/Crestwood_Chair.usd",
+    "Bucket": "Crestwood"
+  },
+  {
+    "Name": "Crestwood_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Crestwood/Crestwood_Loveseat.usd",
+    "Bucket": "Crestwood"
+  },
+  {
+    "Name": "Crestwood_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Crestwood/Crestwood_Sofa.usd",
+    "Bucket": "Crestwood"
+  },
+  {
+    "Name": "Dutchtown_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Dutchtown/Dutchtown_Chair.usd",
+    "Bucket": "Dutchtown"
+  },
+  {
+    "Name": "Dutchtown_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Dutchtown/Dutchtown_Loveseat.usd",
+    "Bucket": "Dutchtown"
+  },
+  {
+    "Name": "Dutchtown_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Dutchtown/Dutchtown_Sofa.usd",
+    "Bucket": "Dutchtown"
+  },
+  {
+    "Name": "Hazelwood_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Hazelwood/Hazelwood_Chair.usd",
+    "Bucket": "Hazelwood"
+  },
+  {
+    "Name": "Hazelwood_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Hazelwood/Hazelwood_Loveseat.usd",
+    "Bucket": "Hazelwood"
+  },
+  {
+    "Name": "Hazelwood_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Hazelwood/Hazelwood_Sofa.usd",
+    "Bucket": "Hazelwood"
+  },
+  {
+    "Name": "Maplewood_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Maplewood/Maplewood_Chair.usd",
+    "Bucket": "Maplewood"
+  },
+  {
+    "Name": "Maplewood_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Maplewood/Maplewood_Loveseat.usd",
+    "Bucket": "Maplewood"
+  },
+  {
+    "Name": "Maplewood_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Maplewood/Maplewood_Sofa.usd",
+    "Bucket": "Maplewood"
+  },
+  {
+    "Name": "Whitecliff_Chair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Whitecliff/Whitecliff_Chair.usd",
+    "Bucket": "Whitecliff"
+  },
+  {
+    "Name": "Whitecliff_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Whitecliff/Whitecliff_Loveseat.usd",
+    "Bucket": "Whitecliff"
+  },
+  {
+    "Name": "Whitecliff_Ottoman.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Whitecliff/Whitecliff_Ottoman.usd",
+    "Bucket": "Whitecliff"
+  },
+  {
+    "Name": "Whitecliff_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Whitecliff/Whitecliff_Sofa.usd",
+    "Bucket": "Whitecliff"
+  },
+  {
+    "Name": "Whitecliff_Sofa_Variants.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/FurnitureSets/Whitecliff/Whitecliff_Sofa_Variants.usd",
+    "Bucket": "Whitecliff"
+  },
+  {
+    "Name": "CreveCoeur.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/MediaTables/CreveCoeur.usd",
+    "Bucket": "MediaTables"
+  },
+  {
+    "Name": "Huntliegh.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/MediaTables/Huntliegh.usd",
+    "Bucket": "MediaTables"
+  },
+  {
+    "Name": "Manchester.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/MediaTables/Manchester.usd",
+    "Bucket": "MediaTables"
+  },
+  {
+    "Name": "Manchester_Var01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/MediaTables/Manchester_Var01.usd",
+    "Bucket": "MediaTables"
+  },
+  {
+    "Name": "Soulard.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/MediaTables/Soulard.usd",
+    "Bucket": "MediaTables"
+  },
+  {
+    "Name": "curtain_valance.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Misc/curtain_valance.usd",
+    "Bucket": "Misc"
+  },
+  {
+    "Name": "Dellwood_CoffeeTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_CoffeeTable.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_DiningChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_DiningChair.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_DiningTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_DiningTable.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_EndTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_EndTable.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_LoungeChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_LoungeChair.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_Loveseat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_Loveseat.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_Ottoman.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_Ottoman.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_RoundDiningTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_RoundDiningTable.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_Sofa.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Dellwood_SwivelChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Dellwood/Dellwood_SwivelChair.usd",
+    "Bucket": "Dellwood"
+  },
+  {
+    "Name": "Roxana_CoffeeTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_CoffeeTable.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_DiningBench.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_DiningBench.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_DiningTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_DiningTable.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_FoldingChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_FoldingChair.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_LoungeChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_LoungeChair.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_Ottoman.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_Ottoman.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_Rocker.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_Rocker.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_RoundCoffeeTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_RoundCoffeeTable.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_RoundEndTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_RoundEndTable.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_Sofa.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_Sofa.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Roxana_TeteATeteChair.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Roxana_TeteATeteChair.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Rozana_EndTable.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Outdoors/Roxana/Rozana_EndTable.usd",
+    "Bucket": "Roxana"
+  },
+  {
+    "Name": "Partition_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Partitions/Partition_01.usd",
+    "Bucket": "Partitions"
+  },
+  {
+    "Name": "AftonConsole.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/SofaTables/AftonConsole.usd",
+    "Bucket": "SofaTables"
+  },
+  {
+    "Name": "Ellisville.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/SofaTables/Ellisville.usd",
+    "Bucket": "SofaTables"
+  },
+  {
+    "Name": "EurekaConsole.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/SofaTables/EurekaConsole.usd",
+    "Bucket": "SofaTables"
+  },
+  {
+    "Name": "Arnold.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Arnold.usd",
+    "Bucket": "Sofas"
+  },
+  {
+    "Name": "Moline.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Moline.usd",
+    "Bucket": "Sofas"
+  },
+  {
+    "Name": "LemayBackPillow.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemayBackPillow.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemayRollArm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemayRollArm.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemaySeat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemaySeat.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemaySideArm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemaySideArm.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemaySofa_Corner.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemaySofa_Corner.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemaySofa_Left.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemaySofa_Left.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemaySofa_Right.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemaySofa_Right.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "LemayWedge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/LemayWedge.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "Lemay_CornerSeat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/Lemay_CornerSeat.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "Lemay_EndSeat_Left.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/Lemay_EndSeat_Left.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "Lemay_EndSeat_Right.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/Lemay_EndSeat_Right.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "Lemay_MiddleSeat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Sofas/Lemay/Lemay_MiddleSeat.usd",
+    "Bucket": "Lemay"
+  },
+  {
+    "Name": "Whittershins.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Furniture/Tables/Whittershins.usd",
+    "Bucket": "Tables"
+  },
+  {
+    "Name": "soapdispenser02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Dispensers/soapdispenser02.usd",
+    "Bucket": "Dispensers"
+  },
+  {
+    "Name": "soupdispenser01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Dispensers/soupdispenser01.usd",
+    "Bucket": "Dispensers"
+  },
+  {
+    "Name": "griddle_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Griddles/griddle_A.usd",
+    "Bucket": "Griddles"
+  },
+  {
+    "Name": "faucet_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/KitchenFaucets/faucet_01.usd",
+    "Bucket": "KitchenFaucets"
+  },
+  {
+    "Name": "faucet_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/KitchenFaucets/faucet_02.usd",
+    "Bucket": "KitchenFaucets"
+  },
+  {
+    "Name": "faucet_03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/KitchenFaucets/faucet_03.usd",
+    "Bucket": "KitchenFaucets"
+  },
+  {
+    "Name": "Pan_E.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Pan_E.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "Pan_F.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Pan_F.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "Pan_G.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Pan_G.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "Pan_H.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/Pan_H.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "pan_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/pan_A.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "pan_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/pan_B.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "pan_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/pan_C.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "pan_D.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cookware/pan_D.usd",
+    "Bucket": "Cookware"
+  },
+  {
+    "Name": "knife_set_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Cutlery/knife_set_A.usd",
+    "Bucket": "Cutlery"
+  },
+  {
+    "Name": "cutting_board_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/CuttingBoards/cutting_board_A.usd",
+    "Bucket": "CuttingBoards"
+  },
+  {
+    "Name": "P_Glassware_Short.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/P_Glassware_Short.usd",
+    "Bucket": "Dinnerware"
+  },
+  {
+    "Name": "P_Glassware_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/P_Glassware_Tall.usd",
+    "Bucket": "Dinnerware"
+  },
+  {
+    "Name": "bowl_plate.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/bowl_plate.usd",
+    "Bucket": "Dinnerware"
+  },
+  {
+    "Name": "plate_large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/plate_large.usd",
+    "Bucket": "Dinnerware"
+  },
+  {
+    "Name": "plate_small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Dinnerware/plate_small.usd",
+    "Bucket": "Dinnerware"
+  },
+  {
+    "Name": "Fork_Big.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Flatware/Fork_Big.usd",
+    "Bucket": "Flatware"
+  },
+  {
+    "Name": "Fork_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Flatware/Fork_Small.usd",
+    "Bucket": "Flatware"
+  },
+  {
+    "Name": "Knife.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Flatware/Knife.usd",
+    "Bucket": "Flatware"
+  },
+  {
+    "Name": "Spoon_Big.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Flatware/Spoon_Big.usd",
+    "Bucket": "Flatware"
+  },
+  {
+    "Name": "Spoon_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Flatware/Spoon_Small.usd",
+    "Bucket": "Flatware"
+  },
+  {
+    "Name": "brass_grinder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/GadgetsAndTools/brass_grinder.usd",
+    "Bucket": "GadgetsAndTools"
+  },
+  {
+    "Name": "coffee_grinder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/GadgetsAndTools/coffee_grinder.usd",
+    "Bucket": "GadgetsAndTools"
+  },
+  {
+    "Name": "red_grinder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/GadgetsAndTools/red_grinder.usd",
+    "Bucket": "GadgetsAndTools"
+  },
+  {
+    "Name": "Spatula_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_01.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_02.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_03.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_03.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_04.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_04.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_05.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_05.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_06.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_06.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_07.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_07.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_08.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_08.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_09.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_09.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_10.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_10.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_11.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_11.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_12.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_12.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_13.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_13.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_14.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_14.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_15.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_15.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_16.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_16.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_17.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_17.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_18.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_18.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "Spatula_19.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/KitchenUtensils/Spatula_19.usd",
+    "Bucket": "KitchenUtensils"
+  },
+  {
+    "Name": "glass_plate.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Serving/glass_plate.usd",
+    "Bucket": "Serving"
+  },
+  {
+    "Name": "grey_bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Serving/grey_bowl.usd",
+    "Bucket": "Serving"
+  },
+  {
+    "Name": "salt_bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Serving/salt_bowl.usd",
+    "Bucket": "Serving"
+  },
+  {
+    "Name": "serving_bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Serving/serving_bowl.usd",
+    "Bucket": "Serving"
+  },
+  {
+    "Name": "white_tray.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/Serving/white_tray.usd",
+    "Bucket": "Serving"
+  },
+  {
+    "Name": "drawer_organizer_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/StorageAndOrganization/drawer_organizer_A.usd",
+    "Bucket": "StorageAndOrganization"
+  },
+  {
+    "Name": "fruit_bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/StorageAndOrganization/fruit_bowl.usd",
+    "Bucket": "StorageAndOrganization"
+  },
+  {
+    "Name": "paper_towel.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/StorageAndOrganization/paper_towel.usd",
+    "Bucket": "StorageAndOrganization"
+  },
+  {
+    "Name": "spatula_bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Kitchen/Kitchenware/StorageAndOrganization/spatula_bowl.usd",
+    "Bucket": "StorageAndOrganization"
+  },
+  {
+    "Name": "Medium_Fat.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Candles/Medium_Fat.usd",
+    "Bucket": "Candles"
+  },
+  {
+    "Name": "TallThin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Candles/TallThin.usd",
+    "Bucket": "Candles"
+  },
+  {
+    "Name": "Chandelier_Spiral.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Chandeliers/Chandelier_Spiral.usd",
+    "Bucket": "Chandeliers"
+  },
+  {
+    "Name": "chandelier_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Chandeliers/chandelier_A.usd",
+    "Bucket": "Chandeliers"
+  },
+  {
+    "Name": "ArcFloorLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Floor Lamps/ArcFloorLamp.usd",
+    "Bucket": "Floor Lamps"
+  },
+  {
+    "Name": "BrassFloorLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Floor Lamps/BrassFloorLamp.usd",
+    "Bucket": "Floor Lamps"
+  },
+  {
+    "Name": "Candice.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Floor Lamps/Candice.usd",
+    "Bucket": "Floor Lamps"
+  },
+  {
+    "Name": "FloorLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Floor Lamps/FloorLamp.usd",
+    "Bucket": "Floor Lamps"
+  },
+  {
+    "Name": "VintageFloorLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Floor Lamps/VintageFloorLamp.usd",
+    "Bucket": "Floor Lamps"
+  },
+  {
+    "Name": "AshleyLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/AshleyLamp.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "BlackLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/BlackLamp.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "BlackTableLamp.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/BlackTableLamp.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "BubbleLampLarge.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/BubbleLampLarge.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "BubbleLampSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/BubbleLampSmall.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Colbert.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Colbert.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Cramer.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Cramer.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Dylan.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Dylan.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Finn.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Finn.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Isabelle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Isabelle.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Jackson.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Jackson.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Mechant.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Mechant.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "Theory.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Lighting/Table Lamps/Theory.usd",
+    "Bucket": "Table Lamps"
+  },
+  {
+    "Name": "GroundCloth_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Dropcloths/GroundCloth_01.usd",
+    "Bucket": "Dropcloths"
+  },
+  {
+    "Name": "Ladder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Ladders/Ladder.usd",
+    "Bucket": "Ladders"
+  },
+  {
+    "Name": "PaintRoller.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/PaintRoller/PaintRoller.usd",
+    "Bucket": "PaintRoller"
+  },
+  {
+    "Name": "PaintTray.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/PaintTray/PaintTray.usd",
+    "Bucket": "PaintTray"
+  },
+  {
+    "Name": "PaintTrayPaint.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/PaintTray/PaintTrayPaint.usd",
+    "Bucket": "PaintTray"
+  },
+  {
+    "Name": "Paver_24in_Square.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Pavers/Paver_24in_Square.usd",
+    "Bucket": "Pavers"
+  },
+  {
+    "Name": "Eraser.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Supplies/Eraser.usd",
+    "Bucket": "Supplies"
+  },
+  {
+    "Name": "MechanicalPencil.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Supplies/MechanicalPencil.usd",
+    "Bucket": "Supplies"
+  },
+  {
+    "Name": "Sketchbook.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Misc/Supplies/Sketchbook.usd",
+    "Bucket": "Supplies"
+  },
+  {
+    "Name": "GardenMoai.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Decor/GardenMoai.usd",
+    "Bucket": "Decor"
+  },
+  {
+    "Name": "Pagota.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Decor/Pagota.usd",
+    "Bucket": "Decor"
+  },
+  {
+    "Name": "PinkFlamingos.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Decor/PinkFlamingos.usd",
+    "Bucket": "Decor"
+  },
+  {
+    "Name": "TikiGods.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Decor/TikiGods.usd",
+    "Bucket": "Decor"
+  },
+  {
+    "Name": "Bowl.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/FirePits/Bowl.usd",
+    "Bucket": "FirePits"
+  },
+  {
+    "Name": "Rectangle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/FirePits/Rectangle.usd",
+    "Bucket": "FirePits"
+  },
+  {
+    "Name": "3-TierPathLight.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/3-TierPathLight.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "AgedCopperPathLight.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/AgedCopperPathLight.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "CircularBollard.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/CircularBollard.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "CircularWallSconce.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/CircularWallSconce.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "GardenSpotlight.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/GardenSpotlight.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "SquareBollard.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/SquareBollard.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "WallSconce.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Lighting/WallSconce.usd",
+    "Bucket": "Lighting"
+  },
+  {
+    "Name": "Anza_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Anza_Large.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Anza_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Anza_Medium.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Anza_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Anza_Small.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Anza_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Anza_Tall.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "ChippedPlanterSmall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/ChippedPlanterSmall.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "ChippedPlanter_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/ChippedPlanter_Large.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "ChippedPlanter_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/ChippedPlanter_Medium.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "FlutedSquare_LongBox.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/FlutedSquare_LongBox.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Fluted_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Fluted_Large.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Fluted_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Fluted_Medium.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Fluted_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Fluted_Tall.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "Flutted_Low.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/Flutted_Low.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "GardenPlanter_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/GardenPlanter_Large.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "GardenPlanter_Medium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/GardenPlanter_Medium.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "GardenPlanter_Small.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/GardenPlanter_Small.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "SquareGardenPlanterMedium.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/SquareGardenPlanterMedium.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "SquareGardenPlanter_Large.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/SquareGardenPlanter_Large.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "SquareGardenPlanter_Long.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/SquareGardenPlanter_Long.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "SquareGardenPlanter_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Outdoors/Planters/SquareGardenPlanter_Tall.usd",
+    "Bucket": "Planters"
+  },
+  {
+    "Name": "PlantPot.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/PlantPot.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "Plant_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/Plant_01.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "Plant_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/Plant_02.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "Plant_Succulent_01.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/Plant_Succulent_01.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "Plant_Succulent_02.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/Plant_Succulent_02.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "YuccaCane.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Plants/YuccaCane.usd",
+    "Bucket": "Plants"
+  },
+  {
+    "Name": "fallcluster1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Debris/fallcluster1.usd",
+    "Bucket": "Debris"
+  },
+  {
+    "Name": "fallcluster2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Debris/fallcluster2.usd",
+    "Bucket": "Debris"
+  },
+  {
+    "Name": "maplefall1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Debris/maplefall1.usd",
+    "Bucket": "Debris"
+  },
+  {
+    "Name": "oakfall1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Debris/oakfall1.usd",
+    "Bucket": "Debris"
+  },
+  {
+    "Name": "oakfall2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Debris/oakfall2.usd",
+    "Bucket": "Debris"
+  },
+  {
+    "Name": "cluster_1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Leaves/cluster_1.usd",
+    "Bucket": "Leaves"
+  },
+  {
+    "Name": "cluster_2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Leaves/cluster_2.usd",
+    "Bucket": "Leaves"
+  },
+  {
+    "Name": "maple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Leaves/maple.usd",
+    "Bucket": "Leaves"
+  },
+  {
+    "Name": "oak_1.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Leaves/oak_1.usd",
+    "Bucket": "Leaves"
+  },
+  {
+    "Name": "oak_2.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Leaves/oak_2.usd",
+    "Bucket": "Leaves"
+  },
+  {
+    "Name": "Agave.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Agave.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Australian_Tree_Fern.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Australian_Tree_Fern.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Buddha_Belly_Bamboo.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Buddha_Belly_Bamboo.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Crane_Lily.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Crane_Lily.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Cuban_Royal_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Cuban_Royal_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Dagger.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Dagger.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Fan_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Fan_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Golden_Malay_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Golden_Malay_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Grass_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Grass_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Honey_Myrtle.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Honey_Myrtle.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Hurricane_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Hurricane_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Japanese_Fiber_Banana.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Japanese_Fiber_Banana.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Japanese_Flame.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Japanese_Flame.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Japanese_Painted_Fern.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Japanese_Painted_Fern.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Jungle_Flame.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Jungle_Flame.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Travelers_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Travelers_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Windmill_Palm.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Plant_Tropical/Windmill_Palm.usd",
+    "Bucket": "Plant_Tropical"
+  },
+  {
+    "Name": "Acacia.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Acacia.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Barberry.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Barberry.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Boxwood.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Boxwood.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Burning_Bush.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Burning_Bush.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Cedar_Shrub.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Cedar_Shrub.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Century.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Century.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Daphne.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Daphne.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Forsythia.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Forsythia.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Fountain_Grass_Short.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Fountain_Grass_Short.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Fountain_Grass_Tall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Fountain_Grass_Tall.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Fraser_Photina.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Fraser_Photina.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Goldflame_Spirea.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Goldflame_Spirea.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Short_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Short_A.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Short_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Short_B.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Short_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Short_C.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Trimmed_A.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Trimmed_A.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Trimmed_B.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Trimmed_B.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Grass_Trimmed_C.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Grass_Trimmed_C.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Hibiscus.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Hibiscus.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Holly.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Holly.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Hydrangea.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Hydrangea.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Juniper.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Juniper.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Lilac.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Lilac.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Lupin.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Lupin.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Magnolia.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Magnolia.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Meadowlark.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Meadowlark.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Oleander.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Oleander.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Pampas_Grass.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Pampas_Grass.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Pearl_Bush.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Pearl_Bush.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Prairie_Dropseed.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Prairie_Dropseed.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Privet.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Privet.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Rhododendron.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Rhododendron.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Sweet_Mock_Orange.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Sweet_Mock_Orange.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Switchgrass.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Switchgrass.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Thevetia.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Thevetia.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Vibernum.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Vibernum.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "Yew.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Shrub/Yew.usd",
+    "Bucket": "Shrub"
+  },
+  {
+    "Name": "American_Beech.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/American_Beech.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Black_Oak.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Black_Oak.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Black_Oak_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Black_Oak_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Blue_Berry_Elder.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Blue_Berry_Elder.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Chinese_Juniper.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Chinese_Juniper.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Colorado_Spruce.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Colorado_Spruce.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Common_Apple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Common_Apple.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Dogwood.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Dogwood.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Douglas_Fir.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Douglas_Fir.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Eastern_Hemlock.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Eastern_Hemlock.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Elm_Sapling.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Elm_Sapling.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Fraxinus.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Fraxinus.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Golden_Chain.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Golden_Chain.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Gray_Birch.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Gray_Birch.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Gray_Birch_fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Gray_Birch_fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Hawthorn.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Hawthorn.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Honey_Locust.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Honey_Locust.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Honey_Locust_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Honey_Locust_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Italian_Cypress.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Italian_Cypress.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Japanese_Cherry.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Japanese_Cherry.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Japanese_Maple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Japanese_Maple.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Japanese_Maple_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Japanese_Maple_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Kousa_Dogwood.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Kousa_Dogwood.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Largetooth_Aspen.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Largetooth_Aspen.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Lombardy_Poplar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Lombardy_Poplar.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Lombardy_Poplar_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Lombardy_Poplar_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Norway_Spruce.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Norway_Spruce.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Orange_Tree.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Orange_Tree.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Red_Ash.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Red_Ash.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Red_Ash_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Red_Ash_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Red_Cedar.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Red_Cedar.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Red_Maple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Red_Maple.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Red_Oak.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Red_Oak.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Scarlet_Oak.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Scarlet_Oak.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Scarlet_Oak_fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Scarlet_Oak_fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Service_Berry.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Service_Berry.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Shumard_Oak.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Shumard_Oak.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Shumard_Oak_Fall.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Shumard_Oak_Fall.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Siberian_Crab_Apple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Siberian_Crab_Apple.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Sugar_Maple.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Sugar_Maple.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Sycamore.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Sycamore.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "White_Ash.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/White_Ash.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "White_Pine.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/White_Pine.usd",
+    "Bucket": "Trees"
+  },
+  {
+    "Name": "Yellow_Pine.usd",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Vegetation/Trees/Yellow_Pine.usd",
+    "Bucket": "Trees"
+  }
+]

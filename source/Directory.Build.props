@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <RepoRoot>$(MSBuildThisFileDirectory)..\</RepoRoot>
+    <BuildConfiguration>$(Configuration)</BuildConfiguration>
+    <BuildConfiguration Condition="'$(Configuration)' == 'Debug'">debug</BuildConfiguration>
+    <BuildConfiguration Condition="'$(Configuration)' == 'Release'">release</BuildConfiguration>
+    <OutputPath>$(RepoRoot)_build\windows-x86_64\$(BuildConfiguration)\lib\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <BaseIntermediateOutputPath>$(RepoRoot)_build\intermediate\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

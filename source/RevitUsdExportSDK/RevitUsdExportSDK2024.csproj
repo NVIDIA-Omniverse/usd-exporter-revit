@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>RevitUsdExportSDK2024</AssemblyName>
+    <RootNamespace>RevitUsdExportSDK</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants>TRACE;DEBUG;REV2024</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DefineConstants>TRACE;REV2024</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\bindings\**\*.cs" Link="bindings\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Local Revit SDK override: deps/target-deps.packman.xml <source path=...> -->
+    <Reference Include="NewtonSoft.Json">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\NewtonSoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\RevitAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\RevitAPIUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

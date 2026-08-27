@@ -1,0 +1,130 @@
+[repo]
+name = "revit-plugin"
+logging = "info"
+
+[repo.tokens]
+revit_ver = "2024"
+test_inputs_root = "${root}/tests/inputs"
+
+[repo.folders]
+version_file = "VERSION.md"
+
+[repo_connect_client_config]
+enabled = true
+client_version ="VERSION.md"
+source_file = "$root/source/config/revit.usd.export.client.toml"
+
+########################################################################################################################
+# Build tool setup
+########################################################################################################################
+
+[repo_fetch_deps]
+enabled = true
+extra_tool_paths = ["${root}/tools/repoman"]
+
+[repo_cmake]
+enabled = true
+
+########################################################################################################################
+# Build Number
+########################################################################################################################
+
+[repo_build_number]
+enabled = true
+
+
+[repo_test.python_executable]
+python_executable_path = "${root}/_build/target-deps/python/python${exe_ext}"
+
+########################################################################################################################
+# Tests
+########################################################################################################################
+[repo_test]
+archive_pattern = "${conf:repo.folders.packages}/revit-usd-export-plugin-${revit_ver}*.zip"
+default_config = "release"
+default_suite = "all"
+
+# test_root will be overridden to point at the unzipped package location when `--from-package` is used.
+test_root = "$root/_build/$platform/$config"
+
+library_paths = [
+  "${test_root}/lib",
+  "${test_root}/bin",
+  "${root}/_build/target-deps/usd/${config}/lib",
+  "${root}/_build/target-deps/usd/${config}/bin",
+  "${root}/_build/target-deps/usd/${config}/plugin/usd",
+  "${root}/_build/target-deps/python", # windows
+]
+
+discover_path = "${root}/tests"
+
+python_paths = [
+  "${test_root}/python",
+  "${root}/_build/target-deps/usd/${config}/lib/python",
+  "${root}/_build/target-deps/omni_asset_validator/python",
+  "${root}/tests",
+]
+
+[repo_test.suites.core]
+# Native (doctest) unit tests for the SDK core. No Revit install required.
+kind = "executable"
+executable = "${test_root}/tests/revit_usd_export_tests${exe_ext}"
+
+[repo_test.suites.revit2024]
+kind = "unittest"
+log_file = "_build/unittest/results_revit2024.xml"
+module_path = "${root}/tests/test_revit2024_usd_export.py"
+
+[repo_test.suites.revit2025]
+kind = "unittest"
+log_file = "_build/unittest/results_revit2025.xml"
+module_path = "${root}/tests/test_revit2025_usd_export.py"
+
+[repo_test.suites.revit2026]
+kind = "unittest"
+log_file = "_build/unittest/results_revit2026.xml"
+module_path = "${root}/tests/test_revit2026_usd_export.py"
+
+########################################################################################################################
+# Code Format Tool
+########################################################################################################################
+[repo_format]
+license_preamble = '''
+SPDX-FileCopyrightText: Copyright (c) {years} NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+'''
+license_text = ""
+
+files.exclude = [
+    "_build/*",
+    "_repo/*",
+    ".git/*",
+    ".vscode/*",
+    "docs/*",
+    "deps/*",
+]
+
+[repo_format.python]
+
+line_length = 256
+files.include = [
+    "tests/**",
+    "tools/**",
+]
+
+files.exclude = [
+    "tools/repoman/*",
+    "tools/packman/*",
+]
+
+files.extensions = [".py"]
+
+[repo_format.cpp]
+
+line_length = 256
+files.include = [
+    "source/**",
+]
+
+files.extensions = [".h", ".inl", ".cpp", ".c", ".cs"]
+

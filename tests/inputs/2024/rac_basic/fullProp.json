@@ -1,0 +1,64 @@
+{
+  "File": {
+    "OutputFolder": "",
+    "FileName": "",
+    "Extension": ".usda",
+    "PropOrProject": "Prop",
+    "OpenAfterExport": false,
+    "OpenInApp": "",
+    "OpenInAppPath": ""
+  },
+  "View": {
+    "DetailLevel": "NOT USED",
+    "PhaseFilter": "Show Complete",
+    "ViewTemplate": "NOT USED"
+  },
+  "Options": {
+    "IncludeCameras": true,
+    "IncludeLights": true,
+    "IncludeRooms": true,
+    "RoomColorScheme": "Name",
+    "IncludeSpaces": false,
+    "SpaceColorScheme": "NOT USED",
+    "IncludeDrawings": true,
+    "DrawingPublishSet": "adsk 360",
+    "InstanceFamilies": true,
+    "FamilyInstanceStyle": 1,
+    "IncludeBimData": true,
+    "IncludeLinks": false,
+    "CoordinateSystem": 0,
+    "AddSky": false,
+    "SkyAssetPath": "",
+    "MaterialFolderName": "Looks",
+    "MaterialStyle": 1
+  },
+  "Mappings": {
+    "Libraries": {
+      "MaterialFolders": [],
+      "VegetationFolders": [],
+      "AssetFolders": [],
+      "SkyFolders": []
+    },
+    "Materials": {
+      "AutoMapByName": false,
+      "AutoMapAssetFolderPath": "",
+      "UserMapped": []
+    },
+    "FamilyTypes": {
+      "UserMapped": []
+    },
+    "Vegitation": {
+      "AutoMapByName": false,
+      "AutoMapAssetFolderPath": "",
+      "UserMapped": []
+    }
+  },
+  "Batch": {
+    "InputFolder": "NOT USED",
+    "OutputFolder": "C:/Temp/",
+    "FolderDepth": 0,
+    "FileNamePattern": "<fileName>",
+    "ViewToFind": "{3D}"
+  },
+  "OverrideJsonPath": ""
+}

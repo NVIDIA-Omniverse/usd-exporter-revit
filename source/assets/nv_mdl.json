@@ -1,0 +1,5693 @@
+[
+  {
+    "Name": "Ceiling_Tiles.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Ceiling_Tiles.mdl",
+    "Bucket": "Architecture",
+    "Modules": [
+      "Ceiling_Tiles"
+    ]
+  },
+  {
+    "Name": "Roof_Tiles.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Roof_Tiles.mdl",
+    "Bucket": "Architecture",
+    "Modules": [
+      "Roof_Tiles"
+    ]
+  },
+  {
+    "Name": "Shingles_01.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Shingles_01.mdl",
+    "Bucket": "Architecture",
+    "Modules": [
+      "Shingles_01"
+    ]
+  },
+  {
+    "Name": "Carpet_Beige.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Beige.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Beige"
+    ]
+  },
+  {
+    "Name": "Carpet_Berber_Gray.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Gray.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Berber_Gray"
+    ]
+  },
+  {
+    "Name": "Carpet_Berber_Multi.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Multi.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Berber_Multi"
+    ]
+  },
+  {
+    "Name": "Carpet_Charcoal.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Charcoal.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Charcoal"
+    ]
+  },
+  {
+    "Name": "Carpet_Cream.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Cream.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Cream"
+    ]
+  },
+  {
+    "Name": "Carpet_Diamond_Olive.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Diamond_Olive.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Diamond_Olive"
+    ]
+  },
+  {
+    "Name": "Carpet_Diamond_Yellow.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Diamond_Yellow.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Diamond_Yellow"
+    ]
+  },
+  {
+    "Name": "Carpet_Forest.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Forest.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Forest"
+    ]
+  },
+  {
+    "Name": "Carpet_Gray.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Gray.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Gray"
+    ]
+  },
+  {
+    "Name": "Carpet_Pattern_Leaf_Squares_Tan.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Pattern_Leaf_Squares_Tan.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Pattern_Leaf_Squares_Tan"
+    ]
+  },
+  {
+    "Name": "Carpet_Pattern_Loop.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Pattern_Loop.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Pattern_Loop"
+    ]
+  },
+  {
+    "Name": "Carpet_Pattern_Squares_Multi.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Pattern_Squares_Multi.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Pattern_Squares_Multi"
+    ]
+  },
+  {
+    "Name": "Light_12000K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_12000K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_12000K"
+    ]
+  },
+  {
+    "Name": "Light_1900K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_1900K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_1900K"
+    ]
+  },
+  {
+    "Name": "Light_2600K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_2600K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_2600K"
+    ]
+  },
+  {
+    "Name": "Light_2900K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_2900K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_2900K"
+    ]
+  },
+  {
+    "Name": "Light_5000K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_5000K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_5000K"
+    ]
+  },
+  {
+    "Name": "Light_5500K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_5500K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_5500K"
+    ]
+  },
+  {
+    "Name": "Light_6000K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_6000K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_6000K"
+    ]
+  },
+  {
+    "Name": "Light_7000K.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_7000K.mdl",
+    "Bucket": "Emissives",
+    "Modules": [
+      "Light_7000K"
+    ]
+  },
+  {
+    "Name": "Blue_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Blue_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Blue_Glass"
+    ]
+  },
+  {
+    "Name": "Clear_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Clear_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Clear_Glass",
+      "Clear_Glass"
+    ]
+  },
+  {
+    "Name": "Dull_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Dull_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Dull_Glass"
+    ]
+  },
+  {
+    "Name": "Frosted_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Frosted_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Frosted_Glass"
+    ]
+  },
+  {
+    "Name": "Glazed_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Glazed_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glazed_Glass"
+    ]
+  },
+  {
+    "Name": "Green_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Green_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Green_Glass"
+    ]
+  },
+  {
+    "Name": "Mirror.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Mirror.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Mirror"
+    ]
+  },
+  {
+    "Name": "Red_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Red_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Red_Glass"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R02.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R02.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R02"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R25.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R25.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R25"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R50.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R50.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R50"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R75.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R75.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R75"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R85.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R85.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R85"
+    ]
+  },
+  {
+    "Name": "Tinted_Glass_R98.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R98.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Tinted_Glass_R98"
+    ]
+  },
+  {
+    "Name": "Adobe_Brick.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Adobe_Brick.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Adobe_Brick"
+    ]
+  },
+  {
+    "Name": "Brick_Pavers.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Pavers.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Brick_Pavers"
+    ]
+  },
+  {
+    "Name": "Brick_Wall_Brown.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Brown.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Brick_Wall_Brown"
+    ]
+  },
+  {
+    "Name": "Brick_Wall_Red.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Red.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Brick_Wall_Red"
+    ]
+  },
+  {
+    "Name": "Concrete_Block.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Block.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Concrete_Block"
+    ]
+  },
+  {
+    "Name": "Concrete_Formed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Formed.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Concrete_Formed"
+    ]
+  },
+  {
+    "Name": "Concrete_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Polished.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Concrete_Polished"
+    ]
+  },
+  {
+    "Name": "Concrete_Rough.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Rough.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Concrete_Rough"
+    ]
+  },
+  {
+    "Name": "Concrete_Smooth.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Smooth.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Concrete_Smooth"
+    ]
+  },
+  {
+    "Name": "Stucco.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Stucco.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Stucco"
+    ]
+  },
+  {
+    "Name": "Aluminum_Anodized.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Anodized"
+    ]
+  },
+  {
+    "Name": "Aluminum_Anodized_Black.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Black.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Anodized_Black"
+    ]
+  },
+  {
+    "Name": "Aluminum_Anodized_Blue.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Blue.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Anodized_Blue"
+    ]
+  },
+  {
+    "Name": "Aluminum_Anodized_Charcoal.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Charcoal.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Anodized_Charcoal"
+    ]
+  },
+  {
+    "Name": "Aluminum_Anodized_Red.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Red.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Anodized_Red"
+    ]
+  },
+  {
+    "Name": "Aluminum_Cast.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Cast"
+    ]
+  },
+  {
+    "Name": "Aluminum_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Aluminum_Polished"
+    ]
+  },
+  {
+    "Name": "Brass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Brass.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Brass"
+    ]
+  },
+  {
+    "Name": "Bronze.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Bronze.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Bronze"
+    ]
+  },
+  {
+    "Name": "Brushed_Antique_Copper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Brushed_Antique_Copper.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Brushed_Antique_Copper"
+    ]
+  },
+  {
+    "Name": "Cast_Metal_Silver_Vein.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Cast_Metal_Silver_Vein"
+    ]
+  },
+  {
+    "Name": "Chrome.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Chrome.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Chrome"
+    ]
+  },
+  {
+    "Name": "Copper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Copper.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Copper"
+    ]
+  },
+  {
+    "Name": "CorrugatedMetal.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/CorrugatedMetal.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "CorrugatedMetal"
+    ]
+  },
+  {
+    "Name": "Gold.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Gold.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Gold"
+    ]
+  },
+  {
+    "Name": "Iron.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Iron.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Iron"
+    ]
+  },
+  {
+    "Name": "Metal_Door.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Door.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Metal_Door"
+    ]
+  },
+  {
+    "Name": "Metal_Seamed_Roof.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Seamed_Roof.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Metal_Seamed_Roof"
+    ]
+  },
+  {
+    "Name": "RustedMetal.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/RustedMetal.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "RustedMetal"
+    ]
+  },
+  {
+    "Name": "Silver.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Silver.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Silver"
+    ]
+  },
+  {
+    "Name": "Steel_Blued.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Blued.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Steel_Blued"
+    ]
+  },
+  {
+    "Name": "Steel_Carbon.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Steel_Carbon"
+    ]
+  },
+  {
+    "Name": "Steel_Cast.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Cast.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Steel_Cast"
+    ]
+  },
+  {
+    "Name": "Steel_Stainless.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless.mdl",
+    "Bucket": "Metals",
+    "Modules": [
+      "Steel_Stainless"
+    ]
+  },
+  {
+    "Name": "Chain_Link_Fence.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Chain_Link_Fence.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Chain_Link_Fence"
+    ]
+  },
+  {
+    "Name": "Paint_Gloss.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Gloss.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Gloss"
+    ]
+  },
+  {
+    "Name": "Paint_Gloss_Finish.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Gloss_Finish.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Gloss_Finish"
+    ]
+  },
+  {
+    "Name": "Paint_Matte.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Matte.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Matte"
+    ]
+  },
+  {
+    "Name": "Paint_Matte_Finish.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Matte_Finish.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Matte_Finish"
+    ]
+  },
+  {
+    "Name": "Paint_Satin.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Satin"
+    ]
+  },
+  {
+    "Name": "Paint_Satin_Finish.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin_Finish.mdl",
+    "Bucket": "Miscellaneous",
+    "Modules": [
+      "Paint_Satin_Finish"
+    ]
+  },
+  {
+    "Name": "Asphalt.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Asphalt.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Asphalt"
+    ]
+  },
+  {
+    "Name": "Dirt.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Dirt.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Dirt"
+    ]
+  },
+  {
+    "Name": "Grass_Countryside.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Grass_Countryside.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Grass_Countryside"
+    ]
+  },
+  {
+    "Name": "Grass_Cut.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Grass_Cut.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Grass_Cut"
+    ]
+  },
+  {
+    "Name": "Grass_Winter.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Grass_Winter.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Grass_Winter"
+    ]
+  },
+  {
+    "Name": "Leaves.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Leaves.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Leaves"
+    ]
+  },
+  {
+    "Name": "Mulch_Brown.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Mulch_Brown.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Mulch_Brown"
+    ]
+  },
+  {
+    "Name": "Sand.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Sand.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Sand"
+    ]
+  },
+  {
+    "Name": "Soil_Rocky.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Soil_Rocky.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Soil_Rocky"
+    ]
+  },
+  {
+    "Name": "Water.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Water.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Water"
+    ]
+  },
+  {
+    "Name": "Water_Opaque.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Natural/Water_Opaque.mdl",
+    "Bucket": "Natural",
+    "Modules": [
+      "Water_Opaque"
+    ]
+  },
+  {
+    "Name": "Plastic.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Plastic"
+    ]
+  },
+  {
+    "Name": "Plastic_ABS.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_ABS.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Plastic_ABS"
+    ]
+  },
+  {
+    "Name": "Plastic_Acrylic.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_Acrylic.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Plastic_Acrylic"
+    ]
+  },
+  {
+    "Name": "Plastic_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_Clear.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Plastic_Clear"
+    ]
+  },
+  {
+    "Name": "Rubber_Smooth.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Smooth.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Rubber_Smooth"
+    ]
+  },
+  {
+    "Name": "Rubber_Textured.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Textured.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Rubber_Textured"
+    ]
+  },
+  {
+    "Name": "Veneer_OU_Walnut.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_OU_Walnut.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Veneer_OU_Walnut"
+    ]
+  },
+  {
+    "Name": "Veneer_UX_Walnut_Cherry.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_UX_Walnut_Cherry.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Veneer_UX_Walnut_Cherry"
+    ]
+  },
+  {
+    "Name": "Veneer_Z5_Maple.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_Z5_Maple.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Veneer_Z5_Maple"
+    ]
+  },
+  {
+    "Name": "Vinyl.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Vinyl.mdl",
+    "Bucket": "Plastics",
+    "Modules": [
+      "Vinyl"
+    ]
+  },
+  {
+    "Name": "Adobe_Octagon_Dots.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Adobe_Octagon_Dots.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Adobe_Octagon_Dots"
+    ]
+  },
+  {
+    "Name": "Ceramic_Smooth_Fired.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Ceramic_Smooth_Fired.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Ceramic_Smooth_Fired"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tile_12.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Ceramic_Tile_12.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Ceramic_Tile_12"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tile_18.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Ceramic_Tile_18.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Ceramic_Tile_18"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tile_6.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Ceramic_Tile_6.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Ceramic_Tile_6"
+    ]
+  },
+  {
+    "Name": "Fieldstone.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Fieldstone.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Fieldstone"
+    ]
+  },
+  {
+    "Name": "Granite_Dark.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Granite_Dark.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Granite_Dark"
+    ]
+  },
+  {
+    "Name": "Granite_Light.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Granite_Light.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Granite_Light"
+    ]
+  },
+  {
+    "Name": "Gravel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Gravel.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Gravel"
+    ]
+  },
+  {
+    "Name": "Gravel_River_Rock.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Gravel_River_Rock.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Gravel_River_Rock"
+    ]
+  },
+  {
+    "Name": "Marble.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Marble.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Marble"
+    ]
+  },
+  {
+    "Name": "Marble_Smooth.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Marble_Smooth.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Marble_Smooth"
+    ]
+  },
+  {
+    "Name": "Marble_Tile_12.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Marble_Tile_12.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Marble_Tile_12"
+    ]
+  },
+  {
+    "Name": "Marble_Tile_18.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Marble_Tile_18.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Marble_Tile_18"
+    ]
+  },
+  {
+    "Name": "Pea_Gravel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Pea_Gravel.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Pea_Gravel"
+    ]
+  },
+  {
+    "Name": "Porcelain_Smooth.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Smooth.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Porcelain_Smooth"
+    ]
+  },
+  {
+    "Name": "Porcelain_Tile_4.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Tile_4.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Porcelain_Tile_4"
+    ]
+  },
+  {
+    "Name": "Porcelain_Tile_4_Linen.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Tile_4_Linen.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Porcelain_Tile_4_Linen"
+    ]
+  },
+  {
+    "Name": "Porcelain_Tile_6.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Tile_6.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Porcelain_Tile_6"
+    ]
+  },
+  {
+    "Name": "Porcelain_Tile_6_Linen.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Tile_6_Linen.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Porcelain_Tile_6_Linen"
+    ]
+  },
+  {
+    "Name": "Retaining_Block.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Retaining_Block.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Retaining_Block"
+    ]
+  },
+  {
+    "Name": "Slate.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Slate.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Slate"
+    ]
+  },
+  {
+    "Name": "Stone_Wall.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Stone_Wall.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Stone_Wall"
+    ]
+  },
+  {
+    "Name": "Terracotta.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Terracotta.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Terracotta"
+    ]
+  },
+  {
+    "Name": "Terrazzo.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Terrazzo.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Terrazzo"
+    ]
+  },
+  {
+    "Name": "WhiteMode.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Styles/WhiteMode.mdl",
+    "Bucket": "Styles",
+    "Modules": [
+      "WhiteMode"
+    ]
+  },
+  {
+    "Name": "GlassUtils.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassUtils.mdl",
+    "Bucket": "Templates",
+    "Modules": []
+  },
+  {
+    "Name": "GlassWithVolume.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassWithVolume.mdl",
+    "Bucket": "Templates",
+    "Modules": [
+      "GlassWithVolume"
+    ]
+  },
+  {
+    "Name": "Cloth_Black.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Cloth_Black.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Cloth_Black"
+    ]
+  },
+  {
+    "Name": "Cloth_Gray.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Cloth_Gray.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Cloth_Gray"
+    ]
+  },
+  {
+    "Name": "Leather_Black.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Leather_Black.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Leather_Black"
+    ]
+  },
+  {
+    "Name": "Leather_Brown.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Leather_Brown.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Leather_Brown"
+    ]
+  },
+  {
+    "Name": "Leather_Pumpkin.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Leather_Pumpkin.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Leather_Pumpkin"
+    ]
+  },
+  {
+    "Name": "Linen_Beige.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Linen_Beige.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Linen_Beige"
+    ]
+  },
+  {
+    "Name": "Linen_Blue.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Linen_Blue.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Linen_Blue"
+    ]
+  },
+  {
+    "Name": "Linen_White.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Textiles/Linen_White.mdl",
+    "Bucket": "Textiles",
+    "Modules": [
+      "Linen_White"
+    ]
+  },
+  {
+    "Name": "Cardboard.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Cardboard.mdl",
+    "Bucket": "Wall_Board",
+    "Modules": [
+      "Cardboard"
+    ]
+  },
+  {
+    "Name": "Gypsum.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum.mdl",
+    "Bucket": "Wall_Board",
+    "Modules": [
+      "Gypsum"
+    ]
+  },
+  {
+    "Name": "MDF.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/MDF.mdl",
+    "Bucket": "Wall_Board",
+    "Modules": [
+      "MDF"
+    ]
+  },
+  {
+    "Name": "Paper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Paper.mdl",
+    "Bucket": "Wall_Board",
+    "Modules": [
+      "Paper"
+    ]
+  },
+  {
+    "Name": "Plaster.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster.mdl",
+    "Bucket": "Wall_Board",
+    "Modules": [
+      "Plaster"
+    ]
+  },
+  {
+    "Name": "Ash.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Ash"
+    ]
+  },
+  {
+    "Name": "Ash_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Ash_Planks"
+    ]
+  },
+  {
+    "Name": "Bamboo.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Bamboo"
+    ]
+  },
+  {
+    "Name": "Bamboo_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Bamboo_Planks"
+    ]
+  },
+  {
+    "Name": "Beadboard.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Beadboard.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Beadboard"
+    ]
+  },
+  {
+    "Name": "Birch.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Birch"
+    ]
+  },
+  {
+    "Name": "Birch_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Birch_Planks"
+    ]
+  },
+  {
+    "Name": "Cherry.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Cherry"
+    ]
+  },
+  {
+    "Name": "Cherry_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Cherry_Planks"
+    ]
+  },
+  {
+    "Name": "Cork.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cork.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Cork"
+    ]
+  },
+  {
+    "Name": "Mahogany.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Mahogany.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Mahogany"
+    ]
+  },
+  {
+    "Name": "Mahogany_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Mahogany_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Mahogany_Planks"
+    ]
+  },
+  {
+    "Name": "Oak.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Oak"
+    ]
+  },
+  {
+    "Name": "Oak_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Oak_Planks"
+    ]
+  },
+  {
+    "Name": "Parquet_Floor.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Parquet_Floor.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Parquet_Floor"
+    ]
+  },
+  {
+    "Name": "Plywood.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Plywood.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Plywood"
+    ]
+  },
+  {
+    "Name": "Timber.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Timber"
+    ]
+  },
+  {
+    "Name": "Timber_Cladding.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber_Cladding.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Timber_Cladding"
+    ]
+  },
+  {
+    "Name": "Walnut.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Walnut.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Walnut"
+    ]
+  },
+  {
+    "Name": "Walnut_Planks.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Walnut_Planks.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Walnut_Planks"
+    ]
+  },
+  {
+    "Name": "Carpet_Woven.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/Carpet_Woven.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Carpet_Woven",
+      "Carpet_Woven_Orange",
+      "Carpet_Woven_Cherry_Red",
+      "Carpet_Woven_Bordeaux",
+      "Carpet_Woven_Green",
+      "Carpet_Woven_Dark_Blue_Gray",
+      "Carpet_Woven_Sky_Blue"
+    ]
+  },
+  {
+    "Name": "Fabric_Carpet_Long_Floor.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/Fabric_Carpet_Long_Floor.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Fabric_Carpet_Long_Floor",
+      "Fabric_Carpet_Long_Floor_Blue",
+      "Fabric_Carpet_Long_Floor_Rose",
+      "Fabric_Carpet_Long_Floor_Light_Green",
+      "Fabric_Carpet_Long_Floor_Yellow",
+      "Fabric_Carpet_Long_Floor_Orange",
+      "Fabric_Carpet_Long_Floor_Green",
+      "Fabric_Carpet_Long_Floor_Bordeaux"
+    ]
+  },
+  {
+    "Name": "Rug_Carpet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/Rug_Carpet.mdl",
+    "Bucket": "Carpet",
+    "Modules": [
+      "Rug_Carpet_Base",
+      "Rug_Carpet_Lines",
+      "Rug_Carpet_Hexagonal",
+      "Rug_Carpet_Honeycomb"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Diamond.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Diamond.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Diamond",
+      "Ceramic_Tiles_Diamond_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Diamond_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Diamond_Antique_White",
+      "Ceramic_Tiles_Diamond_Antique_White_Dirty",
+      "Ceramic_Tiles_Diamond_White_Matte",
+      "Ceramic_Tiles_Diamond_Black",
+      "Ceramic_Tiles_Diamond_Black_Matte",
+      "Ceramic_Tiles_Diamond_Black_Matte_Rough",
+      "Ceramic_Tiles_Diamond_Graphite",
+      "Ceramic_Tiles_Diamond_Graphite_Varied",
+      "Ceramic_Tiles_Diamond_Graphite_Matte",
+      "Ceramic_Tiles_Diamond_Green",
+      "Ceramic_Tiles_Diamond_Green_Matte",
+      "Ceramic_Tiles_Diamond_Green_Varied",
+      "Ceramic_Tiles_Diamond_Vintage_Green_Bathroom",
+      "Ceramic_Tiles_Diamond_Mint",
+      "Ceramic_Tiles_Diamond_Mint_Varied",
+      "Ceramic_Tiles_Diamond_Lime_Green",
+      "Ceramic_Tiles_Diamond_Lime_Green_Varied",
+      "Ceramic_Tiles_Diamond_Yellow",
+      "Ceramic_Tiles_Diamond_Yellow_Varied",
+      "Ceramic_Tiles_Diamond_Petrol",
+      "Ceramic_Tiles_Diamond_Petrol_Varied",
+      "Ceramic_Tiles_Diamond_Sky",
+      "Ceramic_Tiles_Diamond_Red",
+      "Ceramic_Tiles_Diamond_Red_Varied"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Diamond_Offset.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Diamond_Offset.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Diamond_Offset",
+      "Ceramic_Tiles_Offset_Diamond_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Offset_Diamond_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Offset_Diamond_Antique_White",
+      "Ceramic_Tiles_Offset_Diamond_White_Matte",
+      "Ceramic_Tiles_Offset_Diamond_Antique_White_Dirty",
+      "Ceramic_Tiles_Offset_Diamond_Black",
+      "Ceramic_Tiles_Offset_Diamond_Black_Matte",
+      "Ceramic_Tiles_Offset_Diamond_Graphite",
+      "Ceramic_Tiles_Offset_Diamond_Graphite_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Graphite_Matte",
+      "Ceramic_Tiles_Offset_Diamond_Green",
+      "Ceramic_Tiles_Offset_Diamond_Green_Matte",
+      "Ceramic_Tiles_Offset_Diamond_Green_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Vintage_Green_Bathroom",
+      "Ceramic_Tiles_Offset_Diamond_Mint",
+      "Ceramic_Tiles_Offset_Diamond_Mint_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Lime_Green",
+      "Ceramic_Tiles_Offset_Diamond_Lime_Green_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Yellow",
+      "Ceramic_Tiles_Offset_Diamond_Yellow_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Petrol",
+      "Ceramic_Tiles_Offset_Diamond_Petrol_Varied",
+      "Ceramic_Tiles_Offset_Diamond_Sky",
+      "Ceramic_Tiles_Offset_Diamond_Red",
+      "Ceramic_Tiles_Offset_Diamond_Red_Varied"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Mosaic_Shifted.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Mosaic_Shifted.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Mosaic_Shifted",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Blue_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Green_New",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Green_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Green_Varied_New",
+      "Ceramic_Tiles_Mosaic_Shifted_White",
+      "Ceramic_Tiles_Mosaic_Shifted_White_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_White_Worn_Matte",
+      " Ceramic_Tiles_Mosaic_Shifted_Antique_White",
+      "Ceramic_Tiles_Mosaic_Shifted_Antique_White_Dirty",
+      "Ceramic_Tiles_Mosaic_Shifted_Black",
+      "Ceramic_Tiles_Mosaic_Shifted_Black_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_Black_Matte_Rough",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Gray",
+      "Ceramic_Tiles_Mosaic_Shifted_Dark_Gray_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_Gray",
+      "Ceramic_Tiles_Mosaic_Shifted_Gray_Matte",
+      "Ceramic_Tiles_Mosaic_Shifted_Gray_Matte_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Mint",
+      "Ceramic_Tiles_Mosaic_Shifted_Mint_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Lime_Green",
+      "Ceramic_Tiles_Mosaic_Shifted_Lime_Green_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Yellow",
+      "Ceramic_Tiles_Mosaic_Shifted_Yellow_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Petrol",
+      "Ceramic_Tiles_Mosaic_Shifted_Petrol_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Red",
+      "Ceramic_Tiles_Mosaic_Shifted_Red_Varied",
+      "Ceramic_Tiles_Mosaic_Shifted_Brown"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Paseo.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Paseo.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Paseo",
+      "Ceramic_Tiles_Paseo_Dark_Blue_Matte",
+      "Ceramic_Tiles_Paseo_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Paseo_Dark_Green_New",
+      "Ceramic_Tiles_Paseo_Dark_Green_Matte",
+      "Ceramic_Tiles_Paseo_Dark_Green_Varied_New",
+      "Ceramic_Tiles_Paseo_White",
+      "Ceramic_Tiles_Paseo_White_Matte",
+      "Ceramic_Tiles_Paseo_White_Worn_Matte",
+      " Ceramic_Tiles_Paseo_White_Worn_Matte_Dirty",
+      "Ceramic_Tiles_Paseo_Black",
+      "Ceramic_Tiles_Paseo_Black_Matte",
+      "Ceramic_Tiles_Paseo_Black_Matte_Rough",
+      "Ceramic_Tiles_Paseo_Dark_Gray",
+      "Ceramic_Tiles_Paseo_Dark_Gray_Matte",
+      "Ceramic_Tiles_Paseo_Gray",
+      "Ceramic_Tiles_Paseo_Gray_Matte",
+      "Ceramic_Tiles_Paseo_Gray_Matte_Varied",
+      "Ceramic_Tiles_Paseo_Mint",
+      "Ceramic_Tiles_Paseo_Mint_Varied",
+      "Ceramic_Tiles_Paseo_Lime_Green",
+      "Ceramic_Tiles_Paseo_Lime_Green_Varied",
+      "Ceramic_Tiles_Paseo_Yellow",
+      "Ceramic_Tiles_Paseo_Yellow_Varied",
+      "Ceramic_Tiles_Paseo_Petrol",
+      "Ceramic_Tiles_Paseo_Petrol_Varied",
+      "Ceramic_Tiles_Paseo_Red",
+      "Ceramic_Tiles_Paseo_Red_Varied",
+      "Ceramic_Tiles_Paseo_Brown"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Penny.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Penny.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Penny",
+      "Ceramic_Tiles_Penny_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Penny_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Penny_Antique_White",
+      "Ceramic_Tiles_Penny_White_Matte",
+      "Ceramic_Tiles_Penny_Black",
+      "Ceramic_Tiles_Penny_Black_Matte",
+      "Ceramic_Tiles_Penny_Graphite",
+      "Ceramic_Tiles_Penny_Graphite_Varied",
+      "Ceramic_Tiles_Penny_Graphite_Matte",
+      "Ceramic_Tiles_Penny_Green",
+      "Ceramic_Tiles_Penny_Green_Matte",
+      "Ceramic_Tiles_Penny_Green_Varied",
+      "Ceramic_Tiles_Penny_Vintage_Green_Bathroom",
+      "Ceramic_Tiles_Penny_Mint",
+      "Ceramic_Tiles_Penny_Mint_Varied",
+      "Ceramic_Tiles_Penny_Lime_Green",
+      "Ceramic_Tiles_Penny_Lime_Green_Varied",
+      "Ceramic_Tiles_Penny_Yellow",
+      "Ceramic_Tiles_Penny_Yellow_Varied",
+      "Ceramic_Tiles_Penny_Petrol",
+      "Ceramic_Tiles_Penny_Petrol_Varied",
+      "Ceramic_Tiles_Penny_Sky",
+      "Ceramic_Tiles_Penny_Red",
+      "Ceramic_Tiles_Penny_Red_Varied"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Pinwheel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Pinwheel.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Pinwheel",
+      "Ceramic_Tiles_Pinwheel_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Pinwheel_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Pinwheel_Antique_White",
+      "Ceramic_Tiles_Pinwheel_White_Matte",
+      "Ceramic_Tiles_Pinwheel_Antique_White_Dirty",
+      "Ceramic_Tiles_Pinwheel_Black",
+      "Ceramic_Tiles_Pinwheel_Black_Matte",
+      "Ceramic_Tiles_Pinwheel_Black_Matte_Rough",
+      "Ceramic_Tiles_Pinwheel_Graphite",
+      "Ceramic_Tiles_Pinwheel_Graphite_Varied",
+      "Ceramic_Tiles_Pinwheel_Graphite_Matte",
+      "Ceramic_Tiles_Pinwheel_Green",
+      "Ceramic_Tiles_Pinwheel_Green_Matte",
+      "Ceramic_Tiles_Pinwheel_Green_Varied",
+      "Ceramic_Tiles_Pinwheel_Vintage_Green_Bathroom",
+      "Ceramic_Tiles_Pinwheel_Mint",
+      "Ceramic_Tiles_Pinwheel_Mint_Varied",
+      "Ceramic_Tiles_Pinwheel_Lime_Green",
+      "Ceramic_Tiles_Pinwheel_Lime_Green_Varied",
+      "Ceramic_Tiles_Pinwheel_Yellow",
+      "Ceramic_Tiles_Pinwheel_Yellow_Varied",
+      "Ceramic_Tiles_Pinwheel_Petrol",
+      "Ceramic_Tiles_Pinwheel_Petrol_Varied",
+      "Ceramic_Tiles_Pinwheel_Sky",
+      "Ceramic_Tiles_Pinwheel_Red",
+      "Ceramic_Tiles_Pinwheel_Red_Varied"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Square.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Square.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Square",
+      "Ceramic_Tiles_Square_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Square_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Square_Dark_Green_New",
+      "Ceramic_Tiles_Square_Dark_Green_New_Matte",
+      "Ceramic_Tiles_Square_Dark_Green_Varied_New",
+      "Ceramic_Tiles_Square_White",
+      "Ceramic_Tiles_Square_White_Matte",
+      "Ceramic_Tiles_Square_White_Worn_Matte",
+      " Ceramic_Tiles_Square_Antique_White",
+      "Ceramic_Tiles_Square_Antique_White_Dirty",
+      "Ceramic_Tiles_Square_Black",
+      "Ceramic_Tiles_Square_Black_Matte",
+      "Ceramic_Tiles_Square_Black_Matte_Rough",
+      "Ceramic_Tiles_Square_Dark_Gray",
+      "Ceramic_Tiles_Square_Dark_Gray_Matte",
+      "Ceramic_Tiles_Square_Gray",
+      "Ceramic_Tiles_Square_Gray_Matte",
+      "Ceramic_Tiles_Square_Gray_Matte_Varied",
+      "Ceramic_Tiles_Square_Mint",
+      "Ceramic_Tiles_Square_Mint_Varied",
+      "Ceramic_Tiles_Square_Lime_Green",
+      "Ceramic_Tiles_Square_Lime_Green_Varied",
+      "Ceramic_Tiles_Square_Yellow",
+      "Ceramic_Tiles_Square_Yellow_Varied",
+      "Ceramic_Tiles_Square_Petrol",
+      "Ceramic_Tiles_Square_Petrol_Varied",
+      "Ceramic_Tiles_Square_Red",
+      "Ceramic_Tiles_Square_Red_Varied",
+      "Ceramic_Tiles_Square_Brown"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Square_Brick.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Square_Brick.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Square_Brick",
+      "Ceramic_Tiles_Square_Brick_Dark_Blue_Matte",
+      "Ceramic_Tiles_Square_Brick_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Square_Brick_Dark_Green_New",
+      "Ceramic_Tiles_Square_Brick_Dark_Green_Matte",
+      "Ceramic_Tiles_Square_Brick_Dark_Green_Varied_New",
+      "Ceramic_Tiles_Square_Brick_White",
+      "Ceramic_Tiles_Square_Brick_White_Matte",
+      "Ceramic_Tiles_Square_Brick_White_Worn_Matte",
+      "Ceramic_Tiles_Square_Brick_Black",
+      "Ceramic_Tiles_Square_Brick_Black_Matte",
+      "Ceramic_Tiles_Square_Brick_Black_Matte_Rough",
+      "Ceramic_Tiles_Square_Brick_Dark_Gray",
+      "Ceramic_Tiles_Square_Brick_Dark_Gray_Matte",
+      "Ceramic_Tiles_Square_Brick_Gray",
+      "Ceramic_Tiles_Square_Brick_Gray_Matte",
+      "Ceramic_Tiles_Square_Brick_Gray_Matte_Varied",
+      "Ceramic_Tiles_Square_Brick_Mint",
+      "Ceramic_Tiles_Square_Brick_Mint_Varied",
+      "Ceramic_Tiles_Square_Brick_Lime_Green",
+      "Ceramic_Tiles_Square_Brick_Lime_Green_Varied",
+      "Ceramic_Tiles_Square_Brick_Yellow",
+      "Ceramic_Tiles_Square_Brick_Yellow_Varied",
+      "Ceramic_Tiles_Square_Brick_Petrol",
+      "Ceramic_Tiles_Square_Brick_Petrol_Varied",
+      "Ceramic_Tiles_Square_Brick_Red",
+      "Ceramic_Tiles_Square_Brick_Red_Varied",
+      "Ceramic_Tiles_Square_Brick_Brown"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Subway.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Subway.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Subway",
+      "Ceramic_Tiles_Subway_Antique_White_Dirty",
+      "Ceramic_Tiles_Subway_Dark_Green_New",
+      "Ceramic_Tiles_Subway_Dark_Green_Matte",
+      "Ceramic_Tiles_Subway_Dark_Green_Varied_New",
+      "Ceramic_Tiles_Subway_White",
+      "Ceramic_Tiles_Subway_White_Matte",
+      "Ceramic_Tiles_Subway_White_Worn_Matte",
+      "Ceramic_Tiles_Subway_Black",
+      "Ceramic_Tiles_Subway_Black_Matte",
+      "Ceramic_Tiles_Subway_Black_Matte_Rough",
+      "Ceramic_Tiles_Subway_Dark_Gray",
+      "Ceramic_Tiles_Subway_Dark_Gray_Matte",
+      "Ceramic_Tiles_Subway_Gray",
+      "Ceramic_Tiles_Subway_Gray_Matte",
+      "Ceramic_Tiles_Subway_Gray_Matte_Varied",
+      "Ceramic_Tiles_Subway_Mint",
+      "Ceramic_Tiles_Subway_Mint_Varied",
+      "Ceramic_Tiles_Subway_Lime_Green",
+      "Ceramic_Tiles_Subway_Lime_Green_Varied",
+      "Ceramic_Tiles_Subway_Yellow",
+      "Ceramic_Tiles_Subway_Yellow_Varied",
+      "Ceramic_Tiles_Subway_Petrol",
+      "Ceramic_Tiles_Subway_Petrol_Varied",
+      "Ceramic_Tiles_Subway_Red",
+      "Ceramic_Tiles_Subway_Red_Varied",
+      "Ceramic_Tiles_Subway_Cappucino"
+    ]
+  },
+  {
+    "Name": "Ceramic_Tiles_Glazed_Versailles.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Ceramic_Tiles_Glazed_Versailles.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Ceramic_Tiles_Glazed_Versailles",
+      "Ceramic_Tiles_Versailles_Dark_Blue_New_Matte",
+      "Ceramic_Tiles_Versailles_Dark_Blue_Varied_New",
+      "Ceramic_Tiles_Versailles_Antique_White",
+      "Ceramic_Tiles_Versailles_White_Matte",
+      "Ceramic_Tiles_Versailles_Antique_White_Dirty",
+      "Ceramic_Tiles_Versailles_Black",
+      "Ceramic_Tiles_Versailles_Black_Matte",
+      "Ceramic_Tiles_Versailles_Black_Matte_Rough",
+      "Ceramic_Tiles_Versailles_Graphite",
+      "Ceramic_Tiles_Versailles_Graphite_Varied",
+      "Ceramic_Tiles_Versailles_Graphite_Matte",
+      "Ceramic_Tiles_Versailles_Green",
+      "Ceramic_Tiles_Versailles_Green_Matte",
+      "Ceramic_Tiles_Versailles_Green_Varied",
+      "Ceramic_Tiles_Versailles_Vintage_Green_Bathroom",
+      "Ceramic_Tiles_Versailles_Mint",
+      "Ceramic_Tiles_Versailles_Mint_Varied",
+      "Ceramic_Tiles_Versailles_Lime_Green",
+      "Ceramic_Tiles_Versailles_Lime_Green_Varied",
+      "Ceramic_Tiles_Versailles_Yellow",
+      "Ceramic_Tiles_Versailles_Yellow_Varied",
+      "Ceramic_Tiles_Versailles_Petrol",
+      "Ceramic_Tiles_Versailles_Petrol_Varied",
+      "Ceramic_Tiles_Versailles_Sky",
+      "Ceramic_Tiles_Versailles_Red",
+      "Ceramic_Tiles_Versailles_Red_Varied"
+    ]
+  },
+  {
+    "Name": "Grog_Fired_Clay.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ceramic/Grog_Fired_Clay.mdl",
+    "Bucket": "Ceramic",
+    "Modules": [
+      "Grog_Fired_Clay",
+      "Grog_Fired_Clay_Glaced",
+      "Grog_Fired_Clay_Dirt",
+      "Grog_Fired_Clay_Dried_Dirt"
+    ]
+  },
+  {
+    "Name": "Carbon_Fiber.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/Carbon_Fiber.mdl",
+    "Bucket": "Composite",
+    "Modules": [
+      "Carbon_Fiber",
+      "Carbon_Fiber_Matte_Uncoated",
+      "Carbon_Fiber_Shiny_Coating",
+      "Carbon_Fiber_Worn_Coating",
+      "Carbon_Fiber_Matte_Coating",
+      "Carbon_Fiber_Dusty_Coating",
+      "Carbon_Fiber_Aluminized",
+      "Carbon_Fiber_Aluminized_Coated"
+    ]
+  },
+  {
+    "Name": "Fiberglass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/Fiberglass.mdl",
+    "Bucket": "Composite",
+    "Modules": [
+      "Fiberglass",
+      "Fiberglass_Flat_Weave",
+      "Fiberglass_Shiny",
+      "Fiberglass_Yellowish",
+      "Fiberglass_Blueish"
+    ]
+  },
+  {
+    "Name": "Fiberglass_Imperfections.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/Fiberglass_Imperfections.mdl",
+    "Bucket": "Composite",
+    "Modules": [
+      "Fiberglass_Imperfections",
+      "Fiberglass_Bumpy_Imperfections",
+      "Fiberglass_Torn_Imperfections",
+      "Fiberglass_Warped_Imperfections"
+    ]
+  },
+  {
+    "Name": "Concrete_Floor_Damage.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Floor_Damage.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Floor_Damage",
+      "Defined_Reflections_Damaged_Concrete",
+      "Shiny_Damaged_Concrete",
+      "Soft_Reflections_Damaged_Concrete",
+      "Matt_Damaged_Concrete",
+      "Dark_Damaged_Concrete",
+      "Dark_Rough_Concrete"
+    ]
+  },
+  {
+    "Name": "Concrete_Formed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Formed.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Formed",
+      "Concrete_Formed_Rough"
+    ]
+  },
+  {
+    "Name": "Concrete_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Polished.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Polished",
+      "Concrete_Polished_Matte"
+    ]
+  },
+  {
+    "Name": "Concrete_Precast.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Precast.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Precast",
+      "concrete_precast_light_gray",
+      "concrete_precast_ivory",
+      "concrete_precast_light_warm_gray",
+      "concrete_precast_warm_gray",
+      "concrete_precast_dark_gray",
+      "concrete_precast_dark_charcoal",
+      "concrete_precast_walnut",
+      "concrete_precast_sienna"
+    ]
+  },
+  {
+    "Name": "Concrete_Rough.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Rough.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Rough",
+      "Concrete_Rough_Dirty",
+      "Concrete_Rough_Mossy",
+      "Concrete_Rough_Heavy_Decay"
+    ]
+  },
+  {
+    "Name": "Concrete_Wall_Aged.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Wall_Aged.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Wall_Aged",
+      "Concrete_Wall_Aged_Slight_Grunge",
+      "Concrete_Wall_Aged_Rough_Black_Grunge"
+    ]
+  },
+  {
+    "Name": "Concrete_Wall_Aged_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Wall_Aged_Scratched.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Wall_Aged_Scratched",
+      "Concrete_Wall_Aged_Scratched_Shiny",
+      "Concrete_Wall_Aged_Scratched_Medium_Grime",
+      "Concrete_Wall_Aged_Scratched_Heavy_Grime"
+    ]
+  },
+  {
+    "Name": "Concrete_Wall_Even.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Concrete_Wall_Even.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Concrete_Wall_Even",
+      "Concrete_Wall_Even_New_Shiny",
+      "Concrete_Wall_Even_Brownish_Dirty",
+      "Concrete_Wall_Even_Greenish_Dirty"
+    ]
+  },
+  {
+    "Name": "Mortar.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Mortar.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Mortar",
+      "Mortar_Moist",
+      "Mortar_White",
+      "Mortar_Antique_White",
+      "Mortar_Sand_White",
+      "Mortar_Yellow",
+      "Mortar_Clay",
+      "Mortar_Tan"
+    ]
+  },
+  {
+    "Name": "Spongy_Concrete_Weathered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Spongy_Concrete_Weathered.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Spongy_Concrete_Weathered",
+      "Spongy_Concrete_Weathered_Rough",
+      "Spongy_Concrete_Weathered_Dark_Dirt",
+      "Spongy_Concrete_Weathered_Light_Dirt",
+      "Spongy_Concrete_Weathered_Wet_Flows"
+    ]
+  },
+  {
+    "Name": "Spongy_Concrete_Weathered_Mossy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Spongy_Concrete_Weathered_Mossy.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Spongy_Concrete_Weathered_Mossy",
+      "Spongy_Concrete_Weathered_Mossy_Rough",
+      "Spongy_Concrete_Weathered_Mossy_Dark_Dirt",
+      "Spongy_Concrete_Weathered_Mossy_Light_Dirt"
+    ]
+  },
+  {
+    "Name": "Stone_Pores_Weathered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Concrete/Stone_Pores_Weathered.mdl",
+    "Bucket": "Concrete",
+    "Modules": [
+      "Stone_Pores_Weathered",
+      "Dry_Bright_Stone",
+      "Matte_Stone",
+      "Slightly_Grown_Moss",
+      "Soft_Grown_Moss",
+      "Saturated_Green_Patches",
+      "Fadely_Yellowish_Moss"
+    ]
+  },
+  {
+    "Name": "Cashmere_Wool_Suiting.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cashmere_Wool_Suiting.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cashmere_Wool_Suiting",
+      "Cashmere_Wool_Suiting_Champagne",
+      "Cashmere_Wool_Suiting_Silver",
+      "Cashmere_Wool_Suiting_Smoke",
+      "Cashmere_Wool_Suiting_Black",
+      "Cashmere_Wool_Suiting_Autumn",
+      "Cashmere_Wool_Suiting_Flaxen",
+      "Cashmere_Wool_Suiting_Mustard",
+      "Cashmere_Wool_Suiting_Chocolate",
+      "Cashmere_Wool_Suiting_Potters_Clay",
+      "Cashmere_Wool_Suiting_Amazon_Clay",
+      "Cashmere_Wool_Suiting_Ash_Brown",
+      "Cashmere_Wool_Suiting_Sky_Blue",
+      "Cashmere_Wool_Suiting_Electric",
+      "Cashmere_Wool_Suiting_Teal",
+      "Cashmere_Wool_Suiting_Mint",
+      "Cashmere_Wool_Suiting_Olive",
+      "Cashmere_Wool_Suiting_Rosy_Peach",
+      "Cashmere_Wool_Suiting_Crimson",
+      "Cashmere_Wool_Suiting_Burgundy",
+      "Cashmere_Wool_Suiting_Lavender",
+      "Cashmere_Wool_Suiting_Rose",
+      "Cashmere_Wool_Suiting_Purple"
+    ]
+  },
+  {
+    "Name": "Cotton_Denim.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_Denim.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_Denim",
+      "Cotton_Denim_Independence_Blue",
+      "Cotton_Denim_Carbon",
+      "Cotton_Denim_Black",
+      "Cotton_Denim_Washed_Blue",
+      "Cotton_Denim_Light_Blue",
+      "Cotton_Denim_Bleached_Light_Blue"
+    ]
+  },
+  {
+    "Name": "Cotton_French_Terry.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_French_Terry.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_French_Terry",
+      "Cotton_French_Terry_Sand",
+      "Cotton_French_Terry_Gray",
+      "Cotton_French_Terry_Harbor_Gray",
+      "Cotton_French_Terry_Brown",
+      "Cotton_French_Terry_Saffron",
+      "Cotton_French_Terry_Terracotta",
+      "Cotton_French_Terry_Petrol",
+      "Cotton_French_Terry_Electric_Blue",
+      "Cotton_French_Terry_Mid_Gray",
+      "Cotton_French_Terry_Dark_Blue",
+      "Cotton_French_Terry_Dark_Gray",
+      "Cotton_French_Terry_Olive_Green",
+      "Cotton_French_Terry_Burgundy",
+      "Cotton_French_Terry_Shrimp",
+      "Cotton_French_Terry_Fuchsia",
+      "Cotton_French_Terry_Fox_Red"
+    ]
+  },
+  {
+    "Name": "Cotton_Oxford.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_Oxford.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_Oxford",
+      "Cotton_Oxford_Fog",
+      "Cotton_Oxford_Sand",
+      "Cotton_Oxford_Pepper",
+      "Cotton_Oxford_Tobacco",
+      "Cotton_Oxford_Coffee_Bean",
+      "Cotton_Oxford_Carbon",
+      "Cotton_Oxford_Saffron",
+      "Cotton_Oxford_Paprika",
+      "Cotton_Oxford_Garnet",
+      "Cotton_Oxford_Jungle",
+      "Cotton_Oxford_Green_Tea",
+      "Cotton_Oxford_Peacock",
+      "Cotton_Oxford_Fuchsia",
+      "Cotton_Oxford_Plum",
+      "Cotton_Oxford_Blue_Jay",
+      "Cotton_Oxford_Ink"
+    ]
+  },
+  {
+    "Name": "Cotton_Roughly_Woven.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_Roughly_Woven.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_Roughly_Woven",
+      "Fabric_Cotton_Roughly_Woven_Orange",
+      "Fabric_Cotton_Roughly_Woven_Cheery_Red",
+      "Fabric_Cotton_Roughly_Woven_Dark_Red",
+      "Fabric_Cotton_Roughly_Woven_Green",
+      "Fabric_Cotton_Roughly_Woven_Dark_Ash"
+    ]
+  },
+  {
+    "Name": "Cotton_Single_Jersey.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_Single_Jersey.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_Single_Jersey",
+      "Cotton_Single_Jersey_Silver",
+      "Cotton_Single_Jersey_Gray",
+      "Cotton_Single_Jersey_Charcoal",
+      "Cotton_Single_Jersey_Black",
+      "Cotton_Single_Jersey_Khaki",
+      "Cotton_Single_Jersey_Almond",
+      "Cotton_Single_Jersey_Cinnamon",
+      "Cotton_Single_Jersey_Terracotta",
+      "Cotton_Single_Jersey_Red",
+      "Cotton_Single_Jersey_Brick_Red",
+      "Cotton_Single_Jersey_Burgundy",
+      "Cotton_Single_Jersey_Raspberry",
+      "Cotton_Single_Jersey_Bubblegum",
+      "Cotton_Single_Jersey_Shrimp",
+      "Cotton_Single_Jersey_Lemon",
+      "Cotton_Single_Jersey_Orange",
+      "Cotton_Single_Jersey_Mint",
+      "Cotton_Single_Jersey_Lime",
+      "Cotton_Single_Jersey_Grass_Green",
+      "Cotton_Single_Jersey_Hunter_Green",
+      "Cotton_Single_Jersey_Slate",
+      "Cotton_Single_Jersey_Turquoise",
+      "Cotton_Single_Jersey_Teal",
+      "Cotton_Single_Jersey_Royal_Blue",
+      "Cotton_Single_Jersey_Navy_Blue",
+      "Cotton_Single_Jersey_Purple",
+      "Cotton_Single_Jersey_Plum",
+      "Cotton_Single_Jersey_Amethyst"
+    ]
+  },
+  {
+    "Name": "Cotton_Twill_Gabardine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Cotton_Twill_Gabardine.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Cotton_Twill_Gabardine",
+      "Cotton_Twill_Gabardine_Oyster",
+      "Cotton_Twill_Gabardine_Sand",
+      "Cotton_Twill_Gabardine_Black_Pepper",
+      "Cotton_Twill_Gabardine_Tobacco",
+      "Cotton_Twill_Gabardine_Carbon",
+      "Cotton_Twill_Gabardine_Charcoal",
+      "Cotton_Twill_Gabardine_Fog",
+      "Cotton_Twill_Gabardine_Saffron",
+      "Cotton_Twill_Gabardine_Paprika",
+      "Cotton_Twill_Gabardine_Garnet",
+      "Cotton_Twill_Gabardine_Jungle",
+      "Cotton_Twill_Gabardine_Fuchsia",
+      "Cotton_Twill_Gabardine_Aubergine",
+      "Cotton_Twill_Gabardine_Morning_Glory",
+      "Cotton_Twill_Gabardine_Blue_Jay"
+    ]
+  },
+  {
+    "Name": "Fabric_Cotton_Fine_Woven.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Fabric_Cotton_Fine_Woven.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Fabric_Cotton_Fine_Woven",
+      "Fabric_Cotton_Fine_Woven_Yellow",
+      "Fabric_Cotton_Fine_Woven_Orange",
+      "Fabric_Cotton_Fine_Woven_Cheery_Red",
+      "Fabric_Cotton_Fine_Woven_Dark_Red",
+      "Fabric_Cotton_Fine_Woven_Dark_Green",
+      "Fabric_Cotton_Fine_Woven_Petrol",
+      "Fabric_Cotton_Fine_Woven_Light_Blue"
+    ]
+  },
+  {
+    "Name": "Fabric_Cotton_Pique_Weave.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Fabric_Cotton_Pique_Weave.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Fabric_Cotton_Pique_Weave",
+      "Fabric_Cotton_Pique_Weave_Carulean",
+      "Fabric_Cotton_Pique_Weave_Rust",
+      "Fabric_Cotton_Pique_Weave_Yellow",
+      "Fabric_Cotton_Pique_Weave_French_Blue",
+      "Fabric_Cotton_Pique_Weave_Green_Ash",
+      "Fabric_Cotton_Pique_Weave_Burnt_Coral",
+      "Fabric_Cotton_Pique_Weave_Mint",
+      "Fabric_Cotton_Pique_Weave_Amethyst",
+      "Fabric_Cotton_Pique_Weave_Raspberry",
+      "Fabric_Cotton_Pique_Weave_Inkwell",
+      "Fabric_Cotton_Pique_Weave_Gray",
+      "Fabric_Cotton_Pique_Weave_Buttercream",
+      "Fabric_Cotton_Pique_Weave_Desert_Mist"
+    ]
+  },
+  {
+    "Name": "Felt_Plain.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Felt_Plain.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Felt_Plain ",
+      "Felt_Mat_Red ",
+      "Felt_Mat_Burgundy ",
+      "Felt_Mat_Brick ",
+      "Felt_Mat_Brown ",
+      "Felt_Mat_Taupe ",
+      "Felt_Mat_Golden ",
+      "Felt_Mat_Khaki ",
+      "Felt_Mat_Steelgray ",
+      "Felt_Mat_Navyblue ",
+      "Felt_Mat_Charcoal ",
+      "Felt_Mat_Euroblue ",
+      "Felt_Mat_Electricblue ",
+      "Felt_Mat_Academyblue ",
+      "Felt_Mat_Black ",
+      "Felt_Mat_Darkgreen "
+    ]
+  },
+  {
+    "Name": "Polyester_Charmeuse.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Polyester_Charmeuse.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Polyester_Charmeuse",
+      "Polyester_Charmeuse_Silver",
+      "Polyester_Charmeuse_Gold",
+      "Polyester_Charmeuse_Red",
+      "Polyester_Charmeuse_Orange",
+      "Polyester_Charmeuse_Purple",
+      "Polyester_Charmeuse_Aqua_Blue",
+      "Polyester_Charmeuse_Black",
+      "Polyester_Charmeuse_Lime_Green",
+      "Polyester_Charmeuse_Lemon",
+      "Polyester_Charmeuse_Teal"
+    ]
+  },
+  {
+    "Name": "Polyester_Crepe_de_Chine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Polyester_Crepe_de_Chine.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Polyester_Crepe_de_Chine",
+      "Polyester_Crepe_de_Chine_Red",
+      "Polyester_Crepe_de_Chine_Orange",
+      "Polyester_Crepe_de_Chine_Pink",
+      "Polyester_Crepe_de_Chine_Rose",
+      "Polyester_Crepe_de_Chine_Purple",
+      "Polyester_Crepe_de_Chine_Sky_Blue",
+      "Polyester_Crepe_de_Chine_Anthracite",
+      "Polyester_Crepe_de_Chine_Petrol",
+      "Polyester_Crepe_de_Chine_Black",
+      "Polyester_Crepe_de_Chine_Dark_Green",
+      "Polyester_Crepe_de_Chine_Lime_Green"
+    ]
+  },
+  {
+    "Name": "Polyester_Herringbone.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Polyester_Herringbone.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Polyester_Herringbone",
+      "Polyester_Herringbone_Light_Grey",
+      "Polyester_Herringbone_Silver",
+      "Polyester_Herringbone_Tan",
+      "Polyester_Herringbone_Brown",
+      "Polyester_Herringbone_Light_Brown",
+      "Polyester_Herringbone_Beige",
+      "Polyester_Herringbone_Burgundy",
+      "Polyester_Herringbone_Maroon",
+      "Polyester_Herringbone_Pastel_Blue",
+      "Polyester_Herringbone_Royal_Blue",
+      "Polyester_Herringbone_Orange",
+      "Polyester_Herringbone_Green",
+      "Polyester_Herringbone_Yellow"
+    ]
+  },
+  {
+    "Name": "Polyester_Twill.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Polyester_Twill.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Polyester_Twill",
+      "Polyester_Twill_Light_Grey",
+      "Polyester_Twill_Silver",
+      "Polyester_Twill_Tan",
+      "Polyester_Twill_Brown",
+      "Polyester_Twill_Light_Brown",
+      "Polyester_Twill_Beige"
+    ]
+  },
+  {
+    "Name": "Silk_Charmeuse.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Silk_Charmeuse.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Silk_Charmeuse",
+      "Silk_Charmeuse_Silver",
+      "Silk_Charmeuse_Natural",
+      "Silk_Charmeuse_Champagne",
+      "Silk_Charmeuse_Rose",
+      "Silk_Charmeuse_Lavender",
+      "Silk_Charmeuse_Purple",
+      "Silk_Charmeuse_Sand",
+      "Silk_Charmeuse_Orange",
+      "Silk_Charmeuse_Blue",
+      "Silk_Charmeuse_Light_Blue"
+    ]
+  },
+  {
+    "Name": "Silk_Crepe_Back_Satin.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Silk_Crepe_Back_Satin.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Silk_Crepe_Back_Satin",
+      "Silk_Crepe_Back_Satin_Natural",
+      "Silk_Crepe_Back_Satin_Champagne",
+      "Silk_Crepe_Back_Satin_Rose",
+      "Silk_Crepe_Back_Satin_Pink",
+      "Silk_Crepe_Back_Satin_Shiny_Moss",
+      "Silk_Crepe_Back_Satin_Purple",
+      "Silk_Crepe_Back_Satin_Electric_Blue",
+      "Silk_Crepe_Back_Satin_Royal_Blue",
+      "Silk_Crepe_Back_Satin_Red",
+      "Silk_Crepe_Back_Satin_Yellow",
+      "Silk_Crepe_Back_Satin_Forest_Green"
+    ]
+  },
+  {
+    "Name": "Silk_Crepe_de_Chine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Silk_Crepe_de_Chine.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Silk_Crepe_de_Chine",
+      "Silk_Crepe_de_Chine_Natural",
+      "Silk_Crepe_de_Chine_Champagne",
+      "Silk_Crepe_de_Chine_Rose",
+      "Silk_Crepe_de_Chine_Pink",
+      "Silk_Crepe_de_Chine_Moss",
+      "Silk_Crepe_de_Chine_Purple",
+      "Silk_Crepe_de_Chine_Sky_Blue",
+      "Silk_Crepe_de_Chine_Royal_Blue",
+      "Silk_Crepe_de_Chine_Red",
+      "Silk_Crepe_de_Chine_Yellow",
+      "Silk_Crepe_de_Chine_Forest_Green"
+    ]
+  },
+  {
+    "Name": "Silk_Georgette.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Silk_Georgette.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Silk_Georgette",
+      "Silk_Georgette_Beige",
+      "Silk_Georgette_Silver",
+      "Silk_Georgette_Turquoise",
+      "Silk_Georgette_Lavender",
+      "Silk_Georgette_Rose",
+      "Silk_Georgette_Fuchsia",
+      "Silk_Georgette_Purple",
+      "Silk_Georgette_Red",
+      "Silk_Georgette_Yellow",
+      "Silk_Georgette_Orange",
+      "Silk_Georgette_Electric_Blue",
+      "Silk_Georgette_Sky_Blue",
+      "Silk_Georgette_Green",
+      "Silk_Georgette_Mint_Green"
+    ]
+  },
+  {
+    "Name": "Silk_Plain_Chiffon.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Silk_Plain_Chiffon.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Silk_Plain_Chiffon",
+      "Silk_Plain_Chiffon_Shiny",
+      "Silk_Plain_Chiffon_Natural"
+    ]
+  },
+  {
+    "Name": "Tweed_Herringbone.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Tweed_Herringbone.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Tweed_Herringbone",
+      "Tweed_Herringbone_Dark_Blue",
+      "Tweed_Herringbone_Gray",
+      "Tweed_Herringbone_Black_White",
+      "Tweed_Herringbone_Brown",
+      "Tweed_Herringbone_Mustard",
+      "Tweed_Herringbone_Blue_Khaki",
+      "Tweed_Herringbone_Dark_Brown",
+      "Tweed_Herringbone_Red_Vanilla",
+      "Tweed_Herringbone_Olive_Green",
+      "Tweed_Herringbone_Saturated_Green",
+      "Tweed_Herringbone_Purple_Orange",
+      "Tweed_Herringbone_Green_Blue"
+    ]
+  },
+  {
+    "Name": "Velvet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Velvet.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Velvet",
+      "Velvet_Bordeaux",
+      "Velvet_Blue",
+      "Velvet_Orange",
+      "Velvet_Turquoise",
+      "Velvet_Green",
+      "Velvet_Eggplant",
+      "Velvet_White",
+      "Velvet_Black",
+      "Velvet_Shimmering_Dark_Red",
+      "Velvet_Shimmering_Emerald",
+      "Velvet_Shimmering_Dark_Blue",
+      "Velvet_Shimmering_Purple",
+      "Velvet_Ocean_Blue",
+      "Velvet_Dark_Grey"
+    ]
+  },
+  {
+    "Name": "Wool_Melton.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Wool_Melton.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Wool_Melton",
+      "Wool_Melton_Sand",
+      "Wool_Melton_Gray",
+      "Wool_Melton_Tobacco",
+      "Wool_Melton_Carbon",
+      "Wool_Melton_Saffron",
+      "Wool_Melton_Paprika",
+      "Wool_Melton_Garnet",
+      "Wool_Melton_Green_Tea",
+      "Wool_Melton_Jungle",
+      "Wool_Melton_Fuchsia",
+      "Wool_Melton_Aubergine",
+      "Wool_Melton_Morning_Glory",
+      "Wool_Melton_Blue_Jay"
+    ]
+  },
+  {
+    "Name": "Wool_Sweater_Knit.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Fabric/Wool_Sweater_Knit.mdl",
+    "Bucket": "Fabric",
+    "Modules": [
+      "Wool_Sweater_Knit",
+      "Wool_Sweater_Knit_Oyster",
+      "Wool_Sweater_Knit_Sand",
+      "Wool_Sweater_Knit_Black_Pepper",
+      "Wool_Sweater_Knit_Tobacco",
+      "Wool_Sweater_Knit_Carbon",
+      "Wool_Sweater_Knit_Charcoal",
+      "Wool_Sweater_Knit_Fog",
+      "Wool_Sweater_Knit_Saffron",
+      "Wool_Sweater_Knit_Paprika",
+      "Wool_Sweater_Knit_Garnet",
+      "Wool_Sweater_Knit_Emerald",
+      "Wool_Sweater_Knit_Green_Tea",
+      "Wool_Sweater_Knit_Fuchsia",
+      "Wool_Sweater_Knit_Purple",
+      "Wool_Sweater_Knit_Aubergine",
+      "Wool_Sweater_Knit_Blue_Jay"
+    ]
+  },
+  {
+    "Name": "Alexandrite.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Alexandrite.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Alexandrite"
+    ]
+  },
+  {
+    "Name": "Amethyst.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Amethyst.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Amethyst"
+    ]
+  },
+  {
+    "Name": "Ametrine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Ametrine.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Ametrine"
+    ]
+  },
+  {
+    "Name": "Aquamarine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Aquamarine.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Aquamarine"
+    ]
+  },
+  {
+    "Name": "Citrine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Citrine.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Citrine"
+    ]
+  },
+  {
+    "Name": "Diamond.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Diamond.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Diamond"
+    ]
+  },
+  {
+    "Name": "Emerald.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Emerald.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Emerald"
+    ]
+  },
+  {
+    "Name": "Garnet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Garnet.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Garnet"
+    ]
+  },
+  {
+    "Name": "Iolite.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Iolite.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Iolite"
+    ]
+  },
+  {
+    "Name": "Jade.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Jade.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Jade"
+    ]
+  },
+  {
+    "Name": "Morganite.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Morganite.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Morganite"
+    ]
+  },
+  {
+    "Name": "Onyx.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Onyx.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Onyx"
+    ]
+  },
+  {
+    "Name": "Pearl.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Pearl.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Pearl"
+    ]
+  },
+  {
+    "Name": "Peridot.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Peridot.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Peridot"
+    ]
+  },
+  {
+    "Name": "Ruby.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Ruby.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Ruby"
+    ]
+  },
+  {
+    "Name": "Sapphire.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Sapphire.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Sapphire"
+    ]
+  },
+  {
+    "Name": "Tanzanite.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Tanzanite.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Tanzanite"
+    ]
+  },
+  {
+    "Name": "Topaz.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Topaz.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Topaz"
+    ]
+  },
+  {
+    "Name": "Tourmaline.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Tourmaline.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Tourmaline"
+    ]
+  },
+  {
+    "Name": "Turquoise.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Turquoise.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Turquoise"
+    ]
+  },
+  {
+    "Name": "Zircon.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Gems/Zircon.mdl",
+    "Bucket": "Gems",
+    "Modules": [
+      "Zircon"
+    ]
+  },
+  {
+    "Name": "Glass_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Clear.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Clear",
+      "Glass_Clear_Greenish",
+      "Glass_Clear_Blueish"
+    ]
+  },
+  {
+    "Name": "Glass_Colored.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Colored.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Colored",
+      "Glass_Clear_Saturated_Orange",
+      "Glass_Clear_Saturated_Yellow",
+      "Glass_Clear_Saturated_Sea_Blue",
+      "Glass_Clear_Saturated_Blue",
+      "Glass_Clear_Saturated_Purple",
+      "Glass_Clear_Saturated_Red"
+    ]
+  },
+  {
+    "Name": "Glass_Dirty.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Dirty.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Dirty",
+      "Glass_Clear_Heavy_Dirt_Dust",
+      "Glass_Clear_Heavy_Mixed_Dirt",
+      "Glass_Clear_Light_Drop_Stains",
+      "Glass_Clear_Light_Dusty_Dirt",
+      "Glass_Clear_Light_Mixed_Dirt"
+    ]
+  },
+  {
+    "Name": "Glass_Fritted.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Fritted.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Fritted",
+      "Glass_Clear_Medium_Frit",
+      "Glass_Clear_Large_Frit"
+    ]
+  },
+  {
+    "Name": "Glass_Glazing_Spandrel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Glazing_Spandrel.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Glazing_Spandrel",
+      "Glass_Glazing_Spandrel_Evergreen",
+      "Glass_Glazing_Spandrel_Dark_Gray",
+      "Glass_Glazing_Spandrel_Bronze",
+      "Glass_Glazing_Spandrel_Dark_Blue",
+      "Glass_Glazing_Spandrel_White",
+      "Glass_Glazing_Spandrel_Cool_Gray"
+    ]
+  },
+  {
+    "Name": "Glass_Glazing_Tinted.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Glazing_Tinted.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Glazing_Tinted",
+      "Glass_Glazing_Tinted_Medium_Gray",
+      "Glass_Glazing_Tinted_Dark_Gray",
+      "Glass_Glazing_Tinted_Cool_Gray",
+      "Glass_Glazing_Tinted_Blue_Sky",
+      "Glass_Glazing_Tinted_Smoked_Sky",
+      "Glass_Glazing_Tinted_Dark_Blue",
+      "Glass_Glazing_Tinted_Petrol",
+      "Glass_Glazing_Tinted_Teal",
+      "Glass_Glazing_Tinted_Evergreen",
+      "Glass_Glazing_Tinted_Green",
+      "Glass_Glazing_Tinted_Soft_Green",
+      "Glass_Glazing_Tinted_Light_Bronze",
+      "Glass_Glazing_Tinted_Bronze",
+      "Glass_Glazing_Tinted_Dark_Bronze"
+    ]
+  },
+  {
+    "Name": "Glass_Optical.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Optical.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Optical",
+      "Glass_Optical_PSK",
+      "Glass_Optical_FK",
+      "Glass_Optical_PK",
+      "Glass_Optical_BK",
+      "Glass_Optical_LAK",
+      "Glass_Optical_SK",
+      "Glass_Optical_SSK",
+      "Glass_Optical_BAK",
+      "Glass_Optical_BALF",
+      "Glass_Optical_K",
+      "Glass_Optical_KF",
+      "Glass_Optical_LASF",
+      "Glass_Optical_SF",
+      "Glass_Optical_LAF",
+      "Glass_Optical_BAF",
+      "Glass_Optical_BASF",
+      "Glass_Optical_F",
+      "Glass_Optical_LF",
+      "Glass_Optical_LLF"
+    ]
+  },
+  {
+    "Name": "Glass_Smudged.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glass_Smudged.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glass_Smudged",
+      "Glass_Clear_Light_Smudges_Variation",
+      "Glass_Clear_Heavy_Smudges"
+    ]
+  },
+  {
+    "Name": "Glazing_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glazing_Clear.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glazing_Clear"
+    ]
+  },
+  {
+    "Name": "Glazing_Float.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Glazing_Float.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Glazing_Float"
+    ]
+  },
+  {
+    "Name": "Mirror.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Glass/Mirror.mdl",
+    "Bucket": "Glass",
+    "Modules": [
+      "Mirror",
+      "Mirror_Warm_Tint",
+      "Mirror_Cool_Tint",
+      "Mirror_Smoked_Light",
+      "Mirror_Smoked_Dark"
+    ]
+  },
+  {
+    "Name": "Asphalt_Fine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Asphalt_Fine.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Asphalt_Fine",
+      "Asphalt_Fine_Dry_With_Puddles",
+      "Asphalt_Fine_Dry_With_Strong_Puddles",
+      "Asphalt_Fine_Moist",
+      "Asphalt_Fine_Medium_Wet",
+      "Asphalt_Fine_Moist_With_Puddles",
+      "Asphalt_Fine_Wet",
+      "Asphalt_Wet_Puddles"
+    ]
+  },
+  {
+    "Name": "Cobblestone_Big_and_Loose.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Cobblestone_Big_and_Loose.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Cobblestone_Big_and_Loose",
+      "Cobblestone_Big_and_Loose_Shiny",
+      "Cobblestone_Big_and_Loose_Wet_Grout",
+      "Cobblestone_Big_and_Loose_Wet"
+    ]
+  },
+  {
+    "Name": "Cobblestone_Medieval.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Cobblestone_Medieval.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Cobblestone_Medieval",
+      "Cobblestone_Medieval_Dark_Dirt"
+    ]
+  },
+  {
+    "Name": "Gravel_Track_Ballast.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Gravel_Track_Ballast.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Gravel_Track_Ballast"
+    ]
+  },
+  {
+    "Name": "Ground_Aggregate_Exposed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Ground_Aggregate_Exposed.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Ground_Aggregate_Exposed",
+      "Ground_Aggregate_Exposed_Matte",
+      "Ground_Aggregate_Slightly_Mossy",
+      "Ground_Aggregate_Heavy_Moss",
+      "Ground_Aggregate_Saturated_Moss_Patches",
+      "Ground_Aggregate_Charred_Moss"
+    ]
+  },
+  {
+    "Name": "Ground_Hard_Court.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Ground_Hard_Court.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Ground_Hard_Court",
+      "Ground_Hard_Court_Red_Desaturated",
+      "Ground_Hard_Court_Blue",
+      "Ground_Hard_Court_Faded_Blue",
+      "Ground_Hard_Court_Light_Green",
+      "Ground_Hard_Court_Dark_Green",
+      "Ground_Hard_Court_Olive_Green"
+    ]
+  },
+  {
+    "Name": "Ground_Leaves.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Ground_Leaves.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Ground_Leaves",
+      "ground_leaves_green",
+      "ground_leaves_yellow",
+      "ground_leaves_orange",
+      "ground_leaves_red",
+      "ground_leaves_blue"
+    ]
+  },
+  {
+    "Name": "Ground_Leaves_Oak.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Ground_Leaves_Oak.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Ground_Leaves_Oak",
+      "Ground_Leaves_Oak_Shiny"
+    ]
+  },
+  {
+    "Name": "Large_Granite_Paving.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Large_Granite_Paving.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Large_Granite_Paving",
+      "large_granite_paving_shiny"
+    ]
+  },
+  {
+    "Name": "Mulch.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Mulch.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Mulch",
+      "Mulch_Dry",
+      "Mulch_Dry_Contrast",
+      "Mulch_Mist_Damp",
+      "Mulch_Wet",
+      "Mulch_Sun"
+    ]
+  },
+  {
+    "Name": "Paving_Stones.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Paving_Stones.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Paving_Stones",
+      "Bright_Shiny_Paving_Stones",
+      "Wet_Grouts_Paving_Stones",
+      "Wet_Paving_Stones",
+      "Wet_Spots_Paving_Stones"
+    ]
+  },
+  {
+    "Name": "Rough_Gravel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Rough_Gravel.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Rough_Gravel"
+    ]
+  },
+  {
+    "Name": "Small_Cobblestone.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Ground/Small_Cobblestone.mdl",
+    "Bucket": "Ground",
+    "Modules": [
+      "Small_Cobblestone",
+      "Small_Cobblestone_Bright",
+      "Small_Cobblestone_Wet_Grouts",
+      "Small_Cobblestone_Flooded_Grouts",
+      "Small_Cobblestone_Water_Flooded"
+    ]
+  },
+  {
+    "Name": "ABS_Hard_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/ABS_Hard_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "ABS_Hard_Leather",
+      "ABS_Hard_Leather_Brown",
+      "ABS_Hard_Leather_Grey",
+      "ABS_Hard_Leather_Peach",
+      "ABS_Hard_Leather_Vintage_Rose",
+      "ABS_Hard_Leather_Moss",
+      "ABS_Hard_Leather_Sky",
+      "ABS_Hard_Leather_Pop_Turquoise",
+      "ABS_Hard_Leather_Pop_Pink",
+      "ABS_Hard_Leather_Pop_Lime",
+      "ABS_Hard_Leather_Deep_Ocean",
+      "ABS_Hard_Leather_Deep_Green",
+      "ABS_Hard_Leather_Deep_Violet"
+    ]
+  },
+  {
+    "Name": "ABS_Quilted_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/ABS_Quilted_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "ABS_Quilted_Leather",
+      "ABS_Quilted_Leather_Radish",
+      "ABS_Quilted_Leather_Purple",
+      "ABS_Quilted_Leather_Dark_Purple",
+      "ABS_Quilted_Leather_Dark_Blue",
+      "ABS_Quilted_Leather_Dark_Turquoise",
+      "ABS_Quilted_Leather_Moss",
+      "ABS_Quilted_Leather_Brown",
+      "ABS_Quilted_Leather_Black",
+      "ABS_Quilted_Leather_Red"
+    ]
+  },
+  {
+    "Name": "ABS_Soft_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/ABS_Soft_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "ABS_Soft_Leather",
+      "ABS_Soft_Leather_Brown",
+      "ABS_Soft_Leather_Ash",
+      "ABS_Soft_Leather_Bone",
+      "ABS_Soft_Leather_Salmon",
+      "ABS_Soft_Leather_Cognac",
+      "    ABS_Soft_Leather_Beige",
+      "ABS_Soft_Leather_Pop_Orange",
+      "ABS_Soft_Leather_Pop_Purple",
+      "ABS_Soft_Leather_Pop_Grapefruit",
+      "ABS_Soft_Leather_Deep_Blue",
+      "ABS_Soft_Leather_Deep_Mint",
+      "ABS_Soft_Leather_Deep_Radish"
+    ]
+  },
+  {
+    "Name": "ABS_Woven_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/ABS_Woven_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "ABS_Woven_Leather",
+      "ABS_Velvety_Woven_Leather_Brown",
+      "ABS_Spotty_Woven_Leather_Brown",
+      "ABS_Soft_Woven_Leather_Dark",
+      "ABS_Soft_Woven_Leather_Brown",
+      "ABS_Soft_Woven_Leather_Ash",
+      "ABS_Spotty_Woven_Leather_Ash",
+      "ABS_Spotty_Woven_Leather_Dark",
+      "ABS_Puffy_Woven_Leather_Dark",
+      "ABS_Puffy_Woven_Leather_Brown",
+      "ABS_Puffy_Woven_Leather_Ash",
+      "ABS_Soft_Woven_Leather_Baby_Blue",
+      "ABS_Soft_Woven_Leather_Mint",
+      "ABS_Soft_Woven_Leather_Sand",
+      "ABS_Soft_Woven_Leather_Lavender",
+      "ABS_Soft_Woven_Leather_Salmon"
+    ]
+  },
+  {
+    "Name": "Aniline_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/Aniline_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "Aniline_Leather",
+      "Aniline_Leather_Black",
+      "Aniline_Leather_Shiny_Brown",
+      "Aniline_Leather_Soft_Light_Brown",
+      "Aniline_Leather_Spotted_Yellow",
+      "Aniline_Leather_Grunge",
+      "Aniline_Leather_Cognac_Red",
+      "Aniline_Leather_Dark_Brown"
+    ]
+  },
+  {
+    "Name": "PU_Split_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/PU_Split_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "PU_Split_Leather",
+      "PU_Split_Leather_Black",
+      "PU_Split_Leather_Dark_Green",
+      "PU_Split_Leather_Red",
+      "PU_Split_Leather_Purple",
+      "PU_Split_Leather_Brown",
+      "PU_Split_Leather_Beige",
+      "PU_Split_Leather_Light_Blue",
+      "PU_Split_Leather_Light_Salmon",
+      "PU_Split_Leather_Blue"
+    ]
+  },
+  {
+    "Name": "Pigmented_Smooth_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/Pigmented_Smooth_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "Pigmented_Smooth_Leather",
+      "Pigmented_Smooth_Leather_Black",
+      "Pigmented_Smooth_Leather_Green",
+      "Pigmented_Smooth_Leather_Gray",
+      "Pigmented_Smooth_Leather_Turquoise",
+      "Pigmented_Smooth_Leather_Light_Blue",
+      "Pigmented_Smooth_Leather_Dark_Grey",
+      "Pigmented_Smooth_Leather_Ash_Brown",
+      "Pigmented_Smooth_Leather_Red_Yellow"
+    ]
+  },
+  {
+    "Name": "Pull_Up_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/Pull_Up_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "Pull_Up_Leather",
+      "Pull_Up_Leather_Black",
+      "Pull_Up_Leather_Violet",
+      "Pull_Up_Leather_Blue",
+      "Pull_Up_Leather_Yellow",
+      "Pull_Up_Leather_Light_Brown",
+      "Pull_Up_Leather_Dark_Brown",
+      "Pull_Up_Leather_Cognac",
+      "Pull_Up_Leather_Red_Oak",
+      "Pull_Up_Leather_Red_Wine"
+    ]
+  },
+  {
+    "Name": "Semi_Aniline_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/Semi_Aniline_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "Semi_Aniline_Leather",
+      "Semi_Aniline_Black",
+      "Semi_Aniline_Red",
+      "Semi_Aniline_Peach",
+      "Semi_Aniline_Mint",
+      "Semi_Aniline_Orange",
+      "Semi_Aniline_Lemon",
+      "Semi_Aniline_Salmon"
+    ]
+  },
+  {
+    "Name": "Suede_Leather.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Leather/Suede_Leather.mdl",
+    "Bucket": "Leather",
+    "Modules": [
+      "Suede_Leather",
+      "Suede_Leather_Black",
+      "Suede_Leather_Chocolate_Brown",
+      "Suede_Leather_Medium_Brown",
+      "Suede_Leather_Beige",
+      "Suede_Leather_Light_Blue",
+      "Suede_Leather_Turquoise",
+      "Suede_Leather_Blue"
+    ]
+  },
+  {
+    "Name": "Water_Blue_Ocean_Perlinwaves.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Liquids/Water_Blue_Ocean_Perlinwaves.mdl",
+    "Bucket": "Liquids",
+    "Modules": [
+      "Water_Blue_Ocean_Perlinwaves",
+      "Water_Ocean_Light_Blue",
+      "Water_Ocean_Blue_Reef",
+      "Water_Ocean_Green_Reef",
+      "Water_Pool_Clear_Blue",
+      "Water_Pool_Clear_Green"
+    ]
+  },
+  {
+    "Name": "Water_Murky_Perlinwaves.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Liquids/Water_Murky_Perlinwaves.mdl",
+    "Bucket": "Liquids",
+    "Modules": [
+      "Water_Murky_Perlinwaves",
+      "Water_Murky_Perlin_Green_Lake_Min",
+      "Water_Murky_Perlin_Green_Lake_Med",
+      "Water_Murky_Perlinwaves_Green_Lake_Heavy_Scattering",
+      "Water_Murky_Perlinwaves_Clear_Broth",
+      "Water_Murky_Perlinwaves_Dirty_Broth",
+      "Water_Murky_Perlinwaves_Dirty_Broth_Dense",
+      "Water_Murky_Perlinwaves_Rusty_Lake",
+      "Water_Murky_Perlinwaves_Green_Pond",
+      "Water_Murky_Perlinwaves_Green_Swamp"
+    ]
+  },
+  {
+    "Name": "Facade_Brick_Grey.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Masonry/Facade_Brick_Grey.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Facade_Brick_Grey",
+      "Facade_Brick_Bright",
+      "Facade_Brick_Glaced"
+    ]
+  },
+  {
+    "Name": "Facade_Brick_Red_Clinker.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Masonry/Facade_Brick_Red_Clinker.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Facade_Brick_Red_Clinker",
+      "Facade_Brick_Red_Clinker_Mossy_Leaking",
+      "Facade_Brick_Red_Clinker_Slightly_Painted",
+      "Facade_Brick_Red_Clinker_Painted_White",
+      "Facade_Brick_Red_Clinker_Sloppy_Paint_Job",
+      "Facade_Brick_Red_Clinker_Dirty_Paint",
+      "Facade_Brick_Red_Clinker_Painted_Yellow",
+      "Facade_Brick_Red_Clinker_Painted_Terracotta",
+      "Facade_Brick_Red_Clinker_Painted_Cool_Green",
+      "Facade_Brick_Red_Clinker_Painted_Aqua_Blue"
+    ]
+  },
+  {
+    "Name": "Sandstone_Brick_Vintage.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Masonry/Sandstone_Brick_Vintage.mdl",
+    "Bucket": "Masonry",
+    "Modules": [
+      "Sandstone_Brick_Vintage",
+      "Sandstone_Brick_Vintage_Red_Deposit",
+      "Sandstone_Brick_Vintage_Black_Deposit"
+    ]
+  },
+  {
+    "Name": "Aging_Copper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aging_Copper.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aging_Copper",
+      "Aging_Copper_State_2_of_12",
+      "Aging_Copper_State_3_of_12",
+      "Aging_Copper_State_4_of_12",
+      "Aging_Copper_State_5_of_12",
+      "Aging_Copper_State_6_of_12",
+      "Aging_Copper_State_7_of_12",
+      "Aging_Copper_State_8_of_12",
+      "Aging_Copper_State_9_of_12",
+      "Aging_Copper_State_10_of_12",
+      "Aging_Copper_State_11_of_12",
+      "Aging_Copper_State_12_of_12"
+    ]
+  },
+  {
+    "Name": "Aluminum.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum",
+      "Aluminum_Polished",
+      "Aluminum_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Aluminum_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Brushed",
+      "Aluminum_Brushed_Light_Brushing",
+      "Aluminum_Brushed_Medium_Light_Brushing",
+      "Aluminum_Brushed_Medium_Brushing",
+      "Aluminum_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Aluminum_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Foil",
+      "Aluminum_Foil_Smudged_Foil",
+      "Aluminum_Foil_Shiny_Wrinkled",
+      "Aluminum_Foil_Matte_Wrinkled",
+      "Aluminum_Foil_Heavy_Glossy_Wrinkles",
+      "Aluminum_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Aluminum_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Hammered",
+      "Aluminum_Hammered_Shiny",
+      "Aluminum_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Aluminum_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Knurling",
+      "Aluminum_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Aluminum_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Scratched",
+      "Aluminum_Scratched_Light_Bumpy",
+      "Aluminum_Scratched_Dark_Shiny",
+      "Aluminum_Scratched_Dark_Matte",
+      "Aluminum_Scratched_Scuffs_and_Grime",
+      "Aluminum_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Aluminum_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Aluminum_Sheet",
+      "Aluminum_Sheet_Punched",
+      "Aluminum_Sheet_Soft_Splotches",
+      "Aluminum_Sheet_Matte_Imperfections",
+      "Aluminum_Sheet_Glossy_Imperfections",
+      "Aluminum_Sheet_Splotchy_Streaks",
+      "Aluminum_Sheet_Glossy_Streaks",
+      "Aluminum_Sheet_Punched_Small_Circular",
+      "Aluminum_Sheet_Punched_Hexagonal",
+      "Aluminum_Sheet_Punched_Hexagonal_Small",
+      "Aluminum_Sheet_Punched_Square",
+      "Aluminum_Sheet_Punched_Line",
+      "Aluminum_Sheet_Punched_Cross",
+      "Aluminum_Sheet_Punched_Rhombus",
+      "Aluminum_Sheet_Punched_Triangle",
+      "Aluminum_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Blued_Steel_Cold.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Blued_Steel_Cold.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Blued_Steel_Cold",
+      "Blued_Steel_Cold_Matte",
+      "Blued_Steel_Cold_Matte_Smudged",
+      "Blued_Steel_Cold_Worn"
+    ]
+  },
+  {
+    "Name": "Brass.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass",
+      "Brass_Yellow_New_Stained",
+      "Brass_Yellow_Shiny_Handled",
+      "Brass_Yellow_Worn",
+      "Brass_Yellow_Rough_Worn",
+      "Brass_Gold_New",
+      "Brass_Gold_New_Stained",
+      "Brass_Gold_Shiny_Handled",
+      "Brass_Gold_Worn",
+      "Brass_Gold_Rough_Worn",
+      "Brass_Red_New",
+      "Brass_Red_New_Stained",
+      "Brass_Red_Shiny_Handled",
+      "Brass_Red_Worn",
+      "Brass_Red_Rough_Worn"
+    ]
+  },
+  {
+    "Name": "Brass_Antique.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Antique.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Antique",
+      "Brass_Antique_Shiny_Stained",
+      "Brass_Antique_Matte_Dirty"
+    ]
+  },
+  {
+    "Name": "Brass_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Brushed",
+      "Brass_Brushed_Yellow_Fine",
+      "Brass_Brushed_Yellow_Medium",
+      "Brass_Brushed_Yellow_Dirty_Medium",
+      "Brass_Brushed_Yellow_Strong",
+      "Brass_Brushed_Gold_Smooth_Subtle",
+      "Brass_Brushed_Gold_Fine",
+      "Brass_Brushed_Gold_Medium",
+      "Brass_Brushed_Gold_Dirty_Medium",
+      "Brass_Brushed_Gold_Strong",
+      "Brass_Brushed_Red_Smooth_Subtle",
+      "Brass_Brushed_Red_Fine",
+      "Brass_Brushed_Red_Medium",
+      "Brass_Brushed_Red_Dirty_Medium",
+      "Brass_Brushed_Red_Strong"
+    ]
+  },
+  {
+    "Name": "Brass_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Foil",
+      "Brass_Foil_Yellow_Slightly_Wrinkled",
+      "Brass_Foil_Yellow_Shiny_Wrinkled",
+      "Brass_Foil_Yellow_Matte_Wrinkled",
+      "Brass_Foil_Yellow_Heavy_Wrinkles",
+      "Brass_Foil_Gold_Heavy_Wrinkles",
+      "Brass_Foil_Gold_Slightly_Wrinkled",
+      "Brass_Foil_Gold_Shiny_Wrinkled",
+      "Brass_Foil_Gold_Matte_Wrinkled",
+      "Brass_Foil_Gold_Flat_Smudged",
+      "Brass_Foil_Red_Heavy_Wrinkles",
+      "Brass_Foil_Red_Slightly_Wrinkled",
+      "Brass_Foil_Red_Shiny_Wrinkled",
+      "Brass_Foil_Red_Matte_Wrinkled",
+      "Brass_Foil_Red_Flat_Smudged"
+    ]
+  },
+  {
+    "Name": "Brass_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Hammered",
+      "Brass_Hammered_Yellow_Shiny_Soft_Hammering",
+      "Brass_Hammered_Yellow_Matte_Hammering",
+      "Brass_Hammered_Gold_Hammered_Darkened",
+      "Brass_Hammered_Gold_Shiny_Soft_Hammering",
+      "Brass_Hammered_Gold_Matte_Hammering",
+      "Brass_Hammered_Red_Hammered_Darkened",
+      "Brass_Hammered_Red_Shiny_Soft_Hammering",
+      "Brass_Hammered_Red_Matte_Hammering"
+    ]
+  },
+  {
+    "Name": "Brass_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Knurling",
+      "Brass_Knurling_Yellow_Rough_Dirty",
+      "Brass_Knurling_Gold",
+      "Brass_Knurling_Gold_Rough_Dirty",
+      "Brass_Knurling_Red",
+      "Brass_Knurling_Red_Rough_Dirty"
+    ]
+  },
+  {
+    "Name": "Brass_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Polished.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Polished",
+      "Brass_Polished_Yellow_Matte_Polish",
+      "Brass_Polished_Yellow_Cloudy_Polish",
+      "Brass_Polished_Yellow_Shiny_Worn",
+      "Brass_Polished_Gold_Shiny_Polish",
+      "Brass_Polished_Gold_Matte_Polish",
+      "Brass_Polished_Gold_Cloudy_Polish",
+      "Brass_Polished_Gold_Shiny_Worn",
+      "Brass_Polished_Red_Shiny_Polish",
+      "Brass_Polished_Red_Matte_Polish",
+      "Brass_Polished_Red_Cloudy_Polish",
+      "Brass_Polished_Red_Shiny_Worn"
+    ]
+  },
+  {
+    "Name": "Brass_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Scratched",
+      "Brass_Scratched_Yellow_Subtle_Worn_Scratches",
+      "Brass_Scratched_Yellow_Medium_Glossy_Scratches",
+      "Brass_Scratched_Yellow_Medium_Glossy_Deep_Scratches",
+      "Brass_Scratched_Yellow_Heavy_Worn_Scratches",
+      "Brass_Scratched_Gold_Polished_Subtle_Dark_Scratches",
+      "Brass_Scratched_Gold_Subtle_Worn_Scratches",
+      "Brass_Scratched_Gold_Medium_Glossy_Scratches",
+      "Brass_Scratched_Gold_Medium_Glossy_Deep_Scratches",
+      "Brass_Scratched_Gold_Heavy_Worn_Scratches",
+      "Brass_Scratched_Red_Polished_Subtle_Dark_Scratches",
+      "Brass_Scratched_Red_Subtle_Worn_Scratches",
+      "Brass_Scratched_Red_Medium_Glossy_Scratches",
+      "Brass_Scratched_Red_Medium_Glossy_Deep_Scratches",
+      "Brass_Scratched_Red_Heavy_Worn_Scratches"
+    ]
+  },
+  {
+    "Name": "Brass_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Brass_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Brass_Sheet",
+      "Brass_Sheet_Yellow_Soft_Splotches",
+      "Brass_Sheet_Yellow_Glossy_Imperfections",
+      "Brass_Sheet_Yellow_Splotchy_Streaks",
+      "Brass_Sheet_Yellow_Matte_Imperfections",
+      "Brass_Sheet_Gold_New_Clean",
+      "Brass_Sheet_Gold_Soft_Splotches",
+      "Brass_Sheet_Gold_Glossy_Imperfections",
+      "Brass_Sheet_Gold_Splotchy_Streaks",
+      "Brass_Sheet_Gold_Matte_Imperfections",
+      "Brass_Sheet_Red_New_Clean",
+      "Brass_Sheet_Red_Soft_Splotches",
+      "Brass_Sheet_Red_Glossy_Imperfections",
+      "Brass_Sheet_Red_Splotchy_Streaks",
+      "Brass_Sheet_Red_Matte_Imperfections"
+    ]
+  },
+  {
+    "Name": "Bronze.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze",
+      "Bronze_Yellow_New_Stained",
+      "Bronze_Yellow_Shiny_Handled",
+      "Bronze_Yellow_Worn",
+      "Bronze_Yellow_Rough_Worn",
+      "Bronze_New",
+      "Bronze_New_Stained",
+      "Bronze_Shiny_Handled",
+      "Bronze_Worn",
+      "Bronze_Rough_Worn",
+      "Bronze_Red_New",
+      "Bronze_Red_New_Stained",
+      "Bronze_Red_Shiny_Handled",
+      "Bronze_Red_Worn",
+      "Bronze_Red_Rough_Worn"
+    ]
+  },
+  {
+    "Name": "Bronze_Antique.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Antique.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Antique",
+      "Bronze_Antique_Shiny_Stained",
+      "Bronze_Antique_Matte_Dirty"
+    ]
+  },
+  {
+    "Name": "Bronze_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Brushed",
+      "Bronze_Brushed_Yellow_Fine",
+      "Bronze_Brushed_Yellow_Medium",
+      "Bronze_Brushed_Yellow_Dirty_Medium",
+      "Bronze_Brushed_Yellow_Strong"
+    ]
+  },
+  {
+    "Name": "Bronze_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Foil",
+      "Bronze_Foil_Slightly_Wrinkled",
+      "Bronze_Foil_Shiny_Wrinkled",
+      "Bronze_Foil_Matte_Wrinkled",
+      "Bronze_Foil_Heavy_Wrinkles"
+    ]
+  },
+  {
+    "Name": "Bronze_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Hammered",
+      "Bronze_Hammered_Shiny_Soft_Hammering",
+      "Bronze_Hammered_Matte_Hammering"
+    ]
+  },
+  {
+    "Name": "Bronze_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Knurling",
+      "Bronze_Knurling_Rough_Dirty"
+    ]
+  },
+  {
+    "Name": "Bronze_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Polished.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Polished",
+      "Bronze_Polished_Matte_Polish",
+      "Bronze_Polished_Cloudy_Polish",
+      "Bronze_Polished_Shiny_Worn"
+    ]
+  },
+  {
+    "Name": "Bronze_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Scratched",
+      "Bronze_Scratched_Yellow_Subtle_Worn_Scratches",
+      "Bronze_Scratched_Yellow_Medium_Glossy_Scratches",
+      "Bronze_Scratched_Yellow_Medium_Glossy_Deep_Scratches",
+      "Bronze_Scratched_Yellow_Heavy_Worn_Scratches"
+    ]
+  },
+  {
+    "Name": "Bronze_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Sheet",
+      "Bronze_Sheet_Soft_Splotches",
+      "Bronze_Sheet_Glossy_Imperfections",
+      "Bronze_Sheet_Splotchy_Streaks",
+      "Bronze_Sheet_Matte_Imperfections"
+    ]
+  },
+  {
+    "Name": "Bronze_Sheet_Punched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Bronze_Sheet_Punched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Bronze_Sheet_Punched",
+      "Bronze_Sheet_Punched_",
+      "Bronze_Sheet_Punched_Small_Circular",
+      "Bronze_Sheet_Punched_Hexagonal",
+      "Bronze_Sheet_Punched_Hexagonal_Small",
+      "Bronze_Sheet_Punched_Square",
+      "Bronze_Sheet_Punched_Line",
+      "Bronze_Sheet_Punched_Cross",
+      "Bronze_Sheet_Punched_Rhombus",
+      "Bronze_Sheet_Punched_Triangle",
+      "Bronze_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Chrome_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chrome_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chrome_Hammered"
+    ]
+  },
+  {
+    "Name": "Chromium.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium",
+      "Chromium_Polished",
+      "Chromium_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Chromium_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium_Brushed",
+      "Chromium_Brushed_Light_Brushing",
+      "Chromium_Brushed_Medium_Light_Brushing",
+      "Chromium_Brushed_Medium_Brushing",
+      "Chromium_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Chromium_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium_Foil",
+      "Chromium_Foil_Smudged_Foil",
+      "Chromium_Foil_Shiny_Wrinkled",
+      "Chromium_Foil_Matte_Wrinkled",
+      "Chromium_Foil_Heavy_Glossy_Wrinkles",
+      "Chromium_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Chromium_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium_Knurling",
+      "Chromium_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Chromium_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium_Scratched",
+      "Chromium_Scratched_Light_Bumpy",
+      "Chromium_Scratched_Dark_Shiny",
+      "Chromium_Scratched_Dark_Matte",
+      "Chromium_Scratched_Scuffs_and_Grime",
+      "Chromium_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Chromium_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Chromium_Sheet",
+      "Chromium_Sheet_Punched",
+      "Chromium_Sheet_Soft_Splotches",
+      "Chromium_Sheet_Matte_Imperfections",
+      "Chromium_Sheet_Glossy_Imperfections",
+      "Chromium_Sheet_Splotchy_Streaks",
+      "Chromium_Sheet_Glossy_Streaks",
+      "Chromium_Sheet_Punched_Circular_Small",
+      "Chromium_Sheet_Punched_Hexagonal",
+      "Chromium_Sheet_Punched_Hexagonal_Small",
+      "Chromium_Sheet_Punched_Square",
+      "Chromium_Sheet_Punched_Line",
+      "Chromium_Sheet_Punched_Cross",
+      "Chromium_Sheet_Punched_Rhombus",
+      "Chromium_Sheet_Punched_Triangle",
+      "Chromium_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Copper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper",
+      "Copper_Polished",
+      "Copper_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Copper_Antique_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Antique_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Antique_Brushed ",
+      "Copper_Antique_Brushed_Shiny",
+      "Copper_Antique_Brushed_Shiny_Smudged",
+      "Copper_Antique_Brushed_Worn_Matte",
+      "Copper_Antique_Brushed_Decayed_Matte",
+      "Copper_Antique_Brushed_Shiny_Matte_Smudged"
+    ]
+  },
+  {
+    "Name": "Copper_Antique_Brushed_Patinated.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Antique_Brushed_Patinated.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Antique_Brushed_Patinated ",
+      "Copper_Antique_Brushed_Minimal_Patina",
+      "Copper_Antique_Brushed_Slight_Patina",
+      "Copper_Antique_Brushed_Slight_Patina_Spots",
+      "Copper_Antique_Brushed_Medium_Patina",
+      "Copper_Antique_Brushed_Strong_Patina",
+      "Copper_Antique_Brushed_Very_Strong_Patina",
+      "Copper_Antique_Brushed_Pure_Patina",
+      "Copper_Antique_Brushed_Crusted_Patina"
+    ]
+  },
+  {
+    "Name": "Copper_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Brushed",
+      "Copper_Brushed_Light_Brushing",
+      "Copper_Brushed_Medium_Light_Brushing",
+      "Copper_Brushed_Medium_Brushing",
+      "Copper_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Copper_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Foil",
+      "Copper_Foil_Smudged_Foil",
+      "Copper_Foil_Shiny_Wrinkled",
+      "Copper_Foil_Matte_Wrinkled",
+      "Copper_Foil_Heavy_Glossy_Wrinkles",
+      "Copper_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Copper_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Hammered",
+      "Copper_Hammered_Shiny",
+      "Copper_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Copper_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Knurling",
+      "Copper_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Copper_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Scratched",
+      "Copper_Scratched_Light_Bumpy",
+      "Copper_Scratched_Dark_Shiny",
+      "Copper_Scratched_Dark_Matte",
+      "Copper_Scratched_Scuffs_and_Grime",
+      "Copper_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Copper_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Copper_Sheet",
+      "Copper_Sheet_Punched",
+      "Copper_Sheet_Soft_Splotches",
+      "Copper_Sheet_Matte_Imperfections",
+      "Copper_Sheet_Glossy_Imperfections",
+      "Copper_Sheet_Splotchy_Streaks",
+      "Copper_Sheet_Glossy_Streaks",
+      "Copper_Sheet_Punched_Circular_Small",
+      "Copper_Sheet_Punched_Hexagonal",
+      "Copper_Sheet_Punched_Hexagonal_Small",
+      "Copper_Sheet_Punched_Square",
+      "Copper_Sheet_Punched_Line",
+      "Copper_Sheet_Punched_Cross",
+      "Copper_Sheet_Punched_Rhombus",
+      "Copper_Sheet_Punched_Triangle",
+      "Copper_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Double_Tear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Double_Tear.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Double_Tear",
+      "Diamond_Plate_Double_Tear_Glossy",
+      "Diamond_Plate_Double_Tear_Shiny_Tops",
+      "Diamond_Plate_Double_Tear_Matte_Aged",
+      "Diamond_Plate_Double_Tear_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Quadruple_Tear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Quadruple_Tear.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Quadruple_Tear",
+      "Diamond_Plate_Quadruple_Tear_Glossy",
+      "Diamond_Plate_Quadruple_Tear_Shiny_Tops",
+      "Diamond_Plate_Quadruple_Tear_Matte_Aged",
+      "Diamond_Plate_Quadruple_Tear_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Quintuple_Tear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Quintuple_Tear.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Quintuple_Tear",
+      "Diamond_Plate_Quintuple_Tear_Glossy",
+      "Diamond_Plate_Quintuple_Tear_Shiny_Tops",
+      "Diamond_Plate_Quintuple_Tear_Matte_Aged",
+      "Diamond_Plate_Quintuple_Tear_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Single_Tear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Single_Tear.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Single_Tear",
+      "Diamond_Plate_Single_Tear_Glossy",
+      "Diamond_Plate_Single_Tear_Shiny_Tops",
+      "Diamond_Plate_Single_Tear_Matte_Aged",
+      "Diamond_Plate_Single_Tear_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Spike.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Spike.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Spike",
+      "Diamond_Plate_Spike_Glossy",
+      "Diamond_Plate_Spike_Shiny_Tops",
+      "Diamond_Plate_Spike_Matte_Aged",
+      "Diamond_Plate_Spike_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Diamond_Plate_Triple_Tear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Diamond_Plate_Triple_Tear.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Diamond_Plate_Triple_Tear",
+      "Diamond_Plate_Triple_Tear_Glossy",
+      "Diamond_Plate_Triple_Tear_Shiny_Tops",
+      "Diamond_Plate_Triple_Tear_Matte_Aged",
+      "Diamond_Plate_Triple_Tear_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Gold.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold",
+      "Gold_Polished",
+      "Gold_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Gold_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Brushed",
+      "Gold_Brushed_Light_Brushing",
+      "Gold_Brushed_Medium_Light_Brushing",
+      "Gold_Brushed_Medium_Brushing",
+      "Gold_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Gold_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Foil",
+      "Gold_Foil_Smudged_Foil",
+      "Gold_Foil_Shiny_Wrinkled",
+      "Gold_Foil_Matte_Wrinkled",
+      "Gold_Foil_Heavy_Glossy_Wrinkles",
+      "Gold_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Gold_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Hammered",
+      "Gold_Hammered_Shiny",
+      "Gold_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Gold_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Knurling",
+      "Gold_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Gold_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Scratched",
+      "Gold_Scratched_Light_Bumpy",
+      "Gold_Scratched_Dark_Shiny",
+      "Gold_Scratched_Dark_Matte",
+      "Gold_Scratched_Scuffs_and_Grime",
+      "Gold_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Gold_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Gold_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Gold_Sheet",
+      "Gold_Sheet_Punched",
+      "Gold_Sheet_Soft_Splotches",
+      "Gold_Sheet_Matte_Imperfections",
+      "Gold_Sheet_Glossy_Imperfections",
+      "Gold_Sheet_Splotchy_Streaks",
+      "Gold_Sheet_Glossy_Streaks",
+      "Gold_Sheet_Punched_Circular_Small",
+      "Gold_Sheet_Punched_Hexagonal",
+      "Gold_Sheet_Punched_Hexagonal_Small",
+      "Gold_Sheet_Punched_Square",
+      "Gold_Sheet_Punched_Line",
+      "Gold_Sheet_Punched_Cross",
+      "Gold_Sheet_Punched_Rhombus",
+      "Gold_Sheet_Punched_Triangle",
+      "Gold_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Iron.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron",
+      "Iron_Polished",
+      "Iron_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Iron_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Brushed",
+      "Iron_Brushed_Light_Brushing",
+      "Iron_Brushed_Medium_Light_Brushing",
+      "Iron_Brushed_Medium_Brushing",
+      "Iron_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Iron_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Foil",
+      "Iron_Foil_Smudged_Foil",
+      "Iron_Foil_Shiny_Wrinkled",
+      "Iron_Foil_Matte_Wrinkled",
+      "Iron_Foil_Heavy_Glossy_Wrinkles",
+      "Iron_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Iron_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Hammered",
+      "Iron_Hammered_Shiny",
+      "Iron_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Iron_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Knurling",
+      "Iron_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Iron_Pitted_Steel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Pitted_Steel.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Pitted_Steel ",
+      "light_pitted_steel",
+      "medium_pitted_steel",
+      "strong_pitted_steel"
+    ]
+  },
+  {
+    "Name": "Iron_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Scratched",
+      "Iron_Scratched_Light_Bumpy",
+      "Iron_Scratched_Dark_Shiny",
+      "Iron_Scratched_Dark_Matte",
+      "Iron_Scratched_Scuffs_and_Grime",
+      "Iron_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Iron_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Iron_Sheet",
+      "Iron_Sheet_Punched",
+      "Iron_Sheet_Soft_Splotches",
+      "Iron_Sheet_Matte_Imperfections",
+      "Iron_Sheet_Glossy_Imperfections",
+      "Iron_Sheet_Splotchy_Streaks",
+      "Iron_Sheet_Glossy_Streaks",
+      "Iron_Sheet_Punched_Small_Circular",
+      "Iron_Sheet_Punched_Hexagonal",
+      "Iron_Sheet_Punched_Hexagonal_Small",
+      "Iron_Sheet_Punched_Square",
+      "Iron_Sheet_Punched_Line",
+      "Iron_Sheet_Punched_Cross",
+      "Iron_Sheet_Punched_Rhombus",
+      "Iron_Sheet_Punched_Triangle",
+      "Iron_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Mercury.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Mercury.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Mercury"
+    ]
+  },
+  {
+    "Name": "Metal_Cast.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Metal_Cast.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Metal_Cast",
+      "Iron_Cast",
+      "Iron_Cast_Black_Matte",
+      "Stainless_Steel_Cast_Shiny",
+      "Stainless_Steel_Cast_Rough",
+      "Aluminum_Cast_Shiny",
+      "Aluminum_Cast_Rough",
+      "Metal_Cast_Painted",
+      "Metal_Cast_Painted_Red",
+      "Metal_Cast_Painted_Gray",
+      "Metal_Cast_Painted_Antique_White",
+      "Metal_Cast_Painted_White",
+      "Metal_Cast_Painted_Petrol"
+    ]
+  },
+  {
+    "Name": "Nickel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel",
+      "Nickel_Polished",
+      "Nickel_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Nickel_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Brushed",
+      "Nickel_Brushed_Light_Brushing",
+      "Nickel_Brushed_Medium_Light_Brushing",
+      "Nickel_Brushed_Medium_Brushing",
+      "Nickel_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Nickel_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Foil",
+      "Nickel_Foil_Smudged_Foil",
+      "Nickel_Foil_Shiny_Wrinkled",
+      "Nickel_Foil_Matte_Wrinkled",
+      "Nickel_Foil_Heavy_Glossy_Wrinkles",
+      "Nickel_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Nickel_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Hammered",
+      "Nickel_Hammered_Shiny",
+      "Nickel_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Nickel_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Knurling",
+      "Nickel_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Nickel_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Scratched",
+      "Nickel_Scratched_Light_Bumpy",
+      "Nickel_Scratched_Dark_Shiny",
+      "Nickel_Scratched_Dark_Matte",
+      "Nickel_Scratched_Scuffs_and_Grime",
+      "Nickel_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Nickel_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Nickel_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Nickel_Sheet",
+      "Nickel_Sheet_Punched",
+      "Nickel_Sheet_Soft_Splotches",
+      "Nickel_Sheet_Matte_Imperfections",
+      "Nickel_Sheet_Glossy_Imperfections",
+      "Nickel_Sheet_Splotchy_Streaks",
+      "Nickel_Sheet_Glossy_Streaks",
+      "Nickel_Sheet_Punched_Small_Circular",
+      "Nickel_Sheet_Punched_Hexagonal",
+      "Nickel_Sheet_Punched_Hexagonal_Small",
+      "Nickel_Sheet_Punched_Square",
+      "Nickel_Sheet_Punched_Line",
+      "Nickel_Sheet_Punched_Cross",
+      "Nickel_Sheet_Punched_Rhombus",
+      "Nickel_Sheet_Punched_Triangle",
+      "Nickel_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "PCB_Copper.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/PCB_Copper.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "PCB_Copper",
+      "PCB_Copper_Smooth",
+      "PCB_Copper_Beige",
+      "PCB_Coppery",
+      "PCB_Coppery_Soft"
+    ]
+  },
+  {
+    "Name": "PCB_Goldfinger.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/PCB_Goldfinger.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "PCB_Goldfinger",
+      "PCB_Goldfinger_Smooth",
+      "PCB_Goldfinger_Soft"
+    ]
+  },
+  {
+    "Name": "Platinum.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum",
+      "Platinum_Polished",
+      "Platinum_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Platinum_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Brushed",
+      "Platinum_Brushed_Light_Brushing",
+      "Platinum_Brushed_Medium_Light_Brushing",
+      "Platinum_Brushed_Medium_Brushing",
+      "Platinum_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Platinum_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Foil",
+      "Platinum_Foil_Smudged_Foil",
+      "Platinum_Foil_Shiny_Wrinkled",
+      "Platinum_Foil_Matte_Wrinkled",
+      "Platinum_Foil_Heavy_Glossy_Wrinkles",
+      "Platinum_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Platinum_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Hammered",
+      "Platinum_Hammered_Shiny",
+      "Platinum_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Platinum_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Knurling",
+      "Platinum_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Platinum_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Scratched",
+      "Platinum_Scratched_Light_Bumpy",
+      "Platinum_Scratched_Dark_Shiny",
+      "Platinum_Scratched_Dark_Matte",
+      "Platinum_Scratched_Scuffs_and_Grime",
+      "Platinum_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Platinum_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Platinum_Sheet",
+      "Platinum_Sheet_Punched",
+      "Platinum_Sheet_Soft_Splotches",
+      "Platinum_Sheet_Matte_Imperfections",
+      "Platinum_Sheet_Glossy_Imperfections",
+      "Platinum_Sheet_Splotchy_Streaks",
+      "Platinum_Sheet_Glossy_Streaks",
+      "Platinum_Sheet_Punched_Small_Circular",
+      "Platinum_Sheet_Punched_Hexagonal",
+      "Platinum_Sheet_Punched_Hexagonal_Small",
+      "Platinum_Sheet_Punched_Square",
+      "Platinum_Sheet_Punched_Line",
+      "Platinum_Sheet_Punched_Cross",
+      "Platinum_Sheet_Punched_Rhombus",
+      "Platinum_Sheet_Punched_Triangle",
+      "Platinum_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Punched_Circular_Plate.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Punched_Circular_Plate.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Punched_Circular_Plate",
+      "Punched_Circular_Plate_Glossy",
+      "Punched_Circular_Plate_Matte_Aged",
+      "Punched_Circular_Plate_Dirty_Worn"
+    ]
+  },
+  {
+    "Name": "Silver.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver",
+      "Silver_Polished",
+      "Silver_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Silver_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Brushed",
+      "Silver_Brushed_Light_Brushing",
+      "Silver_Brushed_Medium_Light_Brushing",
+      "Silver_Brushed_Medium_Brushing",
+      "Silver_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Silver_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Foil",
+      "Silver_Foil_Smudged_Foil",
+      "Silver_Foil_Shiny_Wrinkled",
+      "Silver_Foil_Matte_Wrinkled",
+      "Silver_Foil_Heavy_Glossy_Wrinkles",
+      "Silver_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Silver_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Hammered",
+      "Silver_Hammered_Shiny",
+      "Silver_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Silver_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Knurling",
+      "Silver_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Silver_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Scratched",
+      "Silver_Scratched_Light_Bumpy",
+      "Silver_Scratched_Dark_Shiny",
+      "Silver_Scratched_Dark_Matte",
+      "Silver_Scratched_Scuffs_and_Grime",
+      "Silver_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Silver_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Silver_Sheet",
+      "Silver_Sheet_Punched",
+      "Silver_Sheet_Soft_Splotches",
+      "Silver_Sheet_Matte_Imperfections",
+      "Silver_Sheet_Glossy_Imperfections",
+      "Silver_Sheet_Splotchy_Streaks",
+      "Silver_Sheet_Glossy_Streaks",
+      "Silver_Sheet_Punched_Small_Circular",
+      "Silver_Sheet_Punched_Hexagonal",
+      "Silver_Sheet_Punched_Hexagonal_Small",
+      "Silver_Sheet_Punched_Square",
+      "Silver_Sheet_Punched_Line",
+      "Silver_Sheet_Punched_Cross",
+      "Silver_Sheet_Punched_Rhombus",
+      "Silver_Sheet_Punched_Triangle",
+      "Silver_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Solder_Paste.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Solder_Paste.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Solder_Paste",
+      "Solder_Paste_Fresh",
+      "Solder_Paste_Dull",
+      "Solder_Paste_Bumpy"
+    ]
+  },
+  {
+    "Name": "Stainless_Steel.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Stainless_Steel.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Stainless_Steel",
+      "Stainless_Steel_Punched",
+      "Stainless_Steel_Shiny_Worn",
+      "Stainless_Steel_Shiny_Smudged",
+      "Stainless_Steel_Glossy",
+      "Stainless_Steel_Matte",
+      "Stainless_Steel_Punched_Small_Circular",
+      "Stainless_Steel_Punched_Hexagonal",
+      "Stainless_Steel_Punched_Hexagonal_Small",
+      "Stainless_Steel_Punched_Square",
+      "Stainless_Steel_Punched_Line",
+      "Stainless_Steel_Punched_Cross",
+      "Stainless_Steel_Punched_Rhombus",
+      "Stainless_Steel_Punched_Triangle",
+      "Stainless_Steel_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Stainless_Steel_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Stainless_Steel_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Stainless_Steel_Brushed",
+      "Stainless_Steel_Brushed_Punched",
+      "Steel_Brushed_Medium_Brushing",
+      "Steel_Brushed_Matte_Brushing",
+      "Steel_Brushed_Clean_Polished",
+      "Steel_Brushed_Worn",
+      "Stainless_Steel_Brushed_Punched_Small_Circular",
+      "Stainless_Steel_Brushed_Punched_Hexagonal",
+      "Stainless_Steel_Brushed_Punched_Hexagonal_Small",
+      "Stainless_Steel_Brushed_Punched_Square",
+      "Stainless_Steel_Brushed_Punched_Line",
+      "Stainless_Steel_Brushed_Punched_Cross",
+      "Stainless_Steel_Brushed_Punched_Rhombus",
+      "Stainless_Steel_Brushed_Punched_Triangle",
+      "Stainless_Steel_Brushed_Punched_Star",
+      "Stainless_Steel_Brushed_Punched_Cross_Special"
+    ]
+  },
+  {
+    "Name": "Stainless_Steel_Brushed_Punched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Stainless_Steel_Brushed_Punched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Stainless_Steel_Brushed_Punched",
+      "Stainless_Steel_Brushed_Punched_",
+      "Stainless_Steel_Brushed_Punched_Circular",
+      "Stainless_Steel_Brushed_Punched_Small_Circular",
+      "Stainless_Steel_Brushed_Punched_Hexagonal",
+      "Stainless_Steel_Brushed_Punched_Hexagonal_Small",
+      "Stainless_Steel_Brushed_Punched_Square",
+      "Stainless_Steel_Brushed_Punched_Line",
+      "Stainless_Steel_Brushed_Punched_Cross",
+      "Stainless_Steel_Brushed_Punched_Rhombus",
+      "Stainless_Steel_Brushed_Punched_Triangle",
+      "Stainless_Steel_Brushed_Punched_Star",
+      "Stainless_Steel_Brushed_Punched_Cross_Special"
+    ]
+  },
+  {
+    "Name": "Stainless_Steel_Milled.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Stainless_Steel_Milled.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Stainless_Steel_Milled",
+      "Stainless_Steel_Milled_Worn"
+    ]
+  },
+  {
+    "Name": "Stainless_Steel_Punched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Stainless_Steel_Punched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Stainless_Steel_Punched",
+      "Stainless_Steel_Punched_",
+      "Stainless_Steel_Punched_Small_Circular",
+      "Stainless_Steel_Punched_Hexagonal",
+      "Stainless_Steel_Punched_Hexagonal_Small",
+      "Stainless_Steel_Punched_Square",
+      "Stainless_Steel_Punched_Line",
+      "Stainless_Steel_Punched_Cross",
+      "Stainless_Steel_Punched_Rhombus",
+      "Stainless_Steel_Punched_Triangle",
+      "Stainless_Steel_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Titanium.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium",
+      "Titanium_Polished",
+      "Titanium_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Titanium_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Brushed",
+      "Titanium_Brushed_Light_Brushing",
+      "Titanium_Brushed_Medium_Light_Brushing",
+      "Titanium_Brushed_Medium_Brushing",
+      "Titanium_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Titanium_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Foil",
+      "Titanium_Foil_Smudged_Foil",
+      "Titanium_Foil_Shiny_Wrinkled",
+      "Titanium_Foil_Matte_Wrinkled",
+      "Titanium_Foil_Heavy_Glossy_Wrinkles",
+      "Titanium_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Titanium_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Hammered",
+      "Titanium_Hammered_Shiny",
+      "Titanium_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Titanium_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Knurling",
+      "Titanium_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Titanium_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Scratched",
+      "Titanium_Scratched_Light_Bumpy",
+      "Titanium_Scratched_Dark_Shiny",
+      "Titanium_Scratched_Dark_Matte",
+      "Titanium_Scratched_Scuffs_and_Grime",
+      "Titanium_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Titanium_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Titanium_Sheet",
+      "Titanium_Sheet_Punched",
+      "Titanium_Sheet_Soft_Splotches",
+      "Titanium_Sheet_Matte_Imperfections",
+      "Titanium_Sheet_Glossy_Imperfections",
+      "Titanium_Sheet_Splotchy_Streaks",
+      "Titanium_Sheet_Glossy_Streaks",
+      "Titanium_Sheet_Punched_Small_Circular",
+      "Titanium_Sheet_Punched_Hexagonal",
+      "Titanium_Sheet_Punched_Hexagonal_Small",
+      "Titanium_Sheet_Punched_Square",
+      "Titanium_Sheet_Punched_Line",
+      "Titanium_Sheet_Punched_Cross",
+      "Titanium_Sheet_Punched_Rhombus",
+      "Titanium_Sheet_Punched_Triangle",
+      "Titanium_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Tungsten.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten",
+      "Tungsten_Polished",
+      "Tungsten_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Tungsten_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Brushed",
+      "Tungsten_Brushed_Light_Brushing",
+      "Tungsten_Brushed_Medium_Light_Brushing",
+      "Tungsten_Brushed_Medium_Brushing",
+      "Tungsten_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Tungsten_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Foil",
+      "Tungsten_Foil_Smudged_Foil",
+      "Tungsten_Foil_Shiny_Wrinkled",
+      "Tungsten_Foil_Matte_Wrinkled",
+      "Tungsten_Foil_Heavy_Glossy_Wrinkles",
+      "Tungsten_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Tungsten_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Hammered",
+      "Tungsten_Hammered_Shiny",
+      "Tungsten_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Tungsten_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Knurling",
+      "Tungsten_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Tungsten_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Scratched",
+      "Tungsten_Scratched_Light_Bumpy",
+      "Tungsten_Scratched_Dark_Shiny",
+      "Tungsten_Scratched_Dark_Matte",
+      "Tungsten_Scratched_Scuffs_and_Grime",
+      "Tungsten_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Tungsten_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Tungsten_Sheet",
+      "Tungsten_Sheet_Punched",
+      "Tungsten_Sheet_Soft_Splotches",
+      "Tungsten_Sheet_Matte_Imperfections",
+      "Tungsten_Sheet_Glossy_Imperfections",
+      "Tungsten_Sheet_Splotchy_Streaks",
+      "Tungsten_Sheet_Glossy_Streaks",
+      "Tungsten_Sheet_Punched_Small_Circular",
+      "Tungsten_Sheet_Punched_Hexagonal",
+      "Tungsten_Sheet_Punched_Hexagonal_Small",
+      "Tungsten_Sheet_Punched_Square",
+      "Tungsten_Sheet_Punched_Line",
+      "Tungsten_Sheet_Punched_Cross",
+      "Tungsten_Sheet_Punched_Rhombus",
+      "Tungsten_Sheet_Punched_Triangle",
+      "Tungsten_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Zinc.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc",
+      "Zinc_Polished",
+      "Zinc_Glossy_Fingerprints"
+    ]
+  },
+  {
+    "Name": "Zinc_Brushed.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Brushed.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Brushed",
+      "Zinc_Brushed_Light_Brushing",
+      "Zinc_Brushed_Medium_Light_Brushing",
+      "Zinc_Brushed_Medium_Brushing",
+      "Zinc_Brushed_Very_Strong_Brushing"
+    ]
+  },
+  {
+    "Name": "Zinc_Foil.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Foil.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Foil",
+      "Zinc_Foil_Smudged_Foil",
+      "Zinc_Foil_Shiny_Wrinkled",
+      "Zinc_Foil_Matte_Wrinkled",
+      "Zinc_Foil_Heavy_Glossy_Wrinkles",
+      "Zinc_Foil_Heavy_Matte_Wrinkled"
+    ]
+  },
+  {
+    "Name": "Zinc_Galvanizing.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Galvanizing.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Galvanizing",
+      "Zinc_Rough_Crystals",
+      "Zinc_Rough_Medium_Oxidized",
+      "Zinc_Rough_Heavy_Shiny_Oxidized",
+      "Zinc_Dirty_Rough_Oxidized"
+    ]
+  },
+  {
+    "Name": "Zinc_Hammered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Hammered.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Hammered",
+      "Zinc_Hammered_Shiny",
+      "Zinc_Hammered_Dull"
+    ]
+  },
+  {
+    "Name": "Zinc_Knurling.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Knurling.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Knurling",
+      "Zinc_Knurling_Worn"
+    ]
+  },
+  {
+    "Name": "Zinc_Scratched.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Scratched.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Scratched",
+      "Zinc_Scratched_Light_Bumpy",
+      "Zinc_Scratched_Dark_Shiny",
+      "Zinc_Scratched_Dark_Matte",
+      "Zinc_Scratched_Scuffs_and_Grime",
+      "Zinc_Scratched_Dirty_Rough"
+    ]
+  },
+  {
+    "Name": "Zinc_Sheet.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Zinc_Sheet.mdl",
+    "Bucket": "Metal",
+    "Modules": [
+      "Zinc_Sheet",
+      "Zinc_Sheet_Punched",
+      "Zinc_Sheet_Soft_Splotches",
+      "Zinc_Sheet_Matte_Imperfections",
+      "Zinc_Sheet_Glossy_Imperfections",
+      "Zinc_Sheet_Splotchy_Streaks",
+      "Zinc_Sheet_Glossy_Streaks",
+      "Zinc_Sheet_Punched_Small_Circular",
+      "Zinc_Sheet_Punched_Hexagonal",
+      "Zinc_Sheet_Punched_Hexagonal_Small",
+      "Zinc_Sheet_Punched_Square",
+      "Zinc_Sheet_Punched_Line",
+      "Zinc_Sheet_Punched_Cross",
+      "Zinc_Sheet_Punched_Rhombus",
+      "Zinc_Sheet_Punched_Triangle",
+      "Zinc_Sheet_Punched_Star"
+    ]
+  },
+  {
+    "Name": "Metal_Mesh_Weave_01.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Mesh/Metal_Mesh_Weave_01.mdl",
+    "Bucket": "Mesh",
+    "Modules": [
+      "Metal_Mesh_Weave_01 ",
+      "Woven_Metal_01_Steel_Brass",
+      "Woven_Metal_01_Pure_Steel",
+      "Woven_Metal_01_Golden_Steel",
+      "Woven_Metal_01_Warmgolden_Steel",
+      "Woven_Metal_01_Copper_Steel",
+      "Woven_Metal_01_Faint_Copper"
+    ]
+  },
+  {
+    "Name": "Metal_Mesh_Weave_02.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Mesh/Metal_Mesh_Weave_02.mdl",
+    "Bucket": "Mesh",
+    "Modules": [
+      "Metal_Mesh_Weave_02 ",
+      "Woven_Metal_02_Copper_Steel",
+      "Woven_Metal_02_Copper_Pure",
+      "Woven_Metal_02_Brass_Steel",
+      "Woven_Metal_02_Brass_Pure",
+      "Woven_Metal_02_Steel_Brass",
+      "Woven_Metal_02_Steel_Pure",
+      "Woven_Metal_02_Gold_Glossy",
+      "Woven_Metal_02_Gold_Matte"
+    ]
+  },
+  {
+    "Name": "Metal_Mesh_Weave_03.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Mesh/Metal_Mesh_Weave_03.mdl",
+    "Bucket": "Mesh",
+    "Modules": [
+      "Metal_Mesh_Weave_03 ",
+      "Woven_Metal_03_Steel_Polished",
+      "Woven_Metal_03_Steel_Glossy",
+      "Woven_Metal_03_Steel_Worn",
+      "Woven_Metal_03_Copper_Polished",
+      "Woven_Metal_03_Copper_Glossy",
+      "Woven_Metal_03_Copper_Worn",
+      "Woven_Metal_03_Brass_Polished",
+      "Woven_Metal_03_Brass_Glossy",
+      "Woven_Metal_03_Brass_Worn"
+    ]
+  },
+  {
+    "Name": "Jelly.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Food/Jelly.mdl",
+    "Bucket": "Food",
+    "Modules": [
+      "Jelly",
+      "Jelly_Dark_Red_Raspberry",
+      "Jelly_Red_Strawberry",
+      "Jelly_Red_Orange",
+      "Jelly_Yellow_Lemon",
+      "Jelly_White_Pineapple",
+      "Jelly_Green_Apple"
+    ]
+  },
+  {
+    "Name": "Jelly_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Food/Jelly_Clear.mdl",
+    "Bucket": "Food",
+    "Modules": [
+      "Jelly_Clear",
+      "Jelly_Clear_Dark_Red_Raspberry",
+      "Jelly_Clear_Red_Strawberry",
+      "Jelly_Clear_Orange",
+      "Jelly_Clear_Yellow_Lemon",
+      "Jelly_Clear_White_Pineapple",
+      "Jelly_Clear_Green_Apple"
+    ]
+  },
+  {
+    "Name": "Retroreflective_Material.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Retroreflective/Retroreflective_Material.mdl",
+    "Bucket": "Retroreflective",
+    "Modules": [
+      "Retroreflective_Material",
+      "Retroreflective_Material_Gray_Worn",
+      "Retroreflective_Material_White",
+      "Retroreflective_Material_Orange",
+      "Retroreflective_Material_Red",
+      "Retroreflective_Material_Blue",
+      "Retroreflective_Material_Yellow"
+    ]
+  },
+  {
+    "Name": "Retroreflective_Tape.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Retroreflective/Retroreflective_Tape.mdl",
+    "Bucket": "Retroreflective",
+    "Modules": [
+      "Retroreflective_Tape",
+      "Retroreflective_Tape_Yellow_Worn",
+      "Retroreflective_Tape_Orange",
+      "Retroreflective_Tape_Blue",
+      "Retroreflective_Tape_Green",
+      "Retroreflective_Tape_Red",
+      "Retroreflective_Tape_White"
+    ]
+  },
+  {
+    "Name": "Retroreflective_Warnstripes.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Retroreflective/Retroreflective_Warnstripes.mdl",
+    "Bucket": "Retroreflective",
+    "Modules": [
+      "Retroreflective_Warnstripes",
+      "Retroreflective_Warnstripes_Black_White",
+      "Retroreflective_Warnstripes_Black_Yellow"
+    ]
+  },
+  {
+    "Name": "Tire.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Other/Rubber/Tire.mdl",
+    "Bucket": "Rubber",
+    "Modules": [
+      "Tire",
+      "Tire_Dusty",
+      "Tire_Offroad",
+      "Tire_Slick",
+      "Tire_New"
+    ]
+  },
+  {
+    "Name": "Chalk_Paint.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Chalk_Paint.mdl",
+    "Bucket": "Paint",
+    "Modules": [
+      "Chalk_Paint",
+      "Chalk_Paint_Origami",
+      "Chalk_Paint_Rose_Ash",
+      "Chalk_Paint_Moonlight",
+      "Chalk_Paint_Elation",
+      "Chalk_Paint_Misty",
+      "Chalk_Paint_Moonstone",
+      "Chalk_Paint_Roses",
+      "Chalk_Paint_Felted_Wool",
+      "Chalk_Paint_Bark",
+      "Chalk_Paint_Morning_Dew",
+      "Chalk_Paint_Contemplation",
+      "Chalk_Paint_Distance",
+      "Chalk_Paint_Deep_Emerald",
+      "Chalk_Paint_Night_Watch",
+      "Chalk_Paint_Wine",
+      "Chalk_Paint_Black_Bean",
+      "Chalk_Paint_Dark_Forest",
+      "Chalk_Paint_Charcoal_Blue",
+      "Chalk_Paint_Summernight"
+    ]
+  },
+  {
+    "Name": "Chalk_Paint_Pebbles.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Chalk_Paint_Pebbles.mdl",
+    "Bucket": "Paint",
+    "Modules": [
+      "Chalk_Paint_Pebbles",
+      "Chalk_Paint_Pebbles_Origami",
+      "Chalk_Paint_Pebbles_Rose_Ash",
+      "Chalk_Paint_Pebbles_Moonlight",
+      "Chalk_Paint_Pebbles_Elation",
+      "Chalk_Paint_Pebbles_Misty",
+      "Chalk_Paint_Pebbles_Moonstone",
+      "Chalk_Paint_Pebbles_Roses",
+      "Chalk_Paint_Pebbles_Felted_Wool",
+      "Chalk_Paint_Pebbles_Bark",
+      "Chalk_Paint_Pebbles_Morning_Dew",
+      "Chalk_Paint_Pebbles_Contemplation",
+      "Chalk_Paint_Pebbles_Distance",
+      "Chalk_Paint_Pebbles_Deep_Emerald",
+      "Chalk_Paint_Pebbles_Night_Watch",
+      "Chalk_Paint_Pebbles_Wine",
+      "Chalk_Paint_Pebbles_Black_Bean",
+      "Chalk_Paint_Pebbles_Dark_Forest",
+      "Chalk_Paint_Pebbles_Charcoal_Blue",
+      "Chalk_Paint_Pebbles_Summernight"
+    ]
+  },
+  {
+    "Name": "Hammer_Paint.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Hammer_Paint.mdl",
+    "Bucket": "Paint",
+    "Modules": [
+      "Hammer_Paint",
+      "Hammer_Paint_Brilliant_Blue",
+      "Hammer_Paint_Red",
+      "Hammer_Paint_Dark_Red",
+      "Hammer_Paint_Green",
+      "Hammer_Paint_Black",
+      "Hammer_Paint_Anthracite",
+      "Hammer_Paint_Copper",
+      "Hammer_Paint_Aluminum",
+      "Hammer_Paint_Gold"
+    ]
+  },
+  {
+    "Name": "Paint_Eggshell.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Paint_Eggshell.mdl",
+    "Bucket": "Paint",
+    "Modules": [
+      "Paint_Eggshell",
+      "Paint_Eggshell_Teal",
+      "Paint_Eggshell_Lime",
+      "Paint_Eggshell_Leaf",
+      "Paint_Eggshell_Light_Denim",
+      "Paint_Eggshell_Denim",
+      "Paint_Eggshell_Peach",
+      "Paint_Eggshell_Pale_Rose",
+      "Paint_Eggshell_Burnt_Red",
+      "Paint_Eggshell_Copper",
+      "Paint_Eggshell_Sunny",
+      "Paint_Eggshell_Nude",
+      "Paint_Eggshell_Camel",
+      "Paint_Eggshell_Vanilla",
+      "Paint_Eggshell_Taupe",
+      "Paint_Eggshell_Cashmere",
+      "Paint_Eggshell_Ash",
+      "Paint_Eggshell_Earth",
+      "Paint_Eggshell_White"
+    ]
+  },
+  {
+    "Name": "Paint_Gun_Metal.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Paint_Gun_Metal.mdl",
+    "Bucket": "Paint",
+    "Modules": [
+      "Paint_Gun_Metal ",
+      "Paint_Gun_Metal_Black_0",
+      "Paint_Gun_Metal_Black_25",
+      "Paint_Gun_Metal_Black_50",
+      "Paint_Gun_Metal_Black_75",
+      "Paint_Gun_Metal_Gray_0",
+      "Paint_Gun_Metal_Gray_25",
+      "Paint_Gun_Metal_Gray_50",
+      "Paint_Gun_Metal_Gray_75"
+    ]
+  },
+  {
+    "Name": "Carpaint_Candy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Carpaint_Candy.mdl",
+    "Bucket": "Carpaint",
+    "Modules": [
+      "Carpaint_Candy",
+      "Black_Monster_Flakes_Candy",
+      "Red_Candy_Coat",
+      "Red_Murdered_Candy_Coat",
+      "Orange_Murdered_Candy_Coat",
+      "Yellow_Candy_Coat",
+      "Green_Candy_Coat",
+      "Green_Murdered_Candy_Coat",
+      "Blue_Intense_Candy_Coat",
+      "Blue_Murdered_Candy_Coat",
+      "Purple_Candy_Madness",
+      "Purple_Monster_Flakes",
+      "Pinkie_Pie"
+    ]
+  },
+  {
+    "Name": "Carpaint_Metallic.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Carpaint_Metallic.mdl",
+    "Bucket": "Carpaint",
+    "Modules": [
+      "Carpaint_Metallic",
+      "White_Light_Metallic",
+      "White_Strong_Metallic",
+      "White_Silver_Metallic",
+      "White_Blue_Metallic",
+      "Black_Sparkling_Metallic",
+      "Bright_Silver_Metallic",
+      "Dark_Silver_Metallic",
+      "Silverblue_Metallic",
+      "Graphite_Metallic",
+      "Taupe_Metallic",
+      "Dark_Gray_Metallic",
+      "Gunmetal_Matte_Metallic",
+      "Cherry_Red_Metallic",
+      "Dark_Red_Metallic",
+      "Flaming_Orange_Metallic",
+      "Mocha_Metallic",
+      "Golden_Yellow_Metallic",
+      "Gold_Metallic",
+      "Golden_Flakes_Metallic",
+      "Sparkling_Lime_Metallic",
+      "Rainforest_Metallic",
+      "Grass_Green_Metallic",
+      "Emerald_Metallic",
+      "Vintage_Turquoise_Metallic",
+      "Electric_Blue_Metallic",
+      "Teal_Metallic",
+      "Elegant_Blue_Metallic",
+      "Poseidon_Blue_Metallic",
+      "Purple_Rain_Metallic",
+      "Pink_Glamour_Metallic"
+    ]
+  },
+  {
+    "Name": "Carpaint_Shifting_Flakes.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Carpaint_Shifting_Flakes.mdl",
+    "Bucket": "Carpaint",
+    "Modules": [
+      "Carpaint_Shifting_Flakes",
+      "White_to_Purple",
+      "White_to_Blue",
+      "White_to_Gold",
+      "White_Chameleon",
+      "Green_Aquatic",
+      "Dimmed_Green",
+      "Goblin_Fire",
+      "Emerald_to_Blue",
+      "Nebular",
+      "Elegant_Emerald",
+      "Purple_Red_Orange",
+      "Golden_Green_Intense",
+      "Soft_Golden_Green",
+      "Gold_Green_Purple",
+      "Electric_Shimmer",
+      "Blue_Purple_Emerald",
+      "Petrol_Purple",
+      "Deep_Blue_Purple",
+      "Turquoise_Purple",
+      "Desert_Wind",
+      "Green_Dragon_Monsterflakes",
+      "Andromeda",
+      "Blue_Saphire",
+      "Bionic_Flare",
+      "Aquatic",
+      "Poseidon",
+      "Red_Elegance",
+      "Princess_Fire",
+      "Magic_Green",
+      "Voodoo"
+    ]
+  },
+  {
+    "Name": "Carpaint_Solid.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Carpaint_Solid.mdl",
+    "Bucket": "Carpaint",
+    "Modules": [
+      "Carpaint_Solid",
+      "White",
+      "Vintage_White",
+      "Black",
+      "Black_Matte",
+      "Agent_Gray",
+      "Agent_Gray_Matte",
+      "Blood_Red",
+      "Tarreri_Red",
+      "Dark_Decent_Red",
+      "Vintage_Maroon",
+      "Orange",
+      "Brown_Matte",
+      "Bumblebee",
+      "Wasp",
+      "Feline_Dark_Green",
+      "Hunting_Green_Matte",
+      "Vintage_Sky_Blue",
+      "Blue",
+      "Dark_Decent_Blue"
+    ]
+  },
+  {
+    "Name": "Effect_Pigment_Metallic.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Effect_Pigment_Metallic.mdl",
+    "Bucket": "Carpaint",
+    "Modules": [
+      "Effect_Pigment_Metallic",
+      "Chameleon_Pigment_Desert_Fire",
+      "Chameleon_Pigment_Goblin_Fire",
+      "Chameleon_Pigment_Borealis",
+      "Chameleon_Pigment_Candytron",
+      "Chameleon_Pigment_Deep_Purple",
+      "Chameleon_Pigment_Scarabeus",
+      "Chameleon_Pigment_Golden_Lavender",
+      "Chameleon_Pigment_Pink_Slip",
+      "Chameleon_Pigment_Aqua_Racer",
+      "Chameleon_Pigment_Golden_Green"
+    ]
+  },
+  {
+    "Name": "Cardboard.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paper/Cardboard.mdl",
+    "Bucket": "Paper",
+    "Modules": [
+      "Cardboard",
+      "Cardboard_Worn"
+    ]
+  },
+  {
+    "Name": "Cardboard_Low_Quality.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paper/Cardboard_Low_Quality.mdl",
+    "Bucket": "Paper",
+    "Modules": [
+      "Cardboard_Low_Quality",
+      "Cardboard_Low_Quality_Dirt",
+      "Cardboard_Low_Quality_Corrugation",
+      "Cardboard_Low_Quality_Used",
+      "Cardboard_Low_Quality_Burnt"
+    ]
+  },
+  {
+    "Name": "Paper_Plain.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Paper/Paper_Plain.mdl",
+    "Bucket": "Paper",
+    "Modules": [
+      "Paper_Plain",
+      "Paper_Coldpressed_Watercolor",
+      "Paper_Coldpressed"
+    ]
+  },
+  {
+    "Name": "Facade_Plaster_Rough.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plaster/Facade_Plaster_Rough.mdl",
+    "Bucket": "Plaster",
+    "Modules": [
+      "Facade_Plaster_Rough",
+      "Facade_Plaster_Rough_Matte",
+      "Facade_Plaster_Rough_Dark_Dirt",
+      "Facade_Plaster_Rough_Bright_Dirt"
+    ]
+  },
+  {
+    "Name": "Mosaic_Multi_Color_Stone.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plaster/Mosaic_Multi_Color_Stone.mdl",
+    "Bucket": "Plaster",
+    "Modules": [
+      "Mosaic_Multi_Color_Stone",
+      "Mosaic_Multi_Color_Stone_Red",
+      "Mosaic_Multi_Color_Stone_Ash",
+      "Mosaic_Multi_Color_Stone_Brown"
+    ]
+  },
+  {
+    "Name": "Plaster_Wall.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plaster/Plaster_Wall.mdl",
+    "Bucket": "Plaster",
+    "Modules": [
+      "Plaster_Wall",
+      "Plaster_Wall_Slightly_Cracked",
+      "Plaster_Wall_Cracked",
+      "Plaster_Wall_Weathered"
+    ]
+  },
+  {
+    "Name": "Stucco.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plaster/Stucco.mdl",
+    "Bucket": "Plaster",
+    "Modules": [
+      "Stucco",
+      "Stucco_Shiny_Rough",
+      "Stucco_Old_Repainted",
+      "Stucco_Subtle_Dirt",
+      "Stucco_Slight_Dirt",
+      "Stucco_Dirty"
+    ]
+  },
+  {
+    "Name": "PCB_Prepreg.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/PCB_Prepreg.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "PCB_Prepreg",
+      "PCB_Prepreg_Rough",
+      "PCB_Prepreg_Shiny"
+    ]
+  },
+  {
+    "Name": "PCB_Solder_Mask.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/PCB_Solder_Mask.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "PCB_Solder_Mask",
+      "PCB_Solder_Mask_Green_Fast",
+      "PCB_Solder_Mask_Black",
+      "PCB_Solder_Mask_Black_Fast",
+      "PCB_Solder_Mask_Yellow",
+      "PCB_Solder_Mask_Yellow_Fast",
+      "PCB_Solder_Mask_Red_Fast",
+      "PCB_Solder_Mask_Red",
+      "PCB_Solder_Mask_Blue",
+      "PCB_Solder_Mask_Blue_Fast",
+      "PCB_Solder_Mask_White",
+      "PCB_Solder_Mask_White_Fast"
+    ]
+  },
+  {
+    "Name": "PET_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/PET_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "PET_Clear",
+      "PET_Smudged"
+    ]
+  },
+  {
+    "Name": "Plastic_Standardized_Surface_Finish.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Plastic_Standardized_Surface_Finish.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Plastic_Standardized_Surface_Finish",
+      "Plastic_Standardized_Surface_Finish_V12",
+      "Plastic_Standardized_Surface_Finish_V15",
+      "Plastic_Standardized_Surface_Finish_V18",
+      "Plastic_Standardized_Surface_Finish_V21",
+      "Plastic_Standardized_Surface_Finish_V24",
+      "Plastic_Standardized_Surface_Finish_V27",
+      "Plastic_Standardized_Surface_Finish_Template_V2",
+      "Plastic_Standardized_Surface_Finish_V30",
+      "Plastic_Standardized_Surface_Finish_V33",
+      "Plastic_Standardized_Surface_Finish_V36",
+      "Plastic_Standardized_Surface_Finish_V39",
+      "Plastic_Standardized_Surface_Finish_V42",
+      "Plastic_Standardized_Surface_Finish_V45"
+    ]
+  },
+  {
+    "Name": "Plastic_Thick_Translucent.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Plastic_Thick_Translucent.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Plastic_Thick_Translucent",
+      "plastic_simple_controls",
+      "plastic_black",
+      "plastic_dark_gray",
+      "plastic_light_gray",
+      "plastic_white",
+      "plastic_ivory_white",
+      "plastic_lemon",
+      "plastic_yellow_orange",
+      "plastic_orange",
+      "plastic_dark_orange",
+      "plastic_red",
+      "plastic_magenta",
+      "plastic_purple",
+      "plastic_dark_blue",
+      "plastic_blue",
+      "plastic_sky_blue",
+      "plastic_light_blue",
+      "plastic_teal",
+      "plastic_dark_green",
+      "plastic_green",
+      "plastic_light_green",
+      "plastic_lime_green"
+    ]
+  },
+  {
+    "Name": "Plastic_Thick_Translucent_Flakes.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Plastic_Thick_Translucent_Flakes.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Plastic_Thick_Translucent_Flakes",
+      "metallic_plastic_simple_controls",
+      "plastic_black",
+      "plastic_dark_gray",
+      "plastic_light_gray",
+      "plastic_white",
+      "plastic_ivory_white",
+      "plastic_lemon",
+      "plastic_yellow_orange",
+      "plastic_orange",
+      "plastic_dark_orange",
+      "plastic_red",
+      "plastic_magenta",
+      "plastic_purple",
+      "plastic_dark_blue",
+      "plastic_blue",
+      "plastic_sky_blue",
+      "plastic_light_blue",
+      "plastic_teal",
+      "plastic_dark_green",
+      "plastic_green",
+      "plastic_light_green",
+      "plastic_lime_green"
+    ]
+  },
+  {
+    "Name": "Polycarbonate_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polycarbonate_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polycarbonate_Clear",
+      "Polycarbonate_Smudged"
+    ]
+  },
+  {
+    "Name": "Polycarbonate_Cloudy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polycarbonate_Cloudy.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polycarbonate_Cloudy",
+      "Polycarbonate_Cloudy_Soft",
+      "Polycarbonate_Cloudy_Rough",
+      "Polycarbonate_Cloudy_Thick"
+    ]
+  },
+  {
+    "Name": "Polycarbonate_Opaque.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polycarbonate_Opaque.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polycarbonate_Opaque",
+      "Polycarbonate_Ivory",
+      "Polycarbonate_Lemon",
+      "Polycarbonate_Yellow",
+      "Polycarbonate_Dark_Orange",
+      "Polycarbonate_Red",
+      "Polycarbonate_Magenta",
+      "Polycarbonate_Purple",
+      "Polycarbonate_Dark_Blue",
+      "Polycarbonate_Blue",
+      "Polycarbonate_Sky_Blue",
+      "Polycarbonate_Light_Blue",
+      "Polycarbonate_Teal",
+      "Polycarbonate_Dark_Green",
+      "Polycarbonate_Green",
+      "Polycarbonate_Light_Green",
+      "Polycarbonate_Lime_Green",
+      "Polycarbonate_Black",
+      "Polycarbonate_Dark_Gray",
+      "Polycarbonate_Light_Gray"
+    ]
+  },
+  {
+    "Name": "Polycarbonate_Spectral_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polycarbonate_Spectral_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polycarbonate_Spectral_Clear",
+      "Polycarbonate_Spectral_Smudges"
+    ]
+  },
+  {
+    "Name": "Polyethylene_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polyethylene_Clear",
+      "Polyethylene_Smudged"
+    ]
+  },
+  {
+    "Name": "Polyethylene_Cloudy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Cloudy.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polyethylene_Cloudy",
+      "Polyethylene_Cloudy_Soft",
+      "Polyethylene_Cloudy_Rough",
+      "Polyethylene_Cloudy_Thick"
+    ]
+  },
+  {
+    "Name": "Polyethylene_Opaque.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Opaque.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polyethylene_Opaque",
+      "Polyethylene_Ivory",
+      "Polyethylene_Lemon",
+      "Polyethylene_Yellow",
+      "Polyethylene_Dark_Orange",
+      "Polyethylene_Red",
+      "Polyethylene_Magenta",
+      "Polyethylene_Purple",
+      "Polyethylene_Dark_Blue",
+      "Polyethylene_Blue",
+      "Polyethylene_Sky_Blue",
+      "Polyethylene_Light_Blue",
+      "Polyethylene_Teal",
+      "Polyethylene_Dark_Green",
+      "Polyethylene_Green",
+      "Polyethylene_Light_Green",
+      "Polyethylene_Lime_Green",
+      "Polyethylene_Black",
+      "Polyethylene_Dark_Gray",
+      "Polyethylene_Light_Gray"
+    ]
+  },
+  {
+    "Name": "Polymethylmethacrylate_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polymethylmethacrylate_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polymethylmethacrylate_Clear",
+      "Polymethylmethacrylate_Smudged"
+    ]
+  },
+  {
+    "Name": "Polypropylene_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polypropylene_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polypropylene_Clear",
+      "Polypropylene_Smudged"
+    ]
+  },
+  {
+    "Name": "Polypropylene_Cloudy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polypropylene_Cloudy.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polypropylene_Cloudy",
+      "Polypropylene_Cloudy_Soft",
+      "Polypropylene_Cloudy_Rough",
+      "Polypropylene_Cloudy_Thick"
+    ]
+  },
+  {
+    "Name": "Polypropylene_Opaque.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polypropylene_Opaque.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polypropylene_Opaque",
+      "Polypropylene_Ivory",
+      "Polypropylene_Lemon",
+      "Polypropylene_Yellow",
+      "Polypropylene_Dark_Orange",
+      "Polypropylene_Red",
+      "Polypropylene_Magenta",
+      "Polypropylene_Purple",
+      "Polypropylene_Dark_Blue",
+      "Polypropylene_Blue",
+      "Polypropylene_Sky_Blue",
+      "Polypropylene_Light_Blue",
+      "Polypropylene_Teal",
+      "Polypropylene_Dark_Green",
+      "Polypropylene_Green",
+      "Polypropylene_Light_Green",
+      "Polypropylene_Lime_Green",
+      "Polypropylene_Black",
+      "Polypropylene_Dark_Gray",
+      "Polypropylene_Light_Gray"
+    ]
+  },
+  {
+    "Name": "Polystyrene_Clear.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polystyrene_Clear.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Polystyrene_Clear",
+      "Polystyrene_Smudged"
+    ]
+  },
+  {
+    "Name": "Styrofoam.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Styrofoam.mdl",
+    "Bucket": "Plastic",
+    "Modules": [
+      "Styrofoam",
+      "Styrofoam_no_SSS"
+    ]
+  },
+  {
+    "Name": "Devil_Black.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Devil_Black.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Devil_Black",
+      "Devil_Black_Clean_Pollished",
+      "Devil_Black_Dark",
+      "Devil_Black_Satin",
+      "Devil_Black_Matte",
+      "Devil_Black_Grunge",
+      "Devil_Black_Stain",
+      "Devil_Black_Ripple"
+    ]
+  },
+  {
+    "Name": "Granite_Polished.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Granite_Polished.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Granite_Polished",
+      "baltic_red",
+      "black_galaxy",
+      "blue_eyes",
+      "butterfly_verde",
+      "caledonia",
+      "castor_brown",
+      "emerald_pearl",
+      "giallo_fiorito",
+      "golden_galaxy",
+      "ice_kynite",
+      "morning_rose",
+      "tan_brown",
+      "tiger_skin_gold"
+    ]
+  },
+  {
+    "Name": "Rosa_Beta.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Rosa_Beta.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Rosa_Beta",
+      "Rosa_Beta_Clean_Pollished",
+      "Rosa_Beta_Satin",
+      "Rosa_Beta_Matte",
+      "Rosa_Beta_Grunge",
+      "Rosa_Beta_Stain",
+      "Rosa_Beta_Glossy_Stain"
+    ]
+  },
+  {
+    "Name": "Star_Galaxy.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Star_Galaxy.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Star_Galaxy",
+      "Star_Galaxy_Dark",
+      "Star_Galaxy_Polished",
+      "Star_Galaxy_Ice",
+      "Star_Galaxy_Used"
+    ]
+  },
+  {
+    "Name": "Steel_Grey.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Steel_Grey.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Steel_Grey",
+      "Steel_Grey_Polished",
+      "Steel_Grey_Dark_Clean_Ripple",
+      "Steel_Grey_Bright",
+      "Steel_Grey_Soft_Alabaster",
+      "Steel_Grey_Dust",
+      "Steel_Grey_Dark_Sprinkles",
+      "Steel_Grey_Alabaster"
+    ]
+  },
+  {
+    "Name": "Stone_Mediterranean.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Stone_Mediterranean.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Stone_Mediterranean",
+      "Stone_Mediterranean_Matte",
+      "Stone_Mediterranean_Warm_Shiny",
+      "Stone_Mediterranean_Warm_Matte"
+    ]
+  },
+  {
+    "Name": "Stone_Natural_Black.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Stone_Natural_Black.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Stone_Natural_Black",
+      "Stone_Natural_Black_Matte",
+      "Stone_Natural_Black_Shiny"
+    ]
+  },
+  {
+    "Name": "Terrazzo.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Terrazzo.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Terrazzo",
+      "Terrazzo_Dry_Matt",
+      "Terrazzo_Speckled_Spots",
+      "Terrazzo_Freckled_Highlights",
+      "Terrazzo_Footprints",
+      "Terrazzo_Diffuse_Clean",
+      "Terrazzo_Shiny_Clean"
+    ]
+  },
+  {
+    "Name": "Volga_Blue.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Stone/Volga_Blue.mdl",
+    "Bucket": "Stone",
+    "Modules": [
+      "Volga_Blue",
+      "Volga_Blue_Darken",
+      "Volga_Blue_Deep_Pollished",
+      "Volga_Blue_Bright_Blue",
+      "Volga_Blue_Imperfections"
+    ]
+  },
+  {
+    "Name": "Laminate_Oak.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Laminate_Oak.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Laminate_Oak",
+      "Laminate_Oak_Polished",
+      "Laminate_Oak_Slight_Smudges",
+      "Laminate_Oak_Dirty"
+    ]
+  },
+  {
+    "Name": "OSB_Wood.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/OSB_Wood.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "OSB_Wood",
+      "OSB_Wood_Shiny"
+    ]
+  },
+  {
+    "Name": "OSB_Wood_Splattered.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/OSB_Wood_Splattered.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "OSB_Wood_Splattered",
+      "OSB_Wood_Splattered_Dense"
+    ]
+  },
+  {
+    "Name": "Wood_Bark.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Bark.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Bark",
+      "bark_oak_dark_contrast"
+    ]
+  },
+  {
+    "Name": "Wood_Cork.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Cork.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Cork",
+      "Wood_Cork_Coated_Matte",
+      "Wood_Cork_Coated_Glossy"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Ash.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Ash.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Ash",
+      "Wood_Tiles_Ash_Brickbond",
+      "Wood_Tiles_Ash_Chantilly",
+      "Wood_Tiles_Ash_Chevron",
+      "Wood_Tiles_Ash_Cubes",
+      "Wood_Tiles_Ash_Diagonal",
+      "Wood_Tiles_Ash_Herringbone",
+      "Wood_Tiles_Ash_Mosaic",
+      "Wood_Tiles_Ash_Stackbond",
+      "Wood_Tiles_Ash_Versailles",
+      "Wood_Tiles_Ash_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Beech.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Beech.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Beech",
+      "Wood_Tiles_Beech_Brickbond",
+      "Wood_Tiles_Beech_Chantilly",
+      "Wood_Tiles_Beech_Chevron",
+      "Wood_Tiles_Beech_Cubes",
+      "Wood_Tiles_Beech_Diagonal",
+      "Wood_Tiles_Beech_Herringbone",
+      "Wood_Tiles_Beech_Mosaic",
+      "Wood_Tiles_Beech_Stackbond",
+      "Wood_Tiles_Beech_Versailles",
+      "Wood_Tiles_Beech_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Fineline.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Fineline.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Fineline",
+      "Wood_Tiles_Fineline_Brickbond",
+      "Wood_Tiles_Fineline_Chantilly",
+      "Wood_Tiles_Fineline_Chevron",
+      "Wood_Tiles_Fineline_Cubes",
+      "Wood_Tiles_Fineline_Diagonal",
+      "Wood_Tiles_Fineline_Herringbone",
+      "Wood_Tiles_Fineline_Mosaic",
+      "Wood_Tiles_Fineline_Stackbond",
+      "Wood_Tiles_Fineline_Versailles",
+      "Wood_Tiles_Fineline_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Oak_Mountain.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Oak_Mountain.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Oak_Mountain",
+      "Wood_Tiles_Oak_Mountain_Brickbond",
+      "Wood_Tiles_Oak_Mountain_Chantilly",
+      "Wood_Tiles_Oak_Mountain_Chevron",
+      "Wood_Tiles_Oak_Mountain_Cubes",
+      "Wood_Tiles_Oak_Mountain_Diagonal",
+      "Wood_Tiles_Oak_Mountain_Herringbone",
+      "Wood_Tiles_Oak_Mountain_Mosaic",
+      "Wood_Tiles_Oak_Mountain_Stackbond",
+      "Wood_Tiles_Oak_Mountain_Versailles",
+      "Wood_Tiles_Oak_Mountain_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Pine.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Pine.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Pine",
+      "Wood_Tiles_Pine_Brickbond",
+      "Wood_Tiles_Pine_Chantilly",
+      "Wood_Tiles_Pine_Chevron",
+      "Wood_Tiles_Pine_Cubes",
+      "Wood_Tiles_Pine_Diagonal",
+      "Wood_Tiles_Pine_Herringbone",
+      "Wood_Tiles_Pine_Mosaic",
+      "Wood_Tiles_Pine_Stackbond",
+      "Wood_Tiles_Pine_Versailles",
+      "Wood_Tiles_Pine_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Poplar.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Poplar.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Poplar",
+      "Wood_Tiles_Poplar_Brickbond",
+      "Wood_Tiles_Poplar_Chantilly",
+      "Wood_Tiles_Poplar_Chevron",
+      "Wood_Tiles_Poplar_Cubes",
+      "Wood_Tiles_Poplar_Diagonal",
+      "Wood_Tiles_Poplar_Herringbone",
+      "Wood_Tiles_Poplar_Mosaic",
+      "Wood_Tiles_Poplar_Stackbond",
+      "Wood_Tiles_Poplar_Versailles",
+      "Wood_Tiles_Poplar_Woodstrip"
+    ]
+  },
+  {
+    "Name": "Wood_Tiles_Walnut.mdl",
+    "Path": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Wood_Tiles_Walnut.mdl",
+    "Bucket": "Wood",
+    "Modules": [
+      "Wood_Tiles_Walnut",
+      "Wood_Tiles_Walnut_Brickbond",
+      "Wood_Tiles_Walnut_Chantilly",
+      "Wood_Tiles_Walnut_Chevron",
+      "Wood_Tiles_Walnut_Cubes",
+      "Wood_Tiles_Walnut_Diagonal",
+      "Wood_Tiles_Walnut_Herringbone",
+      "Wood_Tiles_Walnut_Mosaic",
+      "Wood_Tiles_Walnut_Stackbond",
+      "Wood_Tiles_Walnut_Versailles",
+      "Wood_Tiles_Walnut_Woodstrip"
+    ]
+  }
+]

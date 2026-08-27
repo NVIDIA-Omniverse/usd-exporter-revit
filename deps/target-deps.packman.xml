@@ -1,0 +1,30 @@
+<project toolsVersion="5.0">
+  <!-- The Autodesk Revit 2024 SDK (RevitDevKit) is not redistributed with this repository.
+       To build the Revit 2024 USD Export Plugin, provide your own copy of the Autodesk Revit 2024
+       SDK, then uncomment the block below and set the path to your local SDK installation
+       (the folder containing the RevitAPI assemblies). -->
+  <!--
+  <dependency name="revitdevkit_2024" linkPath="../_build/target-deps/revitdevkit_2024">
+    <source path="C:/path/to/your/RevitDevKit_2024" />
+  </dependency>
+  -->
+  <dependency name="python" linkPath="../_build/target-deps/python" tags="non-redist">
+    <package name="python" version="3.12.13+nv8-${platform}" />
+  </dependency>
+
+  <dependency name="usd_$config" linkPath="../_build/target-deps/usd/$config">
+    <package name="openusd" version="0.25.11-9-windows_v143_x86_64-dynamic-$config-py312.no_imaging" platforms="windows-x86_64" />
+  </dependency>
+  <dependency name="onetbb_$config" linkPath="../_build/target-deps/onetbb/$config">
+    <package name="onetbb" version="2021.13.0-4-windows_v143_x86_64-$config" platforms="windows-x86_64" />
+  </dependency>
+  <dependency name="fmt" linkPath="../_build/target-deps/fmt" tags="non-redist">
+    <package name="fmt" version="7.0.3+nv2" />
+  </dependency>
+  <dependency name="omni_asset_validator" linkPath="../_build/target-deps/omni_asset_validator" tags="non-redist">
+    <package name="omni.asset_validator" version="1.1.6+v1-1-6.7620.1b7aab35.gl.${platform_target_abi}" />
+  </dependency>
+  <dependency name="doctest" linkPath="../_build/target-deps/doctest" tags="non-redist">
+    <package name="doctest" version="2.4.5+nv1-3" />
+  </dependency>
+</project>

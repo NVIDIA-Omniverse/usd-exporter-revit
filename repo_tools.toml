@@ -1,0 +1,25 @@
+[repo_update_version]
+command = "update_version"
+entry_point = "${root}/tools/repoman/update_version.py:setup_repo_tool"
+
+[repo_build_solutions]
+command = "build_solutions"
+entry_point = "${root}/tools/repoman/build_solutions.py:setup_repo_tool"
+
+[repo_cmake]
+command = "build"
+entry_point = "${root}/tools/repoman/cmake_build.py:setup_repo_tool"
+
+[repo_stage_runtime]
+command = "stage_runtime"
+entry_point = "${root}/tools/repoman/stage_runtime.py:setup_repo_tool"
+
+[repo_fetch_deps]
+command = "fetch_deps"
+entry_point = "${root}/tools/repoman/fetch_deps.py:setup_repo_tool"
+fetch.packman_target_files_to_pull = [
+    "${root}/deps/target-deps.packman.xml",
+]
+fetch.packman_host_files_to_pull = [
+]
+

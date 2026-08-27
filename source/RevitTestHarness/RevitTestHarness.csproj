@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>RevitTestHarness</AssemblyName>
+    <RootNamespace>RevitTestHarness</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <OutputPath>$(RepoRoot)_build\test\windows-x86_64\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Utilities\**\*.cs" Link="Utilities\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\RevitUsdExportSDK\RevitUsdExportSettings.cs" Link="RevitUsdExportSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NewtonSoft.Json">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\NewtonSoft.Json.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\RevitAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(RepoRoot)_build\target-deps\revitdevkit_2024\RevitAPIUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+<project toolsVersion="5.0">
+  <dependency name="repo_man" linkPath="../_repo/deps/repo_man">
+    <package name="repo_man" version="1.88.2" />
+  </dependency>
+  <dependency name="repo_build" linkPath="../_repo/deps/repo_build">
+    <package name="repo_build" version="1.13.2" />
+  </dependency>
+  <dependency name="repo_test" linkPath="../_repo/repo_test">
+    <package name="repo_test" version="2.40.1" />
+  </dependency>
+  <dependency name="repo_source" linkPath="../_repo/deps/repo_source">
+    <package name="repo_source" version="0.6.3" />
+  </dependency>
+  <dependency name="repo_format" linkPath="../_repo/deps/repo_format" tags="non-redist">
+    <package name="repo_format" version="2.18.0" />
+  </dependency>
+</project>

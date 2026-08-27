@@ -1,0 +1,18 @@
+# Repo tool outputs
+/_build/
+/_repo/
+
+# Repo tooling
+.lastformat
+PACKAGE-*.yaml
+
+# .NET / Python
+**/bin/
+**/obj/
+**/__pycache__/
+
+# Visual Studio / IDE
+**/.vs/
+*.user
+*.suo
+.vscode/
