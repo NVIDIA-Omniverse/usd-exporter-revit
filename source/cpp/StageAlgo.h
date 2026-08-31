@@ -7,7 +7,7 @@
 
 #include <pxr/usd/usd/stage.h>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 //! Utility functions to manipulate `UsdStage`
 //!
@@ -26,7 +26,7 @@ namespace revit::usd_export::core
 //! @note Mass units are authored as kilogramsPerUnit = 1 (UsdPhysicsMassUnits::kilograms).
 //! @param fileFormatArgs Additional file format-specific arguments to be supplied during Stage creation.
 //! @returns The newly created stage or a null pointer.
-REVIT_USD_EXPORT_API pxr::UsdStageRefPtr createStage(
+USD_EXPORTER_REVIT_API pxr::UsdStageRefPtr createStage(
     const std::string& identifier,
     const std::string& defaultPrimName,
     const pxr::TfToken& upAxis,
@@ -45,7 +45,7 @@ REVIT_USD_EXPORT_API pxr::UsdStageRefPtr createStage(
 //!
 //! @param stage The stage to be saved.
 //! @param comment Optional save comment recorded in the log.
-REVIT_USD_EXPORT_API void saveStage(pxr::UsdStagePtr stage, const char* comment = nullptr);
+USD_EXPORTER_REVIT_API void saveStage(pxr::UsdStagePtr stage, const char* comment = nullptr);
 
 //! Convert meters per unit for the given `UsdStage`
 //!
@@ -54,7 +54,7 @@ REVIT_USD_EXPORT_API void saveStage(pxr::UsdStagePtr stage, const char* comment 
 //!
 //! @param stage The stage to convert.
 //! @param metersPerUnit The new meters per unit value.
-REVIT_USD_EXPORT_API bool convertMetersPerUnit(pxr::UsdStagePtr stage, const double metersPerUnit);
+USD_EXPORTER_REVIT_API bool convertMetersPerUnit(pxr::UsdStagePtr stage, const double metersPerUnit);
 
 //! Get the meters per unit from a USD file
 //!
@@ -62,10 +62,10 @@ REVIT_USD_EXPORT_API bool convertMetersPerUnit(pxr::UsdStagePtr stage, const dou
 //!
 //! @param filePath The local path to the USD file.
 //! @return The metersPerUnit value, or -1.0 if the file cannot be opened, is not local, or doesn't have the metadata.
-REVIT_USD_EXPORT_API double getMetersPerUnitFromFile(const std::string& filePath);
+USD_EXPORTER_REVIT_API double getMetersPerUnitFromFile(const std::string& filePath);
 
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -77,14 +77,14 @@ extern "C"
      * @param[in] linearUnits      The meters per unit for all linear measurements in the stage.
      * @return The newly created stage id.
      */
-    REVIT_USD_EXPORT_API long int revit_usd_export_core_createStage(const char* identifier, const char* defaultPrimName, char* upAxis, const double linearUnits);
+    USD_EXPORTER_REVIT_API long int usd_exporter_revit_core_createStage(const char* identifier, const char* defaultPrimName, char* upAxis, const double linearUnits);
 
     /**
      * Configure a stage so that the defining metadata is explicitly authored.
      * @param[in] stage_id     Stage Id.
      * @param[in] comment      Optional save comment recorded in the log.
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_saveStage(const long int stage_id, const char* commit);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_saveStage(const long int stage_id, const char* commit);
 
     /**
      * Convert meters per unit for the given stage.
@@ -92,12 +92,12 @@ extern "C"
      * @param[in] metersPerUnit The new meters per unit value.
      * @return true if successful, false otherwise.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_convertMetersPerUnit(const long int stage_id, const double metersPerUnit);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_convertMetersPerUnit(const long int stage_id, const double metersPerUnit);
 
     /**
      * Get the meters per unit from a USD file.
      * @param[in] filePath     The local path to the USD file.
      * @return The metersPerUnit value, or -1.0 if the it cannot be determined.
      */
-    REVIT_USD_EXPORT_API double revit_usd_export_core_getMetersPerUnitFromFile(const char* filePath);
+    USD_EXPORTER_REVIT_API double usd_exporter_revit_core_getMetersPerUnitFromFile(const char* filePath);
 }

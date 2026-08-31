@@ -13,7 +13,7 @@
 #include <string>
 
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 
 //! Validate that prim opinions could be authored at this path on the stage
@@ -42,4 +42,4 @@ bool isEditablePrimLocation(const pxr::UsdStagePtr stage, const pxr::SdfPath& pa
 //! @returns True if the location is valid, or false otherwise.
 bool isEditablePrimLocation(const pxr::UsdPrim& prim, const std::string& name, std::string* reason);
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail

@@ -11,7 +11,7 @@
 
 static const std::string g_fileScheme = "file";
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 bool isWindowsDrivePath(const std::string& uri)
 {
@@ -35,7 +35,15 @@ std::string getScheme(const std::string& uri)
     }
 
     std::string scheme = uri.substr(0, colon);
-    std::transform(scheme.begin(), scheme.end(), scheme.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+    std::transform(
+        scheme.begin(),
+        scheme.end(),
+        scheme.begin(),
+        [](unsigned char c)
+        {
+            return static_cast<char>(std::tolower(c));
+        }
+    );
     return scheme;
 }
 
@@ -70,13 +78,13 @@ bool isLocalUri(const std::string& uri)
     return scheme.empty() || scheme == g_fileScheme;
 }
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail
 
 extern "C"
 {
-    bool revit_file_client_uri_exists(const std::string& uri)
+    bool usd_exporter_revit_file_client_uri_exists(const std::string& uri)
     {
-        namespace detail = revit::usd_export::core::detail;
+        namespace detail = usd::exporter::revit::core::detail;
         if (!detail::isLocalUri(uri))
         {
             return false;
@@ -86,8 +94,8 @@ extern "C"
         return std::filesystem::exists(detail::getLocalPath(uri), ec) && !ec;
     }
 
-    REVIT_USD_EXPORT_API bool revit_file_client_is_local_uri(const char* uri)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_file_client_is_local_uri(const char* uri)
     {
-        return uri && revit::usd_export::core::detail::isLocalUri(uri);
+        return uri && usd::exporter::revit::core::detail::isLocalUri(uri);
     }
 }

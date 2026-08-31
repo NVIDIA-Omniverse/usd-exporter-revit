@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using RevitUsdExport.Settings;
+using UsdExporterRevit.Settings;
 
 namespace RevitTestHarness.Session
 {
@@ -61,7 +61,7 @@ public class TestData
     {
     }
 
-    public TestData(string test, string model, RevitUsdExportSettings settings)
+    public TestData(string test, string model, UsdExporterRevitSettings settings)
     {
         Test = test;
         Model = model;

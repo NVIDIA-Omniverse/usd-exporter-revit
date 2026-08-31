@@ -28,10 +28,7 @@ def _resolve_cmake_exe(root: str) -> str:
     if path_cmake:
         return path_cmake
 
-    raise omni.repo.man.exceptions.QuietExpectedError(
-        "CMake was not found in _build/host-deps/cmake or on PATH. "
-        "Install CMake and add its bin directory to PATH before building."
-    )
+    raise omni.repo.man.exceptions.QuietExpectedError("CMake was not found in _build/host-deps/cmake or on PATH. " "Install CMake and add its bin directory to PATH before building.")
 
 
 def _preflight_cmake(root: str) -> str:
@@ -145,11 +142,11 @@ def setup_repo_tool(parser: argparse.ArgumentParser, config: Dict) -> Callable:
             "x64",
             "-T",
             "v143",
-            f"-DREVIT_USD_EXPORT_USD_ROOT={usd_root}",
-            f"-DREVIT_USD_EXPORT_TBB_ROOT={tbb_root}",
+            f"-DUSD_EXPORTER_REVIT_USD_ROOT={usd_root}",
+            f"-DUSD_EXPORTER_REVIT_TBB_ROOT={tbb_root}",
             f"-DREVIT_VERSION={revit_ver}",
-            "-DREVIT_USD_EXPORT_BUILD_TESTS=ON",
-            f"-DREVIT_USD_EXPORT_DOCTEST_INCLUDE_DIR={target_deps}/doctest/include",
+            "-DUSD_EXPORTER_REVIT_BUILD_TESTS=ON",
+            f"-DUSD_EXPORTER_REVIT_DOCTEST_INCLUDE_DIR={target_deps}/doctest/include",
             f"-DPython3_ROOT_DIR={target_deps}/python",
             "-DPython3_FIND_STRATEGY=LOCATION",
         ]

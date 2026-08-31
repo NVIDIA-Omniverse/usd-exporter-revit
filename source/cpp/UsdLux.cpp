@@ -15,9 +15,9 @@
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineCylinderLight(const long stage_id, const char* parent_path, const char* name, const float length, const float radius, const float intensity)
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineCylinderLight(const long stage_id, const char* parent_path, const char* name, const float length, const float radius, const float intensity)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -41,16 +41,16 @@ extern "C"
         light.CreateRadiusAttr(pxr::VtValue(radius));
 
         pxr::UsdLuxLightAPI lightApi = pxr::UsdLuxLightAPI::Apply(light.GetPrim());
-        revit::usd_export::core::createIntensityAttr(lightApi, intensity);
+        usd::exporter::revit::core::createIntensityAttr(lightApi, intensity);
 
         std::string newPath = light.GetPath().GetAsString();
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineDiskLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity)
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineDiskLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -73,16 +73,16 @@ extern "C"
         light.CreateRadiusAttr(pxr::VtValue(radius));
 
         pxr::UsdLuxLightAPI lightApi = pxr::UsdLuxLightAPI::Apply(light.GetPrim());
-        revit::usd_export::core::createIntensityAttr(lightApi, intensity);
+        usd::exporter::revit::core::createIntensityAttr(lightApi, intensity);
 
         std::string newPath = light.GetPath().GetAsString();
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineSphereLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity)
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineSphereLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -105,16 +105,16 @@ extern "C"
         light.CreateRadiusAttr(pxr::VtValue(radius));
 
         pxr::UsdLuxLightAPI lightApi = pxr::UsdLuxLightAPI::Apply(light.GetPrim());
-        revit::usd_export::core::createIntensityAttr(lightApi, intensity);
+        usd::exporter::revit::core::createIntensityAttr(lightApi, intensity);
 
         std::string newPath = light.GetPath().GetAsString();
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API void pxr_usd_createLuxShapingApiIesFileAttr(const long stage_id, const char* light_path, const char* file_path)
+    USD_EXPORTER_REVIT_API void pxr_usd_createLuxShapingApiIesFileAttr(const long stage_id, const char* light_path, const char* file_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -136,9 +136,9 @@ extern "C"
         shapingApi.CreateShapingIesFileAttr().Set(pxr::SdfAssetPath(file_path));
     }
 
-    REVIT_USD_EXPORT_API void pxr_usd_createLuxShapingApiIesFileAttrAtTime(const long stage_id, const char* light_path, const char* file_path, const double time)
+    USD_EXPORTER_REVIT_API void pxr_usd_createLuxShapingApiIesFileAttrAtTime(const long stage_id, const char* light_path, const char* file_path, const double time)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;

@@ -8,7 +8,7 @@
 #include <string>
 #include <system_error>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 bool hasScheme(const std::string& path)
@@ -17,24 +17,24 @@ bool hasScheme(const std::string& path)
     return colon != std::string::npos && colon < path.find('/');
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
-bool revit::usd_export::core::detail::isFileRelative(const std::string& path)
+bool usd::exporter::revit::core::detail::isFileRelative(const std::string& path)
 {
     return path[0] == '.';
 }
 
-bool revit::usd_export::core::detail::isAbsolute(const std::string& path)
+bool usd::exporter::revit::core::detail::isAbsolute(const std::string& path)
 {
     return path[0] == '/' || hasScheme(path);
 }
 
-bool revit::usd_export::core::detail::isSearchPath(const std::string& path)
+bool usd::exporter::revit::core::detail::isSearchPath(const std::string& path)
 {
-    return !revit::usd_export::core::detail::isAbsolute(path) && !revit::usd_export::core::detail::isFileRelative(path);
+    return !usd::exporter::revit::core::detail::isAbsolute(path) && !usd::exporter::revit::core::detail::isFileRelative(path);
 }
 
-std::string revit::usd_export::core::detail::normalizePath(const std::string& path)
+std::string usd::exporter::revit::core::detail::normalizePath(const std::string& path)
 {
     static auto replaceAll = [](std::string str, const std::string& from, const std::string& to)
     {
@@ -57,7 +57,7 @@ std::string revit::usd_export::core::detail::normalizePath(const std::string& pa
     return finalPath;
 }
 
-std::string revit::usd_export::core::detail::makeRelativeUrl(const char* baseUrl, const char* otherUrl)
+std::string usd::exporter::revit::core::detail::makeRelativeUrl(const char* baseUrl, const char* otherUrl)
 {
     if (!baseUrl || !otherUrl)
     {

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <AssemblyName>UsdExporterRevit2025</AssemblyName>
+    <RootNamespace>UsdExporterRevit</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants>TRACE;DEBUG;REV2025</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DefineConstants>TRACE;REV2025</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Utilities\**\*.cs" Link="Utilities\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\UsdExporterRevit.UI\**\*.cs" Link="UsdExporterRevit.UI\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Page Include="..\UsdExporterRevit.UI\**\*.xaml" Link="UsdExporterRevit.UI\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="revit_all_main_versions_api_x64" Version="2025.0.0" PrivateAssets="all" />
+    <PackageReference Include="newtonsoft.json" Version="13.0.1" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsdExporterRevitSDK\UsdExporterRevitSDK2025.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

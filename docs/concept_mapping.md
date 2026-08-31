@@ -1,10 +1,10 @@
-# NVIDIA OpenUSD Exporter Plugin for Revit to OpenUSD Data Mapping
+# usd-exporter-revit to OpenUSD Data Mapping
 
 ## Introduction
 
 ### Overview
 
-This document describes how the NVIDIA OpenUSD Exporter Plugin for Revit maps
+This document describes how the usd-exporter-revit maps
 Autodesk Revit model data to OpenUSD. It focuses on current plugin and SDK
 behavior.
 
@@ -63,7 +63,7 @@ behavior.
 
 ### What Is Not Preserved
 
-The current NVIDIA OpenUSD Exporter Plugin for Revit does not preserve the
+The current usd-exporter-revit does not preserve the
 following regardless of export options. Option-gated concepts (rooms, spaces,
 links, lights, cameras, drawings, BIM attributes) are covered in the concept
 mapping table and later sections.
@@ -92,7 +92,7 @@ mapping table and later sections.
 
 | Term | Description |
 | --- | --- |
-| NVIDIA OpenUSD Exporter Plugin for Revit | NVIDIA Revit plugin that exports Autodesk Revit models to OpenUSD. |
+| USD Exporter for Revit | NVIDIA Revit plugin that exports Autodesk Revit models to OpenUSD. |
 | Revit | Autodesk Revit host application. |
 | AEC | Architecture, engineering, and construction data. |
 | BIM | Building Information Modeling data such as categories, families, types, parameters, rooms, spaces, and links. |
@@ -409,7 +409,7 @@ Names in this table match plugin export settings fields.
 
 | Option | Values and Defaults | Mapping Impact |
 | --- | --- | --- |
-| `File.OutputFolder` | Documents/Omniverse/Revit by default | Chooses local output directory. |
+| `File.OutputFolder` | Documents/Omniverse/UsdExporterRevit by default | Chooses local output directory. |
 | `File.FileName` | `"Default"` | Names the default prim and root file stem. |
 | `File.Extension` | `.usdc` default; `.usd` / `.usda` / `.usdc` supported | Chooses USD file format. |
 | `View.DetailLevel` | Empty default | Temporarily sets Fine/Medium/Coarse on the export view. |

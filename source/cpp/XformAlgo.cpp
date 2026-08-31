@@ -18,7 +18,7 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 static const GfRotation g_identityRotation = GfRotation().SetIdentity();
 static const GfVec3d g_identityTranslation = GfVec3d(0.0, 0.0, 0.0);
@@ -120,21 +120,21 @@ GfVec3d computeXyzRotationsFromRotation(const GfRotation& rotate)
     return GfVec3d(angles[2], angles[1], angles[0]);
 }
 
-GfVec3i getAxisIndices(const revit::usd_export::core::RotationOrder& rotationOrder)
+GfVec3i getAxisIndices(const usd::exporter::revit::core::RotationOrder& rotationOrder)
 {
     switch (rotationOrder)
     {
-        case revit::usd_export::core::RotationOrder_eXyz:
+        case usd::exporter::revit::core::RotationOrder_eXyz:
             return GfVec3i(0, 1, 2);
-        case revit::usd_export::core::RotationOrder_eXzy:
+        case usd::exporter::revit::core::RotationOrder_eXzy:
             return GfVec3i(0, 2, 1);
-        case revit::usd_export::core::RotationOrder_eYxz:
+        case usd::exporter::revit::core::RotationOrder_eYxz:
             return GfVec3i(1, 0, 2);
-        case revit::usd_export::core::RotationOrder_eYzx:
+        case usd::exporter::revit::core::RotationOrder_eYzx:
             return GfVec3i(1, 2, 0);
-        case revit::usd_export::core::RotationOrder_eZxy:
+        case usd::exporter::revit::core::RotationOrder_eZxy:
             return GfVec3i(2, 0, 1);
-        case revit::usd_export::core::RotationOrder_eZyx:
+        case usd::exporter::revit::core::RotationOrder_eZyx:
             return GfVec3i(2, 1, 0);
         default:
             // Default rotation order is XYZ.
@@ -142,7 +142,7 @@ GfVec3i getAxisIndices(const revit::usd_export::core::RotationOrder& rotationOrd
     }
 }
 
-GfRotation computeRotation(const GfVec3f& rotations, const revit::usd_export::core::RotationOrder rotationOrder)
+GfRotation computeRotation(const GfVec3f& rotations, const usd::exporter::revit::core::RotationOrder rotationOrder)
 {
     static const GfVec3d xyzAxes[] = { GfVec3d::XAxis(), GfVec3d::YAxis(), GfVec3d::ZAxis() };
     const GfVec3i indices = getAxisIndices(rotationOrder);
@@ -159,7 +159,7 @@ GfRotation computeRotation(const GfVec3f& rotations, const revit::usd_export::co
     return rotation;
 }
 
-GfTransform computeTransformFromComponents(const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const revit::usd_export::core::RotationOrder rotationOrder, const GfVec3f& scale)
+GfTransform computeTransformFromComponents(const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const usd::exporter::revit::core::RotationOrder rotationOrder, const GfVec3f& scale)
 {
     // TODO: Refactor this to retain rotations greater than 360 degrees.
     // Right now a rotation greater than 360 will only be retained if it is in the first position and the remaining two are zero
@@ -178,28 +178,28 @@ GfTransform computeTransformFromComponents(const GfVec3d& translation, const GfV
     return transform;
 }
 
-GfMatrix4d computeMatrixFromComponents(const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const revit::usd_export::core::RotationOrder rotationOrder, const GfVec3f& scale)
+GfMatrix4d computeMatrixFromComponents(const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const usd::exporter::revit::core::RotationOrder rotationOrder, const GfVec3f& scale)
 {
     // Build a transform from the components and return it's internal matrix
     const GfTransform transform = computeTransformFromComponents(translation, pivot, rotation, rotationOrder, scale);
     return transform.GetMatrix();
 }
 
-UsdGeomXformCommonAPI::RotationOrder convertRotationOrder(const revit::usd_export::core::RotationOrder& rotationOrder)
+UsdGeomXformCommonAPI::RotationOrder convertRotationOrder(const usd::exporter::revit::core::RotationOrder& rotationOrder)
 {
     switch (rotationOrder)
     {
-        case revit::usd_export::core::RotationOrder_eXyz:
+        case usd::exporter::revit::core::RotationOrder_eXyz:
             return UsdGeomXformCommonAPI::RotationOrderXYZ;
-        case revit::usd_export::core::RotationOrder_eXzy:
+        case usd::exporter::revit::core::RotationOrder_eXzy:
             return UsdGeomXformCommonAPI::RotationOrderXZY;
-        case revit::usd_export::core::RotationOrder_eYxz:
+        case usd::exporter::revit::core::RotationOrder_eYxz:
             return UsdGeomXformCommonAPI::RotationOrderYXZ;
-        case revit::usd_export::core::RotationOrder_eYzx:
+        case usd::exporter::revit::core::RotationOrder_eYzx:
             return UsdGeomXformCommonAPI::RotationOrderYZX;
-        case revit::usd_export::core::RotationOrder_eZxy:
+        case usd::exporter::revit::core::RotationOrder_eZxy:
             return UsdGeomXformCommonAPI::RotationOrderZXY;
-        case revit::usd_export::core::RotationOrder_eZyx:
+        case usd::exporter::revit::core::RotationOrder_eZyx:
             return UsdGeomXformCommonAPI::RotationOrderZYX;
         default:
             // Default rotation order is XYZ.
@@ -233,30 +233,30 @@ bool getMatrixXformOp(const std::vector<UsdGeomXformOp>& xformOps, UsdGeomXformO
     return false;
 }
 
-revit::usd_export::core::RotationOrder convertRotationOrder(const UsdGeomXformCommonAPI::RotationOrder& rotationOrder)
+usd::exporter::revit::core::RotationOrder convertRotationOrder(const UsdGeomXformCommonAPI::RotationOrder& rotationOrder)
 {
     switch (rotationOrder)
     {
         case UsdGeomXformCommonAPI::RotationOrderXYZ:
-            return revit::usd_export::core::RotationOrder_eXyz;
+            return usd::exporter::revit::core::RotationOrder_eXyz;
         case UsdGeomXformCommonAPI::RotationOrderXZY:
-            return revit::usd_export::core::RotationOrder_eXzy;
+            return usd::exporter::revit::core::RotationOrder_eXzy;
         case UsdGeomXformCommonAPI::RotationOrderYXZ:
-            return revit::usd_export::core::RotationOrder_eYxz;
+            return usd::exporter::revit::core::RotationOrder_eYxz;
         case UsdGeomXformCommonAPI::RotationOrderYZX:
-            return revit::usd_export::core::RotationOrder_eYzx;
+            return usd::exporter::revit::core::RotationOrder_eYzx;
         case UsdGeomXformCommonAPI::RotationOrderZXY:
-            return revit::usd_export::core::RotationOrder_eZxy;
+            return usd::exporter::revit::core::RotationOrder_eZxy;
         case UsdGeomXformCommonAPI::RotationOrderZYX:
-            return revit::usd_export::core::RotationOrder_eZyx;
+            return usd::exporter::revit::core::RotationOrder_eZyx;
         default:
             // Default rotation order is XYZ.
-            return revit::usd_export::core::RotationOrder_eXyz;
+            return usd::exporter::revit::core::RotationOrder_eXyz;
     }
 }
 
 // Overloaded version of UsdGeomXformCommonAPI::GetXformVectorsByAccumulation which treats pivot as a double
-void getXformVectorsByAccumulation(const UsdGeomXformCommonAPI& xformCommonAPI, GfVec3d* translation, GfVec3d* pivot, GfVec3f* rotation, revit::usd_export::core::RotationOrder* rotationOrder, GfVec3f* scale, const UsdTimeCode time)
+void getXformVectorsByAccumulation(const UsdGeomXformCommonAPI& xformCommonAPI, GfVec3d* translation, GfVec3d* pivot, GfVec3f* rotation, usd::exporter::revit::core::RotationOrder* rotationOrder, GfVec3f* scale, const UsdTimeCode time)
 {
     // Get the xform vectors in the types expected by the xformCommonAPI
     GfVec3f pivotFloat;
@@ -268,7 +268,7 @@ void getXformVectorsByAccumulation(const UsdGeomXformCommonAPI& xformCommonAPI, 
 }
 
 // Given a 4x4 matrix compute the values of common components
-void computeComponentsFromMatrix(const GfMatrix4d& matrix, GfVec3d& translation, GfVec3d& pivot, GfVec3f& rotation, revit::usd_export::core::RotationOrder& rotationOrder, GfVec3f& scale)
+void computeComponentsFromMatrix(const GfMatrix4d& matrix, GfVec3d& translation, GfVec3d& pivot, GfVec3f& rotation, usd::exporter::revit::core::RotationOrder& rotationOrder, GfVec3f& scale)
 {
     // Get the components from the transform and cast to the expected precision
     const GfTransform transform = GfTransform(matrix);
@@ -278,20 +278,20 @@ void computeComponentsFromMatrix(const GfMatrix4d& matrix, GfVec3d& translation,
     // Decompose rotation into a rotationOrder of XYZ and convert from double to float
     const GfVec3d rotationDouble = computeXyzRotationsFromRotation(transform.GetRotation());
     rotation.Set(rotationDouble[0], rotationDouble[1], rotationDouble[2]);
-    rotationOrder = revit::usd_export::core::RotationOrder_eXyz;
+    rotationOrder = usd::exporter::revit::core::RotationOrder_eXyz;
 
     // Convert scale from double to float
     const GfVec3d scaleDouble = transform.GetScale();
     scale.Set(scaleDouble[0], scaleDouble[1], scaleDouble[2]);
 }
 
-void getLocalTransformComponents(const UsdPrim& prim, GfVec3d& translation, GfVec3d& pivot, GfVec3f& rotation, revit::usd_export::core::RotationOrder& rotationOrder, GfVec3f& scale, UsdTimeCode time)
+void getLocalTransformComponents(const UsdPrim& prim, GfVec3d& translation, GfVec3d& pivot, GfVec3f& rotation, usd::exporter::revit::core::RotationOrder& rotationOrder, GfVec3f& scale, UsdTimeCode time)
 {
     // Initialize as identity
     translation.Set(0.0, 0.0, 0.0);
     pivot.Set(0.0, 0.0, 0.0);
     rotation.Set(0.0, 0.0, 0.0);
-    rotationOrder = revit::usd_export::core::RotationOrder_eXyz;
+    rotationOrder = usd::exporter::revit::core::RotationOrder_eXyz;
     scale.Set(1.0, 1.0, 1.0);
 
     // Early out if the prim is not xformable
@@ -434,7 +434,7 @@ bool setLocalTransform(UsdPrim prim, const GfMatrix4d& matrix, UsdTimeCode time)
     return true;
 }
 
-bool setLocalTransform(UsdPrim prim, const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const revit::usd_export::core::RotationOrder rotationOrder, const GfVec3f& scale, UsdTimeCode time)
+bool setLocalTransform(UsdPrim prim, const GfVec3d& translation, const GfVec3d& pivot, const GfVec3f& rotation, const usd::exporter::revit::core::RotationOrder rotationOrder, const GfVec3f& scale, UsdTimeCode time)
 {
     // Early out with a failure return if the prim is not xformable
     UsdGeomXformable xformable(prim);
@@ -497,9 +497,9 @@ UsdGeomXform defineXform(UsdStagePtr stage, const SdfPath& path, std::optional<p
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(stage, path, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(stage, path, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomXform due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomXform due to an invalid location: %s", reason.c_str());
         return UsdGeomXform();
     }
 
@@ -507,7 +507,7 @@ UsdGeomXform defineXform(UsdStagePtr stage, const SdfPath& path, std::optional<p
     UsdGeomXform xform = UsdGeomXform::Define(stage, path);
     if (!xform)
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomXform at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomXform at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdGeomXform();
     }
 
@@ -524,13 +524,13 @@ UsdGeomXform defineXform(UsdStagePtr stage, const SdfPath& path, std::optional<p
 
     return xform;
 }
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransform(const long int stage_id, const char* prim_path, const double transform[4][4])
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransform(const long int stage_id, const char* prim_path, const double transform[4][4])
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -544,12 +544,12 @@ extern "C"
 
         const pxr::GfMatrix4d m(transform);
         const pxr::GfTransform _tTransform(m);
-        return revit::usd_export::core::setLocalTransform(prim, _tTransform);
+        return usd::exporter::revit::core::setLocalTransform(prim, _tTransform);
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransformPivot(const long int stage_id, const char* prim_path, const double transform[4][4], const pxr::GfVec3d pivot)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransformPivot(const long int stage_id, const char* prim_path, const double transform[4][4], const pxr::GfVec3d pivot)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -564,12 +564,12 @@ extern "C"
         const pxr::GfMatrix4d m(transform);
         pxr::GfTransform _tTransform(m);
         _tTransform.SetPivotPosition(pivot);
-        return revit::usd_export::core::setLocalTransform(prim, _tTransform);
+        return usd::exporter::revit::core::setLocalTransform(prim, _tTransform);
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransformMatrix(const long int stage_id, const char* prim_path, const double matrix[4][4])
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransformMatrix(const long int stage_id, const char* prim_path, const double matrix[4][4])
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -582,12 +582,13 @@ extern "C"
         }
 
         const pxr::GfMatrix4d m(matrix);
-        return revit::usd_export::core::setLocalTransform(prim, m);
+        return usd::exporter::revit::core::setLocalTransform(prim, m);
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_getLocalTransformComponents(const long int stage_id, const char* prim_path, double* translation[3], double* pivot[3], double* rotation[3], revit::usd_export::core::RotationOrder* rotationOrder, double* scale[3])
+    USD_EXPORTER_REVIT_API void
+    usd_exporter_revit_core_getLocalTransformComponents(const long int stage_id, const char* prim_path, double* translation[3], double* pivot[3], double* rotation[3], usd::exporter::revit::core::RotationOrder* rotationOrder, double* scale[3])
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -602,11 +603,11 @@ extern "C"
         pxr::GfVec3d _translation;
         pxr::GfVec3d _pivot;
         pxr::GfVec3f _rotation;
-        revit::usd_export::core::RotationOrder _rotationOrder;
+        usd::exporter::revit::core::RotationOrder _rotationOrder;
         pxr::GfVec3f _scale;
-        revit::usd_export::core::getLocalTransformComponents(prim, _translation, _pivot, _rotation, _rotationOrder, _scale);
+        usd::exporter::revit::core::getLocalTransformComponents(prim, _translation, _pivot, _rotation, _rotationOrder, _scale);
 
-        revit::usd_export::core::CacheTransformData tempTransformData;
+        usd::exporter::revit::core::CacheTransformData tempTransformData;
         tempTransformData.translation = pxr::GfVec3d(_translation[0], _translation[1], _translation[2]);
         tempTransformData.pivot = pxr::GfVec3d(_pivot[0], _pivot[1], _pivot[2]);
         tempTransformData.rotation = pxr::GfVec3d((double)_rotation[0], (double)_rotation[1], (double)_rotation[2]);
@@ -614,7 +615,7 @@ extern "C"
         tempTransformData.rotationOrder = _rotationOrder;
 
         // Returns a temporary buffer for each stage (thread-safe).
-        revit::usd_export::core::CacheTransformData& transformData = revit::usd_export::core::stageCache.getTempData(stage_id, tempTransformData);
+        usd::exporter::revit::core::CacheTransformData& transformData = usd::exporter::revit::core::stageCache.getTempData(stage_id, tempTransformData);
 
         if (translation != nullptr)
         {
@@ -638,15 +639,15 @@ extern "C"
         }
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineXform(const long int stage_id, const char* prim_path)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineXform(const long int stage_id, const char* prim_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
         }
 
-        pxr::UsdGeomXform _transform = revit::usd_export::core::defineXform(stage, pxr::SdfPath(prim_path));
+        pxr::UsdGeomXform _transform = usd::exporter::revit::core::defineXform(stage, pxr::SdfPath(prim_path));
 
         if (!_transform.GetPrim().IsValid())
         {
@@ -655,7 +656,7 @@ extern "C"
         const std::string newPath = _transform.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 }

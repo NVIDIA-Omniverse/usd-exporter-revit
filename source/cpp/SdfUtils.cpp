@@ -19,15 +19,15 @@
 
 PXR_NAMESPACE_USING_DIRECTIVE
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 static const std::string g_mutenessCustomKey = "omni_layer:muteness";
 static const std::string g_lockedCustomKey = "omni_layer:locked";
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
-std::string revit::usd_export::core::detail::computeAbsolutePath(const SdfLayerRefPtr& rootLayer, const std::string& path)
+std::string usd::exporter::revit::core::detail::computeAbsolutePath(const SdfLayerRefPtr& rootLayer, const std::string& path)
 {
     if (SdfLayer::IsAnonymousLayerIdentifier(path) || rootLayer->IsAnonymous())
     {
@@ -37,11 +37,11 @@ std::string revit::usd_export::core::detail::computeAbsolutePath(const SdfLayerR
     {
         // Compute the path through the resolver
         const std::string& absolutePath = rootLayer->ComputeAbsolutePath(path);
-        return revit::usd_export::core::detail::normalizePath(absolutePath);
+        return usd::exporter::revit::core::detail::normalizePath(absolutePath);
     }
 }
 
-void revit::usd_export::core::detail::resolvePathsInternal(const SdfLayerRefPtr& srcLayer, SdfLayerRefPtr dstLayer, bool storeRelativePath, bool relativeToSrcLayer, bool copyLayerOffsets)
+void usd::exporter::revit::core::detail::resolvePathsInternal(const SdfLayerRefPtr& srcLayer, SdfLayerRefPtr dstLayer, bool storeRelativePath, bool relativeToSrcLayer, bool copyLayerOffsets)
 {
     using PathConvertFn = std::function<std::string(const std::string& path)>;
     PathConvertFn makePathAbsolute = [&srcLayer, &dstLayer](const std::string& path)
@@ -54,14 +54,14 @@ void revit::usd_export::core::detail::resolvePathsInternal(const SdfLayerRefPtr&
         std::string externRefPathFull;
         if (!srcLayer->IsAnonymous())
         {
-            externRefPathFull = revit::usd_export::core::detail::computeAbsolutePath(srcLayer, path);
+            externRefPathFull = usd::exporter::revit::core::detail::computeAbsolutePath(srcLayer, path);
         }
         else
         {
-            externRefPathFull = revit::usd_export::core::detail::computeAbsolutePath(dstLayer, path);
+            externRefPathFull = usd::exporter::revit::core::detail::computeAbsolutePath(dstLayer, path);
         }
 
-        if (revit::usd_export::core::detail::isSearchPath(path) && !revit_file_client_uri_exists(externRefPathFull))
+        if (usd::exporter::revit::core::detail::isSearchPath(path) && !usd_exporter_revit_file_client_uri_exists(externRefPathFull))
         {
             return path;
         }
@@ -84,12 +84,12 @@ void revit::usd_export::core::detail::resolvePathsInternal(const SdfLayerRefPtr&
             return path;
         }
 
-        std::string relativePath = revit::usd_export::core::detail::computeAbsolutePath(srcLayer, path);
+        std::string relativePath = usd::exporter::revit::core::detail::computeAbsolutePath(srcLayer, path);
         // FIXME: Resolver will firstly find MDL in the same dir as USD
         // for material reference, then Core Library. Currently, this is
         // used to check the existence of the path and see if it's necessary
         // to resolve path of mdl references.
-        if (revit::usd_export::core::detail::isSearchPath(path) && !revit_file_client_uri_exists(relativePath))
+        if (usd::exporter::revit::core::detail::isSearchPath(path) && !usd_exporter_revit_file_client_uri_exists(relativePath))
         {
             return path;
         }
@@ -107,13 +107,13 @@ void revit::usd_export::core::detail::resolvePathsInternal(const SdfLayerRefPtr&
             }
             if (relativeToSrcLayer)
             {
-                relativePath = revit::usd_export::core::detail::makeRelativeUrl(srcLayer->GetIdentifier().c_str(), relativePath.c_str());
+                relativePath = usd::exporter::revit::core::detail::makeRelativeUrl(srcLayer->GetIdentifier().c_str(), relativePath.c_str());
             }
             else
             {
-                relativePath = revit::usd_export::core::detail::makeRelativeUrl(dstLayer->GetIdentifier().c_str(), relativePath.c_str());
+                relativePath = usd::exporter::revit::core::detail::makeRelativeUrl(dstLayer->GetIdentifier().c_str(), relativePath.c_str());
             }
-            relativePath = revit::usd_export::core::detail::normalizePath(relativePath);
+            relativePath = usd::exporter::revit::core::detail::normalizePath(relativePath);
 
             // If relative path cannot be computed, it returns absolute path to avoid
             // reference issue. For example, if src and dst are not in the same domain.
@@ -164,7 +164,7 @@ void revit::usd_export::core::detail::resolvePathsInternal(const SdfLayerRefPtr&
     dstLayer->SetCustomLayerData(rootLayerCustomData);
 }
 
-void revit::usd_export::core::detail::resolvePaths(const std::string& srcLayerIdentifier, const std::string& targetLayerIdentifier, bool storeRelativePath, bool relativeToSrcLayer, bool copySublayerLayerOffsets)
+void usd::exporter::revit::core::detail::resolvePaths(const std::string& srcLayerIdentifier, const std::string& targetLayerIdentifier, bool storeRelativePath, bool relativeToSrcLayer, bool copySublayerLayerOffsets)
 {
     auto srcLayer = SdfLayer::Find(srcLayerIdentifier);
     auto dstLayer = SdfLayer::Find(targetLayerIdentifier);
@@ -173,10 +173,10 @@ void revit::usd_export::core::detail::resolvePaths(const std::string& srcLayerId
         return;
     }
 
-    revit::usd_export::core::detail::resolvePathsInternal(srcLayer, dstLayer, storeRelativePath, relativeToSrcLayer, copySublayerLayerOffsets);
+    usd::exporter::revit::core::detail::resolvePathsInternal(srcLayer, dstLayer, storeRelativePath, relativeToSrcLayer, copySublayerLayerOffsets);
 }
 
-bool revit::usd_export::core::detail::mergePrimSpecInternal(SdfLayerRefPtr dstLayer, const SdfLayerRefPtr& srcLayer, const SdfPath& primSpecPath, bool isDstStrongerThanSrc, const SdfPath& targetPrimPath)
+bool usd::exporter::revit::core::detail::mergePrimSpecInternal(SdfLayerRefPtr dstLayer, const SdfLayerRefPtr& srcLayer, const SdfPath& primSpecPath, bool isDstStrongerThanSrc, const SdfPath& targetPrimPath)
 {
     if (dstLayer == srcLayer)
     {
@@ -279,15 +279,15 @@ bool revit::usd_export::core::detail::mergePrimSpecInternal(SdfLayerRefPtr dstLa
     if (originalStrongLayer->GetPrimAtPath(primSpecPath))
     {
         SdfCopySpec(originalStrongLayer, primSpecPath, tempStrongLayer, tempPath);
-        revit::usd_export::core::detail::resolvePathsInternal(originalStrongLayer, tempStrongLayer, false);
+        usd::exporter::revit::core::detail::resolvePathsInternal(originalStrongLayer, tempStrongLayer, false);
     }
     if (originalWeakLayer->GetPrimAtPath(primSpecPath))
     {
         SdfCopySpec(originalWeakLayer, primSpecPath, tempWeakLayer, tempPath);
-        revit::usd_export::core::detail::resolvePathsInternal(originalWeakLayer, tempWeakLayer, false);
+        usd::exporter::revit::core::detail::resolvePathsInternal(originalWeakLayer, tempWeakLayer, false);
     }
     UsdUtilsStitchLayers(tempStrongLayer, tempWeakLayer, shouldCopyValueFn);
-    revit::usd_export::core::detail::resolvePathsInternal(targetLayer, tempStrongLayer, true, true);
+    usd::exporter::revit::core::detail::resolvePathsInternal(targetLayer, tempStrongLayer, true, true);
 
     SdfCreatePrimInLayer(targetLayer, primSpecPath);
     SdfPath newPrimPath;
@@ -304,7 +304,7 @@ bool revit::usd_export::core::detail::mergePrimSpecInternal(SdfLayerRefPtr dstLa
     return true;
 }
 
-bool revit::usd_export::core::detail::mergePrimSpec(const std::string& dstLayerIdentifier, const std::string& srcLayerIdentifier, const std::string& primSpecPath, bool isDstStrongerThanSrc, const std::string& targetPrimPath)
+bool usd::exporter::revit::core::detail::mergePrimSpec(const std::string& dstLayerIdentifier, const std::string& srcLayerIdentifier, const std::string& primSpecPath, bool isDstStrongerThanSrc, const std::string& targetPrimPath)
 {
     auto dstLayer = SdfLayer::Find(dstLayerIdentifier);
     auto srcLayer = SdfLayer::Find(srcLayerIdentifier);
@@ -333,10 +333,10 @@ bool revit::usd_export::core::detail::mergePrimSpec(const std::string& dstLayerI
         sdfTargetPrimPath = SdfPath(targetPrimPath);
     }
 
-    return revit::usd_export::core::detail::mergePrimSpecInternal(dstLayer, srcLayer, sdfPrimPath, isDstStrongerThanSrc, sdfTargetPrimPath);
+    return usd::exporter::revit::core::detail::mergePrimSpecInternal(dstLayer, srcLayer, sdfPrimPath, isDstStrongerThanSrc, sdfTargetPrimPath);
 }
 
-std::string revit::usd_export::core::detail::getPathAsString(const SdfPath& path)
+std::string usd::exporter::revit::core::detail::getPathAsString(const SdfPath& path)
 {
 #if PXR_VERSION > 2008
     return path.GetAsString();

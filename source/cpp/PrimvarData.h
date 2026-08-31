@@ -12,7 +12,7 @@
 #include <pxr/base/vt/array.h>
 #include <pxr/usd/usdGeom/primvar.h>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 //! @defgroup primvars UsdGeomPrimvars Algorithms
@@ -226,6 +226,6 @@ using Vec3fPrimvarData = PrimvarData<pxr::GfVec3f>;
 
 //! @}
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 #include "PrimvarData.inl"

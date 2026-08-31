@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to `NVIDIA OpenUSD Exporter Plugin for Revit`.
+Thank you for your interest in contributing to `usd-exporter-revit`.
 
 This project accepts contributions through pull requests. Before opening a pull
 request, make sure your change is focused, documented where appropriate, and
@@ -64,7 +64,7 @@ Visual Studio):
 .\repo.bat fetch_deps --config release
 ```
 
-Then open e.g. `source\solutions\RevitUsdExport2025.sln`.
+Then open e.g. `source\solutions\UsdExporterRevit2025.sln`.
 
 Native sources: `CMakeLists.txt`, `cmake/*.cmake`  
 C# sources: `source/**/*.csproj`  

@@ -11,26 +11,26 @@ extern "C"
      * Determine if initialization was successful.
      * @return  A bool indicating if initialization was successful.
      */
-    REVIT_USD_EXPORT_API bool initialized();
+    USD_EXPORTER_REVIT_API bool initialized();
 
     /**
      * Perform some one-time initialization.
      * @return  A bool indicating if startup was successful.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_startup();
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_startup();
 
     /**
      * Resolve the plugin install root used for config and bundled assets.
      *
-     * Derived from the directory containing `revit_usd_export.dll`.
+     * Derived from the directory containing `usd_exporter_revit.dll`.
      * @return  The install root path, or an empty string when resolution fails.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_install_path();
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_install_path();
 
     /**
      * Get the linear units.
      * @param[in] name            Name of the linear units.
      * @return  The linear unit
      */
-    REVIT_USD_EXPORT_API double revit_usd_export_getGeomLinearUnits(const char* name);
+    USD_EXPORTER_REVIT_API double usd_exporter_revit_getGeomLinearUnits(const char* name);
 }

@@ -6,15 +6,15 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace revit.file
+namespace usd.exporter.revit.file
 {
 public class client
 {
-    [DllImport("revit_usd_export", EntryPoint = "revit_file_client_is_local_uri", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
-    public static extern bool revit_file_client_is_local_uri(byte[] uri);
+    [DllImport("usd_exporter_revit", EntryPoint = "usd_exporter_revit_file_client_is_local_uri", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
+    public static extern bool usd_exporter_revit_file_client_is_local_uri(byte[] uri);
     public static bool isLocalUri(string uri)
     {
-        return revit_file_client_is_local_uri(Encoding.UTF8.GetBytes(uri));
+        return usd_exporter_revit_file_client_is_local_uri(Encoding.UTF8.GetBytes(uri));
     }
 }
 }

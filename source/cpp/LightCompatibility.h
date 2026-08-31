@@ -17,21 +17,21 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 //! Author the width attribute for a UsdLuxRectLight prim
 //!
 //! @param prim The UsdLuxRectLight prim to author the attribute
 //! @param value The float value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createRectWidthAttr(pxr::UsdLuxRectLight& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createRectWidthAttr(pxr::UsdLuxRectLight& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the height attribute for a UsdLuxRectLight prim
 //!
 //! @param prim The UsdLuxRectLight prim to author the attribute
 //! @param value The float value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createRectHeightAttr(pxr::UsdLuxRectLight& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createRectHeightAttr(pxr::UsdLuxRectLight& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the extent attribute for a UsdLuxCylinderLight, UsdLuxDiskLight,
 //! UsdLuxRectLight, UsdLuxSphereLight, or UsdLuxPortalLight.
@@ -40,36 +40,36 @@ REVIT_USD_EXPORT_API void createRectHeightAttr(pxr::UsdLuxRectLight& prim, float
 //!
 //! @param prim The prim to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createLightExtentAttr(pxr::UsdPrim prim, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createLightExtentAttr(pxr::UsdPrim prim, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the texture file attribute for a UsdLuxRectLight prim
 //!
 //! @param prim The UsdLuxRectLight prim to author the attribute
 //! @param value The SdfAssetPath value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createRectTextureFileAttr(pxr::UsdLuxRectLight& prim, const pxr::SdfAssetPath& value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createRectTextureFileAttr(pxr::UsdLuxRectLight& prim, const pxr::SdfAssetPath& value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the intensity attribute for a prim with UsdLuxLight[API] applied
 //!
 //! @param prim The UsdLuxLight[API] prim to author the attribute
 //! @param value The float value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createIntensityAttr(pxr::UsdLuxLightAPI& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createIntensityAttr(pxr::UsdLuxLightAPI& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the "enable color temperature" attribute for a prim with UsdLuxLight[API] applied
 //!
 //! @param prim The UsdLuxLight[API] prim to author the attribute
 //! @param value The bool value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createEnableColorTemperatureAttr(pxr::UsdLuxLightAPI& prim, bool value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void createEnableColorTemperatureAttr(pxr::UsdLuxLightAPI& prim, bool value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Author the color temperature attribute for a prim with UsdLuxLight[API] applied
 //!
 //! @param prim The UsdLuxLight[API] prim to author the attribute
 //! @param value The float value to author the attribute
 //! @param time The time at which the attribute value is written
-REVIT_USD_EXPORT_API void createColorTemperatureAttr(pxr::UsdLuxLightAPI& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
-} // namespace revit::usd_export::core
+USD_EXPORTER_REVIT_API void createColorTemperatureAttr(pxr::UsdLuxLightAPI& prim, float value, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -79,7 +79,7 @@ extern "C"
      * @param[in] prim_path        The absolute prim path.
      * @param[in] value            The bool value to author the attribute
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createEnableColorTemperatureAttr(const long int stage_id, const char* prim_path, const bool value);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createEnableColorTemperatureAttr(const long int stage_id, const char* prim_path, const bool value);
 
     /**
      * Author the color temperature attribute for a prim path applied with UsdTimeCode::Default
@@ -87,14 +87,14 @@ extern "C"
      * @param[in] prim_path        The absolute prim path.
      * @param[in] value            The float value to author the attribute
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createColorTemperatureAttr(const long int stage_id, const char* prim_path, const float value);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createColorTemperatureAttr(const long int stage_id, const char* prim_path, const float value);
 
     /**
      * Author the extent attribute for a UsdLuxCylinderLight, UsdLuxDiskLight, UsdLuxRectLight, UsdLuxSphereLight, or UsdLuxPortalLight with UsdTimeCode::Default
      * @param[in] stage_id         Stage Id.
      * @param[in] prim_path        The absolute prim path.
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createLightExtentAttr(const long int stage_id, const char* prim_path);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createLightExtentAttr(const long int stage_id, const char* prim_path);
 
     /**
      * Author the intensity attribute for a prim path applied with UsdTimeCode::Default
@@ -102,5 +102,5 @@ extern "C"
      * @param[in] prim_path        The absolute prim path.
      * @param[in] value            The float value to author the attribute
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createIntensityAttr(const long int stage_id, const char* prim_path, const float value);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createIntensityAttr(const long int stage_id, const char* prim_path, const float value);
 }

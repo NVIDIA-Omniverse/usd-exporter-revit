@@ -6,7 +6,7 @@
 
 #include <string>
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 
 // These utilities were removed from the AR 2.0 API, so provide them here
@@ -22,4 +22,4 @@ std::string makeRelativeUrl(const char* baseUrl, const char* otherUrl);
 
 std::string normalizePath(const std::string& path);
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail

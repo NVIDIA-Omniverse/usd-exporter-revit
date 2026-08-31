@@ -30,7 +30,7 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 // clang-format off
     TF_DEFINE_PRIVATE_TOKENS(
@@ -129,21 +129,21 @@ UsdStageRefPtr createStage(const std::string& identifier, const std::string& def
     // Refuse remote schemes before any filesystem / Ar resolver open
     if (!detail::isLocalUri(identifier))
     {
-        REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" because the identifier is not a local URI", identifier.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" because the identifier is not a local URI", identifier.c_str());
         return nullptr;
     }
 
     // Early out on an unsupported identifier
     if (identifier.empty() || !UsdStage::IsSupportedFile(identifier))
     {
-        REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to an invalid identifier", identifier.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to an invalid identifier", identifier.c_str());
         return nullptr;
     }
 
     // Early out on an invalid default prim name
     if (!SdfPath::IsValidIdentifier(defaultPrimName))
     {
-        REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to an invalid default prim name: \"%s\" is not a valid identifier", identifier.c_str(), defaultPrimName.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to an invalid default prim name: \"%s\" is not a valid identifier", identifier.c_str(), defaultPrimName.c_str());
         return nullptr;
     }
 
@@ -153,13 +153,13 @@ UsdStageRefPtr createStage(const std::string& identifier, const std::string& def
     std::string reason;
     if (!validateStageMetrics(upAxis, linearUnits, massUnits, &reason))
     {
-        REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to invalid stage metrics: %s", identifier.c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdStage at \"%s\" due to invalid stage metrics: %s", identifier.c_str(), reason.c_str());
         return nullptr;
     }
 
     // Create the stage in memory to avoid adding the identifier to the registry in cases where failures occur
     UsdStageRefPtr stage = UsdStage::CreateInMemory(identifier);
-    revit::usd_export::core::setLayerAuthoringMetadata(stage->GetRootLayer());
+    usd::exporter::revit::core::setLayerAuthoringMetadata(stage->GetRootLayer());
 
     // Configure the stage
     if (!uncheckedConfigureStage(stage, defaultPrimName, upAxis, linearUnits, massUnits))
@@ -194,20 +194,20 @@ void saveStage(UsdStagePtr stage, const char* comment)
     SdfLayerHandleVector dirtyLayers = UsdUtilsGetDirtyLayers(stage);
     for (auto& layer : dirtyLayers)
     {
-        if (!layer->IsAnonymous() && !revit::usd_export::core::hasLayerAuthoringMetadata(layer))
+        if (!layer->IsAnonymous() && !usd::exporter::revit::core::hasLayerAuthoringMetadata(layer))
         {
-            revit::usd_export::core::setLayerAuthoringMetadata(layer);
+            usd::exporter::revit::core::setLayerAuthoringMetadata(layer);
         }
     }
 
     if (comment == nullptr)
     {
-        REVIT_LOG_INFO("Saving \"%s\"", UsdDescribe(stage).c_str());
+        USD_EXPORTER_REVIT_LOG_INFO("Saving \"%s\"", UsdDescribe(stage).c_str());
         stage->Save();
     }
     else
     {
-        REVIT_LOG_INFO("Saving \"%s\" with comment \"%s\"", UsdDescribe(stage).c_str(), comment);
+        USD_EXPORTER_REVIT_LOG_INFO("Saving \"%s\" with comment \"%s\"", UsdDescribe(stage).c_str(), comment);
         for (auto& layer : dirtyLayers)
         {
             if (!layer->IsAnonymous())
@@ -225,13 +225,13 @@ bool convertMetersPerUnit(UsdStagePtr stage, const double metersPerUnit)
 {
     if (!stage)
     {
-        REVIT_LOG_ERROR("convertMetersPerUnit: Invalid stage provided");
+        USD_EXPORTER_REVIT_LOG_ERROR("convertMetersPerUnit: Invalid stage provided");
         return false;
     }
 
     if (metersPerUnit <= 0.0)
     {
-        REVIT_LOG_ERROR("convertMetersPerUnit: metersPerUnit must be greater than zero, received %f", metersPerUnit);
+        USD_EXPORTER_REVIT_LOG_ERROR("convertMetersPerUnit: metersPerUnit must be greater than zero, received %f", metersPerUnit);
         return false;
     }
 
@@ -250,7 +250,7 @@ bool convertMetersPerUnit(UsdStagePtr stage, const double metersPerUnit)
     // Set the new meters per unit for the stage first
     if (!UsdGeomSetStageMetersPerUnit(stage, metersPerUnit))
     {
-        REVIT_LOG_ERROR("convertMetersPerUnit: Failed to set meters per unit to %f", metersPerUnit);
+        USD_EXPORTER_REVIT_LOG_ERROR("convertMetersPerUnit: Failed to set meters per unit to %f", metersPerUnit);
         return false;
     }
 
@@ -264,8 +264,8 @@ bool convertMetersPerUnit(UsdStagePtr stage, const double metersPerUnit)
             // Get existing transform components including pivot
             GfVec3d translation, pivot;
             GfVec3f rotation, scale;
-            revit::usd_export::core::RotationOrder rotationOrder;
-            revit::usd_export::core::getLocalTransformComponents(prim, translation, pivot, rotation, rotationOrder, scale, UsdTimeCode::Default());
+            usd::exporter::revit::core::RotationOrder rotationOrder;
+            usd::exporter::revit::core::getLocalTransformComponents(prim, translation, pivot, rotation, rotationOrder, scale, UsdTimeCode::Default());
 
             // Scale the translation and pivot by the scale factor
             translation *= scaleFactor;
@@ -277,7 +277,7 @@ bool convertMetersPerUnit(UsdStagePtr stage, const double metersPerUnit)
             }
 
             // Set the scaled transform components back
-            revit::usd_export::core::setLocalTransform(prim, translation, pivot, rotation, rotationOrder, scale, UsdTimeCode::Default());
+            usd::exporter::revit::core::setLocalTransform(prim, translation, pivot, rotation, rotationOrder, scale, UsdTimeCode::Default());
         }
 
         // Scale point-based geometry (meshes, curves, etc.)
@@ -348,7 +348,7 @@ bool convertMetersPerUnit(UsdStagePtr stage, const double metersPerUnit)
         }
     }
 
-    REVIT_LOG_INFO("convertMetersPerUnit: Successfully converted stage to %f meters per unit", metersPerUnit);
+    USD_EXPORTER_REVIT_LOG_INFO("convertMetersPerUnit: Successfully converted stage to %f meters per unit", metersPerUnit);
     return true;
 }
 
@@ -356,13 +356,13 @@ double getMetersPerUnitFromFile(const std::string& filePath)
 {
     if (filePath.empty())
     {
-        REVIT_LOG_ERROR("getMetersPerUnitFromFile: Empty file path provided");
+        USD_EXPORTER_REVIT_LOG_ERROR("getMetersPerUnitFromFile: Empty file path provided");
         return -1.0;
     }
 
     if (!detail::isLocalUri(filePath))
     {
-        REVIT_LOG_ERROR("getMetersPerUnitFromFile: Refusing non-local URI \"%s\"", filePath.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("getMetersPerUnitFromFile: Refusing non-local URI \"%s\"", filePath.c_str());
         return -1.0;
     }
 
@@ -373,65 +373,65 @@ double getMetersPerUnitFromFile(const std::string& filePath)
 
         if (!stage)
         {
-            REVIT_LOG_WARN("getMetersPerUnitFromFile: Failed to open USD file at \"%s\"", filePath.c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("getMetersPerUnitFromFile: Failed to open USD file at \"%s\"", filePath.c_str());
             return -1.0;
         }
 
         // Get the metersPerUnit from the stage
         double metersPerUnit = UsdGeomGetStageMetersPerUnit(stage);
 
-        REVIT_LOG_INFO("getMetersPerUnitFromFile: File \"%s\" has metersPerUnit = %f", filePath.c_str(), metersPerUnit);
+        USD_EXPORTER_REVIT_LOG_INFO("getMetersPerUnitFromFile: File \"%s\" has metersPerUnit = %f", filePath.c_str(), metersPerUnit);
 
         return metersPerUnit;
     }
     catch (const std::exception& e)
     {
-        REVIT_LOG_ERROR("getMetersPerUnitFromFile: Exception while reading file \"%s\": %s", filePath.c_str(), e.what());
+        USD_EXPORTER_REVIT_LOG_ERROR("getMetersPerUnitFromFile: Exception while reading file \"%s\": %s", filePath.c_str(), e.what());
         return -1.0;
     }
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API long int revit_usd_export_core_createStage(const char* identifier, const char* defaultPrimName, char* upAxis, const double linearUnits)
+    USD_EXPORTER_REVIT_API long int usd_exporter_revit_core_createStage(const char* identifier, const char* defaultPrimName, char* upAxis, const double linearUnits)
     {
         std::string _defaultPrimName = defaultPrimName;
 
-        pxr::UsdStageRefPtr stage = revit::usd_export::core::createStage(identifier, std::string(defaultPrimName), pxr::TfToken(upAxis), linearUnits);
+        pxr::UsdStageRefPtr stage = usd::exporter::revit::core::createStage(identifier, std::string(defaultPrimName), pxr::TfToken(upAxis), linearUnits);
         if (stage == nullptr)
         {
             return 0;
         }
 
         // Obtain stage id from StageCache.
-        return revit::usd_export::core::stageCache.add(stage);
+        return usd::exporter::revit::core::stageCache.add(stage);
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_saveStage(const long int stage_id, const char* commit)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_saveStage(const long int stage_id, const char* commit)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
         }
 
-        revit::usd_export::core::saveStage(stage, commit);
+        usd::exporter::revit::core::saveStage(stage, commit);
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_convertMetersPerUnit(const long int stage_id, const double metersPerUnit)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_convertMetersPerUnit(const long int stage_id, const double metersPerUnit)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
         }
 
-        return revit::usd_export::core::convertMetersPerUnit(stage, metersPerUnit);
+        return usd::exporter::revit::core::convertMetersPerUnit(stage, metersPerUnit);
     }
 
-    REVIT_USD_EXPORT_API double revit_usd_export_core_getMetersPerUnitFromFile(const char* filePath)
+    USD_EXPORTER_REVIT_API double usd_exporter_revit_core_getMetersPerUnitFromFile(const char* filePath)
     {
         if (filePath == nullptr)
         {
@@ -439,6 +439,6 @@ extern "C"
         }
 
         std::string path(filePath);
-        return revit::usd_export::core::getMetersPerUnitFromFile(path);
+        return usd::exporter::revit::core::getMetersPerUnitFromFile(path);
     }
 }

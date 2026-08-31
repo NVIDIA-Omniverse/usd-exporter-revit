@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 //! @defgroup prim_displayname UsdPrim Display Name Functions
@@ -22,7 +22,7 @@ namespace revit::usd_export::core
 //!
 //! @param prim The prim to get the display name from
 //! @returns Authored value, or an empty string if no display name has been set
-REVIT_USD_EXPORT_API std::string getDisplayName(const pxr::UsdPrim& prim);
+USD_EXPORTER_REVIT_API std::string getDisplayName(const pxr::UsdPrim& prim);
 
 //! Sets this prim's display name (metadata).
 //!
@@ -32,7 +32,7 @@ REVIT_USD_EXPORT_API std::string getDisplayName(const pxr::UsdPrim& prim);
 //! @param prim The prim to set the display name for
 //! @param name The value to set
 //! @returns True on success, otherwise false
-REVIT_USD_EXPORT_API bool setDisplayName(pxr::UsdPrim prim, const std::string& name);
+USD_EXPORTER_REVIT_API bool setDisplayName(pxr::UsdPrim prim, const std::string& name);
 
 //! Utility functions to generate valid names for `UsdPrims`
 //!
@@ -41,13 +41,13 @@ REVIT_USD_EXPORT_API bool setDisplayName(pxr::UsdPrim prim, const std::string& n
 //! Produce a valid prim name using the Bootstring algorithm.
 //!
 //! This is a lossless encoding algorithm that supports all UTF-8 code set (even control characters).
-//! Transcoding can be disabled via the `REVIT_USD_EXPORT_ENABLE_TRANSCODING` environment variable, in which case invalid
+//! Transcoding can be disabled via the `USD_EXPORTER_REVIT_ENABLE_TRANSCODING` environment variable, in which case invalid
 //! characters are replaced with "_". See
 //! https://github.com/PixarAnimationStudios/OpenUSD-proposals/tree/main/proposals/transcoding_invalid_identifiers for details.
 //!
 //! @param name The input name
 //! @returns A string that is considered valid for use as a prim name.
-REVIT_USD_EXPORT_API std::string getValidPrimName(const std::string& name);
+USD_EXPORTER_REVIT_API std::string getValidPrimName(const std::string& name);
 
 //! Take a vector of preferred names and return a matching vector of valid and unique names.
 //!
@@ -57,13 +57,10 @@ REVIT_USD_EXPORT_API std::string getValidPrimName(const std::string& name);
 //! @param names A vector of preferred prim names.
 //! @param reservedNames A vector of reserved prim names. Names in this vector will not be returned.
 //! @returns A vector of valid and unique names.
-REVIT_USD_EXPORT_API std::vector<std::string> getValidPrimNames(
-    const std::vector<std::string>& names,
-    const std::vector<std::string>& reservedNames = {}
-);
+USD_EXPORTER_REVIT_API std::vector<std::string> getValidPrimNames(const std::vector<std::string>& names, const std::vector<std::string>& reservedNames = {});
 
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -73,7 +70,7 @@ extern "C"
      * @param[in] prim_path     The absolute prim path.
      * @return this prim's display name (metadata)
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_getDisplayName(const long int stage_id, const char* prim_path);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_getDisplayName(const long int stage_id, const char* prim_path);
 
     /**
      * Sets this prim's display name (metadata).
@@ -82,7 +79,7 @@ extern "C"
      * @param[in] name          The value to set.
      * @return True on success, otherwise false
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setDisplayName(const long int stage_id, const char* prim_path, const char* name);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setDisplayName(const long int stage_id, const char* prim_path, const char* name);
 
     /**
      * Produce a valid prim name by replacing invalid characters with "_".
@@ -91,7 +88,7 @@ extern "C"
      * @param[in] name        The input name.
      * @return A string that is considered valid for use as a prim name.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_getValidPrimName(const long int stage_id, const char* name);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_getValidPrimName(const long int stage_id, const char* name);
 
     /**
      * Produce a matching array of valid and unique prim names from an array of preferred names.
@@ -106,12 +103,5 @@ extern "C"
      * @param[out] returnCount         Number of entries in the returned array.
      * @return An array of valid and unique names, ordered to match `names`, or null on failure.
      */
-    REVIT_USD_EXPORT_API const char** revit_usd_export_core_getValidPrimNames(
-        const long int stage_id,
-        const char** names,
-        int namesCount,
-        const char** reservedNames,
-        int reservedNamesCount,
-        int* returnCount
-    );
+    USD_EXPORTER_REVIT_API const char** usd_exporter_revit_core_getValidPrimNames(const long int stage_id, const char** names, int namesCount, const char** reservedNames, int reservedNamesCount, int* returnCount);
 }

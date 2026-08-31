@@ -17,5 +17,5 @@ extern "C"
      * @param[in] texturePath   Texture file path.
      * @return  If successful, the light's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineRectLight(const long int stage_id, const char* prim_path, const float width, const float height, float intensity, const char* texturePath);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineRectLight(const long int stage_id, const char* prim_path, const float width, const float height, float intensity, const char* texturePath);
 }

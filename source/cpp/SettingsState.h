@@ -7,7 +7,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 //! Repo-owned configuration loaded from TOML/JSON with token and env resolution.
@@ -40,4 +40,4 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp);
 SettingsState& mutableSettingsState();
 const SettingsState& settingsState();
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core

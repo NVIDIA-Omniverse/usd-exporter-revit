@@ -6,7 +6,7 @@
 #include "Log.h"
 #include "StageCache.h"
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 void createRectWidthAttr(pxr::UsdLuxRectLight& prim, float value, pxr::UsdTimeCode time)
@@ -32,7 +32,7 @@ void createLightExtentAttr(pxr::UsdPrim prim, pxr::UsdTimeCode time)
     else
     {
         // Warn the user that the light is not boundable
-        REVIT_LOG_WARN(kRevitUsdExportChannel, "Provided prim <%s> is not a UsdGeomBoundable.", prim.GetPath().GetText());
+        USD_EXPORTER_REVIT_LOG_WARN(kUsdExporterRevitChannel, "Provided prim <%s> is not a UsdGeomBoundable.", prim.GetPath().GetText());
     }
 }
 
@@ -56,13 +56,13 @@ void createColorTemperatureAttr(pxr::UsdLuxLightAPI& prim, float value, pxr::Usd
     prim.CreateColorTemperatureAttr().Set(value, time);
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createEnableColorTemperatureAttr(const long int stage_id, const char* prim_path, const bool value)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createEnableColorTemperatureAttr(const long int stage_id, const char* prim_path, const bool value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -75,12 +75,12 @@ extern "C"
         }
         pxr::UsdLuxLightAPI lightAPI = pxr::UsdLuxLightAPI::Apply(prim);
 
-        revit::usd_export::core::createEnableColorTemperatureAttr(lightAPI, value);
+        usd::exporter::revit::core::createEnableColorTemperatureAttr(lightAPI, value);
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createColorTemperatureAttr(const long int stage_id, const char* prim_path, const float value)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createColorTemperatureAttr(const long int stage_id, const char* prim_path, const float value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -93,12 +93,12 @@ extern "C"
         }
         pxr::UsdLuxLightAPI lightAPI = pxr::UsdLuxLightAPI::Apply(prim);
 
-        revit::usd_export::core::createColorTemperatureAttr(lightAPI, value);
+        usd::exporter::revit::core::createColorTemperatureAttr(lightAPI, value);
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createLightExtentAttr(const long int stage_id, const char* prim_path)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createLightExtentAttr(const long int stage_id, const char* prim_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -110,12 +110,12 @@ extern "C"
             return;
         }
 
-        revit::usd_export::core::createLightExtentAttr(prim);
+        usd::exporter::revit::core::createLightExtentAttr(prim);
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_createIntensityAttr(const long int stage_id, const char* prim_path, const float value)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_createIntensityAttr(const long int stage_id, const char* prim_path, const float value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -128,6 +128,6 @@ extern "C"
         }
         pxr::UsdLuxLightAPI lightAPI = pxr::UsdLuxLightAPI::Apply(prim);
 
-        revit::usd_export::core::createIntensityAttr(lightAPI, value);
+        usd::exporter::revit::core::createIntensityAttr(lightAPI, value);
     }
 }

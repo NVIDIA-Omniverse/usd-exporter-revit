@@ -9,9 +9,9 @@
 
 extern "C"
 {
-    bool REVIT_USD_EXPORT_API loadSettings()
+    bool USD_EXPORTER_REVIT_API loadSettings()
     {
         const bool preserveStartTimestamp = initialized();
-        return revit::usd_export::core::loadSettingsState(revit::usd_export::core::mutableSettingsState(), preserveStartTimestamp);
+        return usd::exporter::revit::core::loadSettingsState(usd::exporter::revit::core::mutableSettingsState(), preserveStartTimestamp);
     }
 }

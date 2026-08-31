@@ -13,7 +13,7 @@
 #include <map>
 #include <vector>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 template <typename T>
@@ -199,7 +199,7 @@ bool PrimvarData<T>::index()
     // We do not fully understand the correct manner by which indexing should be described when element size is involved.
     if (m_elementSize > 1)
     {
-        REVIT_LOG_ERROR("Unable to index PrimvarData due to element size greater than one");
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to index PrimvarData due to element size greater than one");
         return false;
     }
 
@@ -217,7 +217,7 @@ bool PrimvarData<T>::index()
             else
             {
                 // Abort indexing if existing indices are outside the value range
-                REVIT_LOG_ERROR("Unable to index PrimvarData due to existing indices outside the range of existing values");
+                USD_EXPORTER_REVIT_LOG_ERROR("Unable to index PrimvarData due to existing indices outside the range of existing values");
                 return false;
             }
         }
@@ -303,4 +303,4 @@ bool PrimvarData<T>::operator!=(const PrimvarData<T>& other) const
     return !(*this == other);
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core

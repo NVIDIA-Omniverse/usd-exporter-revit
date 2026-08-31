@@ -17,7 +17,7 @@ extern "C"
      * @param[in] cameraData  The camera data to set, including the world space transform matrix.
      * @return  If successful, the camera's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineCamera(const long int stage_id, const char* prim_path, const pxr::GfCamera* cameraData);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineCamera(const long int stage_id, const char* prim_path, const pxr::GfCamera* cameraData);
 
     /**
      * Defines a basic 3d camera on the stage.
@@ -36,7 +36,7 @@ extern "C"
      * @param[in] focusDistance    focus distance in world units.
      * @return  If successful, the camera's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineCameraEx(
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineCameraEx(
         const long int stage_id,
         const char* prim_path,
         const double transform[4][4],

@@ -25,28 +25,31 @@ namespace
 
 using StringMap = std::unordered_map<std::string, std::string>;
 
-static constexpr const char* g_sdkSettingsRelativePath = "config/revit.usd.export.core.toml";
-static constexpr const char* g_clientSettingsRelativePath = "config/revit.usd.export.client.toml";
+static constexpr const char* g_sdkSettingsRelativePath = "config/usd.exporter.revit.core.toml";
+static constexpr const char* g_clientSettingsRelativePath = "config/usd.exporter.revit.client.toml";
 static constexpr const char* g_userConfigFileName = "user.config.json";
 static constexpr const char* g_folderPattern = "{0}/{1}-{2}/{3}-{4}";
 
-#ifdef REVIT_USD_EXPORT_APP_VERSION
-static constexpr const char* g_builtAppVersion = REVIT_USD_EXPORT_APP_VERSION;
+#ifdef USD_EXPORTER_REVIT_APP_VERSION
+static constexpr const char* g_builtAppVersion = USD_EXPORTER_REVIT_APP_VERSION;
 #else
 static constexpr const char* g_builtAppVersion = "";
 #endif
 
-#ifdef REVIT_USD_EXPORT_PLUGIN_VERSION
-static constexpr const char* g_builtPluginVersion = REVIT_USD_EXPORT_PLUGIN_VERSION;
+#ifdef USD_EXPORTER_REVIT_VERSION
+static constexpr const char* g_builtPluginVersion = USD_EXPORTER_REVIT_VERSION;
 #else
 static constexpr const char* g_builtPluginVersion = "";
 #endif
 
-static revit::usd_export::core::SettingsState g_settingsState;
+static usd::exporter::revit::core::SettingsState g_settingsState;
 
 std::string trim(std::string value)
 {
-    const auto isSpace = [](unsigned char ch) { return std::isspace(ch) != 0; };
+    const auto isSpace = [](unsigned char ch)
+    {
+        return std::isspace(ch) != 0;
+    };
     while (!value.empty() && isSpace(static_cast<unsigned char>(value.front())))
     {
         value.erase(value.begin());
@@ -236,13 +239,13 @@ std::string getOmniverseBasePath(const char* leaf)
     {
         return {};
     }
-    return userProfile + "/.revit_usd_export_plugin/" + leaf;
+    return userProfile + "/.usd_exporter_revit/" + leaf;
 }
 
 bool getTimestampString(std::string& outTimeString)
 {
     const std::time_t currentTime = std::time(nullptr);
-    std::tm localTime {};
+    std::tm localTime{};
 #if defined(_WIN32)
     if (localtime_s(&localTime, &currentTime) != 0)
     {
@@ -255,7 +258,7 @@ bool getTimestampString(std::string& outTimeString)
     }
 #endif
 
-    char timeBuffer[32] {};
+    char timeBuffer[32]{};
     if (std::strftime(timeBuffer, sizeof(timeBuffer), "%Y%m%d_%H%M%S", &localTime) == 0)
     {
         return false;
@@ -373,10 +376,7 @@ void applyPersistentPreferences(StringMap& values)
     }
 }
 
-void extractOptionGroup(
-    const StringMap& values,
-    const char* prefix,
-    std::unordered_map<std::string, std::string>& options)
+void extractOptionGroup(const StringMap& values, const char* prefix, std::unordered_map<std::string, std::string>& options)
 {
     const std::string optionPrefix = prefix;
     const size_t prefixLength = optionPrefix.size();
@@ -433,29 +433,29 @@ bool parseJsonString(const std::string& json, size_t& index, std::string& outVal
             const char escaped = json[index++];
             switch (escaped)
             {
-            case '"':
-            case '\\':
-            case '/':
-                value.push_back(escaped);
-                break;
-            case 'b':
-                value.push_back('\b');
-                break;
-            case 'f':
-                value.push_back('\f');
-                break;
-            case 'n':
-                value.push_back('\n');
-                break;
-            case 'r':
-                value.push_back('\r');
-                break;
-            case 't':
-                value.push_back('\t');
-                break;
-            default:
-                value.push_back(escaped);
-                break;
+                case '"':
+                case '\\':
+                case '/':
+                    value.push_back(escaped);
+                    break;
+                case 'b':
+                    value.push_back('\b');
+                    break;
+                case 'f':
+                    value.push_back('\f');
+                    break;
+                case 'n':
+                    value.push_back('\n');
+                    break;
+                case 'r':
+                    value.push_back('\r');
+                    break;
+                case 't':
+                    value.push_back('\t');
+                    break;
+                default:
+                    value.push_back(escaped);
+                    break;
             }
             continue;
         }
@@ -566,9 +566,7 @@ bool parseJsonValue(const std::string& json, size_t& index, const std::string& p
         {
             ++index;
         }
-        while (index < json.size() &&
-               (std::isdigit(static_cast<unsigned char>(json[index])) != 0 || json[index] == '.' || json[index] == 'e' ||
-                json[index] == 'E' || json[index] == '+' || json[index] == '-'))
+        while (index < json.size() && (std::isdigit(static_cast<unsigned char>(json[index])) != 0 || json[index] == '.' || json[index] == 'e' || json[index] == 'E' || json[index] == '+' || json[index] == '-'))
         {
             ++index;
         }
@@ -605,12 +603,7 @@ bool parseJsonPreferencesFile(const std::filesystem::path& path, StringMap& valu
     return parseJsonObject(json, index, "", values);
 }
 
-std::string buildScopedFolder(
-    const std::string& basePath,
-    const std::string& appName,
-    const std::string& appVersion,
-    const std::string& clientName,
-    const std::string& clientVersion)
+std::string buildScopedFolder(const std::string& basePath, const std::string& appName, const std::string& appVersion, const std::string& clientName, const std::string& clientVersion)
 {
     std::string folder = fmt::format(g_folderPattern, basePath, appName, appVersion, clientName, clientVersion);
     std::replace(folder.begin(), folder.end(), '\\', '/');
@@ -619,7 +612,7 @@ std::string buildScopedFolder(
 
 } // namespace
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 std::string SettingsState::exportOption(const std::string& key) const
@@ -638,10 +631,10 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
 {
     StringMap values;
 
-    const std::filesystem::path sdkSettingsFile = std::filesystem::path(revit_usd_export_install_path()) / g_sdkSettingsRelativePath;
+    const std::filesystem::path sdkSettingsFile = std::filesystem::path(usd_exporter_revit_install_path()) / g_sdkSettingsRelativePath;
     parseTomlFile(sdkSettingsFile, values);
 
-    const std::filesystem::path clientSettingsFile = std::filesystem::path(revit_usd_export_install_path()) / g_clientSettingsRelativePath;
+    const std::filesystem::path clientSettingsFile = std::filesystem::path(usd_exporter_revit_install_path()) / g_clientSettingsRelativePath;
     if (std::filesystem::exists(clientSettingsFile))
     {
         parseTomlFile(clientSettingsFile, values);
@@ -651,7 +644,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
     {
         if (!getTimestampString(state.startTimestamp))
         {
-            REVIT_LOG_ERROR(kRevitUsdExportChannel, "Time conversion failure! Falling back to 00000000_000000.");
+            USD_EXPORTER_REVIT_LOG_ERROR(kUsdExporterRevitChannel, "Time conversion failure! Falling back to 00000000_000000.");
             state.startTimestamp = "00000000_000000";
         }
     }
@@ -664,7 +657,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
     preValidationTokens[kStartTimeToken] = state.startTimestamp;
     preValidationTokens[kBuildConfigToken] = state.buildConfig;
 
-    for (const char* key : { "app.name", "revit.usd.export.core.client.name" })
+    for (const char* key : { "app.name", "usd.exporter.revit.core.client.name" })
     {
         auto found = values.find(key);
         if (found != values.end())
@@ -675,7 +668,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
 
     state.appName = valueAtPath(values, "app.name");
     state.appVersion = g_builtAppVersion;
-    state.clientName = valueAtPath(values, "revit.usd.export.core.client.name");
+    state.clientName = valueAtPath(values, "usd.exporter.revit.core.client.name");
     state.clientVersion = g_builtPluginVersion;
     state.waitForDebugger = parseBool(valueAtPath(values, "app.waitForDebugger"));
 
@@ -691,7 +684,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
     Check "%s" to verify these settings.
             )";
 
-        REVIT_LOG_FATAL(
+        USD_EXPORTER_REVIT_LOG_FATAL(
             badSettingsMessage,
             kAppNameSetting,
             state.appName.c_str(),
@@ -701,16 +694,14 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
             state.clientName.c_str(),
             kClientVersionSetting,
             state.clientVersion.c_str(),
-            clientSettingsFile.string().c_str());
+            clientSettingsFile.string().c_str()
+        );
         return false;
     }
 
-    state.dataFolder = buildScopedFolder(
-        getOmniverseBasePath("data"), state.appName, state.appVersion, state.clientName, state.clientVersion);
-    state.logsFolder = buildScopedFolder(
-        getOmniverseBasePath("logs"), state.appName, state.appVersion, state.clientName, state.clientVersion);
-    state.cacheFolder = buildScopedFolder(
-        getOmniverseBasePath("cache"), state.appName, state.appVersion, state.clientName, state.clientVersion);
+    state.dataFolder = buildScopedFolder(getOmniverseBasePath("data"), state.appName, state.appVersion, state.clientName, state.clientVersion);
+    state.logsFolder = buildScopedFolder(getOmniverseBasePath("logs"), state.appName, state.appVersion, state.clientName, state.clientVersion);
+    state.cacheFolder = buildScopedFolder(getOmniverseBasePath("cache"), state.appName, state.appVersion, state.clientName, state.clientVersion);
 
     const std::filesystem::path preferencesConfigPath = std::filesystem::path(state.dataFolder) / g_userConfigFileName;
     if (std::filesystem::exists(preferencesConfigPath))
@@ -718,8 +709,10 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
         parseJsonPreferencesFile(preferencesConfigPath, values);
     }
 
-    migrateLegacyKeys(values, "revit.connect.core", "revit.usd.export.core");
-    migrateLegacyKeys(values, "persistent.revit.connect.core", "persistent.revit.usd.export.core");
+    migrateLegacyKeys(values, "revit.connect.core", "usd.exporter.revit.core");
+    migrateLegacyKeys(values, "persistent.revit.connect.core", "persistent.usd.exporter.revit.core");
+    migrateLegacyKeys(values, "revit.usd.export.core", "usd.exporter.revit.core");
+    migrateLegacyKeys(values, "persistent.revit.usd.export.core", "persistent.usd.exporter.revit.core");
     applyPersistentPreferences(values);
 
     StringMap tokens;
@@ -737,7 +730,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
     resolveAllValues(values, tokens);
 
     state.appName = valueAtPath(values, "app.name");
-    state.clientName = valueAtPath(values, "revit.usd.export.core.client.name");
+    state.clientName = valueAtPath(values, "usd.exporter.revit.core.client.name");
     state.logFile = resolveSubstitutions(valueAtPath(values, "log.file"), tokens);
     if (state.logLevel.empty())
     {
@@ -748,8 +741,8 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
         state.logLevel = resolveSubstitutions(state.logLevel, tokens);
     }
 
-    extractOptionGroup(values, "revit.usd.export.core.exportOptions.", state.exportOptions);
-    extractOptionGroup(values, "revit.usd.export.core.importOptions.", state.importOptions);
+    extractOptionGroup(values, "usd.exporter.revit.core.exportOptions.", state.exportOptions);
+    extractOptionGroup(values, "usd.exporter.revit.core.importOptions.", state.importOptions);
 
     for (auto& entry : state.exportOptions)
     {
@@ -773,4 +766,4 @@ const SettingsState& settingsState()
     return g_settingsState;
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core

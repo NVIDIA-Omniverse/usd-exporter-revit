@@ -18,7 +18,7 @@
 #include <pxr/usd/usd/timeCode.h>
 #include <pxr/usd/usdGeom/xform.h>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 //! Get the local transform of a prim at a given time in the form of common transform components.
 //!
@@ -29,8 +29,15 @@ namespace revit::usd_export::core
 //! @param rotationOrder Rotation order the rotation result.
 //! @param scale Scale result.
 //! @param time Time at which to query the value.
-REVIT_USD_EXPORT_API void
-getLocalTransformComponents(const pxr::UsdPrim& prim, pxr::GfVec3d& translation, pxr::GfVec3d& pivot, pxr::GfVec3f& rotation, revit::usd_export::core::RotationOrder& rotationOrder, pxr::GfVec3f& scale, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API void getLocalTransformComponents(
+    const pxr::UsdPrim& prim,
+    pxr::GfVec3d& translation,
+    pxr::GfVec3d& pivot,
+    pxr::GfVec3f& rotation,
+    usd::exporter::revit::core::RotationOrder& rotationOrder,
+    pxr::GfVec3f& scale,
+    pxr::UsdTimeCode time = pxr::UsdTimeCode::Default()
+);
 
 //! Set the local transform of a prim.
 //!
@@ -38,7 +45,7 @@ getLocalTransformComponents(const pxr::UsdPrim& prim, pxr::GfVec3d& translation,
 //! @param transform The transform value to set.
 //! @param time Time at which to write the value.
 //! @returns A bool indicating if the local transform was set.
-REVIT_USD_EXPORT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfTransform& transform, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfTransform& transform, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Set the local transform of a prim from a 4x4 matrix.
 //!
@@ -46,7 +53,7 @@ REVIT_USD_EXPORT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfTran
 //! @param matrix The matrix value to set.
 //! @param time Time at which to write the value.
 //! @returns A bool indicating if the local transform was set.
-REVIT_USD_EXPORT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfMatrix4d& matrix, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
+USD_EXPORTER_REVIT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfMatrix4d& matrix, pxr::UsdTimeCode time = pxr::UsdTimeCode::Default());
 
 //! Set the local transform of a prim from common transform components.
 //!
@@ -58,12 +65,12 @@ REVIT_USD_EXPORT_API bool setLocalTransform(pxr::UsdPrim prim, const pxr::GfMatr
 //! @param scale The scale value to set.
 //! @param time Time at which to write the values.
 //! @returns True if the transform was set successfully.
-REVIT_USD_EXPORT_API bool setLocalTransform(
+USD_EXPORTER_REVIT_API bool setLocalTransform(
     pxr::UsdPrim prim,
     const pxr::GfVec3d& translation,
     const pxr::GfVec3d& pivot,
     const pxr::GfVec3f& rotation,
-    const revit::usd_export::core::RotationOrder rotationOrder,
+    const usd::exporter::revit::core::RotationOrder rotationOrder,
     const pxr::GfVec3f& scale,
     pxr::UsdTimeCode time = pxr::UsdTimeCode::Default()
 );
@@ -75,8 +82,8 @@ REVIT_USD_EXPORT_API bool setLocalTransform(
 //! @param transform Optional local transform to set
 //!
 //! @returns UsdGeomXform schema wrapping the defined UsdPrim. Returns an invalid schema on error.
-REVIT_USD_EXPORT_API pxr::UsdGeomXform defineXform(pxr::UsdStagePtr stage, const pxr::SdfPath& path, std::optional<pxr::GfTransform> transform = std::nullopt);
-} // namespace revit::usd_export::core
+USD_EXPORTER_REVIT_API pxr::UsdGeomXform defineXform(pxr::UsdStagePtr stage, const pxr::SdfPath& path, std::optional<pxr::GfTransform> transform = std::nullopt);
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -87,7 +94,7 @@ extern "C"
      * @param[in] transform  The transform value to set.
      * @return A bool indicating if the local transform was set.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransform(const long int stage_id, const char* prim_path, const double transform[4][4]);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransform(const long int stage_id, const char* prim_path, const double transform[4][4]);
 
     /**
      * Set the local transform of a prim with a pivot.
@@ -97,7 +104,7 @@ extern "C"
      * @param[in] pivot      The pivot position to set.
      * @return A bool indicating if the local transform was set.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransformPivot(const long int stage_id, const char* prim_path, const double transform[4][4], const pxr::GfVec3d pivot);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransformPivot(const long int stage_id, const char* prim_path, const double transform[4][4], const pxr::GfVec3d pivot);
     /**
      * Set the local transform of a prim.
      * @param[in] stage_id   Stage Id.
@@ -105,7 +112,7 @@ extern "C"
      * @param[in] matrix     The matrix value to set.
      * @return A bool indicating if the local transform was set.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setLocalTransformMatrix(const long int stage_id, const char* prim_path, const double matrix[4][4]);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setLocalTransformMatrix(const long int stage_id, const char* prim_path, const double matrix[4][4]);
 
     /**
      * Get the local transform of a prim at a given time in the form of common transform components.
@@ -117,7 +124,8 @@ extern "C"
      * @param[out] rotationOrder Rotation order the rotation result.
      * @param[out] scale         Scale result.
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_getLocalTransformComponents(const long int stage_id, const char* prim_path, double* translation[3], double* pivot[3], double* rotation[3], revit::usd_export::core::RotationOrder* rotationOrder, double* scale[3]);
+    USD_EXPORTER_REVIT_API void
+    usd_exporter_revit_core_getLocalTransformComponents(const long int stage_id, const char* prim_path, double* translation[3], double* pivot[3], double* rotation[3], usd::exporter::revit::core::RotationOrder* rotationOrder, double* scale[3]);
 
     /**
      * Defines an xform on the stage.
@@ -125,5 +133,5 @@ extern "C"
      * @param[in] prim_path      The absolute prim path.
      * @return  If successful, Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineXform(const long int stage_id, const char* prim_path);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineXform(const long int stage_id, const char* prim_path);
 }

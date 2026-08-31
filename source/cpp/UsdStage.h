@@ -14,17 +14,17 @@ extern "C"
      * @param[in] set_name            Name of the variant set.
      * @param[in] option_name         Name of the variant option.
      */
-    REVIT_USD_EXPORT_API bool pxr_usd_stageSetVariantEditTarget(const long stage_id, const char* prim_path, const char* set_name, const char* option_name);
+    USD_EXPORTER_REVIT_API bool pxr_usd_stageSetVariantEditTarget(const long stage_id, const char* prim_path, const char* set_name, const char* option_name);
 
     /**
      * Sets the stage Edit Target to the Root Layer.
      * @param[in] stage_id            Stage Id.
      */
-    REVIT_USD_EXPORT_API void pxr_usd_stageSetRootEditTarget(const long stage_id);
+    USD_EXPORTER_REVIT_API void pxr_usd_stageSetRootEditTarget(const long stage_id);
 
     /**
      * Sets the stage Edit Target to the Session Layer.
      * @param[in] stage_id            Stage Id.
      */
-    REVIT_USD_EXPORT_API void pxr_usd_stageSetSessionEditTarget(const long stage_id);
+    USD_EXPORTER_REVIT_API void pxr_usd_stageSetSessionEditTarget(const long stage_id);
 }

@@ -25,40 +25,40 @@
 #include <windows.h>
 #endif
 
-const RevitLogChannel kRevitUsdExportChannel = { "revit.usd.export.core" };
+const UsdExporterRevitLogChannel kUsdExporterRevitChannel = { "usd.exporter.revit.core" };
 
 namespace
 {
 
-using RevitLogLevel = revit::usd_export::core::detail::RevitLogLevel;
+using UsdExporterRevitLogLevel = usd::exporter::revit::core::detail::UsdExporterRevitLogLevel;
 
 static constexpr size_t g_logMessageBufferSize = 4096;
 
 std::mutex g_logMutex;
 std::ofstream g_logFile;
-RevitLogLevel g_minLogLevel = RevitLogLevel::Info;
+UsdExporterRevitLogLevel g_minLogLevel = UsdExporterRevitLogLevel::Info;
 bool g_logFileInitialized = false;
 
-const char* levelToString(revit::usd_export::core::detail::RevitLogLevel level)
+const char* levelToString(usd::exporter::revit::core::detail::UsdExporterRevitLogLevel level)
 {
     switch (level)
     {
-    case revit::usd_export::core::detail::RevitLogLevel::Verbose:
-        return "Verbose";
-    case revit::usd_export::core::detail::RevitLogLevel::Info:
-        return "Info";
-    case revit::usd_export::core::detail::RevitLogLevel::Warn:
-        return "Warn";
-    case revit::usd_export::core::detail::RevitLogLevel::Error:
-        return "Error";
-    case revit::usd_export::core::detail::RevitLogLevel::Fatal:
-        return "Fatal";
-    default:
-        return "Unknown";
+        case usd::exporter::revit::core::detail::UsdExporterRevitLogLevel::Verbose:
+            return "Verbose";
+        case usd::exporter::revit::core::detail::UsdExporterRevitLogLevel::Info:
+            return "Info";
+        case usd::exporter::revit::core::detail::UsdExporterRevitLogLevel::Warn:
+            return "Warn";
+        case usd::exporter::revit::core::detail::UsdExporterRevitLogLevel::Error:
+            return "Error";
+        case usd::exporter::revit::core::detail::UsdExporterRevitLogLevel::Fatal:
+            return "Fatal";
+        default:
+            return "Unknown";
     }
 }
 
-RevitLogLevel parseLogLevel(const std::string& levelName)
+UsdExporterRevitLogLevel parseLogLevel(const std::string& levelName)
 {
     std::string normalized = levelName;
     for (char& ch : normalized)
@@ -68,31 +68,31 @@ RevitLogLevel parseLogLevel(const std::string& levelName)
 
     if (normalized == "verbose")
     {
-        return RevitLogLevel::Verbose;
+        return UsdExporterRevitLogLevel::Verbose;
     }
     if (normalized == "info")
     {
-        return RevitLogLevel::Info;
+        return UsdExporterRevitLogLevel::Info;
     }
     if (normalized == "warn" || normalized == "warning")
     {
-        return RevitLogLevel::Warn;
+        return UsdExporterRevitLogLevel::Warn;
     }
     if (normalized == "error")
     {
-        return RevitLogLevel::Error;
+        return UsdExporterRevitLogLevel::Error;
     }
     if (normalized == "fatal")
     {
-        return RevitLogLevel::Fatal;
+        return UsdExporterRevitLogLevel::Fatal;
     }
 
-    return RevitLogLevel::Info;
+    return UsdExporterRevitLogLevel::Info;
 }
 
 void applyLogLevelFromSettings()
 {
-    const std::string& levelName = revit::usd_export::core::settingsState().logLevel;
+    const std::string& levelName = usd::exporter::revit::core::settingsState().logLevel;
     if (!levelName.empty())
     {
         g_minLogLevel = parseLogLevel(levelName);
@@ -103,7 +103,7 @@ std::string currentTimestamp()
 {
     const auto now = std::chrono::system_clock::now();
     const std::time_t nowTime = std::chrono::system_clock::to_time_t(now);
-    std::tm localTime {};
+    std::tm localTime{};
 #if defined(_WIN32)
     localtime_s(&localTime, &nowTime);
 #else
@@ -180,7 +180,7 @@ void ensureLogFileOpen()
         return;
     }
 
-    const std::string& logFilePath = revit::usd_export::core::settingsState().logFile;
+    const std::string& logFilePath = usd::exporter::revit::core::settingsState().logFile;
     if (logFilePath.empty())
     {
         return;
@@ -204,44 +204,36 @@ void writeToOutputs(const std::string& formattedMessage)
 #endif
 }
 
-std::string formatLogLine(
-    revit::usd_export::core::detail::RevitLogLevel level, const char* channelName, const char* messageText)
+std::string formatLogLine(usd::exporter::revit::core::detail::UsdExporterRevitLogLevel level, const char* channelName, const char* messageText)
 {
-    std::array<char, g_logMessageBufferSize> lineBuffer {};
-    std::snprintf(
-        lineBuffer.data(),
-        lineBuffer.size(),
-        "[%s] [%s] [%s] %s",
-        currentTimestamp().c_str(),
-        levelToString(level),
-        channelName,
-        messageText);
+    std::array<char, g_logMessageBufferSize> lineBuffer{};
+    std::snprintf(lineBuffer.data(), lineBuffer.size(), "[%s] [%s] [%s] %s", currentTimestamp().c_str(), levelToString(level), channelName, messageText);
     return lineBuffer.data();
 }
 
 } // namespace
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 
-bool revitLogShouldLog(RevitLogLevel level)
+bool usdExporterRevitLogShouldLog(UsdExporterRevitLogLevel level)
 {
     return static_cast<int>(level) >= static_cast<int>(g_minLogLevel);
 }
 
-const RevitLogChannel& revitLogDefaultChannel()
+const UsdExporterRevitLogChannel& usdExporterRevitLogDefaultChannel()
 {
-    return kRevitUsdExportChannel;
+    return kUsdExporterRevitChannel;
 }
 
-void revitLogWriteV(RevitLogLevel level, const RevitLogChannel& channel, const char* format, va_list args)
+void usdExporterRevitLogWriteV(UsdExporterRevitLogLevel level, const UsdExporterRevitLogChannel& channel, const char* format, va_list args)
 {
-    if (!revitLogShouldLog(level))
+    if (!usdExporterRevitLogShouldLog(level))
     {
         return;
     }
 
-    std::array<char, g_logMessageBufferSize> messageBuffer {};
+    std::array<char, g_logMessageBufferSize> messageBuffer{};
     va_list argsCopy;
     va_copy(argsCopy, args);
     const int formattedLength = std::vsnprintf(messageBuffer.data(), messageBuffer.size(), format, argsCopy);
@@ -260,7 +252,7 @@ void revitLogWriteV(RevitLogLevel level, const RevitLogChannel& channel, const c
         messageText = ownedMessage.c_str();
     }
 
-    const char* channelName = channel.name ? channel.name : "revit.usd.export.core";
+    const char* channelName = channel.name ? channel.name : "usd.exporter.revit.core";
     const std::string formattedMessage = formatLogLine(level, channelName, messageText);
 
     std::lock_guard<std::mutex> lock(g_logMutex);
@@ -274,7 +266,7 @@ void revitLogWriteV(RevitLogLevel level, const RevitLogChannel& channel, const c
     }
 }
 
-void revitLogStartup()
+void usdExporterRevitLogStartup()
 {
     std::lock_guard<std::mutex> lock(g_logMutex);
 
@@ -286,7 +278,7 @@ void revitLogStartup()
         return;
     }
 
-    const std::string& logFilePath = revit::usd_export::core::settingsState().logFile;
+    const std::string& logFilePath = usd::exporter::revit::core::settingsState().logFile;
     if (logFilePath.empty())
     {
         return;
@@ -298,22 +290,19 @@ void revitLogStartup()
     }
     else
     {
-        const std::string warning = formatLogLine(
-            RevitLogLevel::Warn,
-            kRevitUsdExportChannel.name,
-            ("Failed to open log file '" + logFilePath + "'; file logging disabled, retrying on next log.").c_str());
+        const std::string warning = formatLogLine(UsdExporterRevitLogLevel::Warn, kUsdExporterRevitChannel.name, ("Failed to open log file '" + logFilePath + "'; file logging disabled, retrying on next log.").c_str());
         writeToOutputs(warning);
     }
 }
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API void revit_usd_export_core_startupLog()
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_startupLog()
     {
-        revit::usd_export::core::detail::revitLogStartup();
+        usd::exporter::revit::core::detail::usdExporterRevitLogStartup();
 
-        REVIT_LOG_VERBOSE("Initialized [%s] logging channel", kRevitUsdExportChannel.name);
+        USD_EXPORTER_REVIT_LOG_VERBOSE("Initialized [%s] logging channel", kUsdExporterRevitChannel.name);
     }
 }

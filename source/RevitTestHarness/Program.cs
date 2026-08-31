@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using RevitUsdExport.Utilities;
-// using RevitUsdExport.Models;
-using RevitUsdExport.Settings;
+using UsdExporterRevit.Utilities;
+// using UsdExporterRevit.Models;
+using UsdExporterRevit.Settings;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
@@ -139,7 +139,7 @@ internal class FileTest
         {
             string nextConfig = Configs.Where(j => !_configsRan.Contains(j)).First();
             _activeConfigFile = new FileInfo(nextConfig);
-            RevitUsdExportSettings settings = RevitUsdExportSettings.Read(_activeConfigFile.FullName);
+            UsdExporterRevitSettings settings = UsdExporterRevitSettings.Read(_activeConfigFile.FullName);
             FileInfo revitFile = new FileInfo(RevitFilePath);
             settings.Batch.InputFolder = revitFile.Directory.FullName.Replace(@"\", "/");
             settings.Batch.OutputFolder = Path.Combine(OutputDirectory, _activeConfigFile.Name.Replace(".json", "")).Replace(@"\", "/");
@@ -211,7 +211,7 @@ internal class Harness
 
 #endregion
 
-    private const string _appName = "RevitUsdExportTestHarness";
+    private const string _appName = "UsdExporterRevitTestHarness";
 
     private static Dictionary<int, FileInfo> _revitLaunchPaths = new Dictionary<int, FileInfo>() {
         { 2024, new FileInfo(@"C:\Program Files\Autodesk\Revit 2024\Revit.exe") },
@@ -298,7 +298,7 @@ internal class Harness
         p.StartInfo.FileName = _revitLaunchPaths[Version].FullName;
         p.StartInfo.Arguments = $"\"{GetFirstRevitFile()}\"";
         p.StartInfo.UseShellExecute = false;
-        p.StartInfo.EnvironmentVariables["REVIT_USD_EXPORT_TEST_HARNESS"] = "1";
+        p.StartInfo.EnvironmentVariables["USD_EXPORTER_REVIT_TEST_HARNESS"] = "1";
         p.EnableRaisingEvents = true;
         p.Exited += OnProcessExited;
 

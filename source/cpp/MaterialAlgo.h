@@ -15,7 +15,7 @@
 #include <pxr/usd/usdShade/material.h>
 #include <pxr/usd/usdShade/shader.h>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 //! Translate an sRGB color value to linear color space
 //!
@@ -25,7 +25,7 @@ namespace revit::usd_export::core
 //!
 //! @param color sRGB representation of a color to be translated to linear color space
 //! @returns The translated color in linear color space
-REVIT_USD_EXPORT_API pxr::GfVec3f sRgbToLinear(const pxr::GfVec3f& color);
+USD_EXPORTER_REVIT_API pxr::GfVec3f sRgbToLinear(const pxr::GfVec3f& color);
 
 //! Translate a linear color value to sRGB color space
 //!
@@ -35,20 +35,20 @@ REVIT_USD_EXPORT_API pxr::GfVec3f sRgbToLinear(const pxr::GfVec3f& color);
 //!
 //! @param color linear representation of a color to be translated to sRGB color space
 //! @returns The color in sRGB color space
-REVIT_USD_EXPORT_API pxr::GfVec3f linearToSrgb(const pxr::GfVec3f& color);
+USD_EXPORTER_REVIT_API pxr::GfVec3f linearToSrgb(const pxr::GfVec3f& color);
 
 //! Get the effective surface Shader of a Material for the MDL render context.
 //!
 //! @param material The Material to consider
 //! @returns The connected Shader. Returns an invalid object on error.
-REVIT_USD_EXPORT_API pxr::UsdShadeShader computeEffectiveMdlSurfaceShader(const pxr::UsdShadeMaterial& material);
+USD_EXPORTER_REVIT_API pxr::UsdShadeShader computeEffectiveMdlSurfaceShader(const pxr::UsdShadeMaterial& material);
 
 //! Create a UsdShadeMaterial as a child of the UsdPrim argument
 //!
 //! @param parent Parent UsdPrim for the material to be created
 //! @param name Name of the material to be created
 //! @returns The newly created UsdShadeMaterial.  Returns an Invalid prim on error.
-REVIT_USD_EXPORT_API pxr::UsdShadeMaterial createMaterial(pxr::UsdPrim parent, const std::string& name);
+USD_EXPORTER_REVIT_API pxr::UsdShadeMaterial createMaterial(pxr::UsdPrim parent, const std::string& name);
 
 //! Create a UsdShadeShader as a child of the UsdShadeMaterial argument with the specified MDL
 //!
@@ -58,7 +58,7 @@ REVIT_USD_EXPORT_API pxr::UsdShadeMaterial createMaterial(pxr::UsdPrim parent, c
 //! @param module Name of the MDL module to set as source asset sub-identifier for the shader
 //! @param connectMaterialOutputs If true, creates surface, displacement and volume outputs on the material and connects them to the shader output
 //! @returns The newly created UsdShadeShader.  Returns an Invalid prim on error.
-REVIT_USD_EXPORT_API pxr::UsdShadeShader createMdlShader(pxr::UsdShadeMaterial& material, const std::string& name, const pxr::SdfAssetPath& mdlPath, const pxr::TfToken& module, bool connectMaterialOutputs = true);
+USD_EXPORTER_REVIT_API pxr::UsdShadeShader createMdlShader(pxr::UsdShadeMaterial& material, const std::string& name, const pxr::SdfAssetPath& mdlPath, const pxr::TfToken& module, bool connectMaterialOutputs = true);
 
 //! Create an MDL shader input
 //!
@@ -76,19 +76,19 @@ REVIT_USD_EXPORT_API pxr::UsdShadeShader createMdlShader(pxr::UsdShadeMaterial& 
 //! @param typeName The value type of the input
 //! @param colorSpace If set, the newly created input's colorSpace attribute
 //! @returns The newly created UsdShadeInput input.  Returns an Invalid UsdShadeInput on error.
-REVIT_USD_EXPORT_API pxr::UsdShadeInput createMdlShaderInput(
+USD_EXPORTER_REVIT_API pxr::UsdShadeInput createMdlShaderInput(
     pxr::UsdShadeMaterial& material,
     const pxr::TfToken& name,
     const pxr::VtValue& value,
     const pxr::SdfValueTypeName& typeName,
-    std::optional<revit::usd_export::core::ColorSpace> colorSpace = std::nullopt
+    std::optional<usd::exporter::revit::core::ColorSpace> colorSpace = std::nullopt
 );
 
 //! Binds a UsdShadeMaterial to a UsdPrim
 //!
 //! @param prim UsdPrim to bind the material to
 //! @param material UsdShadeMaterial to bind to the prim
-REVIT_USD_EXPORT_API void bindMaterial(pxr::UsdPrim prim, const pxr::UsdShadeMaterial& material);
+USD_EXPORTER_REVIT_API void bindMaterial(pxr::UsdPrim prim, const pxr::UsdShadeMaterial& material);
 
 //! Defines a UsdShadeMaterial and connected UsdShadeShaders using OmniPBR.mdl and UsdPreviewSurface with the specified input attributes
 //!
@@ -101,7 +101,7 @@ REVIT_USD_EXPORT_API void bindMaterial(pxr::UsdPrim prim, const pxr::UsdShadeMat
 //! @param roughness The Roughness Amount to set, 0.0-1.0 range where 1.0 = flat and 0.0 = glossy
 //! @param metallic The Metallic Amount to set, 0.0-1.0 range where 1.0 = max metallic and 0.0 = no metallic
 //! @returns The newly defined UsdShadeMaterial. Returns an Invalid prim on error
-REVIT_USD_EXPORT_API pxr::UsdShadeMaterial defineOmniPbrMaterial(pxr::UsdStagePtr stage, const pxr::SdfPath& path, const pxr::GfVec3f& color, const float opacity = 1.0f, const float roughness = 0.5f, const float metallic = 0.0f);
+USD_EXPORTER_REVIT_API pxr::UsdShadeMaterial defineOmniPbrMaterial(pxr::UsdStagePtr stage, const pxr::SdfPath& path, const pxr::GfVec3f& color, const float opacity = 1.0f, const float roughness = 0.5f, const float metallic = 0.0f);
 
 //! Adds an emissive color to the PBR material
 //!
@@ -116,7 +116,7 @@ REVIT_USD_EXPORT_API pxr::UsdShadeMaterial defineOmniPbrMaterial(pxr::UsdStagePt
 //! @param color The emissive color (linear color space)
 //! @param intensity The intensity of the emissive color
 //! @returns Whether or not the emissive color was added to the material
-REVIT_USD_EXPORT_API bool addEmissiveColorToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::GfVec3f& color, const float intensity = 1000.0f);
+USD_EXPORTER_REVIT_API bool addEmissiveColorToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::GfVec3f& color, const float intensity = 1000.0f);
 
 //! Adds a diffuse texture to the PBR material
 //!
@@ -128,13 +128,13 @@ REVIT_USD_EXPORT_API bool addEmissiveColorToPbrMaterial(pxr::UsdShadeMaterial& m
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addDiffuseTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addDiffuseTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Get the effective surface Shader of a Material for the universal render context.
 //!
 //! @param material The Material to consider
 //! @returns The connected Shader. Returns an invalid object on error.
-REVIT_USD_EXPORT_API pxr::UsdShadeShader computeEffectivePreviewSurfaceShader(const pxr::UsdShadeMaterial& material);
+USD_EXPORTER_REVIT_API pxr::UsdShadeShader computeEffectivePreviewSurfaceShader(const pxr::UsdShadeMaterial& material);
 
 //! Adds a normal texture to the PBR material
 //!
@@ -143,7 +143,7 @@ REVIT_USD_EXPORT_API pxr::UsdShadeShader computeEffectivePreviewSurfaceShader(co
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addNormalTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addNormalTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Adds an ORM (occlusion, roughness, metallic) texture to the PBR material
 //!
@@ -155,7 +155,7 @@ REVIT_USD_EXPORT_API bool addNormalTextureToPbrMaterial(pxr::UsdShadeMaterial& m
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addOrmTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addOrmTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Adds a roughness texture to the PBR material
 //!
@@ -167,7 +167,7 @@ REVIT_USD_EXPORT_API bool addOrmTextureToPbrMaterial(pxr::UsdShadeMaterial& mate
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addRoughnessTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addRoughnessTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Adds a metallic texture to the PBR material
 //!
@@ -179,7 +179,7 @@ REVIT_USD_EXPORT_API bool addRoughnessTextureToPbrMaterial(pxr::UsdShadeMaterial
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addMetallicTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addMetallicTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Adds an opacity texture to the PBR material
 //!
@@ -196,7 +196,7 @@ REVIT_USD_EXPORT_API bool addMetallicTextureToPbrMaterial(pxr::UsdShadeMaterial&
 //! @param material The UsdShadeMaterial prim to add the texture
 //! @param texturePath The SdfAssetPath to the texture file
 //! @returns Whether or not the texture was added to the material
-REVIT_USD_EXPORT_API bool addOpacityTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
+USD_EXPORTER_REVIT_API bool addOpacityTextureToPbrMaterial(pxr::UsdShadeMaterial& material, const pxr::SdfAssetPath& texturePath);
 
 //! Defines a UsdShadeMaterial and connected UsdShadeShaders using OmniGlass.mdl and UsdPreviewSurface with the specified input attributes
 //!
@@ -208,8 +208,8 @@ REVIT_USD_EXPORT_API bool addOpacityTextureToPbrMaterial(pxr::UsdShadeMaterial& 
 //! @param indexOfRefraction The Index of Refraction to set, 1.0-4.0 range
 //! @param roughness The roughness of the frosted glass surface, 0.0-1.0 range where 1.0 = frosted and 0.0 = clear
 //! @returns The newly defined UsdShadeMaterial. Returns an Invalid prim on error
-REVIT_USD_EXPORT_API pxr::UsdShadeMaterial defineOmniGlassMaterial(pxr::UsdStagePtr stage, const pxr::SdfPath& path, const pxr::GfVec3f& color, const float indexOfRefraction = 1.491f, const float roughness = 0.02f);
-} // namespace revit::usd_export::core
+USD_EXPORTER_REVIT_API pxr::UsdShadeMaterial defineOmniGlassMaterial(pxr::UsdStagePtr stage, const pxr::SdfPath& path, const pxr::GfVec3f& color, const float indexOfRefraction = 1.491f, const float roughness = 0.02f);
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -219,7 +219,7 @@ extern "C"
      * @param[in] color     sRGB representation of a color to be translated to linear color space.
      * @return The translated color in linear color space.
      */
-    REVIT_USD_EXPORT_API float* revit_usd_export_core_sRgbToLinear(const pxr::GfVec3f color);
+    USD_EXPORTER_REVIT_API float* usd_exporter_revit_core_sRgbToLinear(const pxr::GfVec3f color);
 
     /**
      * Translate a linear color value to sRGB color space.
@@ -227,7 +227,7 @@ extern "C"
      * @param[in] color     linear representation of a color to be translated to sRGB color space.
      * @return The color in sRGB color space.
      */
-    REVIT_USD_EXPORT_API float* revit_usd_export_core_linearToSrgb(const pxr::GfVec3f color);
+    USD_EXPORTER_REVIT_API float* usd_exporter_revit_core_linearToSrgb(const pxr::GfVec3f color);
 
     /**
      * Create a UsdShadeMaterial as a child of the UsdPrim argument.
@@ -236,7 +236,7 @@ extern "C"
      * @param[in] name          Name of the material to be created.
      * return If successful, the material's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_createMaterial(const long int stage_id, const char* parent, const char* name);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_createMaterial(const long int stage_id, const char* parent, const char* name);
 
     /**
      * Create a UsdShadeShader as a child of the UsdShadeMaterial argument with the specified MDL.
@@ -248,7 +248,7 @@ extern "C"
      * @param[in] connectMaterialOutputs   If true, creates surface, displacement and volume outputs on the material and connects them to the shader output.
      * return If successful, the shader's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_createMdlShader(const long int stage_id, const char* prim_path, const char* name, const char* mdlPath, const char* module, bool connectMaterialOutputs);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_createMdlShader(const long int stage_id, const char* prim_path, const char* name, const char* mdlPath, const char* module, bool connectMaterialOutputs);
 
     /**
      * Create an MDL shader input
@@ -268,7 +268,7 @@ extern "C"
      * @param color_space             Color space for the asset.
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputAsset(const long int stage_id, const char* material_path, const char* input_name, const char* value, revit::usd_export::core::ColorSpace color_space);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputAsset(const long int stage_id, const char* material_path, const char* input_name, const char* value, usd::exporter::revit::core::ColorSpace color_space);
 
     /**
      * Create an MDL shader input
@@ -283,7 +283,7 @@ extern "C"
      * @param value                   The value assigned to the input
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputBool(const long int stage_id, const char* material_path, const char* input_name, bool value);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputBool(const long int stage_id, const char* material_path, const char* input_name, bool value);
 
     /**
      * Create an MDL shader input
@@ -298,7 +298,7 @@ extern "C"
      * @param value                   The value assigned to the input
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputInt(const long int stage_id, const char* material_path, const char* input_name, const int value);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputInt(const long int stage_id, const char* material_path, const char* input_name, const int value);
 
     /**
      * Create an MDL shader input
@@ -313,7 +313,7 @@ extern "C"
      * @param value                   The value assigned to the input
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputFloat(const long int stage_id, const char* material_path, const char* input_name, const float value);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputFloat(const long int stage_id, const char* material_path, const char* input_name, const float value);
 
     /**
      * Create an MDL shader input
@@ -328,7 +328,7 @@ extern "C"
      * @param value                   The value assigned to the input
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputFloat2(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec2f value);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputFloat2(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec2f value);
 
     /**
      * Create an MDL shader input
@@ -343,7 +343,7 @@ extern "C"
      * @param value                   The value assigned to the input
      * @returns If the input was created and set successfully.
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputColor3f(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec3f value);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputColor3f(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec3f value);
 
     /**
      * Binds a UsdShadeMaterial to a UsdPrim.
@@ -351,7 +351,7 @@ extern "C"
      * @param[in] prim_path           Usd prim path to bind the material to.
      * @param[in] material_prim_path  UsdShadeMaterial to bind to the prim.
      */
-    REVIT_USD_EXPORT_API void revit_usd_export_core_bindMaterial(const long int stage_id, const char* prim_path, const char* material_prim_path);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_bindMaterial(const long int stage_id, const char* prim_path, const char* material_prim_path);
 
     /**
      * Defines a UsdShadeMaterial and connected UsdShadeShaders using OmniPBR.mdl and UsdPreviewSurface with the specified input attributes.
@@ -363,7 +363,7 @@ extern "C"
      * @param metallic  The Metallic Amount to set, 0.0-1.0 range where 1.0 = max metallic and 0.0 = no metallic
      * return If successful, the material's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineOmniPbrMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float opacity, const float roughness, const float metallic);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineOmniPbrMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float opacity, const float roughness, const float metallic);
 
     /**
      * Adds an emissive color to the PBR material
@@ -379,7 +379,7 @@ extern "C"
      * @param intensity         The intensity of the emissive color
      * @returns Whether or not the emissive color was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addEmissiveColorToPbrMaterial(const long int stage_id, const char* material_path, const pxr::GfVec3f color, const float intensity);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addEmissiveColorToPbrMaterial(const long int stage_id, const char* material_path, const pxr::GfVec3f color, const float intensity);
 
     /**
      * Adds a diffuse texture to the PBR material
@@ -394,7 +394,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addDiffuseTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addDiffuseTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Adds a normal texture to the PBR material
@@ -406,7 +406,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addNormalTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addNormalTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Adds an ORM (occlusion, roughness, metallic) texture to the PBR material
@@ -421,7 +421,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addOrmTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addOrmTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Adds a roughness texture to the PBR material
@@ -436,7 +436,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addRoughnessTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addRoughnessTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Adds a metallic texture to the PBR material
@@ -451,7 +451,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addMetallicTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addMetallicTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Adds an opacity texture to the PBR material
@@ -471,7 +471,7 @@ extern "C"
      * @param texture_path      The SdfAssetPath to the texture file
      * @returns Whether or not the texture was added to the material
      */
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addOpacityTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addOpacityTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path);
 
     /**
      * Defines a UsdShadeMaterial and connected UsdShadeShaders using OmniGlass.mdl and UsdPreviewSurface with the specified input attributes.
@@ -482,5 +482,5 @@ extern "C"
      * @param[in] roughness         The roughness of the frosted glass surface, 0.0-1.0 range where 1.0 = frosted and 0.0 = clear
      * return If successful, the material's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineOmniGlassMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float indexOfRefraction, const float roughness);
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineOmniGlassMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float indexOfRefraction, const float roughness);
 }

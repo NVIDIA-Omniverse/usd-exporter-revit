@@ -9,7 +9,7 @@
 
 #include <string>
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 
 std::string computeAbsolutePath(const pxr::SdfLayerRefPtr& rootLayer, const std::string& path);
@@ -33,4 +33,4 @@ bool mergePrimSpec(const std::string& dstLayerIdentifier, const std::string& src
 //! @returns A string representation of this path.
 std::string getPathAsString(const pxr::SdfPath& path);
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail

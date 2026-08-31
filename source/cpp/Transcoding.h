@@ -6,7 +6,7 @@
 
 #include <string>
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 
 //! Encoding algorithm produces different output depending on format.
@@ -33,4 +33,4 @@ std::string encodeIdentifier(const std::string& inputString, TranscodingFormat f
 //! @param inputString The input string.
 std::string decodeIdentifier(const std::string& inputString);
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail

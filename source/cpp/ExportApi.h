@@ -3,4 +3,4 @@
 //
 #pragma once
 
-#define REVIT_USD_EXPORT_API __declspec(dllexport)
+#define USD_EXPORTER_REVIT_API __declspec(dllexport)

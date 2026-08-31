@@ -15,7 +15,7 @@
 
 using namespace pxr;
 
-bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr stage, const SdfPath& path, std::string* reason)
+bool usd::exporter::revit::core::detail::isEditablePrimLocation(const UsdStagePtr stage, const SdfPath& path, std::string* reason)
 {
     // The stage must be valid
     if (!stage)
@@ -32,7 +32,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr s
     {
         if (reason != nullptr)
         {
-            *reason = TfStringPrintf("\"%s\" is not a valid absolute prim path.", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            *reason = TfStringPrintf("\"%s\" is not a valid absolute prim path.", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
         return false;
     }
@@ -43,7 +43,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr s
     {
         if (reason != nullptr)
         {
-            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
         return false;
     }
@@ -62,8 +62,8 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr s
                 {
                     *reason = TfStringPrintf(
                         "\"%s\" is a descendant of instance \"%s\", authoring is not allowed.",
-                        revit::usd_export::core::detail::getPathAsString(path).c_str(),
-                        revit::usd_export::core::detail::getPathAsString(currentPath).c_str()
+                        usd::exporter::revit::core::detail::getPathAsString(path).c_str(),
+                        usd::exporter::revit::core::detail::getPathAsString(currentPath).c_str()
                     );
                 }
                 return false;
@@ -74,8 +74,8 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr s
                 {
                     *reason = TfStringPrintf(
                         "\"%s\" is a descendant of instance proxy \"%s\", authoring is not allowed.",
-                        revit::usd_export::core::detail::getPathAsString(path).c_str(),
-                        revit::usd_export::core::detail::getPathAsString(currentPath).c_str()
+                        usd::exporter::revit::core::detail::getPathAsString(path).c_str(),
+                        usd::exporter::revit::core::detail::getPathAsString(currentPath).c_str()
                     );
                 }
                 return false;
@@ -93,7 +93,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdStagePtr s
     return true;
 }
 
-bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdPrim& prim, const std::string& name, std::string* reason)
+bool usd::exporter::revit::core::detail::isEditablePrimLocation(const UsdPrim& prim, const std::string& name, std::string* reason)
 {
     // The parent prim must be valid
     // We don't need to check that the UsdStage is valid as it must be if the UsdPrim is valid.
@@ -111,7 +111,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdPrim& prim
     {
         if (reason != nullptr)
         {
-            *reason = TfStringPrintf("\"%s\" is an instance, authoring is not allowed.", revit::usd_export::core::detail::getPathAsString(prim.GetPath()).c_str());
+            *reason = TfStringPrintf("\"%s\" is an instance, authoring is not allowed.", usd::exporter::revit::core::detail::getPathAsString(prim.GetPath()).c_str());
         }
         return false;
     }
@@ -121,7 +121,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdPrim& prim
     {
         if (reason != nullptr)
         {
-            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", revit::usd_export::core::detail::getPathAsString(prim.GetPath()).c_str());
+            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", usd::exporter::revit::core::detail::getPathAsString(prim.GetPath()).c_str());
         }
         return false;
     }
@@ -142,7 +142,7 @@ bool revit::usd_export::core::detail::isEditablePrimLocation(const UsdPrim& prim
     {
         if (reason != nullptr)
         {
-            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", revit::usd_export::core::detail::getPathAsString(child.GetPath()).c_str());
+            *reason = TfStringPrintf("\"%s\" is an instance proxy, authoring is not allowed.", usd::exporter::revit::core::detail::getPathAsString(child.GetPath()).c_str());
         }
         return false;
     }

@@ -10,15 +10,15 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 UsdGeomCamera defineCamera(UsdStagePtr stage, const SdfPath& path, const GfCamera& cameraData)
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(stage, path, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(stage, path, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomCamera due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomCamera due to an invalid location: %s", reason.c_str());
         return UsdGeomCamera();
     }
 
@@ -30,9 +30,9 @@ UsdGeomCamera defineCamera(UsdStagePtr stage, const SdfPath& path, const GfCamer
         // The xformOp may be invalid if there are xform op opinions in the composed layer stack stronger than that of the current edit target.
         if (!xformable.MakeMatrixXform())
         {
-            REVIT_LOG_ERROR(
+            USD_EXPORTER_REVIT_LOG_ERROR(
                 "Unable to define UsdGeomCamera at \"%s\" due to non-editable attributes: %s",
-                revit::usd_export::core::detail::getPathAsString(path).c_str(),
+                usd::exporter::revit::core::detail::getPathAsString(path).c_str(),
                 "Xform op opinions in the composed layer stack are stronger than that of the current edit target"
             );
             return UsdGeomCamera();
@@ -42,7 +42,7 @@ UsdGeomCamera defineCamera(UsdStagePtr stage, const SdfPath& path, const GfCamer
     UsdGeomCamera camera = UsdGeomCamera::Define(stage, path);
     if (!camera)
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomCamera at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomCamera at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return camera;
     }
 
@@ -55,20 +55,20 @@ UsdGeomCamera defineCamera(UsdStagePtr stage, const SdfPath& path, const GfCamer
 
     return camera;
 }
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineCamera(const long int stage_id, const char* prim_path, const pxr::GfCamera* cameraData)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineCamera(const long int stage_id, const char* prim_path, const pxr::GfCamera* cameraData)
     {
         // Get the stage corresponding to uri from cache.
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
         }
 
-        pxr::UsdGeomCamera camera = revit::usd_export::core::defineCamera(stage, pxr::SdfPath(prim_path), *cameraData);
+        pxr::UsdGeomCamera camera = usd::exporter::revit::core::defineCamera(stage, pxr::SdfPath(prim_path), *cameraData);
         if (!camera.GetPrim().IsValid())
         {
             return nullptr;
@@ -76,11 +76,11 @@ extern "C"
         const std::string newPath = camera.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineCameraEx(
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineCameraEx(
         const long int stage_id,
         const char* prim_path,
         const double transform[4][4],
@@ -97,7 +97,7 @@ extern "C"
     )
     {
         // Get the stage corresponding to uri from cache.
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -119,7 +119,7 @@ extern "C"
             focusDistance
         );
 
-        pxr::UsdGeomCamera camera = revit::usd_export::core::defineCamera(stage, pxr::SdfPath(prim_path), cameraData);
+        pxr::UsdGeomCamera camera = usd::exporter::revit::core::defineCamera(stage, pxr::SdfPath(prim_path), cameraData);
         if (!camera.GetPrim().IsValid())
         {
             return nullptr;
@@ -127,7 +127,7 @@ extern "C"
         const std::string newPath = camera.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 }

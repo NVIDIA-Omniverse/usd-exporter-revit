@@ -38,5 +38,5 @@ extern "C"
      * @param[out] data   Returns a non-conversion string buffer.
      * @param[out] size   Returns a non-conversion string buffer size.
      */
-    REVIT_USD_EXPORT_API void stringutil_getRawData(const char* ptr, const void** data, int* size);
+    USD_EXPORTER_REVIT_API void stringutil_getRawData(const char* ptr, const void** data, int* size);
 }

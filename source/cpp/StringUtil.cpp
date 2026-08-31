@@ -136,7 +136,7 @@ void GetRawData(const char* ptr, const void** data, int* size)
 // ------------------------------------------------------------.
 extern "C"
 {
-    REVIT_USD_EXPORT_API void stringutil_getRawData(const char* ptr, const void** data, int* size)
+    USD_EXPORTER_REVIT_API void stringutil_getRawData(const char* ptr, const void** data, int* size)
     {
         StringUtil::GetRawData(ptr, data, size);
     }

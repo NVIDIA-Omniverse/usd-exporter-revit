@@ -1,0 +1,231 @@
+<Window x:Class="UsdExporterRevit.UI.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsdExporterRevit.UI"
+        mc:Ignorable="d"
+        Title="Settings" Height="520" Width="580" MaxHeight="520" MinHeight="520" MaxWidth="1080" MinWidth="540">
+    <Grid ShowGridLines="False" Background="#FF4C4F54">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="440"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="tab_control" Height="440" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="5">
+            <TabItem x:Name="tab_output" Header="Output">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="130"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Stroke="Black"   Margin="5,8,5,5" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0"/>
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="0"/>
+                    <TextBox x:Name="tb_fileName" Margin="15,40,5,0" TextWrapping="Wrap" Text="file name" VerticalAlignment="Top" Height="25" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" TextChanged="tb_fileName_TextChanged"/>
+                    <ComboBox x:Name="combo_extension" Margin="5,40,15,0" VerticalAlignment="Top" Height="25" Grid.Column="3" Grid.Row="0" SelectionChanged="combo_extension_SelectionChanged" />
+                    <TextBlock x:Name="text_folderPath" Margin="15,95,15,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="21" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" Background="#FFF1F1F1"/>
+                    <Label Content="Folder" HorizontalAlignment="Left" Margin="15,70,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Extension" HorizontalAlignment="Right" Margin="0,10,15,0" VerticalAlignment="Top" Height="30" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" TextWrapping="Wrap" Text="File" VerticalAlignment="Top" Background="White" Grid.Row="0" Grid.Column="1"/>
+                    <Button x:Name="b_selectFolder" Content="Select" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top"  Width="75" Height="20" Click="b_selectFolder_Click" Grid.Column="1" Grid.Row="0"/>
+
+                    <Rectangle Stroke="Black"   Margin="5,5,5,5" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,-3,0,0" TextWrapping="Wrap" Text="Usd" VerticalAlignment="Top" Background="White" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="Material Style" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="86" Grid.Column="1" Grid.Row="1"/>
+                    <RadioButton x:Name="radio_externalMats" Content="External Library (Props)" HorizontalAlignment="Left" Margin="0,15,0,0" VerticalAlignment="Top" Width="140" GroupName="material_style" Grid.Column="3" Grid.Row="1" Checked="radio_externalMats_Checked" ToolTip="Creates a separate Looks.usdc file that is payloaded or referenced into the World stage. Ideal for Props." />
+                    <RadioButton x:Name="radio_internalMats" Content="Internal (Assembly)" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="130" GroupName="material_style" Grid.Column="2" Grid.Row="1" Checked="radio_internalMats_Checked" ToolTip="Embeds a Looks scope within the World stage, allowing for quick global overrides. Ideal for Assemblies." />
+                    <Label Content="Material Prim + Folder" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tb_materialPrim" Margin="30,40,20,0" TextWrapping="Wrap" Text="Looks" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" TextChanged="tb_materialPrim_TextChanged"/>
+                    <Label Content="File Composition" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" ToolTip="File Composition settings affect only material aggregation, not Link aggregation."/>
+                    <RadioButton x:Name="radio_references" Content="References" HorizontalAlignment="Left" Margin="0,65,0,0" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1" Checked="radio_references_Checked" />
+                    <RadioButton x:Name="radio_payloads" Content="Payloads" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" Checked="radio_payloads_Checked" />
+                    <Label x:Name="label_units" Content="Units" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <ComboBox x:Name="combo_units" Margin="10,95,20,0" HorizontalAlignment="Left" SelectionChanged="combo_units_SelectionChanged" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Height="20" Width="100" VerticalAlignment="Top"/>
+
+                    <Rectangle Stroke="Black" Margin="5,5,5,5" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,-3,0,0" TextWrapping="Wrap" Text="Advanced" VerticalAlignment="Top" Background="White" Grid.Row="2" Grid.Column="1"/>
+                    <CheckBox x:Name="cb_override" Content="Override with Json" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Checked="cb_override_Checked" Unchecked="cb_override_Unchecked" />
+                    <CheckBox x:Name="cb_use1click" Content="Enable 1-Click Export" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Checked="cb_use1click_Checked" Unchecked="cb_use1click_Unchecked" />
+                    <Button x:Name="b_selectJsonOverride" Content="Select Json" Margin="15,42,15,0" VerticalAlignment="Top" Height="20" Grid.Row="2" Grid.Column="3" Click="b_selectJsonOverride_Click"/>
+                    <TextBlock x:Name="text_overridePath" Margin="15,75,15,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFF1F1F1" Height="24"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_options" Header="Options">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Stroke="Black" Margin="5,5,5,5" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="cb_cameras" Content="Include Cameras" HorizontalAlignment="Left" Margin="15,25,0,0" VerticalAlignment="Top" Checked="cb_cameras_Checked" Unchecked="cb_cameras_Unchecked" Grid.Column="1"/>
+                    <CheckBox x:Name="cb_lights" Content="Include Lights (Exported without instancing)" HorizontalAlignment="Left" Margin="15,85,0,0" Width="270" VerticalAlignment="Top" Checked="cb_lights_Checked" Unchecked="cb_lights_Unchecked" Grid.Column="1"/>
+                    <CheckBox x:Name="cb_links" Content="Include Links" HorizontalAlignment="Left" Margin="15,55,0,0" VerticalAlignment="Top" Checked="cb_links_Checked" Unchecked="cb_links_Unchecked" Grid.Column="1"/>
+                    <CheckBox x:Name="cb_bim" Content="Include BIM Data" HorizontalAlignment="Left" Margin="15,115,0,0" VerticalAlignment="Top" Checked="cb_bim_Checked" Unchecked="cb_bim_Unchecked" Grid.Column="1"/>
+                    <CheckBox x:Name="cb_rooms" Content="Include Rooms" HorizontalAlignment="Left" Margin="15,145,0,0" VerticalAlignment="Top" Checked="cb_rooms_Checked" Unchecked="cb_rooms_Unchecked" Grid.Column="1"/>
+                    <ComboBox x:Name="combo_rooms" Margin="15,145,20,0" SelectionChanged="combo_rooms_SelectionChanged" Grid.Column="2" Height="20" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cb_spaces" Content="Include Spaces" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top" Checked="cb_spaces_Checked" Unchecked="cb_spaces_Unchecked" Grid.Column="1"/>
+                    <ComboBox x:Name="combo_spaces" Margin="15,175,20,0" SelectionChanged="combo_spaces_SelectionChanged" Grid.Column="2" Height="20" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cb_drawings" Content="Include Drawings" HorizontalAlignment="Left" Margin="15,205,0,0" Checked="cb_drawings_Checked" Unchecked="cb_drawings_Unchecked" Grid.Column="1" Height="20" VerticalAlignment="Top">
+                        <CheckBox.ToolTip>
+                            <ToolTip MaxWidth="420">
+                                <TextBlock MaxWidth="400" TextWrapping="Wrap">
+                                    <Run Text="When checked, exports drawings as textured mesh planes anchored at real-world scale to the model."/>
+                                    <LineBreak/>
+                                    <Run Text="To export, enable Crop View in the Properties panel under Extents for the desired 2D drawings."/>
+                                </TextBlock>
+                            </ToolTip>
+                        </CheckBox.ToolTip>
+                    </CheckBox>
+                    <ComboBox x:Name="combo_drawings" Margin="15,205,20,0" SelectionChanged="combo_drawings_SelectionChanged" Grid.Column="2" Height="20" VerticalAlignment="Top">
+                        <ComboBox.ToolTip>
+                            <ToolTip MaxWidth="420">
+                                <TextBlock MaxWidth="400" TextWrapping="Wrap">
+                                    <Run Text="When checked, exports drawings as textured mesh planes anchored at real-world scale to the model."/>
+                                    <LineBreak/>
+                                    <Run Text="To export, enable Crop View in the Properties panel under Extents for the desired 2D drawings."/>
+                                </TextBlock>
+                            </ToolTip>
+                        </ComboBox.ToolTip>
+                    </ComboBox>
+                    <CheckBox x:Name="cb_instance" Content="Instance Families" HorizontalAlignment="Left" Margin="15,235,0,0" VerticalAlignment="Top" Width="126" Grid.Column="1" Grid.ColumnSpan="3" Checked="cb_instance_Checked" Unchecked="cb_instance_Unchecked"/>
+                    <ComboBox x:Name="combo_instancing" Margin="15,235,20,0" Grid.Column="2" Height="20" VerticalAlignment="Top" SelectionChanged="combo_instancing_SelectionChanged"/>
+                    <Label x:Name="label_cs" Content="Coorindate System" HorizontalAlignment="Left" Margin="30,260,0,0" VerticalAlignment="Top" Width="139" Grid.Column="1" Grid.ColumnSpan="1"/>
+                    <ComboBox x:Name="combo_coordinates" Margin="15,265,20,0" SelectionChanged="combo_coordinates_SelectionChanged" Grid.Column="2" Height="20" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_view" Header="View">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="280"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Margin="5,8,5,5" Stroke="Black" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" TextWrapping="Wrap" Text="View(s) to Export" VerticalAlignment="Top" Background="White" Grid.Column="1"/>
+                    <Label Content="Select View(s)" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <ScrollViewer Margin="15,45,10,15"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                        <StackPanel x:Name="sp_view" Margin="0,0,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    </ScrollViewer>
+
+                    <Rectangle Margin="5,5,5,5" Stroke="Black" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,-3,0,0" TextWrapping="Wrap" Text="View Manipulations" VerticalAlignment="Top" Background="White" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="Detail Level" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <ComboBox x:Name="combo_detailLevel" Margin="15,15,20,15" Grid.Column="2" Grid.Row="1" SelectionChanged="combo_detailLevel_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                    <Label Content="Phase Filter" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <ComboBox x:Name="combo_phaseFilter" Margin="15,45,20,0" Grid.Column="2" Grid.Row="1" SelectionChanged="combo_phaseFilter_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                    <Label x:Name="label_vt" Content="View Template" HorizontalAlignment="Left" Margin="15,75,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <ComboBox x:Name="combo_viewTemplate" Margin="15,75,20,0" Grid.Column="2" Grid.Row="1" SelectionChanged="combo_viewTemplate_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_mappings" Header="Mappings">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+
+                    <Rectangle Margin="5,5,5,5" Stroke="Black" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1"/>
+                    <RadioButton Name="radio_materials" Content="Materials" GroupName="mapping_group" Margin="0,12,0,0" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Checked="radio_materials_Checked"/>
+                    <RadioButton Name="radio_families" Content="Families" GroupName="mapping_group" Margin="0,12,0,0" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Checked="radio_families_Checked"/>
+
+                    <Rectangle Margin="5,5,5,5" Stroke="Black" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2"/>
+                    <Label Content="Library" Margin="10,2,0,45" Grid.Column="1" Grid.Row="2"/>
+                    <Label Content="Group" Margin="10,2,0,0" Grid.Column="3" Grid.Row="2"/>
+                    <Label Content="File" Margin="10,40,0,0" Grid.Column="1" Grid.Row="2"/>
+                    <Label Content="Module" Margin="-50,40,0,0" Grid.Column="3" Grid.Row="2"/>
+                    <ComboBox Name="combo_root" Margin="10,25,5,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" SelectionChanged="combo_root_SelectionChanged"/>
+                    <ComboBox Name="combo_bucket" Margin="5,25,10,0" VerticalAlignment="Top" Height="20" Grid.Column="3" Grid.Row="2" SelectionChanged="combo_bucket_SelectionChanged"/>
+                    <ComboBox Name="combo_file" Margin="10,60,60,0" VerticalAlignment="Top" Height="20" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" SelectionChanged="combo_file_SelectionChanged"/>
+                    <ComboBox Name="combo_module" Margin="-50,60,10,0" VerticalAlignment="Top" Height="20" Grid.Column="3" Grid.Row="2" SelectionChanged="combo_module_SelectionChanged"/>
+
+                    <Rectangle Margin="5,5,5,5" Stroke="Black" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3"/>
+                    <Label Content="Cateogry" Margin="10,2,9,0" Grid.Column="1" Grid.Row="3"/>
+                    <Label Content="Search" Margin="10,2,9,0" Grid.Column="2" Grid.Row="3"/>
+                    <ComboBox Name="combo_category" Margin="10,25,5,0" Height="22" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" SelectionChanged="combo_category_SelectionChanged"/>
+                    <TextBox Name="tb_search" Text="" Margin="5,25,10,0" Height="22" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" TextChanged="tb_search_TextChanged"/>
+                    <ScrollViewer x:Name="sv_selection" Margin="10,52,10,10" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+                        <ListBox Name="lb_mappings" Margin="0,0,0,0" SelectionChanged="lb_mappings_SelectionChanged" SelectionMode="Extended" MouseWheel="lb_mappings_MouseWheel">
+                            <ListBox.ContextMenu>
+                                <ContextMenu Name="context_mapping" >
+                                    <MenuItem x:Name="assign_mapping" Header="Assign Mapping to Selected" Click="assign_mapping_Click"></MenuItem>
+                                    <MenuItem x:Name="remove_mapping" Header="Remove Mapping from Selected" Click="remove_mapping_Click"></MenuItem>
+                                </ContextMenu>
+                            </ListBox.ContextMenu>
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                    <Setter Property="Margin" Value="0,0,0,0"></Setter>
+                                    <Setter Property="Height" Value="24"></Setter>
+                                    <Setter Property="BorderBrush" Value="DarkGray"></Setter>
+                                    <Setter Property="BorderThickness" Value="1"></Setter>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <TextBlock Text="Material or Family"/>
+                            <TextBlock Text="Material or Family"/>
+                        </ListBox>
+
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_batch" Header="Batch">
+                <Grid ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Stroke="Black"   Margin="5,5,5,5" Grid.Column="1"/>
+                    <TextBlock x:Name="text_batchInput" Margin="20,45,20,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="21" Background="#FFF1F1F1" Grid.Column="1"/>
+                    <Label Content="Input Folder" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1"/>
+                    <Button x:Name="b_selectBatchInput" Content="Select Input" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top"  Width="80" Height="20" Click="b_selectBatchInput_Click" Grid.Column="1"/>
+                    <TextBlock x:Name="text_batchOutput" Margin="20,130,20,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="21" Background="#FFF1F1F1" Grid.Column="1"/>
+                    <Label Content="Output Folder" HorizontalAlignment="Left" Margin="15,100,0,0" VerticalAlignment="Top" Height="26" Grid.Column="1"/>
+                    <Button x:Name="b_selectBatchOutput" Content="Select Output" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top" Width="80" Height="20" Click="b_selectBatchOutput_Click" Grid.Column="1"/>
+                    <Slider x:Name="slider_folderDepth" Margin="40,220,20,0" VerticalAlignment="Top" TickPlacement="Both" SmallChange="1" RenderTransformOrigin="-0.08,0.5" ValueChanged="slider_folderDepth_ValueChanged" Grid.Column="1"/>
+                    <Label Content="Folder Depth" HorizontalAlignment="Left" Margin="15,190,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock x:Name="text_folderDepth" HorizontalAlignment="Left" Margin="20,225,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="19" Grid.Column="1"/>
+                    <Label Content="View To Find" HorizontalAlignment="Left" Margin="15,260,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:Name="tb_batchViewString" Margin="20,285,20,0" TextWrapping="Wrap" Text="3D" TextChanged="tb_batchViewString_TextChanged" Grid.Column="1" Height="20" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="b_1" Content="Save to Model" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1" Width="100" Height="25"/>
+        <Button x:Name="b_2" Content="Export to Json" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="1" Margin="0,0,0,10" Width="100" Height="25"/>
+        <Button x:Name="b_3" Content="Import from Json" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Width="100" Height="25"/>
+        <Button Grid.Column="4" Content="Button" HorizontalAlignment="Left" Margin="97,139,0,0" VerticalAlignment="Top" Width="0"/>
+    </Grid>
+</Window>

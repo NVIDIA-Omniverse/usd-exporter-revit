@@ -1,5 +1,5 @@
 [repo]
-name = "revit-plugin"
+name = "usd-exporter-revit"
 logging = "info"
 
 [repo.tokens]
@@ -12,7 +12,7 @@ version_file = "VERSION.md"
 [repo_connect_client_config]
 enabled = true
 client_version ="VERSION.md"
-source_file = "$root/source/config/revit.usd.export.client.toml"
+source_file = "$root/source/config/usd.exporter.revit.client.toml"
 
 ########################################################################################################################
 # Build tool setup
@@ -40,7 +40,7 @@ python_executable_path = "${root}/_build/target-deps/python/python${exe_ext}"
 # Tests
 ########################################################################################################################
 [repo_test]
-archive_pattern = "${conf:repo.folders.packages}/revit-usd-export-plugin-${revit_ver}*.zip"
+archive_pattern = "${conf:repo.folders.packages}/usd-exporter-revit-${revit_ver}*.zip"
 default_config = "release"
 default_suite = "all"
 
@@ -68,22 +68,22 @@ python_paths = [
 [repo_test.suites.core]
 # Native (doctest) unit tests for the SDK core. No Revit install required.
 kind = "executable"
-executable = "${test_root}/tests/revit_usd_export_tests${exe_ext}"
+executable = "${test_root}/tests/usd_exporter_revit_tests${exe_ext}"
 
 [repo_test.suites.revit2024]
 kind = "unittest"
 log_file = "_build/unittest/results_revit2024.xml"
-module_path = "${root}/tests/test_revit2024_usd_export.py"
+module_path = "${root}/tests/test_usd_exporter_revit_2024.py"
 
 [repo_test.suites.revit2025]
 kind = "unittest"
 log_file = "_build/unittest/results_revit2025.xml"
-module_path = "${root}/tests/test_revit2025_usd_export.py"
+module_path = "${root}/tests/test_usd_exporter_revit_2025.py"
 
 [repo_test.suites.revit2026]
 kind = "unittest"
 log_file = "_build/unittest/results_revit2026.xml"
-module_path = "${root}/tests/test_revit2026_usd_export.py"
+module_path = "${root}/tests/test_usd_exporter_revit_2026.py"
 
 ########################################################################################################################
 # Code Format Tool

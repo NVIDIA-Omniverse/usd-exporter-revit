@@ -19,7 +19,7 @@ extern "C"
      * @param[in] radius              Radius of the cylinder.
      * @return  If successful, the Cylinder's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineCylinder(const long stage_id, const char* parent_path, const char* name, const pxr::GfVec3f start, const pxr::GfVec3f end, const double radius);
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineCylinder(const long stage_id, const char* parent_path, const char* name, const pxr::GfVec3f start, const pxr::GfVec3f end, const double radius);
 
     /**
      * Defines a UsdGeomScope as the child of a UsdPrim.
@@ -28,5 +28,5 @@ extern "C"
      * @param[in] name                Name of the Scope to be created.
      * @return  If successful, the Scope's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineScope(const long stage_id, const char* parent_path, const char* name);
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineScope(const long stage_id, const char* parent_path, const char* name);
 }

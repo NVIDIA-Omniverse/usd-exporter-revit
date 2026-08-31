@@ -9,9 +9,9 @@
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API bool pxr_usd_stageSetVariantEditTarget(const long stage_id, const char* prim_path, const char* set_name, const char* option_name)
+    USD_EXPORTER_REVIT_API bool pxr_usd_stageSetVariantEditTarget(const long stage_id, const char* prim_path, const char* set_name, const char* option_name)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -34,9 +34,9 @@ extern "C"
         return false;
     }
 
-    REVIT_USD_EXPORT_API void pxr_usd_stageSetRootEditTarget(const long stage_id)
+    USD_EXPORTER_REVIT_API void pxr_usd_stageSetRootEditTarget(const long stage_id)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -47,9 +47,9 @@ extern "C"
         stage->SetEditTarget(target);
     }
 
-    REVIT_USD_EXPORT_API void pxr_usd_stageSetSessionEditTarget(const long stage_id)
+    USD_EXPORTER_REVIT_API void pxr_usd_stageSetSessionEditTarget(const long stage_id)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;

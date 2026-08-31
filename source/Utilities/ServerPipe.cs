@@ -8,7 +8,7 @@ using System.Security.AccessControl;
 using System.Security.Principal;
 #endif
 
-namespace RevitUsdExport.Utilities
+namespace UsdExporterRevit.Utilities
 {
 public class ServerPipe : ABasicPipe
 {
@@ -23,19 +23,8 @@ public class ServerPipe : ABasicPipe
 #if NETFRAMEWORK
         // Restrict pipe to the current Windows user (test harness is net48).
         var pipeSecurity = new PipeSecurity();
-        pipeSecurity.AddAccessRule(new PipeAccessRule(
-            WindowsIdentity.GetCurrent().User,
-            PipeAccessRights.FullControl,
-            AccessControlType.Allow));
-        serverPipeStream = new NamedPipeServerStream(
-            pipeName,
-            PipeDirection.InOut,
-            NamedPipeServerStream.MaxAllowedServerInstances,
-            PipeTransmissionMode.Message,
-            PipeOptions.Asynchronous,
-            0,
-            0,
-            pipeSecurity);
+        pipeSecurity.AddAccessRule(new PipeAccessRule(WindowsIdentity.GetCurrent().User, PipeAccessRights.FullControl, AccessControlType.Allow));
+        serverPipeStream = new NamedPipeServerStream(pipeName, PipeDirection.InOut, NamedPipeServerStream.MaxAllowedServerInstances, PipeTransmissionMode.Message, PipeOptions.Asynchronous, 0, 0, pipeSecurity);
 #else
         serverPipeStream = new NamedPipeServerStream(
             pipeName,

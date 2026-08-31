@@ -1,3 +1,3 @@
 # 1.0
 
-- Initial release of NVIDIA OpenUSD Exporter Plugin for Revit
+- Initial release of usd-exporter-revit

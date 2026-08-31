@@ -17,7 +17,7 @@ extern "C"
      * @param[in] intensity     Light intensity.
      * @return  If successful, the light's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineCylinderLight(const long stage_id, const char* parent_path, const char* name, const float length, const float radius, const float intensity);
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineCylinderLight(const long stage_id, const char* parent_path, const char* name, const float length, const float radius, const float intensity);
 
     /**
      * Creates a disk light.
@@ -28,7 +28,7 @@ extern "C"
      * @param[in] intensity     Light intensity.
      * @return  If successful, the light's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineDiskLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity);
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineDiskLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity);
 
     /**
      * Creates a sphere light.
@@ -39,7 +39,7 @@ extern "C"
      * @param[in] intensity     Light intensity.
      * @return  If successful, the light's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineSphereLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity);
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineSphereLight(const long stage_id, const char* parent_path, const char* name, const float radius, const float intensity);
 
     /**
      * Create the UsdLuxShapingAPI attribute for IES file and set it to the provided file.
@@ -47,7 +47,7 @@ extern "C"
      * @param[in] light_path    Path to the light to create and set the attribute.
      * @param[in] file_path     SdfAssetPath for the IES file.
      */
-    REVIT_USD_EXPORT_API void pxr_usd_createLuxShapingApiIesFileAttr(const long stage_id, const char* light_path, const char* file_path);
+    USD_EXPORTER_REVIT_API void pxr_usd_createLuxShapingApiIesFileAttr(const long stage_id, const char* light_path, const char* file_path);
 
     /**
      * Create the UsdLuxShapingAPI attribute for IES file and set it to the provided file.
@@ -56,5 +56,5 @@ extern "C"
      * @param[in] file_path     SdfAssetPath for the IES file.
      * @param[in] time          Time code value for setting the attribute.
      */
-    REVIT_USD_EXPORT_API void pxr_usd_createLuxShapingApiIesFileAttrAtTime(const long stage_id, const char* light_path, const char* file_path, const double time);
+    USD_EXPORTER_REVIT_API void pxr_usd_createLuxShapingApiIesFileAttrAtTime(const long stage_id, const char* light_path, const char* file_path, const double time);
 }

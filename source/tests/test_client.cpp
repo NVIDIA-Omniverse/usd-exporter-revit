@@ -6,7 +6,7 @@
 
 #include "client.h"
 
-namespace detail = revit::usd_export::core::detail;
+namespace detail = usd::exporter::revit::core::detail;
 
 TEST_CASE("isLocalUri accepts plain local paths")
 {

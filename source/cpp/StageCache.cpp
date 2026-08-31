@@ -10,11 +10,11 @@
 #include <pxr/usd/usd/stageCacheContext.h>
 #include <pxr/usd/usdUtils/stageCache.h>
 
-using namespace revit::usd_export::core;
-revit::usd_export::core::StageCache revit::usd_export::core::stageCache;
+using namespace usd::exporter::revit::core;
+usd::exporter::revit::core::StageCache usd::exporter::revit::core::stageCache;
 
 // ---------------------------------------------------.
-CacheTransformData::CacheTransformData() : translation(0), pivot(0), rotation(0), rotationOrder(revit::usd_export::core::RotationOrder_eXyz), scale(1)
+CacheTransformData::CacheTransformData() : translation(0), pivot(0), rotation(0), rotationOrder(usd::exporter::revit::core::RotationOrder_eXyz), scale(1)
 {
 }
 
@@ -185,14 +185,14 @@ std::vector<const char*>& StageCache::getTempData(const long int stage_id, const
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API long int c_connect_findStage(pxr::UsdStagePtr stage)
+    USD_EXPORTER_REVIT_API long int usd_exporter_revit_stage_cache_find_stage(pxr::UsdStagePtr stage)
     {
-        return revit::usd_export::core::stageCache.add(stage);
+        return usd::exporter::revit::core::stageCache.add(stage);
     }
 
-    REVIT_USD_EXPORT_API pxr::UsdStage* c_connect_findStageFromId(const long int stage_id)
+    USD_EXPORTER_REVIT_API pxr::UsdStage* usd_exporter_revit_stage_cache_find_stage_from_id(const long int stage_id)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -201,13 +201,13 @@ extern "C"
         return stage_ptr;
     }
 
-    REVIT_USD_EXPORT_API void c_connect_evict_stage(const long int stage_id)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_stage_cache_evict_stage(const long int stage_id)
     {
-        revit::usd_export::core::stageCache.remove(stage_id);
+        usd::exporter::revit::core::stageCache.remove(stage_id);
     }
 
-    REVIT_USD_EXPORT_API void c_connect_clear_stage_cache()
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_stage_cache_clear()
     {
-        revit::usd_export::core::stageCache.clear();
+        usd::exporter::revit::core::stageCache.clear();
     }
 }

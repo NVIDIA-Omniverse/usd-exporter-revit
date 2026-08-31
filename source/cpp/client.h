@@ -8,7 +8,7 @@
 #include <filesystem>
 #include <string>
 
-namespace revit::usd_export::core::detail
+namespace usd::exporter::revit::core::detail
 {
 // URI helpers used to decide whether a path can be written locally. Exposed here so they can be unit tested.
 
@@ -24,7 +24,7 @@ std::filesystem::path getLocalPath(const std::string& uri);
 //! Returns true if the URI refers to a local file (no scheme, or the "file" scheme).
 bool isLocalUri(const std::string& uri);
 
-} // namespace revit::usd_export::core::detail
+} // namespace usd::exporter::revit::core::detail
 
 extern "C"
 {
@@ -34,12 +34,12 @@ extern "C"
      * @param uri
      * @return A bool indicating if the URI exists.
      */
-    REVIT_USD_EXPORT_API bool revit_file_client_uri_exists(const std::string& uri);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_file_client_uri_exists(const std::string& uri);
 
     /**
      * Determine if the URI refers to a local file.
      * @param uri
      * @return A bool indicating if the URI refers to a local file.
      */
-    REVIT_USD_EXPORT_API bool revit_file_client_is_local_uri(const char* uri);
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_file_client_is_local_uri(const char* uri);
 }

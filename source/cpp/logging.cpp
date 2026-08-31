@@ -7,18 +7,18 @@
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API void revit_log_info(const char* message)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_info(const char* message)
     {
-        REVIT_LOG_INFO(message);
+        USD_EXPORTER_REVIT_LOG_INFO(message);
     }
 
-    REVIT_USD_EXPORT_API void revit_log_warning(const char* message)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_warning(const char* message)
     {
-        REVIT_LOG_WARN(message);
+        USD_EXPORTER_REVIT_LOG_WARN(message);
     }
 
-    REVIT_USD_EXPORT_API void revit_log_error(const char* message)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_error(const char* message)
     {
-        REVIT_LOG_ERROR(message);
+        USD_EXPORTER_REVIT_LOG_ERROR(message);
     }
 }

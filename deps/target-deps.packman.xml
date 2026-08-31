@@ -1,6 +1,6 @@
 <project toolsVersion="5.0">
   <!-- The Autodesk Revit 2024 SDK (RevitDevKit) is not redistributed with this repository.
-       To build the Revit 2024 USD Export Plugin, provide your own copy of the Autodesk Revit 2024
+       To build usd-exporter-revit 2024, provide your own copy of the Autodesk Revit 2024
        SDK, then uncomment the block below and set the path to your local SDK installation
        (the folder containing the RevitAPI assemblies). -->
   <!--

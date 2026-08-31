@@ -19,7 +19,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\Utilities\**\*.cs" Link="Utilities\%(RecursiveDir)%(Filename)%(Extension)" />
-    <Compile Include="..\RevitUsdExportSDK\RevitUsdExportSettings.cs" Link="RevitUsdExportSettings.cs" />
+    <Compile Include="..\UsdExporterRevitSDK\UsdExporterRevitSettings.cs" Link="UsdExporterRevitSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NewtonSoft.Json">

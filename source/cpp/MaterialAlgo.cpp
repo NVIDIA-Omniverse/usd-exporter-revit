@@ -18,7 +18,7 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 static constexpr const char* g_omniPbrAssetPath("OmniPBR.mdl");
 
@@ -179,29 +179,34 @@ bool removeProperty(UsdStageRefPtr stage, const SdfPath& primPath, const TfToken
             }
         }
 
-        REVIT_LOG_WARN("Cannot remove property <%s> from prim <%s>, it doesn't exist in the current edit target layer <%s>", propName.GetText(), revit::usd_export::core::detail::getPathAsString(primPath).c_str(), layer->GetIdentifier().c_str());
+        USD_EXPORTER_REVIT_LOG_WARN(
+            "Cannot remove property <%s> from prim <%s>, it doesn't exist in the current edit target layer <%s>",
+            propName.GetText(),
+            usd::exporter::revit::core::detail::getPathAsString(primPath).c_str(),
+            layer->GetIdentifier().c_str()
+        );
         return false;
     }
     else
     {
-        REVIT_LOG_WARN("Failed to get the current edit target layer from stage <%s> while removing property <%s>", stage->GetRootLayer()->GetRealPath().c_str(), propName.GetText());
+        USD_EXPORTER_REVIT_LOG_WARN("Failed to get the current edit target layer from stage <%s> while removing property <%s>", stage->GetRootLayer()->GetRealPath().c_str(), propName.GetText());
         return false;
     }
 }
 
-TfToken colorSpaceEnumToToken(const revit::usd_export::core::ColorSpace& colorSpace)
+TfToken colorSpaceEnumToToken(const usd::exporter::revit::core::ColorSpace& colorSpace)
 {
     switch (colorSpace)
     {
-        case revit::usd_export::core::ColorSpace::ColorSpace_eAuto:
+        case usd::exporter::revit::core::ColorSpace::ColorSpace_eAuto:
         {
             return _tokens->colorSpaceAuto;
         }
-        case revit::usd_export::core::ColorSpace::ColorSpace_eRaw:
+        case usd::exporter::revit::core::ColorSpace::ColorSpace_eRaw:
         {
             return _tokens->colorSpaceRaw;
         }
-        case revit::usd_export::core::ColorSpace::ColorSpace_eSrgb:
+        case usd::exporter::revit::core::ColorSpace::ColorSpace_eSrgb:
         {
             return _tokens->colorSpacesRBG;
         }
@@ -216,9 +221,9 @@ UsdShadeMaterial createMaterial(UsdPrim parent, const std::string& name)
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(parent, name, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(parent, name, &reason))
     {
-        REVIT_LOG_WARN("Unable to create UsdShadeMaterial due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdShadeMaterial due to an invalid location: %s", reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -245,9 +250,9 @@ UsdShadeShader createMdlShader(UsdShadeMaterial& material, const std::string& na
 
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(materialPrim, name, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(materialPrim, name, &reason))
     {
-        REVIT_LOG_WARN("Unable to create UsdShadeShader due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdShadeShader due to an invalid location: %s", reason.c_str());
         return UsdShadeShader();
     }
 
@@ -267,18 +272,18 @@ UsdShadeShader createMdlShader(UsdShadeMaterial& material, const std::string& na
     return shader;
 }
 
-UsdShadeInput createMdlShaderInput(UsdShadeMaterial& material, const TfToken& name, const VtValue& value, const SdfValueTypeName& typeName, std::optional<revit::usd_export::core::ColorSpace> colorSpace)
+UsdShadeInput createMdlShaderInput(UsdShadeMaterial& material, const TfToken& name, const VtValue& value, const SdfValueTypeName& typeName, std::optional<usd::exporter::revit::core::ColorSpace> colorSpace)
 {
     if (!material)
     {
-        REVIT_LOG_WARN("Invalid UsdShadeMaterial, cannot create MDL shader input <%s>", name.GetText());
+        USD_EXPORTER_REVIT_LOG_WARN("Invalid UsdShadeMaterial, cannot create MDL shader input <%s>", name.GetText());
         return UsdShadeInput();
     }
 
     UsdShadeShader shaderPrim = computeEffectiveMdlSurfaceShader(material);
     if (!shaderPrim)
     {
-        REVIT_LOG_WARN("Cannot create MDL shader input, no MDL shader found in UsdShadeMaterial <%s>", revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot create MDL shader input, no MDL shader found in UsdShadeMaterial <%s>", usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return UsdShadeInput();
     }
 
@@ -287,10 +292,10 @@ UsdShadeInput createMdlShaderInput(UsdShadeMaterial& material, const TfToken& na
     {
         if (!removeProperty(shaderPrim.GetPrim().GetStage(), shaderPrim.GetPrim().GetPath(), existingInput.GetFullName()))
         {
-            REVIT_LOG_ERROR(
+            USD_EXPORTER_REVIT_LOG_ERROR(
                 "Unable to create UsdShadeInput <%s> in material <%s> because input already exists as type <%s> in another layer",
                 name.GetText(),
-                revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str(),
+                usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str(),
                 existingInput.GetTypeName().GetAsToken().GetText()
             );
             return UsdShadeInput();
@@ -300,14 +305,14 @@ UsdShadeInput createMdlShaderInput(UsdShadeMaterial& material, const TfToken& na
     {
         if (!existingInput.DisconnectSource())
         {
-            REVIT_LOG_WARN("Failure disconnecting the existing source in UsdShadeInput <%s> in material <%s>", name.GetText(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("Failure disconnecting the existing source in UsdShadeInput <%s> in material <%s>", name.GetText(), usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         }
     }
 
     UsdShadeInput surfaceInput = shaderPrim.CreateInput(name, typeName);
     if (!surfaceInput)
     {
-        REVIT_LOG_ERROR("Unable to create UsdShadeInput <%s> in material <%s>", name.GetText(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to create UsdShadeInput <%s> in material <%s>", name.GetText(), usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return UsdShadeInput();
     }
 
@@ -325,17 +330,21 @@ void bindMaterial(UsdPrim prim, const UsdShadeMaterial& material)
     UsdPrim matPrim = material.GetPrim();
     if (!matPrim && !prim)
     {
-        REVIT_LOG_WARN("UsdPrim <%s> and UsdShadeMaterial <%s> are not valid, cannot bind material to prim", revit::usd_export::core::detail::getPathAsString(prim.GetPath()).c_str(), revit::usd_export::core::detail::getPathAsString(matPrim.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN(
+            "UsdPrim <%s> and UsdShadeMaterial <%s> are not valid, cannot bind material to prim",
+            usd::exporter::revit::core::detail::getPathAsString(prim.GetPath()).c_str(),
+            usd::exporter::revit::core::detail::getPathAsString(matPrim.GetPath()).c_str()
+        );
         return;
     }
     if (!matPrim)
     {
-        REVIT_LOG_WARN("UsdShadeMaterial <%s> is not valid, cannot bind material to prim", revit::usd_export::core::detail::getPathAsString(matPrim.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("UsdShadeMaterial <%s> is not valid, cannot bind material to prim", usd::exporter::revit::core::detail::getPathAsString(matPrim.GetPath()).c_str());
         return;
     }
     if (!prim)
     {
-        REVIT_LOG_WARN("UsdPrim <%s> is not valid, cannot bind material to prim", revit::usd_export::core::detail::getPathAsString(prim.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("UsdPrim <%s> is not valid, cannot bind material to prim", usd::exporter::revit::core::detail::getPathAsString(prim.GetPath()).c_str());
         return;
     }
     UsdShadeMaterialBindingAPI materialBinding = UsdShadeMaterialBindingAPI::Apply(prim);
@@ -348,9 +357,9 @@ UsdShadeShader createUsdPreviewSurfaceShader(UsdShadeMaterial& material, const s
 
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(prim, name, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(prim, name, &reason))
     {
-        REVIT_LOG_WARN("Unable to create UsdShadeShader due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Unable to create UsdShadeShader due to an invalid location: %s", reason.c_str());
         return UsdShadeShader();
     }
 
@@ -383,9 +392,9 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(stage, path, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(stage, path, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial due to an invalid location: %s", reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -393,7 +402,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     if (opacity < 0.0 || opacity > 1.0)
     {
         reason = TfStringPrintf("Opacity value %g is outside range [0.0 - 1.0].", opacity);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -401,7 +410,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     if (roughness < 0.0 || roughness > 1.0)
     {
         reason = TfStringPrintf("Roughness value %g is outside range [0.0 - 1.0].", roughness);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -409,7 +418,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     if (metallic < 0.0 || metallic > 1.0)
     {
         reason = TfStringPrintf("Metallic value %g is outside range [0.0 - 1.0].", metallic);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -418,7 +427,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     UsdShadeMaterial material = UsdShadeMaterial::Define(stage, path);
     if (!material)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdShadeMaterial();
     }
 
@@ -433,7 +442,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     UsdShadeShader mdlShader = createMdlShader(material, mdlShaderName, mdlAssetPath, _tokens->omniPbr);
     if (!mdlShader)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", mdlShaderName.c_str(), revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", mdlShaderName.c_str(), usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         // TODO: Cleanup any authored prims before returning a failure
         return UsdShadeMaterial();
     }
@@ -444,7 +453,7 @@ UsdShadeMaterial defineOmniPbrMaterial(UsdStagePtr stage, const SdfPath& path, c
     UsdShadeShader previewShader = createUsdPreviewSurfaceShader(material, previewShaderName);
     if (!previewShader)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", previewShaderName.c_str(), revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", previewShaderName.c_str(), usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         // TODO: Cleanup any authored prims before returning a failure
         return UsdShadeMaterial();
     }
@@ -507,7 +516,7 @@ bool addEmissiveColorToPbrMaterial(UsdShadeMaterial& material, const GfVec3f& co
 {
     if (!material)
     {
-        REVIT_LOG_WARN("Cannot add emissive color, UsdShadeMaterial is not a valid material");
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot add emissive color, UsdShadeMaterial is not a valid material");
         return false;
     }
 
@@ -516,10 +525,7 @@ bool addEmissiveColorToPbrMaterial(UsdShadeMaterial& material, const GfVec3f& co
     UsdShadeShader previewShader = computeEffectivePreviewSurfaceShader(material);
     if (!mdlShader || !previewShader || (mdlShader.GetPrim() == previewShader.GetPrim()))
     {
-        REVIT_LOG_WARN(
-            "Cannot add emissive color, UsdShadeMaterial <%s> must be created by defineOmniPbrMaterial()",
-            revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str()
-        );
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot add emissive color, UsdShadeMaterial <%s> must be created by defineOmniPbrMaterial()", usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return false;
     }
 
@@ -539,29 +545,29 @@ bool verifyValidOmniPbrMaterial(UsdShadeMaterial& material, const SdfAssetPath& 
 {
     if (!material)
     {
-        REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> is not a valid material", texturePath.GetAssetPath().c_str(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> is not a valid material", texturePath.GetAssetPath().c_str(), usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return false;
     }
     UsdShadeShader psShader = computeEffectivePreviewSurfaceShader(material);
     if (!psShader)
     {
-        REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> does not have a valid USD Preview Surface Shader", texturePath.GetAssetPath().c_str(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> does not have a valid USD Preview Surface Shader", texturePath.GetAssetPath().c_str(), usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return false;
     }
     UsdShadeShader mdlShader = computeEffectiveMdlSurfaceShader(material);
     if (!mdlShader || (mdlShader.GetPrim() == psShader.GetPrim()))
     {
-        REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> does not have a valid MDL Shader", texturePath.GetAssetPath().c_str(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+        USD_EXPORTER_REVIT_LOG_WARN("Cannot add texture <%s>, UsdShadeMaterial <%s> does not have a valid MDL Shader", texturePath.GetAssetPath().c_str(), usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str());
         return false;
     }
     SdfAssetPath sourceAsset;
     bool sourceAssetSet = mdlShader.GetSourceAsset(&sourceAsset, _tokens->mdl);
     if (!sourceAssetSet || (sourceAsset.GetAssetPath() != std::string(g_omniPbrAssetPath)))
     {
-        REVIT_LOG_WARN(
+        USD_EXPORTER_REVIT_LOG_WARN(
             "Cannot add texture <%s>, the UsdShadeShader <%s> does not have the correct source asset <%s>. It is using <%s>",
             texturePath.GetAssetPath().c_str(),
-            revit::usd_export::core::detail::getPathAsString(mdlShader.GetPath()).c_str(),
+            usd::exporter::revit::core::detail::getPathAsString(mdlShader.GetPath()).c_str(),
             g_omniPbrAssetPath,
             sourceAssetSet ? sourceAsset.GetAssetPath().c_str() : ""
         );
@@ -590,7 +596,11 @@ UsdShadeShader findOrCreateStPrimvarReader(UsdShadeMaterial& material)
         stShader = UsdShadeShader::Define(material.GetPrim().GetStage(), primvarReaderShaderPath);
         if (!stShader)
         {
-            REVIT_LOG_ERROR("Cannot add USD Preview Surface Primvar Reader shader <%s> to <%s>", revit::usd_export::core::detail::getPathAsString(primvarReaderShaderPath).c_str(), revit::usd_export::core::detail::getPathAsString(material.GetPath()).c_str());
+            USD_EXPORTER_REVIT_LOG_ERROR(
+                "Cannot add USD Preview Surface Primvar Reader shader <%s> to <%s>",
+                usd::exporter::revit::core::detail::getPathAsString(primvarReaderShaderPath).c_str(),
+                usd::exporter::revit::core::detail::getPathAsString(material.GetPath()).c_str()
+            );
 
             return stShader;
         }
@@ -646,7 +656,7 @@ bool addDiffuseTextureToPbrMaterial(UsdShadeMaterial& material, const SdfAssetPa
         createMdlShaderInput(material, _tokens->omniPbrAlbedoColor, VtValue(color), SdfValueTypeNames->Color3f);
         removeProperty(material.GetPrim().GetStage(), material.GetPrim().GetPath(), _tokens->materialColorInputs);
     }
-    UsdShadeInput matTextureInput = revit::usd_export::core::createMaterialLinkedMdlFileInput(material, _tokens->materialDiffuseTexture, _tokens->omniPbrDiffuseTexture, texturePath, _tokens->colorSpaceAuto);
+    UsdShadeInput matTextureInput = usd::exporter::revit::core::createMaterialLinkedMdlFileInput(material, _tokens->materialDiffuseTexture, _tokens->omniPbrDiffuseTexture, texturePath, _tokens->colorSpaceAuto);
 
     // USD Preview Surface
     // Make sure there is a primvar reader for the UV data ("st")
@@ -686,7 +696,7 @@ bool addNormalTextureToPbrMaterial(UsdShadeMaterial& material, const SdfAssetPat
         return false;
     }
 
-    UsdShadeInput matTextureInput = revit::usd_export::core::createMaterialLinkedMdlFileInput(material, _tokens->materialNormalTexture, _tokens->omniPbrNormalTexture, texturePath, _tokens->colorSpaceRaw);
+    UsdShadeInput matTextureInput = usd::exporter::revit::core::createMaterialLinkedMdlFileInput(material, _tokens->materialNormalTexture, _tokens->omniPbrNormalTexture, texturePath, _tokens->colorSpaceRaw);
 
     // USD Preview Surface
     // Make sure there is a primvar reader for the UV data ("st")
@@ -753,7 +763,7 @@ bool addOrmTextureToPbrMaterial(UsdShadeMaterial& material, const SdfAssetPath& 
     createMdlShaderInput(material, _tokens->omniPbrRoughnessTextureInfluence, VtValue(1.0f), SdfValueTypeNames->Float);
     createMdlShaderInput(material, _tokens->omniPbrMetallicTextureInfluence, VtValue(1.0f), SdfValueTypeNames->Float);
     createMdlShaderInput(material, _tokens->omniPbrOrmTextureEnabled, VtValue(true), SdfValueTypeNames->Bool);
-    UsdShadeInput matTextureInput = revit::usd_export::core::createMaterialLinkedMdlFileInput(material, _tokens->materialOrmTexture, _tokens->omniPbrOrmTexture, texturePath, _tokens->colorSpaceRaw);
+    UsdShadeInput matTextureInput = usd::exporter::revit::core::createMaterialLinkedMdlFileInput(material, _tokens->materialOrmTexture, _tokens->omniPbrOrmTexture, texturePath, _tokens->colorSpaceRaw);
 
     // USD Preview Surface
     // Make sure there is a primvar reader for the UV data ("st")
@@ -854,7 +864,7 @@ bool addSingleChannelTextureToPbrMaterial(
         createMdlShaderInput(material, pair.inputName, pair.value, pair.valueTypeName);
     }
 
-    UsdShadeInput matTextureInput = revit::usd_export::core::createMaterialLinkedMdlFileInput(material, matTextureInputToken, omniPbrTextureToken, texturePath, _tokens->colorSpaceRaw);
+    UsdShadeInput matTextureInput = usd::exporter::revit::core::createMaterialLinkedMdlFileInput(material, matTextureInputToken, omniPbrTextureToken, texturePath, _tokens->colorSpaceRaw);
 
     // USD Preview Surface
     // Make sure there is a primvar reader for the UV data ("st")
@@ -957,9 +967,9 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(stage, path, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(stage, path, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial due to an invalid location: %s", reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -967,7 +977,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     if (color[0] < 0.0 || color[1] < 0.0 || color[2] < 0.0 || color[0] > 1.0 || color[1] > 1.0 || color[2] > 1.0)
     {
         reason = TfStringPrintf("Color value (%g, %g, %g)  is outside range [(0, 0, 0) - (1, 1, 1)].", color[0], color[1], color[2]);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -975,7 +985,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     if (indexOfRefraction < 1.0 || indexOfRefraction > 4.0)
     {
         reason = TfStringPrintf("IOR value %g is outside range [1.0 - 4.0].", indexOfRefraction);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -983,7 +993,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     if (roughness < 0.0 || roughness > 1.0)
     {
         reason = TfStringPrintf("Roughness value %g is outside range [0.0 - 1.0].", roughness);
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\" due to an invalid shader parameter value: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdShadeMaterial();
     }
 
@@ -992,7 +1002,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     UsdShadeMaterial material = UsdShadeMaterial::Define(stage, path);
     if (!material)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeMaterial at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdShadeMaterial();
     }
 
@@ -1007,7 +1017,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     UsdShadeShader mdlShader = createMdlShader(material, mdlShaderName, mdlAssetPath, _tokens->omniGlass);
     if (!mdlShader)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", mdlShaderName.c_str(), revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", mdlShaderName.c_str(), usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdShadeMaterial();
     }
 
@@ -1017,7 +1027,7 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     UsdShadeShader previewShader = createUsdPreviewSurfaceShader(material, previewShaderName);
     if (!previewShader)
     {
-        REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", previewShaderName.c_str(), revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdShadeShader named \"%s\" as a child of \"%s\"", previewShaderName.c_str(), usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdShadeMaterial();
     }
 
@@ -1070,27 +1080,27 @@ UsdShadeMaterial defineOmniGlassMaterial(UsdStagePtr stage, const SdfPath& path,
     return material;
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API float* revit_usd_export_core_sRgbToLinear(const pxr::GfVec3f color)
+    USD_EXPORTER_REVIT_API float* usd_exporter_revit_core_sRgbToLinear(const pxr::GfVec3f color)
     {
         static pxr::GfVec3f retColor;
-        retColor = revit::usd_export::core::sRgbToLinear(color);
+        retColor = usd::exporter::revit::core::sRgbToLinear(color);
         return &(retColor[0]);
     }
 
-    REVIT_USD_EXPORT_API float* revit_usd_export_core_linearToSrgb(const pxr::GfVec3f color)
+    USD_EXPORTER_REVIT_API float* usd_exporter_revit_core_linearToSrgb(const pxr::GfVec3f color)
     {
         static pxr::GfVec3f retColor;
-        retColor = revit::usd_export::core::linearToSrgb(color);
+        retColor = usd::exporter::revit::core::linearToSrgb(color);
         return &(retColor[0]);
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_createMaterial(const long int stage_id, const char* parent, const char* name)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_createMaterial(const long int stage_id, const char* parent, const char* name)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -1102,7 +1112,7 @@ extern "C"
             return nullptr;
         }
 
-        pxr::UsdShadeMaterial material = revit::usd_export::core::createMaterial(parentPrim, std::string(name));
+        pxr::UsdShadeMaterial material = usd::exporter::revit::core::createMaterial(parentPrim, std::string(name));
         if (!material.GetPrim().IsValid())
         {
             return nullptr;
@@ -1110,13 +1120,13 @@ extern "C"
         const std::string newPath = material.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_createMdlShader(const long int stage_id, const char* prim_path, const char* name, const char* mdlPath, const char* module, bool connectMaterialOutputs)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_createMdlShader(const long int stage_id, const char* prim_path, const char* name, const char* mdlPath, const char* module, bool connectMaterialOutputs)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -1134,7 +1144,7 @@ extern "C"
 
         pxr::UsdShadeMaterial material(prim);
 
-        pxr::UsdShadeShader shader = revit::usd_export::core::createMdlShader(material, std::string(name), pxr::SdfAssetPath(mdlPath), pxr::TfToken(module), connectMaterialOutputs);
+        pxr::UsdShadeShader shader = usd::exporter::revit::core::createMdlShader(material, std::string(name), pxr::SdfAssetPath(mdlPath), pxr::TfToken(module), connectMaterialOutputs);
         if (!shader.GetPrim().IsValid())
         {
             return nullptr;
@@ -1142,13 +1152,13 @@ extern "C"
         const std::string newPath = shader.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputAsset(const long int stage_id, const char* material_path, const char* input_name, const char* value, revit::usd_export::core::ColorSpace color_space)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputAsset(const long int stage_id, const char* material_path, const char* input_name, const char* value, usd::exporter::revit::core::ColorSpace color_space)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1167,14 +1177,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Asset, color_space);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Asset, color_space);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputBool(const long int stage_id, const char* material_path, const char* input_name, bool value)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputBool(const long int stage_id, const char* material_path, const char* input_name, bool value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1193,14 +1203,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Bool);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Bool);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputInt(const long int stage_id, const char* material_path, const char* input_name, const int value)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputInt(const long int stage_id, const char* material_path, const char* input_name, const int value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1219,14 +1229,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Int);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Int);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputFloat(const long int stage_id, const char* material_path, const char* input_name, const float value)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputFloat(const long int stage_id, const char* material_path, const char* input_name, const float value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1245,14 +1255,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Float);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Float);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputFloat2(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec2f value)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputFloat2(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec2f value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1271,14 +1281,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Float2);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Float2);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_createMdlShaderInputColor3f(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec3f value)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createMdlShaderInputColor3f(const long int stage_id, const char* material_path, const char* input_name, const pxr::GfVec3f value)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1297,14 +1307,14 @@ extern "C"
 
         pxr::UsdShadeMaterial material(materialPrim);
 
-        pxr::UsdShadeInput input = revit::usd_export::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Color3f);
+        pxr::UsdShadeInput input = usd::exporter::revit::core::createMdlShaderInput(material, pxr::TfToken(input_name), pxr::VtValue(value), pxr::SdfValueTypeNames->Color3f);
 
         return input.GetAttr().IsValid();
     }
 
-    REVIT_USD_EXPORT_API void revit_usd_export_core_bindMaterial(const long int stage_id, const char* prim_path, const char* material_prim_path)
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_core_bindMaterial(const long int stage_id, const char* prim_path, const char* material_prim_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return;
@@ -1323,19 +1333,19 @@ extern "C"
         }
         pxr::UsdShadeMaterial material(materialPrim);
 
-        revit::usd_export::core::bindMaterial(prim, material);
+        usd::exporter::revit::core::bindMaterial(prim, material);
     }
 
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineOmniPbrMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float opacity, const float roughness, const float metallic)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineOmniPbrMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float opacity, const float roughness, const float metallic)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
         }
 
-        pxr::UsdShadeMaterial material = revit::usd_export::core::defineOmniPbrMaterial(stage, pxr::SdfPath(prim_path), color, opacity, roughness, metallic);
+        pxr::UsdShadeMaterial material = usd::exporter::revit::core::defineOmniPbrMaterial(stage, pxr::SdfPath(prim_path), color, opacity, roughness, metallic);
         if (!material.GetPrim().IsValid())
         {
             return nullptr;
@@ -1343,13 +1353,13 @@ extern "C"
         const std::string newPath = material.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addEmissiveColorToPbrMaterial(const long int stage_id, const char* material_path, const pxr::GfVec3f color, const float intensity)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addEmissiveColorToPbrMaterial(const long int stage_id, const char* material_path, const pxr::GfVec3f color, const float intensity)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1367,12 +1377,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addEmissiveColorToPbrMaterial(material, color, intensity);
+        return usd::exporter::revit::core::addEmissiveColorToPbrMaterial(material, color, intensity);
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addDiffuseTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addDiffuseTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1390,12 +1400,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addDiffuseTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addDiffuseTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addNormalTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addNormalTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1413,12 +1423,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addNormalTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addNormalTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addOrmTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addOrmTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1436,12 +1446,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addOrmTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addOrmTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addRoughnessTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addRoughnessTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1459,12 +1469,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addRoughnessTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addRoughnessTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addMetallicTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addMetallicTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1482,12 +1492,12 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addMetallicTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addMetallicTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_addOpacityTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_addOpacityTextureToPbrMaterial(const long int stage_id, const char* material_path, const char* texture_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -1505,19 +1515,19 @@ extern "C"
         }
 
         pxr::UsdShadeMaterial material(materialPrim);
-        return revit::usd_export::core::addOpacityTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
+        return usd::exporter::revit::core::addOpacityTextureToPbrMaterial(material, pxr::SdfAssetPath(texture_path));
     }
 
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_defineOmniGlassMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float indexOfRefraction, const float roughness)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_defineOmniGlassMaterial(const long int stage_id, const char* prim_path, const pxr::GfVec3f color, const float indexOfRefraction, const float roughness)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
         }
 
-        pxr::UsdShadeMaterial material = revit::usd_export::core::defineOmniGlassMaterial(stage, pxr::SdfPath(prim_path), color, indexOfRefraction, roughness);
+        pxr::UsdShadeMaterial material = usd::exporter::revit::core::defineOmniGlassMaterial(stage, pxr::SdfPath(prim_path), color, indexOfRefraction, roughness);
         if (!material.GetPrim().IsValid())
         {
             return nullptr;
@@ -1525,7 +1535,7 @@ extern "C"
         const std::string newPath = material.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 }

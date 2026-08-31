@@ -11,13 +11,9 @@
 
 PXR_NAMESPACE_USING_DIRECTIVE
 
-// Set the `REVIT_USD_EXPORT_ENABLE_TRANSCODING` environment variable to enable/disable reversible Bootstring transcoding within
+// Set the `USD_EXPORTER_REVIT_ENABLE_TRANSCODING` environment variable to enable/disable reversible Bootstring transcoding within
 // `makeValidIdentifier`. Defaults `true` (transcoding is enabled). When disabled, invalid characters are replaced with "_".
-TF_DEFINE_ENV_SETTING(
-    REVIT_USD_EXPORT_ENABLE_TRANSCODING,
-    true,
-    "Use the Bootstring transcoding implementation when producing valid Prim names."
-);
+TF_DEFINE_ENV_SETTING(USD_EXPORTER_REVIT_ENABLE_TRANSCODING, true, "Use the Bootstring transcoding implementation when producing valid Prim names.");
 
 namespace
 {
@@ -72,16 +68,16 @@ std::string makeValidIdentifierExtended(const std::string& in)
 
 } // namespace
 
-std::string revit::usd_export::core::detail::makeValidIdentifier(const std::string& in)
+std::string usd::exporter::revit::core::detail::makeValidIdentifier(const std::string& in)
 {
-    static bool s_enableTranscoding = TfGetEnvSetting(REVIT_USD_EXPORT_ENABLE_TRANSCODING);
+    static bool s_enableTranscoding = TfGetEnvSetting(USD_EXPORTER_REVIT_ENABLE_TRANSCODING);
     if (s_enableTranscoding)
     {
         std::string out = encodeIdentifier(in, TranscodingFormat::ASCII);
         if (out.empty())
         {
             // Encoding can fail for invalid UTF-8; fall back to character substitution.
-            REVIT_LOG_WARN(kRevitUsdExportChannel, "Bootstring encoding of \"%s\" failed. Resorting to character substitution.", in.c_str());
+            USD_EXPORTER_REVIT_LOG_WARN(kUsdExporterRevitChannel, "Bootstring encoding of \"%s\" failed. Resorting to character substitution.", in.c_str());
             return makeValidIdentifierExtended(in);
         }
         return out;

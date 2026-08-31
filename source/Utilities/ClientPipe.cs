@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevitUsdExport.Utilities
+namespace UsdExporterRevit.Utilities
 {
 public class ClientPipe : ABasicPipe
 {

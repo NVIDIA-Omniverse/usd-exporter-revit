@@ -3,7 +3,7 @@
 //
 #pragma once
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 enum RotationOrder
 {
@@ -30,4 +30,4 @@ enum ColorSpace
     ColorSpace_eRaw = 1,
     ColorSpace_eSrgb = 2
 };
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core

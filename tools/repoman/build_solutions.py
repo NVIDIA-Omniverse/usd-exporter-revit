@@ -25,13 +25,13 @@ def _intermediate_dir(project_name: str) -> str:
 
 
 def dotnet_restore(revit_version):
-    sln_path = os.path.join(solutions_dir, f"RevitUsdExport{revit_version}.sln")
+    sln_path = os.path.join(solutions_dir, f"UsdExporterRevit{revit_version}.sln")
     cmd = f'"{dotnet_exe_path}" "restore" "{sln_path}"'
     print(f"Executing: {cmd}")
 
     # Sometimes dotnet restore does not output files correctly, so repeat the process until key output file is found
-    intermediate_dir = _intermediate_dir(f"RevitUsdExportPlugin{revit_version}")
-    nuget_props_file = os.path.join(intermediate_dir, f"RevitUsdExportPlugin{revit_version}.csproj.nuget.g.props")
+    intermediate_dir = _intermediate_dir(f"UsdExporterRevit{revit_version}")
+    nuget_props_file = os.path.join(intermediate_dir, f"UsdExporterRevit{revit_version}.csproj.nuget.g.props")
     assets_file = os.path.join(intermediate_dir, "project.assets.json")
 
     max_retries = 10
@@ -52,19 +52,19 @@ def dotnet_restore(revit_version):
                 return False
 
         except subprocess.CalledProcessError as e:
-            print(f"Error restoring RevitUsdExport{revit_version} on attempt {attempt}: {e}")
+            print(f"Error restoring UsdExporterRevit{revit_version} on attempt {attempt}: {e}")
             print(f"Output: {e.stdout}")
             print(f"Error: {e.stderr}")
 
             if attempt >= max_retries:
-                print(f"Failed to restore RevitUsdExport{revit_version} after {max_retries} attempts")
+                print(f"Failed to restore UsdExporterRevit{revit_version} after {max_retries} attempts")
                 return False
 
     return False
 
 
 def dotnet_build(revit_version, configuration):
-    sln_path = os.path.join(solutions_dir, f"RevitUsdExport{revit_version}.sln")
+    sln_path = os.path.join(solutions_dir, f"UsdExporterRevit{revit_version}.sln")
     msbuild_config = build_config.to_build_configuration(configuration)
     cmd = f'"{dotnet_exe_path}" "build" "{sln_path}" "/p:Configuration={msbuild_config}"'
     print(f"Executing: {cmd}")
@@ -73,7 +73,7 @@ def dotnet_build(revit_version, configuration):
         print(result.stdout)
         return True
     except subprocess.CalledProcessError as e:
-        print(f"Error building RevitUsdExport{revit_version}: {e}")
+        print(f"Error building UsdExporterRevit{revit_version}: {e}")
         print(f"Output: {e.stdout}")
         print(f"Error: {e.stderr}")
         return False
@@ -130,26 +130,26 @@ def build_csharp_solutions(configuration="release"):
     """Build checked-in C# solutions; outputs land in _build/ via Directory.Build.props."""
 
     revit_ver: str = omni.repo.man.resolve_tokens("${revit_ver}")
-    project_name = f"RevitUsdExportSetup{revit_ver}"
-    print(f"Building Revit {revit_ver} USD Export Plugin {configuration}...")
+    project_name = f"UsdExporterRevitSetup{revit_ver}"
+    print(f"Building usd-exporter-revit {revit_ver} {configuration}...")
 
     failures = []
 
-    if not msbuild_build(f"{current_dir}\\source\\RevitUsdExportSetup\\RevitUsdExportSetup.sln", configuration, project_name):
-        failures.append("RevitUsdExportSetup.sln")
+    if not msbuild_build(f"{current_dir}\\source\\UsdExporterRevitSetup\\UsdExporterRevitSetup.sln", configuration, project_name):
+        failures.append("UsdExporterRevitSetup.sln")
 
     if not msbuild_build(f"{solutions_dir}\\RevitTestHarness.sln", configuration):
         failures.append("RevitTestHarness.sln")
 
     if revit_ver == "2024":
-        if not msbuild_build(f"{solutions_dir}\\RevitUsdExport2024.sln", configuration):
-            failures.append("RevitUsdExport2024.sln")
+        if not msbuild_build(f"{solutions_dir}\\UsdExporterRevit2024.sln", configuration):
+            failures.append("UsdExporterRevit2024.sln")
     elif revit_ver == "2025":
         if not (dotnet_restore("2025") and dotnet_build("2025", configuration)):
-            failures.append("RevitUsdExport2025.sln")
+            failures.append("UsdExporterRevit2025.sln")
     elif revit_ver == "2026":
         if not (dotnet_restore("2026") and dotnet_build("2026", configuration)):
-            failures.append("RevitUsdExport2026.sln")
+            failures.append("UsdExporterRevit2026.sln")
 
     if failures:
         raise omni.repo.man.exceptions.QuietExpectedError(f"Build failed for: {', '.join(failures)} (configuration: {configuration})")
@@ -159,7 +159,7 @@ def build_csharp_solutions(configuration="release"):
 
 def setup_repo_tool(parser, config):
     parser.prog = "build_solutions"
-    parser.description = "Build all Revit USD Export Plugin C# solutions"
+    parser.description = "Build all usd-exporter-revit C# solutions"
 
     parser.add_argument(
         "--configuration",

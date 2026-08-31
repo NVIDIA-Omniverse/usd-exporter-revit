@@ -8,12 +8,12 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace revit.usd.export
+namespace usd.exporter.revit
 {
 public class stringutil
 {
     // Countermeasures against UTF-8 garbled characters in Windows environment.
-    [DllImport("revit_usd_export", EntryPoint = "stringutil_getRawData", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("usd_exporter_revit", EntryPoint = "stringutil_getRawData", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
     public static extern void stringutil_getRawData(IntPtr ptr, out IntPtr data, out int size);
 
     // Correctly return strings received from C as C# UTF-8.

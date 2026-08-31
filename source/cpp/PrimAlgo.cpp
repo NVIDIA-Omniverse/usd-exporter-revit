@@ -58,7 +58,7 @@ std::vector<std::string> getValidNames(const std::vector<std::string>& names, Va
         const std::string& originalName = names[nameIndex];
 
         // Make the name valid before checking uniqueness
-        const std::string validName = revit::usd_export::core::detail::makeValidIdentifier(originalName);
+        const std::string validName = usd::exporter::revit::core::detail::makeValidIdentifier(originalName);
 
         // Check if the valid name is already used. Increment a numeric suffix on the original name until an available one is found
         std::string name = validName;
@@ -80,7 +80,7 @@ std::vector<std::string> getValidNames(const std::vector<std::string>& names, Va
             size_t& index = cache.startIndices[originalName];
 
             index++;
-            name = revit::usd_export::core::detail::makeValidIdentifier(originalName + "_" + std::to_string(index));
+            name = usd::exporter::revit::core::detail::makeValidIdentifier(originalName + "_" + std::to_string(index));
         }
     }
 
@@ -89,7 +89,7 @@ std::vector<std::string> getValidNames(const std::vector<std::string>& names, Va
 
 } // namespace
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 std::string getDisplayName(const UsdPrim& prim)
@@ -122,7 +122,7 @@ bool setDisplayName(UsdPrim prim, const std::string& name)
 
 std::string getValidPrimName(const std::string& name)
 {
-    return revit::usd_export::core::detail::makeValidIdentifier(name);
+    return usd::exporter::revit::core::detail::makeValidIdentifier(name);
 }
 
 std::vector<std::string> getValidPrimNames(const std::vector<std::string>& names, const std::vector<std::string>& reservedNames)
@@ -132,13 +132,13 @@ std::vector<std::string> getValidPrimNames(const std::vector<std::string>& names
     return getValidNames(names, cache);
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_getDisplayName(const long int stage_id, const char* prim_path)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_getDisplayName(const long int stage_id, const char* prim_path)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -150,16 +150,16 @@ extern "C"
             return nullptr;
         }
 
-        const std::string name = revit::usd_export::core::getDisplayName(prim);
+        const std::string name = usd::exporter::revit::core::getDisplayName(prim);
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, name);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, name);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_setDisplayName(const long int stage_id, const char* prim_path, const char* name)
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_setDisplayName(const long int stage_id, const char* prim_path, const char* name)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return false;
@@ -171,26 +171,19 @@ extern "C"
             return false;
         }
 
-        return revit::usd_export::core::setDisplayName(prim, std::string(name));
+        return usd::exporter::revit::core::setDisplayName(prim, std::string(name));
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_getValidPrimName(const long int stage_id, const char* name)
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_getValidPrimName(const long int stage_id, const char* name)
     {
-        const std::string new_name = revit::usd_export::core::getValidPrimName(std::string(name));
+        const std::string new_name = usd::exporter::revit::core::getValidPrimName(std::string(name));
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, new_name);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, new_name);
         return buff.c_str();
     }
 
-    REVIT_USD_EXPORT_API const char** revit_usd_export_core_getValidPrimNames(
-        const long int stage_id,
-        const char** names,
-        int namesCount,
-        const char** reservedNames,
-        int reservedNamesCount,
-        int* returnCount
-    )
+    USD_EXPORTER_REVIT_API const char** usd_exporter_revit_core_getValidPrimNames(const long int stage_id, const char** names, int namesCount, const char** reservedNames, int reservedNamesCount, int* returnCount)
     {
         if (returnCount != nullptr)
         {
@@ -219,10 +212,10 @@ extern "C"
             }
         }
 
-        const std::vector<std::string> validNames = revit::usd_export::core::getValidPrimNames(nameVec, reservedVec);
+        const std::vector<std::string> validNames = usd::exporter::revit::core::getValidPrimNames(nameVec, reservedVec);
 
         // Returns a temporary buffer for each stage (thread-safe). The buffer owns the strings and the array of pointers.
-        std::vector<const char*>& buff = revit::usd_export::core::stageCache.getTempData(stage_id, validNames);
+        std::vector<const char*>& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, validNames);
 
         if (returnCount != nullptr)
         {

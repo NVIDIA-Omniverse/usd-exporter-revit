@@ -14,7 +14,7 @@
 #include <pxr/usd/usd/stage.h>
 #include <pxr/usd/usdGeom/mesh.h>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 //! Defines a basic polygon mesh on the stage.
 //!
@@ -62,18 +62,18 @@ namespace revit::usd_export::core
 //! @param displayColor Values to be authored for the display color primvar
 //! @param displayOpacity Values to be authored for the display opacity primvar
 //! @returns UsdGeomMesh schema wrapping the defined UsdPrim
-REVIT_USD_EXPORT_API pxr::UsdGeomMesh definePolyMesh(
+USD_EXPORTER_REVIT_API pxr::UsdGeomMesh definePolyMesh(
     pxr::UsdStagePtr stage,
     const pxr::SdfPath& path,
     const pxr::VtIntArray& faceVertexCounts,
     const pxr::VtIntArray& faceVertexIndices,
     const pxr::VtVec3fArray& points,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> normals = std::nullopt,
-    std::optional<revit::usd_export::core::Vec2fPrimvarData> uvs = std::nullopt,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> displayColor = std::nullopt,
-    std::optional<revit::usd_export::core::FloatPrimvarData> displayOpacity = std::nullopt
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> normals = std::nullopt,
+    std::optional<usd::exporter::revit::core::Vec2fPrimvarData> uvs = std::nullopt,
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> displayColor = std::nullopt,
+    std::optional<usd::exporter::revit::core::FloatPrimvarData> displayOpacity = std::nullopt
 );
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -90,7 +90,7 @@ extern "C"
      * @param[in] displayOpacityInterporation, displayOpacity, displayOpacityCount, displayOpacityIndices, displayOpacityIndicesCount  Values to be authored for the display opacity primvar
      * @return  If successful, the mesh's Prim path is returned.
      */
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_definePolyMesh(
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_definePolyMesh(
         const long int stage_id,
         const char* prim_path,
         const int faceVertexCounts[],

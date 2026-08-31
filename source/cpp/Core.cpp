@@ -51,7 +51,7 @@ void waitForDebugger()
 #else
     const int processId = getpid();
 #endif
-    printf("[revit.usd.export.core] Waiting for debugger to attach, press the Enter key to skip... [pid: %d]\n", processId);
+    printf("[usd.exporter.revit.core] Waiting for debugger to attach, press the Enter key to skip... [pid: %d]\n", processId);
     fflush(stdout);
 
     auto getKeyPress = []() -> bool
@@ -90,12 +90,12 @@ void waitForDebugger()
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API bool initialized()
+    USD_EXPORTER_REVIT_API bool initialized()
     {
         return g_initialized;
     }
 
-    REVIT_USD_EXPORT_API bool revit_usd_export_core_startup()
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_startup()
     {
         static constexpr char localeName[] = "ja_JP.utf-8";
         std::setlocale(LC_ALL, localeName);
@@ -111,9 +111,9 @@ extern "C"
             return false;
         }
 
-        revit_usd_export_core_startupLog();
+        usd_exporter_revit_core_startupLog();
 
-        if (revit::usd_export::core::settingsState().waitForDebugger)
+        if (usd::exporter::revit::core::settingsState().waitForDebugger)
         {
             waitForDebugger();
         }
@@ -123,7 +123,7 @@ extern "C"
         return initialized();
     }
 
-    REVIT_USD_EXPORT_API const char* revit_usd_export_install_path()
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_install_path()
     {
         static std::string s_appPath;
         if (!s_appPath.empty())
@@ -133,10 +133,7 @@ extern "C"
 
 #if defined(_WIN32)
         HMODULE module = nullptr;
-        if (GetModuleHandleExW(
-                GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
-                reinterpret_cast<LPCWSTR>(&revit_usd_export_install_path),
-                &module))
+        if (GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, reinterpret_cast<LPCWSTR>(&usd_exporter_revit_install_path), &module))
         {
             wchar_t modulePath[MAX_PATH] = {};
             const DWORD length = GetModuleFileNameW(module, modulePath, MAX_PATH);
@@ -149,7 +146,7 @@ extern "C"
 
         if (s_appPath.empty())
         {
-            REVIT_LOG_FATAL("Cannot resolve plugin install path from module location.");
+            USD_EXPORTER_REVIT_LOG_FATAL("Cannot resolve plugin install path from module location.");
             return g_emptyString;
         }
 
@@ -157,7 +154,7 @@ extern "C"
         return s_appPath.c_str();
     }
 
-    REVIT_USD_EXPORT_API double revit_usd_export_getGeomLinearUnits(const char* name)
+    USD_EXPORTER_REVIT_API double usd_exporter_revit_getGeomLinearUnits(const char* name)
     {
         const std::string metricsName = pxr::TfStringToLower(name);
 
@@ -206,7 +203,7 @@ extern "C"
             return pxr::UsdGeomLinearUnits::yards;
         }
 
-        REVIT_LOG_WARN("getGeomLinearUnits -> The specified unit name cannot be found: %s", name);
+        USD_EXPORTER_REVIT_LOG_WARN("getGeomLinearUnits -> The specified unit name cannot be found: %s", name);
         return 0.0;
     }
 }

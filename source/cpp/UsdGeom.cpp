@@ -14,9 +14,9 @@
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineCylinder(const long stage_id, const char* parent_path, const char* name, const pxr::GfVec3f start, const pxr::GfVec3f end, const double radius)
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineCylinder(const long stage_id, const char* parent_path, const char* name, const pxr::GfVec3f start, const pxr::GfVec3f end, const double radius)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -133,24 +133,24 @@ extern "C"
                 rX = 90.0;
             }
             const pxr::GfVec3f rotation((float)rX, (float)rY, (float)rZ);
-            const revit::usd_export::core::RotationOrder rotationOrder = revit::usd_export::core::RotationOrder_eXyz;
+            const usd::exporter::revit::core::RotationOrder rotationOrder = usd::exporter::revit::core::RotationOrder_eXyz;
             const pxr::GfVec3f scale(1.0f, 1.0f, 1.0f);
 
-            if (revit::usd_export::core::setLocalTransform(prim, translation, pivot, rotation, rotationOrder, scale))
+            if (usd::exporter::revit::core::setLocalTransform(prim, translation, pivot, rotation, rotationOrder, scale))
             {
                 pxr::VtVec3fArray extent;
                 cylinder.ComputeExtent(height, radius, upAxis, &extent);
                 cylinder.CreateExtentAttr(pxr::VtValue(extent));
-                std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+                std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
                 return buff.c_str();
             }
         }
         return nullptr;
     }
 
-    REVIT_USD_EXPORT_API const char* pxr_usd_defineScope(const long int stage_id, const char* parent_path, const char* name)
+    USD_EXPORTER_REVIT_API const char* pxr_usd_defineScope(const long int stage_id, const char* parent_path, const char* name)
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -166,7 +166,7 @@ extern "C"
         pxr::UsdGeomScope scope = pxr::UsdGeomScope::Define(stage, scopePath);
         const std::string newPath = scope.GetPath().GetAsString();
 
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
 
         return buff.c_str();
     }

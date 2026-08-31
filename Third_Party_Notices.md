@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-The NVIDIA OpenUSD Exporter Plugin for Revit is built on, links
+The usd-exporter-revit is built on, links
 against, and/or redistributes the third-party software listed below. This
 document is provided for attribution and license-compliance purposes.
 
@@ -13,8 +13,8 @@ document is provided for attribution and license-compliance purposes.
 | --- | --- | --- | --- |
 | [OpenUSD (pxr)](https://openusd.org/) | 25.11 | Modified Apache 2.0 (Tomorrow Open Source Technology License 1.0) | Core USD runtime. Redistributed as `usd_*.dll`, the `usd/` plugin tree, and `pxr` Python bindings. Bundles open-source components — see [OpenUSD third-party components](#openusd-third-party-components) below. |
 | [CPython](https://www.python.org/) | 3.12.13 | PSF-2.0 | Python runtime (`python312.dll`, `python-runtime/`). Bundles open-source components — see [CPython third-party components](#cpython-third-party-components) below. |
-| [fmt](https://github.com/fmtlib/fmt) | 7.0.3 | MIT (with binary-redistribution exception) | Compiled into `revit_usd_export.dll`. |
-| [doctest](https://github.com/doctest/doctest) | 2.4.5 | MIT | Compiled into `revit_usd_export_tests.exe` (shipped in the release package `tests/` folder). |
+| [fmt](https://github.com/fmtlib/fmt) | 7.0.3 | MIT (with binary-redistribution exception) | Compiled into `usd_exporter_revit.dll`. |
+| [doctest](https://github.com/doctest/doctest) | 2.4.5 | MIT | Compiled into `usd_exporter_revit_tests.exe` (shipped in the release package `tests/` folder). |
 | [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) | 13.0.1 | MIT | Used by the C# plugin and SDK for settings serialization. Revit 2025/2026 builds consume the NuGet package; Revit 2024 builds reference the copy bundled with the Autodesk Revit SDK. |
 | [System.Drawing.Common](https://github.com/dotnet/runtime) | 8.0.3 | MIT | Used by the C# SDK (Revit 2025/2026 builds). |
 | [System.Windows.Extensions](https://github.com/dotnet/runtime) | 8.0.0 | MIT | Used by the C# SDK (Revit 2025/2026 builds). |
@@ -99,7 +99,7 @@ maintained by Autodesk:
 
 # Full License Texts
 
-## NVIDIA OpenUSD Exporter Plugin for Revit dependencies
+## usd-exporter-revit dependencies
 
 ### OpenUSD (pxr) 25.11
 

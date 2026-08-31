@@ -27,10 +27,10 @@ bool validateUnusedMeshTopology(
     const VtIntArray& faceVertexCounts,
     const VtIntArray& faceVertexIndices,
     const VtVec3fArray& points,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> normals,
-    std::optional<revit::usd_export::core::Vec2fPrimvarData> uvs,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> displayColor,
-    std::optional<revit::usd_export::core::FloatPrimvarData> displayOpacity,
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> normals,
+    std::optional<usd::exporter::revit::core::Vec2fPrimvarData> uvs,
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> displayColor,
+    std::optional<usd::exporter::revit::core::FloatPrimvarData> displayOpacity,
     std::string* reason
 )
 {
@@ -87,12 +87,12 @@ bool validateUnusedMeshTopology(
 
 } // namespace
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 // Validate the interpolation given the topology information
 template <typename T>
-bool validatePrimvarInterpolation(const revit::usd_export::core::PrimvarData<T>& primvar, const TfTokenVector& interpolations, const VtArray<int>& faceVertexCounts, const VtArray<int>& faceVertexIndices, const VtArray<GfVec3f>& points)
+bool validatePrimvarInterpolation(const usd::exporter::revit::core::PrimvarData<T>& primvar, const TfTokenVector& interpolations, const VtArray<int>& faceVertexCounts, const VtArray<int>& faceVertexIndices, const VtArray<GfVec3f>& points)
 {
     if (std::find(interpolations.begin(), interpolations.end(), primvar.interpolation()) == interpolations.end())
     {
@@ -133,7 +133,7 @@ bool validatePrimvarInterpolation(const revit::usd_export::core::PrimvarData<T>&
 // Validates that a valid interpolation was found and that indices (if provided) fit inside the value range.
 // If the primvar is invalid and reason is non-null, an error message describing the validation error will be set.
 template <typename T>
-bool validatePrimvar(const revit::usd_export::core::PrimvarData<T>& primvar, const TfTokenVector& interpolations, const VtArray<int>& faceVertexCounts, const VtArray<int>& faceVertexIndices, const VtArray<GfVec3f>& points, std::string* reason)
+bool validatePrimvar(const usd::exporter::revit::core::PrimvarData<T>& primvar, const TfTokenVector& interpolations, const VtArray<int>& faceVertexCounts, const VtArray<int>& faceVertexIndices, const VtArray<GfVec3f>& points, std::string* reason)
 {
     if (!primvar.isValid())
     {
@@ -162,31 +162,31 @@ UsdGeomMesh definePolyMesh(
     const VtIntArray& faceVertexCounts,
     const VtIntArray& faceVertexIndices,
     const VtVec3fArray& points,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> normals,
-    std::optional<revit::usd_export::core::Vec2fPrimvarData> uvs,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData> displayColor,
-    std::optional<revit::usd_export::core::FloatPrimvarData> displayOpacity
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> normals,
+    std::optional<usd::exporter::revit::core::Vec2fPrimvarData> uvs,
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData> displayColor,
+    std::optional<usd::exporter::revit::core::FloatPrimvarData> displayOpacity
 )
 {
     // Early out if the proposed prim location is invalid
     std::string reason;
-    if (!revit::usd_export::core::detail::isEditablePrimLocation(stage, path, &reason))
+    if (!usd::exporter::revit::core::detail::isEditablePrimLocation(stage, path, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomMesh due to an invalid location: %s", reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh due to an invalid location: %s", reason.c_str());
         return UsdGeomMesh();
     }
 
     // Early out if the points are empty
     if (points.empty())
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid points: Empty array", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid points: Empty array", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdGeomMesh();
     }
 
     // Early out if the topology is not valid
     if (!UsdGeomMesh::ValidateTopology(faceVertexIndices, faceVertexCounts, points.size(), &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid topology: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid topology: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdGeomMesh();
     }
 
@@ -196,7 +196,7 @@ UsdGeomMesh definePolyMesh(
         static const TfTokenVector validInterpolations = { UsdGeomTokens->uniform, UsdGeomTokens->vertex, UsdGeomTokens->faceVarying };
         if (!validatePrimvar(normals.value(), validInterpolations, faceVertexCounts, faceVertexIndices, points, &reason))
         {
-            REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid normals: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+            USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid normals: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
             return UsdGeomMesh();
         }
     }
@@ -207,7 +207,7 @@ UsdGeomMesh definePolyMesh(
         static const TfTokenVector validInterpolations = { UsdGeomTokens->vertex, UsdGeomTokens->faceVarying };
         if (!validatePrimvar(uvs.value(), validInterpolations, faceVertexCounts, faceVertexIndices, points, &reason))
         {
-            REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid uvs: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+            USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid uvs: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
             return UsdGeomMesh();
         }
     }
@@ -220,7 +220,7 @@ UsdGeomMesh definePolyMesh(
     {
         if (!validatePrimvar(displayColor.value(), s_allValidInterpolations, faceVertexCounts, faceVertexIndices, points, &reason))
         {
-            REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid display color: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+            USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid display color: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
             return UsdGeomMesh();
         }
     }
@@ -230,7 +230,7 @@ UsdGeomMesh definePolyMesh(
     {
         if (!validatePrimvar(displayOpacity.value(), s_allValidInterpolations, faceVertexCounts, faceVertexIndices, points, &reason))
         {
-            REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid display opacity: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+            USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid display opacity: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
             return UsdGeomMesh();
         }
     }
@@ -238,7 +238,7 @@ UsdGeomMesh definePolyMesh(
     // Validation if there are unused references.
     if (!validateUnusedMeshTopology(faceVertexCounts, faceVertexIndices, points, normals, uvs, displayColor, displayOpacity, &reason))
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid topology: %s", revit::usd_export::core::detail::getPathAsString(path).c_str(), reason.c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\" due to invalid topology: %s", usd::exporter::revit::core::detail::getPathAsString(path).c_str(), reason.c_str());
         return UsdGeomMesh();
     }
 
@@ -246,7 +246,7 @@ UsdGeomMesh definePolyMesh(
     UsdGeomMesh mesh = UsdGeomMesh::Define(stage, path);
     if (!mesh)
     {
-        REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+        USD_EXPORTER_REVIT_LOG_ERROR("Unable to define UsdGeomMesh at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         return UsdGeomMesh();
     }
 
@@ -278,7 +278,7 @@ UsdGeomMesh definePolyMesh(
         UsdGeomPrimvar primvar = UsdGeomPrimvarsAPI(mesh.GetPrim()).CreatePrimvar(name, typeName);
         if (!normals.value().setPrimvar(primvar))
         {
-            REVIT_LOG_WARN("Failed to set normals primvar for UsdGeomMesh at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("Failed to set normals primvar for UsdGeomMesh at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
     }
 
@@ -290,7 +290,7 @@ UsdGeomMesh definePolyMesh(
         UsdGeomPrimvar primvar = UsdGeomPrimvarsAPI(mesh.GetPrim()).CreatePrimvar(name, typeName);
         if (!uvs.value().setPrimvar(primvar))
         {
-            REVIT_LOG_WARN("Failed to set uvs primvar for UsdGeomMesh at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("Failed to set uvs primvar for UsdGeomMesh at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
     }
 
@@ -300,7 +300,7 @@ UsdGeomMesh definePolyMesh(
         UsdGeomPrimvar primvar = mesh.CreateDisplayColorPrimvar();
         if (!displayColor.value().setPrimvar(primvar))
         {
-            REVIT_LOG_WARN("Failed to set display color primvar for UsdGeomMesh at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("Failed to set display color primvar for UsdGeomMesh at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
     }
 
@@ -310,7 +310,7 @@ UsdGeomMesh definePolyMesh(
         UsdGeomPrimvar primvar = mesh.CreateDisplayOpacityPrimvar();
         if (!displayOpacity.value().setPrimvar(primvar))
         {
-            REVIT_LOG_WARN("Failed to set display opacity primvar for UsdGeomMesh at \"%s\"", revit::usd_export::core::detail::getPathAsString(path).c_str());
+            USD_EXPORTER_REVIT_LOG_WARN("Failed to set display opacity primvar for UsdGeomMesh at \"%s\"", usd::exporter::revit::core::detail::getPathAsString(path).c_str());
         }
     }
 
@@ -350,10 +350,10 @@ void convertStorageFromMeshArray(
     pxr::VtIntArray& _faceVertexCounts,
     pxr::VtIntArray& _faceVertexIndices,
     pxr::VtVec3fArray& _points,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData>& _normals,
-    std::optional<revit::usd_export::core::Vec2fPrimvarData>& _uvs,
-    std::optional<revit::usd_export::core::Vec3fPrimvarData>& _displayColor,
-    std::optional<revit::usd_export::core::FloatPrimvarData>& _displayOpacity
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData>& _normals,
+    std::optional<usd::exporter::revit::core::Vec2fPrimvarData>& _uvs,
+    std::optional<usd::exporter::revit::core::Vec3fPrimvarData>& _displayColor,
+    std::optional<usd::exporter::revit::core::FloatPrimvarData>& _displayOpacity
 )
 {
     _faceVertexCounts.clear();
@@ -391,7 +391,7 @@ void convertStorageFromMeshArray(
         pxr::VtArray<pxr::GfVec3f> values;
         values.resize(normalsCount);
         copyMemoryBuffer(normals, normals + normalsCount, values.begin(), sizeof(float) * 3 * normalsCount, sizeof(float) * 3 * normalsCount);
-        _normals = revit::usd_export::core::Vec3fPrimvarData(pxr::TfToken((normalsInterporation == nullptr) ? "" : normalsInterporation), values, indices);
+        _normals = usd::exporter::revit::core::Vec3fPrimvarData(pxr::TfToken((normalsInterporation == nullptr) ? "" : normalsInterporation), values, indices);
     }
 
     if (uvsCount > 0 && uvs != nullptr)
@@ -406,7 +406,7 @@ void convertStorageFromMeshArray(
         values.resize(uvsCount);
         copyMemoryBuffer(uvs, uvs + uvsCount, values.begin(), sizeof(float) * 2 * uvsCount, sizeof(float) * 2 * uvsCount);
 
-        _uvs = revit::usd_export::core::Vec2fPrimvarData(pxr::TfToken((uvsInterporation == nullptr) ? "" : uvsInterporation), values, indices);
+        _uvs = usd::exporter::revit::core::Vec2fPrimvarData(pxr::TfToken((uvsInterporation == nullptr) ? "" : uvsInterporation), values, indices);
     }
 
     if (displayColorCount > 0 && displayColor != nullptr)
@@ -420,7 +420,7 @@ void convertStorageFromMeshArray(
         pxr::VtArray<pxr::GfVec3f> values;
         values.resize(displayColorCount);
         copyMemoryBuffer(displayColor, displayColor + displayColorCount, values.begin(), sizeof(float) * 3 * displayColorCount, sizeof(float) * 3 * displayColorCount);
-        _displayColor = revit::usd_export::core::Vec3fPrimvarData(pxr::TfToken((displayColorInterporation == nullptr) ? "" : displayColorInterporation), values, indices);
+        _displayColor = usd::exporter::revit::core::Vec3fPrimvarData(pxr::TfToken((displayColorInterporation == nullptr) ? "" : displayColorInterporation), values, indices);
     }
 
     if (displayOpacityCount > 0 && displayOpacity != nullptr)
@@ -434,14 +434,14 @@ void convertStorageFromMeshArray(
         pxr::VtArray<float> values;
         values.resize(displayOpacityCount);
         copyMemoryBuffer(displayOpacity, displayOpacity + displayOpacityCount, values.begin(), sizeof(float) * displayOpacityCount, sizeof(float) * displayOpacityCount);
-        _displayOpacity = revit::usd_export::core::FloatPrimvarData(pxr::TfToken((displayOpacityInterporation == nullptr) ? "" : displayOpacityInterporation), values, indices);
+        _displayOpacity = usd::exporter::revit::core::FloatPrimvarData(pxr::TfToken((displayOpacityInterporation == nullptr) ? "" : displayOpacityInterporation), values, indices);
     }
 }
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
-    REVIT_USD_EXPORT_API const char* revit_usd_export_core_definePolyMesh(
+    USD_EXPORTER_REVIT_API const char* usd_exporter_revit_core_definePolyMesh(
         const long int stage_id,
         const char* prim_path,
         const int faceVertexCounts[],
@@ -472,7 +472,7 @@ extern "C"
         const size_t displayOpacityIndicesCount
     )
     {
-        pxr::UsdStagePtr stage = revit::usd_export::core::stageCache.findStageFromId(stage_id);
+        pxr::UsdStagePtr stage = usd::exporter::revit::core::stageCache.findStageFromId(stage_id);
         if (stage == nullptr)
         {
             return nullptr;
@@ -482,10 +482,10 @@ extern "C"
         pxr::VtIntArray _faceVertexCounts;
         pxr::VtIntArray _faceVertexIndices;
         pxr::VtVec3fArray _points;
-        std::optional<revit::usd_export::core::Vec3fPrimvarData> _normals;
-        std::optional<revit::usd_export::core::Vec2fPrimvarData> _uvs;
-        std::optional<revit::usd_export::core::Vec3fPrimvarData> _displayColor;
-        std::optional<revit::usd_export::core::FloatPrimvarData> _displayOpacity;
+        std::optional<usd::exporter::revit::core::Vec3fPrimvarData> _normals;
+        std::optional<usd::exporter::revit::core::Vec2fPrimvarData> _uvs;
+        std::optional<usd::exporter::revit::core::Vec3fPrimvarData> _displayColor;
+        std::optional<usd::exporter::revit::core::FloatPrimvarData> _displayOpacity;
         convertStorageFromMeshArray(
             faceVertexCounts,
             faceVertexCountsCount,
@@ -530,7 +530,7 @@ extern "C"
         const std::string newPath = mesh.GetPath().GetAsString();
 
         // Returns a temporary buffer for each stage (thread-safe).
-        std::string& buff = revit::usd_export::core::stageCache.getTempData(stage_id, newPath);
+        std::string& buff = usd::exporter::revit::core::stageCache.getTempData(stage_id, newPath);
         return buff.c_str();
     }
 }

@@ -11,17 +11,17 @@ extern "C"
      * Log an info message.
      * @param message         The message to log.
      */
-    REVIT_USD_EXPORT_API void revit_log_info(const char* message);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_info(const char* message);
 
     /**
      * Log a warning message.
      * @param message         The message to log.
      */
-    REVIT_USD_EXPORT_API void revit_log_warning(const char* message);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_warning(const char* message);
 
     /**
      * Log an error message.
      * @param message         The message to log.
      */
-    REVIT_USD_EXPORT_API void revit_log_error(const char* message);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_log_error(const char* message);
 }

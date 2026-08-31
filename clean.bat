@@ -6,6 +6,6 @@ for %%d in (cmake windows-x86_64 intermediate test unittest unsignedpackages sig
 )
 
 if exist "_repo" rmdir "_repo" /s /q
-if exist "source\RevitUsdExportSetup\bin" rmdir "source\RevitUsdExportSetup\bin" /s /q
-if exist "source\RevitUsdExportSetup\obj" rmdir "source\RevitUsdExportSetup\obj" /s /q
+if exist "source\UsdExporterRevitSetup\bin" rmdir "source\UsdExporterRevitSetup\bin" /s /q
+if exist "source\UsdExporterRevitSetup\obj" rmdir "source\UsdExporterRevitSetup\obj" /s /q
 if exist "tools\repoman\__pycache__" rmdir "tools\repoman\__pycache__" /s /q

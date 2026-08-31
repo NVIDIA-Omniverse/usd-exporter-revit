@@ -157,26 +157,26 @@ bool IsASCIIContinue(const uint32_t value)
     return ((value >= '0' && value <= '9') || (value >= 'A' && value <= 'Z') || (value == '_') || (value >= 'a' && value <= 'z'));
 }
 
-bool IsStart(const TfUtf8CodePoint value, const revit::usd_export::core::detail::TranscodingFormat format)
+bool IsStart(const TfUtf8CodePoint value, const usd::exporter::revit::core::detail::TranscodingFormat format)
 {
-    if (format == revit::usd_export::core::detail::TranscodingFormat::ASCII)
+    if (format == usd::exporter::revit::core::detail::TranscodingFormat::ASCII)
     {
         return IsASCIIStart(value.AsUInt32());
     }
-    else if (format == revit::usd_export::core::detail::TranscodingFormat::UTF8_XID)
+    else if (format == usd::exporter::revit::core::detail::TranscodingFormat::UTF8_XID)
     {
         return IsASCIIStart(value.AsUInt32()) || TfIsUtf8CodePointXidStart(value);
     }
     return false;
 }
 
-bool IsContinue(const TfUtf8CodePoint value, const revit::usd_export::core::detail::TranscodingFormat format)
+bool IsContinue(const TfUtf8CodePoint value, const usd::exporter::revit::core::detail::TranscodingFormat format)
 {
-    if (format == revit::usd_export::core::detail::TranscodingFormat::ASCII)
+    if (format == usd::exporter::revit::core::detail::TranscodingFormat::ASCII)
     {
         return IsASCIIContinue(value.AsUInt32());
     }
-    else if (format == revit::usd_export::core::detail::TranscodingFormat::UTF8_XID)
+    else if (format == usd::exporter::revit::core::detail::TranscodingFormat::UTF8_XID)
     {
         return TfIsUtf8CodePointXidContinue(value);
     }
@@ -236,7 +236,7 @@ std::optional<uint64_t> decodeVariableLength(TfUtf8CodePointIterator& it)
     return number;
 }
 
-std::optional<std::string> encodeBootstring(const std::string& inputString, const revit::usd_export::core::detail::TranscodingFormat format)
+std::optional<std::string> encodeBootstring(const std::string& inputString, const usd::exporter::revit::core::detail::TranscodingFormat format)
 {
     std::ostringstream oss;
     size_t numberCodePoints = 0;
@@ -383,7 +383,7 @@ std::optional<std::string> decodeBootstring(const std::string& inputString)
 
 } // namespace
 
-std::string revit::usd_export::core::detail::encodeIdentifier(const std::string& inputString, const revit::usd_export::core::detail::TranscodingFormat format)
+std::string usd::exporter::revit::core::detail::encodeIdentifier(const std::string& inputString, const usd::exporter::revit::core::detail::TranscodingFormat format)
 {
     std::optional<std::string> ret = encodeBootstring(inputString, format);
     if (!ret)
@@ -409,7 +409,7 @@ std::string revit::usd_export::core::detail::encodeIdentifier(const std::string&
     return result;
 }
 
-std::string revit::usd_export::core::detail::decodeIdentifier(const std::string& inputString)
+std::string usd::exporter::revit::core::detail::decodeIdentifier(const std::string& inputString)
 {
     if (inputString.substr(0, 4) == BOOTSTRING_PREFIX)
     {

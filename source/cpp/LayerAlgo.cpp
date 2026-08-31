@@ -14,7 +14,7 @@
 
 using namespace pxr;
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 
 static const std::string g_authoringKey = "creator";
@@ -29,7 +29,7 @@ void setLayerAuthoringMetadata(pxr::SdfLayerHandle layer)
 {
     if (!initialized())
     {
-        REVIT_LOG_ERROR("`startup()` must succeed prior calling `setLayerAuthoringMetadata`");
+        USD_EXPORTER_REVIT_LOG_ERROR("`startup()` must succeed prior calling `setLayerAuthoringMetadata`");
         return;
     }
 
@@ -44,4 +44,4 @@ void setLayerAuthoringMetadata(pxr::SdfLayerHandle layer)
     layer->SetCustomLayerData(data);
 }
 
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core

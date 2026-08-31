@@ -17,10 +17,10 @@
 #include <string>
 #include <vector>
 
-namespace revit::usd_export::core
+namespace usd::exporter::revit::core
 {
 /**
- * Buffer to be held in revit_usd_export_core_getLocalTransformComponents.
+ * Buffer to be held in usd_exporter_revit_core_getLocalTransformComponents.
  * Used to keep the return value static for each stage when returning.
  */
 class CacheTransformData
@@ -41,7 +41,7 @@ public:
     pxr::GfVec3d translation;
     pxr::GfVec3d pivot;
     pxr::GfVec3d rotation;
-    revit::usd_export::core::RotationOrder rotationOrder;
+    usd::exporter::revit::core::RotationOrder rotationOrder;
     pxr::GfVec3d scale;
 };
 
@@ -134,7 +134,7 @@ private:
 
 // This cache is shared throughout.
 extern StageCache stageCache;
-} // namespace revit::usd_export::core
+} // namespace usd::exporter::revit::core
 
 extern "C"
 {
@@ -143,25 +143,25 @@ extern "C"
      * @param[in] stage  Stage.
      * @ return  If successful, stage Id.
      */
-    REVIT_USD_EXPORT_API long int c_connect_findStage(pxr::UsdStagePtr stage);
+    USD_EXPORTER_REVIT_API long int usd_exporter_revit_stage_cache_find_stage(pxr::UsdStagePtr stage);
 
     /**
      * If a stage with the specified URI exists, it is returned.
      * @param[in] stage_id     Stage Id.
      * @return Stage pointer(pxr::UsdStagePtr).
      */
-    REVIT_USD_EXPORT_API pxr::UsdStage* c_connect_findStageFromId(const long int stage_id);
+    USD_EXPORTER_REVIT_API pxr::UsdStage* usd_exporter_revit_stage_cache_find_stage_from_id(const long int stage_id);
 
     /**
      * Remove stage from cache.
      * @param[in] stage_id     Stage Id.
      */
-    REVIT_USD_EXPORT_API void c_connect_evict_stage(const long int stage_id);
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_stage_cache_evict_stage(const long int stage_id);
 
     /**
      * Clear stage cache.
      */
-    REVIT_USD_EXPORT_API void c_connect_clear_stage_cache();
+    USD_EXPORTER_REVIT_API void usd_exporter_revit_stage_cache_clear();
 }
 
 #endif

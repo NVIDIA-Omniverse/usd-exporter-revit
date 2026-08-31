@@ -41,8 +41,8 @@ def update_file_version(version, path):
 
 
 def update_assemblyinfo_cs_files(version):
-    plugin_path = f"{g_repo_root}/source/RevitUsdExportPlugin/Properties/AssemblyInfo.cs"
-    sdk_path = f"{g_repo_root}/source/RevitUsdExportSDK/Properties/AssemblyInfo.cs"
+    plugin_path = f"{g_repo_root}/source/UsdExporterRevit/Properties/AssemblyInfo.cs"
+    sdk_path = f"{g_repo_root}/source/UsdExporterRevitSDK/Properties/AssemblyInfo.cs"
     update_file_version(version=version, path=plugin_path)
     update_file_version(version=version, path=sdk_path)
 

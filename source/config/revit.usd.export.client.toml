@@ -1,5 +1,0 @@
-[app]
-name = "Revit"
-
-["revit.usd.export.core".client]
-name = "RevitUsdExportPlugin"
