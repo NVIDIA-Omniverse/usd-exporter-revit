@@ -21,6 +21,9 @@ source_file = "$root/source/config/usd.exporter.revit.client.toml"
 [repo_fetch_deps]
 enabled = true
 extra_tool_paths = ["${root}/tools/repoman"]
+fetch.pip.files_to_pull = ["${root}/deps/pip.toml"]
+fetch.pip.licensing_enabled = false
+fetch.pip.ignore_pip_cache_failure = true
 
 [repo_cmake]
 enabled = true
@@ -61,12 +64,12 @@ discover_path = "${root}/tests"
 python_paths = [
   "${test_root}/python",
   "${root}/_build/target-deps/usd/${config}/lib/python",
-  "${root}/_build/target-deps/omni_asset_validator/python",
+  "${root}/_build/target-deps/usd-validation-nvidia",
   "${root}/tests",
 ]
 
 [repo_test.suites.core]
-# Native (doctest) unit tests for the SDK core. No Revit install required.
+# Native (doctest) unit tests for the exporter core. No Revit install required.
 kind = "executable"
 executable = "${test_root}/tests/usd_exporter_revit_tests${exe_ext}"
 

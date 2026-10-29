@@ -1,6 +1,6 @@
 ---
 name: usd-exporter-revit-contributing
-description: Use when a user asks to modify, test, document, package, or review code changes for the usd-exporter-revit repository, SDK, native bindings, installer, or tests.
+description: Use when a user asks to modify, test, document, package, or review code changes for the usd-exporter-revit repository, export core, native bindings, installer, or tests.
 version: "0.1.0"
 license: Apache-2.0 AND CC-BY-4.0
 metadata:
@@ -30,11 +30,11 @@ Before editing, identify the change type and read the local implementation:
 
 | Change type | Read first |
 |-------------|------------|
-| Export entry points | `source/UsdExporterRevitSDK/Exporter.cs` |
-| Export settings | `source/UsdExporterRevitSDK/UsdExporterRevitSettings.cs` |
-| Geometry / materials capture | `source/UsdExporterRevitSDK/ExportContext.cs`, `source/UsdExporterRevitSDK/Managers/` |
-| USD authoring (C#) | `source/UsdExporterRevitSDK/Usd/` |
-| Revit concept mapping (C#) | `source/UsdExporterRevitSDK/Revit/` |
+| Export entry points | `source/UsdExporterRevitCore/Exporter.cs` |
+| Export settings | `source/UsdExporterRevitCore/UsdExporterRevitSettings.cs` |
+| Geometry / materials capture | `source/UsdExporterRevitCore/ExportContext.cs`, `source/UsdExporterRevitCore/Managers/` |
+| USD authoring (C#) | `source/UsdExporterRevitCore/Usd/` |
+| Revit concept mapping (C#) | `source/UsdExporterRevitCore/Revit/` |
 | Native OpenUSD bindings | `source/cpp/`, `source/bindings/` |
 | Plugin UI / commands | `source/UsdExporterRevit/`, `source/UsdExporterRevit.UI/` |
 | Installer | `source/UsdExporterRevitSetup/`, `tools/nsis/`, `tools/repoman/installer.py` |
@@ -47,7 +47,7 @@ Keep README snippets, settings defaults, concept mapping docs, and tests aligned
 ## Hard Rules
 
 1. Keep changes focused and add tests for affected behavior.
-2. Keep public SDK APIs backwards compatible unless the change intentionally proposes a breaking change.
+2. Keep public export APIs backwards compatible unless the change intentionally proposes a breaking change.
 3. Preserve valid OpenUSD identifiers, namespace structure, stage metadata, and composition behavior when changing export logic.
 4. Export APIs (`Exporter.ExportView` / `ExportBatch`) require a live Revit `UIApplication`. Do not invent a product CLI (see root skill Core Constraints).
 5. Build every supported Revit version affected by the change (`2024` / `2025` / `2026`).
@@ -61,7 +61,7 @@ Use the smallest verification that covers the changed surface:
 | Change | Verification |
 |--------|--------------|
 | Native C++ / bindings | `.\repo.bat test --suite core --config release` |
-| Export settings or SDK export flow | Small model export via plugin or harness; inspect USD |
+| Export settings or core export flow | Small model export via plugin or harness; inspect USD |
 | Plugin UI / commands | Build matching Revit year, install setup exe, smoke the ribbon command |
 | Revit integration behavior | Elevated `.\repo.bat test --suite revit2024 --config release` (replace `2024`); requires `tests/inputs/<ver>/rac_basic/rac_basic_sample_project.rvt` |
 | Concept mapping or docs | Check claims against `docs/concept_mapping.md`, `README.md`, and exported stage structure |

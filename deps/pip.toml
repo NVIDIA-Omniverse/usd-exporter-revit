@@ -1,0 +1,10 @@
+[[dependency]]
+python = "../_build/target-deps/python"
+packages = [
+    "usd-validation-nvidia==1.21.0",
+]
+target = "../_build/target-deps/usd-validation-nvidia"
+platforms = ["*"]
+download_only = false
+install_dependencies = false
+gather_licenses_path = "../_build/PACKAGE-LICENSES/pip/LICENSES.txt"

@@ -5,7 +5,7 @@
 ### Overview
 
 This document describes how the usd-exporter-revit maps
-Autodesk Revit model data to OpenUSD. It focuses on current plugin and SDK
+Autodesk Revit model data to OpenUSD. It focuses on current plugin and export-core
 behavior.
 
 The plugin runs inside Autodesk Revit on Windows and exports one or more
@@ -17,7 +17,7 @@ Omniverse and OpenUSD scene workflows.
 The primary audience is:
 
 - Users who need to understand what Revit data appears in exported USD.
-- Developers integrating the SDK into custom Revit-to-OpenUSD pipelines.
+- Developers integrating the export API into custom Revit-to-OpenUSD pipelines.
 - Downstream tools that need reliable guidance about export options and output
   structure.
 - AI agents that need reliable source material for choosing export options and
@@ -26,7 +26,7 @@ The primary audience is:
 ### Reference Versions
 
 Plugin behavior depends on the Autodesk Revit version, OpenUSD runtime, and
-plugin/SDK versions included with a release. Supported host versions are Revit
+plugin and export-core versions included with a release. Supported host versions are Revit
 2024, 2025, and 2026. Check package metadata and release notes for exact
 dependency versions.
 
@@ -132,7 +132,7 @@ plugin. Later sections describe behavior, option gates, and important limits.
 | Family instancing | Internal class reference, external family asset reference, or payload | `InstanceFamilies`, `FamilyInstanceStyle` | Repeated family geometry can be shared. |
 | User family-type mapping | Payload to external USD asset | `Mappings.FamilyTypes.UserMapped` | Custom assets can replace Revit family geometry. User mappings are always payloads. |
 | Revit link | Payload under `RVT Links/` to a link stage | `IncludeLinks` | Linked models remain separate composed USD files. |
-| Room / Space | Xform + mesh under `Instances/Rooms` or `Instances/Spaces` | `IncludeRooms`, `IncludeSpaces`, color scheme names | Spatial volumes can be exported, then hidden after write. |
+| Room / Space | Xform + optional mesh under `Instances/Rooms` or `Instances/Spaces` | `IncludeRooms`, `IncludeSpaces`, color scheme names, and `IncludeBimData` for spatial attributes | Spatial volumes can be exported, then hidden after write. Metadata-only Xforms remain available when geometry is empty. |
 | Lighting fixture | Fixture Xform and meshes under `Instances/`; additional `UsdLux` light under `Lights/` | `IncludeLights` controls the light, not fixture geometry | Sphere, cylinder, rect, or disk lights; optional IES files. |
 | 3D view camera | `UsdGeomCamera` under `Cameras/` | Active view always; `IncludeCameras` for all non-template 3D views | Camera placement is available for review workflows. With `IncludeCameras=true`, the active view is exported a second time with a collision-safe prim-name suffix. |
 | 2D drawing / sheet view | Textured quad under `Drawings/{PublishSet}/{ViewType}/` | `IncludeDrawings`, `DrawingPublishSet` | Sheet/view images can be placed as textured meshes, then hidden after write. |
@@ -305,12 +305,32 @@ Rooms and Spaces are optional spatial volumes:
 - `IncludeRooms` with `RoomColorScheme`
 - `IncludeSpaces` with `SpaceColorScheme`
 
-Export requires a resolved Color Fill Scheme name. Name resolution is
-case-insensitive and tries equality, prefix, suffix, then substring matching.
 Only Rooms and Spaces with `Area > 0` are exported. Their solids are
-triangulated into meshes under `Instances/Rooms` or `Instances/Spaces`. Scheme
-entry colors become synthetic materials. Active section boxes can filter and
-crop spatial solids.
+triangulated into meshes under `Instances/Rooms` or `Instances/Spaces`. A Color
+Fill Scheme is optional. When specified, name resolution is case-insensitive
+and tries equality, prefix, suffix, then substring matching. Scheme entry
+colors become synthetic materials. Active section boxes can filter and crop
+spatial solids.
+
+When `IncludeBimData=true`, each spatial Xform contains normalized
+`BIM:Spatial:*` string attributes. These attributes preserve stable identifiers,
+identity, level and phase references, available measurements, and boundary
+loops. Each boundary segment contains its source element identifier and
+tessellated Revit curve points. Available category, type, and name values are
+also included. Measurements and curve points use the stage linear unit.
+`LinearUnit` records that unit. Area and volume values use its square and cube.
+The Xform remains in the stage when visualization geometry is empty.
+
+`BoundingElementIds` and `BoundingElementUniqueIds` combine elements from
+boundary segments and available three-dimensional boundary faces. Revit can
+omit floor or ceiling associations from boundary-face results. For linked
+boundaries, segment identifiers describe the source element. Additional
+link-instance attributes identify the containing Revit link.
+Room `OpeningRelationships` records door and window identifiers, FromRoom or
+ToRoom roles, host identifiers, and document identifiers. Numeric element
+identifiers remain available for compatibility. Unique identifiers provide
+stable references. Linked-model spatial data uses the same attributes in the
+linked stage.
 
 Authored Rooms and Spaces are hidden after stage write and do not cast shadows.
 They are visualization aids, not editable Revit spatial objects.
@@ -403,6 +423,26 @@ Conversion scales xform translations and pivots, mesh points, extents, and
 cylinder radius/height. Instanceable prims also scale local scale. External
 mapped assets are scaled by asset MPU relative to feet before final conversion.
 
+## USDZ Packaging
+
+USDZ export first writes the same generated content to temporary USDC layers.
+OpenUSD then packages the root layer and resolved dependencies into one file.
+
+The package preserves geometry, hierarchy, transforms, metadata, material
+bindings, image textures, referenced layers, payload layers, and
+`UsdPreviewSurface` material networks.
+
+Before packaging, the exporter removes MDL shader prims, `outputs:mdl:*`
+connections, and `.mdl` asset paths. Standard USDZ tools do not support MDL.
+The source `.usd`, `.usda`, and `.usdc` export paths retain their MDL data.
+
+Revit-derived materials retain their `UsdPreviewSurface` representation.
+User-mapped MDL-only materials require a `UsdPreviewSurface` representation to
+retain their appearance in USDZ.
+
+Every non-MDL dependency must resolve during packaging. Packaging failure does
+not replace an existing USDZ file.
+
 ## Export Options That Affect Mapping
 
 Names in this table match plugin export settings fields.
@@ -411,7 +451,7 @@ Names in this table match plugin export settings fields.
 | --- | --- | --- |
 | `File.OutputFolder` | Documents/Omniverse/UsdExporterRevit by default | Chooses local output directory. |
 | `File.FileName` | `"Default"` | Names the default prim and root file stem. |
-| `File.Extension` | `.usdc` default; `.usd` / `.usda` / `.usdc` supported | Chooses USD file format. |
+| `File.Extension` | `.usdc` default; `.usd` / `.usda` / `.usdc` / `.usdz` supported | Chooses a USD layer format or a packaged USDZ output. |
 | `View.DetailLevel` | Empty default | Temporarily sets Fine/Medium/Coarse on the export view. |
 | `View.PhaseFilter` | Empty default | Temporarily applies a phase filter. |
 | `View.ViewTemplate` | Empty default | Temporarily applies a view template. |
@@ -582,9 +622,9 @@ export requires a view that shows the intended content.
 
 ### Rooms, Spaces, and Color Fill Schemes
 
-Room and Space export depends on Color Fill Scheme name matching, not on IFC
-spatial structure relationships. The exporter does not author USD relationships
-for room boundaries, room separation lines, or occupancy relationships.
+Room and Space export does not depend on IFC spatial structure relationships.
+The exporter stores spatial relationships as `BIM:Spatial:*` attributes on each
+spatial Xform. It does not author `UsdRelationship` properties.
 
 ## Appendices
 

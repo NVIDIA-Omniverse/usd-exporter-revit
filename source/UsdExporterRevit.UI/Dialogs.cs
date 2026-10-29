@@ -44,46 +44,82 @@ public class Dialogs
 
     public static void Progress(IntPtr windowHandle, ProgressContext context)
     {
-        usd.exporter.revit.log.info($"Starting conversion Progress: Thread ID: {Thread.CurrentThread.ManagedThreadId}, Timestamp: {DateTime.Now}");
-#pragma warning disable CA1416
-        Thread thread = new Thread(delegate() {
-            progressDialog = new UI.Progress(context);
-            progressDialog.Closed += ProgressDialog_Closed;
-            progressDialog.Show();
-            System.Windows.Threading.Dispatcher.Run();
-        });
-
-        thread.SetApartmentState(ApartmentState.STA); // needs to be STA or throws exception
-        thread.Start();
-#pragma warning restore CA1416
+        // Publish the window before export updates can arrive. Never run Revit
+        // API work on this STA thread.
+        var ready = new System.Threading.Tasks.TaskCompletionSource<bool>();
+        {
+            Exception startupError = null;
+            Thread thread = new Thread(delegate() {
+                UI.Progress dialog = null;
+                try
+                {
+                    dialog = new UI.Progress(context.Snapshot());
+                    dialog.Closed += ProgressDialog_Closed;
+                    dialog.Dispatcher.UnhandledException += (sender, args) =>
+                    {
+                        usd.exporter.revit.log.error($"Progress update failed: {args.Exception}");
+                        args.Handled = true;
+                        dialog.Context.State = ProgressContextState.Cancelled;
+                        dialog.Close();
+                    };
+                    Volatile.Write(ref progressDialog, dialog);
+                    dialog.Loaded += (sender, args) => ready.TrySetResult(true);
+                    // ShowDialog owns a dispatcher frame which exits on Close.
+                    dialog.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    startupError = ex;
+                    usd.exporter.revit.log.error($"Progress dialog failed: {ex}");
+                }
+                finally
+                {
+                    if (dialog != null)
+                    {
+                        Interlocked.CompareExchange(ref progressDialog, null, dialog);
+                    }
+                    ready.TrySetResult(true);
+                }
+            });
+            thread.IsBackground = true;
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            ready.Task.GetAwaiter().GetResult();
+            if (startupError != null)
+            {
+                throw new InvalidOperationException("Could not open export progress.", startupError);
+            }
+        }
     }
 
     public static bool ProgressShowing()
     {
-        return progressDialog != null;
+        return Volatile.Read(ref progressDialog) != null;
     }
 
     public static void UpdateProgress(ProgressContext context)
     {
-        if (progressDialog != null)
+        // Capture both objects: queued delegates must never dereference a
+        // replacement window or mutable context belonging to another update.
+        var dialog = Volatile.Read(ref progressDialog);
+        var snapshot = context.Snapshot();
+        if (dialog != null && !dialog.Dispatcher.HasShutdownStarted)
         {
-            progressDialog.Dispatcher.BeginInvoke((Action)(() =>
-                                                           {
-                                                               if (progressDialog != null && progressDialog.IsLoaded)
-                                                               {
-                                                                   progressDialog.Context = context;
-                                                               }
-                                                           }));
+            dialog.Dispatcher.BeginInvoke((Action)(() =>
+                                                   {
+                                                       if (dialog.IsLoaded && dialog.Context.State != ProgressContextState.Cancelled)
+                                                       {
+                                                           dialog.Context = snapshot;
+                                                       }
+                                                   }));
         }
     }
 
     private static void ProgressDialog_Closed(object sender, EventArgs e)
     {
-        if (ProgressDialogStatus != null)
-        {
-            ProgressDialogStatus(sender, progressDialog.Context);
-        }
-        progressDialog = null;
+        var dialog = (UI.Progress)sender;
+        Interlocked.CompareExchange(ref progressDialog, null, dialog);
+        ProgressDialogStatus?.Invoke(sender, dialog.Context.Snapshot());
     }
 }
 #region settings
@@ -136,6 +172,8 @@ public class ProgressContext : EventArgs
     public double ViewProgress = 0.0;
 
     public ProgressContextState State = ProgressContextState.Standard;
+
+    public ProgressContext Snapshot() => (ProgressContext)MemberwiseClone();
 }
 
 public enum ProgressContextState

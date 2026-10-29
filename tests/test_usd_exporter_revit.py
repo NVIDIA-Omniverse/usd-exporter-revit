@@ -11,8 +11,8 @@ from pathlib import Path
 # isort: off
 from test_checkUsd import CheckUsd
 from pxr import Gf
-import omni.asset_validator as validator
 import omni.repo.man
+import usd_validation_nvidia
 
 # isort: on
 
@@ -62,11 +62,11 @@ class TestUsdExporterRevit(unittest.TestCase):
             self._ver = "0"
         # logger so cleanup is safe even if a test skips before test_generic runs.
         self._logger = logging.getLogger(f"test-revit-{self._ver}")
-        # asset validator
-        self.validation_engine = omni.asset_validator.ValidationEngine()
-        self.validation_engine.disable_rule(omni.asset_validator.UsdAsciiPerformanceChecker)
-        self.validation_engine.disable_rule(omni.asset_validator.MaterialPathChecker)
-        self.validation_engine.disable_rule(omni.asset_validator.MissingReferenceChecker)
+        # USD validation
+        self.validation_engine = usd_validation_nvidia.ValidationEngine()
+        self.validation_engine.disable_rule(usd_validation_nvidia.UsdAsciiPerformanceChecker)
+        self.validation_engine.disable_rule(usd_validation_nvidia.MaterialPathChecker)
+        self.validation_engine.disable_rule(usd_validation_nvidia.MissingReferenceChecker)
         self._processes = []
 
     def tearDown(self):
@@ -118,7 +118,7 @@ class TestUsdExporterRevit(unittest.TestCase):
         self.assertEqual(return_code, 0)
 
     def __validate_usd(self, usd_file):
-        """Run the Asset Validator over the given usd file and assert on any unexpected errors."""
+        """Run USD Validation over the given USD file and assert on unexpected errors."""
         result = self.validation_engine.validate(usd_file)
         self.assertEqual(result.asset, usd_file)
         self.assertFalse(result.issues(), msg=result.issues())
@@ -157,6 +157,8 @@ class TestUsdExporterRevit(unittest.TestCase):
         self._logger.info(f"Check rac_basic_sample_project : {file_path}")
         checkUsd = CheckUsd(file_path, self)
         defaultPrimName = checkUsd.get_defaultPrim()
+        self.__check_spatial_elements(checkUsd, f"{defaultPrimName}/Instances/Rooms", require_elements=True)
+        self.__check_spatial_elements(checkUsd, f"{defaultPrimName}/Instances/Spaces", require_elements=False)
         baseLightPath = f"{defaultPrimName}/Lights"
         childPrimNames = checkUsd.get_childPrimNames(baseLightPath)
         sphereLights = 0
@@ -171,6 +173,69 @@ class TestUsdExporterRevit(unittest.TestCase):
         self._logger.info(f"SphereLight = {sphereLights}")
         self._logger.info(f"CylinderLight = {cylinderLights}")
         self.assertTrue(sphereLights == 8 and cylinderLights == 2, f'"{file_path}" The number of exported lights varies.')
+
+    def __check_spatial_elements(self, checkUsd, scope_path, require_elements):
+        child_prim_names = checkUsd.get_childPrimNames(scope_path)
+        if child_prim_names is None:
+            self.assertFalse(require_elements, f"Spatial element scope not found: {scope_path}")
+            return
+        if require_elements:
+            self.assertGreater(len(child_prim_names), 0, f"No spatial elements found under {scope_path}")
+
+        required_attributes = [
+            "BIM:Spatial:UniqueId",
+            "BIM:Spatial:ElementId",
+            "BIM:Spatial:DocumentUniqueId",
+            "BIM:Spatial:Category",
+            "BIM:Spatial:Name",
+            "BIM:Spatial:Number",
+            "BIM:Spatial:LevelElementId",
+            "BIM:Spatial:LevelUniqueId",
+            "BIM:Spatial:LevelDocumentUniqueId",
+            "BIM:Spatial:LevelName",
+            "BIM:Spatial:PhaseElementId",
+            "BIM:Spatial:PhaseUniqueId",
+            "BIM:Spatial:PhaseDocumentUniqueId",
+            "BIM:Spatial:PhaseName",
+            "BIM:Spatial:LinearUnit",
+            "BIM:Spatial:Area",
+            "BIM:Spatial:BoundaryLoopCount",
+            "BIM:Spatial:BoundingElementIds",
+            "BIM:Spatial:BoundingElementUniqueIds",
+        ]
+        if scope_path.endswith("/Rooms"):
+            required_attributes.append("BIM:Spatial:OpeningRelationships")
+        else:
+            required_attributes.extend(
+                [
+                    "BIM:Spatial:Volume",
+                    "BIM:Spatial:Perimeter",
+                    "BIM:Spatial:UnboundedHeight",
+                ]
+            )
+        for child_name in child_prim_names:
+            prim_path = f"{scope_path}/{child_name}"
+            for attribute_name in required_attributes:
+                value = checkUsd.get_attribute(prim_path, attribute_name)
+                self.assertIsNotNone(value, f"Missing {attribute_name} on {prim_path}")
+            area = float(checkUsd.get_attribute(prim_path, "BIM:Spatial:Area"))
+            self.assertGreater(area, 0, f"Non-positive area on {prim_path}")
+            bounding_element_ids = checkUsd.get_attribute(prim_path, "BIM:Spatial:BoundingElementIds")
+            self.assertTrue(bounding_element_ids, f"No bounding element membership on {prim_path}")
+            if scope_path.endswith("/Spaces"):
+                for attribute_name in ("BIM:Spatial:Volume", "BIM:Spatial:Perimeter", "BIM:Spatial:UnboundedHeight"):
+                    value = float(checkUsd.get_attribute(prim_path, attribute_name))
+                    self.assertGreater(value, 0, f"Non-positive {attribute_name} on {prim_path}")
+            loop_count = int(checkUsd.get_attribute(prim_path, "BIM:Spatial:BoundaryLoopCount"))
+            self.assertGreater(loop_count, 0, f"No boundary loops found on {prim_path}")
+            segment_attributes = [
+                "BIM:Spatial:BoundaryLoop0_Segment0_ElementId",
+                "BIM:Spatial:BoundaryLoop0_Segment0_CurveType",
+                "BIM:Spatial:BoundaryLoop0_Segment0_CurvePoints",
+            ]
+            for attribute_name in segment_attributes:
+                value = checkUsd.get_attribute(prim_path, attribute_name)
+                self.assertIsNotNone(value, f"Missing {attribute_name} on {prim_path}")
 
     def __check_output_basic_sample_usds(self, output_folder, file_name):
         """Validates rac_basic_sample_project"""

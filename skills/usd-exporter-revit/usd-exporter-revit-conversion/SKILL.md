@@ -1,6 +1,6 @@
 ---
 name: usd-exporter-revit-conversion
-description: Use when a user asks to export Autodesk Revit models to USD/USDA/USDC with the usd-exporter-revit, choose export settings, validate outputs, or troubleshoot exported USD.
+description: Use when a user asks to export Autodesk Revit models to USD, USDA, USDC, or USDZ with the usd-exporter-revit, choose export settings, validate outputs, or troubleshoot exported USD.
 version: "0.1.0"
 license: Apache-2.0 AND CC-BY-4.0
 metadata:
@@ -15,7 +15,7 @@ tools: [Read, Edit]
 
 ## Purpose
 
-Guide users to export Revit models to OpenUSD through the plugin UI in a live Revit session (or document in-process `UsdExporterRevitSdk` usage for custom Revit hosts), including single-view and batch exports. Choose export settings from user intent, verify outputs, and troubleshoot export results.
+Guide users to export Revit models to OpenUSD through the plugin UI in a live Revit session (or document in-process `UsdExporterRevitCore` usage for custom Revit hosts), including single-view and batch exports. Choose export settings from user intent, verify outputs, and troubleshoot export results.
 
 ## When to Use
 
@@ -25,13 +25,31 @@ For installation, builds, plugin install, or first-run smoke tests, load `../usd
 
 ## Prerequisites
 
-- Matching Autodesk Revit version with the plugin installed, or a custom in-process Revit host using `UsdExporterRevitSdk` (SDK calls require a live `UIApplication`).
+- Matching Autodesk Revit version with the plugin installed, or a custom in-process Revit host using `UsdExporterRevitCore` (core calls require a live `UIApplication`).
 - A Revit document with a 3D view that shows the intended elements, opened in Revit by the user.
 - Exports write to local folders selected through the Windows file picker or settings (`File.OutputFolder`).
 
 ## Supported Outputs
 
-Supported USD outputs: `.usd`, `.usda`, `.usdc` (default `.usdc`).
+Supported USD outputs: `.usd`, `.usda`, `.usdc`, `.usdz` (default `.usdc`).
+
+USDZ preserves:
+
+- Geometry, hierarchy, transforms, metadata, material bindings, and enabled export options.
+- Resolved USD layers, payload layers, image textures, and other resolved dependencies.
+- Revit-derived `UsdPreviewSurface` materials and supported texture inputs.
+
+USDZ removes:
+
+- MDL shader prims.
+- `outputs:mdl:*` material connections.
+- `.mdl` asset paths.
+
+Use `.usd`, `.usda`, or `.usdc` when the downstream workflow requires MDL or editable layers.
+
+User-mapped MDL-only materials require a `UsdPreviewSurface` representation to retain their appearance.
+
+Packaging fails when a non-MDL dependency cannot resolve. The exporter does not replace an existing package after failure.
 
 Export is view-driven: only elements visible in the selected 3D view are exported. Geometry is tessellated `UsdGeomMesh` or, for eligible pipes/conduits/round ducts, `UsdGeomCylinder`.
 
@@ -42,14 +60,14 @@ For concept mapping and the export-options matrix, prefer `docs/concept_mapping.
 1. Confirm the source Revit model opens and the intended 3D view shows the elements to export.
 2. Confirm the requested output path uses a supported USD extension.
 3. Choose export settings from the user's intent for cameras, lights, rooms, spaces, drawings, BIM data, links, family instancing, materials, units, or coordinate systems. Enable only the options the user's request requires.
-4. Instruct the user to export through the USD Exporter ribbon in Revit (single-view or batch). For SDK integrators only, document `UsdExporterRevitSdk.Exporter` APIs that run inside a Revit host.
+4. Instruct the user to export through the USD Exporter ribbon in Revit (single-view or batch). For API integrators only, document `UsdExporterRevitCore.Exporter` APIs that run inside a Revit host.
 5. Return the exact output path, relevant settings, and any warnings or validation results the user reports.
 
-## Plugin And SDK Entry Points
+## Plugin And Core Entry Points
 
 - Plugin UI: USD Exporter ribbon export commands in Revit (primary end-user path).
-- SDK entry point: `source/UsdExporterRevitSDK/Exporter.cs` (`ExportView` / `ExportBatch` require live `UIApplication`; in-process Revit hosts only).
-- Settings model: `source/UsdExporterRevitSDK/UsdExporterRevitSettings.cs`.
+- Core entry point: `source/UsdExporterRevitCore/Exporter.cs` (`ExportView` / `ExportBatch` require live `UIApplication`; in-process Revit hosts only).
+- Settings model: `source/UsdExporterRevitCore/UsdExporterRevitSettings.cs`.
 - Product docs: [Revit documentation](https://docs.omniverse.nvidia.com/connect/latest/revit.html)
 - Per-model settings path: `%USERPROFILE%\Documents\Omniverse\UsdExporterRevit\<model name>\settings.json`, or inside the Revit file when 1-Click Export is enabled.
 - Logs: `%USERPROFILE%\.usd_exporter_revit\logs\Revit-<revit version>\UsdExporterRevit-<plugin version>\<YYYYMMDD_HHMMSS>.log`
@@ -63,7 +81,7 @@ Typical UI flow (matches README Usage):
 3. Choose export settings and local output folder.
 4. Export model as OpenUSD.
 
-SDK-oriented settings focus:
+API-oriented settings focus:
 
 ```text
 File.Extension = .usdc
@@ -79,6 +97,7 @@ Options.MaterialStyle = ExternalLibraryAsReference (default)
 |-------|-----|
 | Export result | User exports a small 3D view; confirm the root USD file exists and matches requested includes |
 | Mapping / hierarchy claims | Compare against `docs/concept_mapping.md` and the authored stage |
+| USDZ materials | Confirm material bindings, `UsdPreviewSurface` outputs, and packaged texture paths resolve |
 
 ## Output Format
 
@@ -116,6 +135,9 @@ Notes:
 - Export does not preserve enough information for general USD-to-Revit round trip.
 - Native Revit B-rep topology is not emitted as an OpenUSD B-rep schema.
 - Option-gated concepts (rooms, spaces, links, lights, cameras, drawings, BIM attributes) appear only when enabled.
+- USDZ removes MDL data and uses `UsdPreviewSurface` for material appearance.
+- User-mapped MDL-only materials do not retain their appearance without a `UsdPreviewSurface` representation.
+- USDZ export requires all non-MDL dependencies to resolve during packaging.
 
 ## Troubleshooting
 

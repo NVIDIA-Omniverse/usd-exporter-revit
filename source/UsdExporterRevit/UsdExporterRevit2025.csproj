@@ -26,7 +26,7 @@
     <PackageReference Include="newtonsoft.json" Version="13.0.1" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsdExporterRevitSDK\UsdExporterRevitSDK2025.csproj">
+    <ProjectReference Include="..\UsdExporterRevitCore\UsdExporterRevitCore2025.csproj">
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>

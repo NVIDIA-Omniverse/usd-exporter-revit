@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-using UsdExporterRevitSdk;
+using UsdExporterRevitCore;
 using Autodesk.Revit.Attributes;
 using System.Linq;
 using Newtonsoft.Json;
@@ -76,144 +76,141 @@ public class ExportCommand : IExternalCommand
         Result r = Result.Failed;
 
         ProgressContext context = null;
-        if (settings.ViewsToExport.Count > 0)
+        try
         {
-            context = new ProgressContext();
-            context.State = ProgressContextState.Standard;
-            context.ActiveViewNumber = 1;
-            context.TotalViewNumber = settings.ViewsToExport.Count;
-            context.ActiveView = settings.ViewsToExport[0];
-            context.DisplayMessage = "Starting Export";
-
-            Dialogs.Progress(handle, context);
-            Exporter.InitiateProgressContext(context.ToProgressUpdate());
-            Exporter.AddProgressUpdateCallback(App.Update_Progress);
-
-            // Subscribe to dialog close event
-            Dialogs.ProgressDialogStatus += OnProgressDialogClosed;
-        }
-
-        if (settings.ViewsToExport.Count == 1)
-        {
-            View3D view = views.Where(v => v.Name == settings.ViewsToExport[0]).FirstOrDefault();
-            if (view != null)
+            if (settings.ViewsToExport.Count > 0)
             {
-                try
-                {
-                    r = Exporter.ExportView(commandData.Application, view, settings);
-                }
-                catch (Exception ex)
-                {
-                    message = $"Export failed: {ex.Message}";
-                    usd.exporter.revit.log.error(message);
-                    Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
-                    return Result.Failed;
-                }
+                context = new ProgressContext();
+                context.State = ProgressContextState.Standard;
+                context.ActiveViewNumber = 1;
+                context.TotalViewNumber = settings.ViewsToExport.Count;
+                context.ActiveView = settings.ViewsToExport[0];
+                context.DisplayMessage = "Starting Export";
 
-                // Check if export was cancelled
-                if (Exporter.IsCancelled())
-                {
-                    Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
-                    return Result.Cancelled;
-                }
-
-                App.SetLastExportPath(settings.File.OutputFolder + settings.File.FileName + settings.File.Extension);
-                if (!settings.File.CheckExtension())
-                {
-                    message = $"This is not a usd file: {App.GetLastExportPath()}";
-                    usd.exporter.revit.log.warning(message);
-                    return Result.Cancelled;
-                }
+                Exporter.InitiateProgressContext(context.ToProgressUpdate());
+                Dialogs.ProgressDialogStatus += OnProgressDialogClosed;
+                Dialogs.Progress(handle, context);
+                Exporter.AddProgressUpdateCallback(App.Update_Progress);
             }
-            else
+
+            if (settings.ViewsToExport.Count == 1)
             {
-                message = $"Unable to find {settings.ViewsToExport[0]} for export...";
-                usd.exporter.revit.log.warning(message);
-                return Result.Cancelled;
-            }
-        }
-        else
-        {
-            string rootOutput = settings.File.OutputFolder;
-            string filePath = string.Empty;
-            int i = 0;
-            foreach (string viewName in settings.ViewsToExport)
-            {
-                i++;
-                if (context == null)
-                {
-                    Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
-                    usd.exporter.revit.log.warning("View does not exist.");
-                    return Result.Cancelled;
-                }
-
-                // Check if export was cancelled
-                if (Exporter.IsCancelled())
-                {
-                    Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
-                    return Result.Cancelled;
-                }
-
-                context.ActiveView = viewName;
-                context.ActiveViewNumber = i;
-                context.DisplayMessage = "Opening View";
-                Dialogs.UpdateProgress(context);
-
-                View3D view = views.Where(v => v.Name == viewName).FirstOrDefault();
+                View3D view = views.Where(v => v.Name == settings.ViewsToExport[0]).FirstOrDefault();
                 if (view != null)
                 {
-                    string cleanViewName = App.RemoveBadWindowsFilePathChars(view.Name);
-                    settings.File.OutputFolder = rootOutput + "/" + cleanViewName;
-                    settings.File.FileName = cleanViewName;
-
-                    string exportPath = settings.File.OutputFolder + settings.File.FileName + settings.File.Extension;
-                    if (!settings.File.CheckExtension())
-                    {
-                        message = $"This is not a usd file: {exportPath}";
-                        usd.exporter.revit.log.warning(message);
-                        continue;
-                    }
                     try
                     {
                         r = Exporter.ExportView(commandData.Application, view, settings);
                     }
                     catch (Exception ex)
                     {
-                        usd.exporter.revit.log.error($"Export of {viewName} failed: {ex.Message}");
-                        continue;
+                        message = $"Export failed: {ex.Message}";
+                        usd.exporter.revit.log.error(message);
+                        return Result.Failed;
                     }
 
                     // Check if export was cancelled
                     if (Exporter.IsCancelled())
                     {
-                        Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
                         return Result.Cancelled;
                     }
 
-                    if (r == Result.Succeeded && string.IsNullOrEmpty(filePath))
+                    App.SetLastExportPath(settings.File.OutputFolder + settings.File.FileName + settings.File.Extension);
+                    if (!settings.File.CheckExtension())
                     {
-                        filePath = settings.File.OutputFolder + settings.File.FileName + settings.File.Extension;
+                        message = $"This is not a usd file: {App.GetLastExportPath()}";
+                        usd.exporter.revit.log.warning(message);
+                        return Result.Cancelled;
                     }
                 }
                 else
                 {
-                    usd.exporter.revit.log.warning($"Unable to find {viewName} for export...");
+                    message = $"Unable to find {settings.ViewsToExport[0]} for export...";
+                    usd.exporter.revit.log.warning(message);
+                    return Result.Cancelled;
                 }
             }
-            r = Result.Succeeded;
-            App.SetLastExportPath(filePath);
+            else
+            {
+                string rootOutput = settings.File.OutputFolder;
+                string filePath = string.Empty;
+                int i = 0;
+                foreach (string viewName in settings.ViewsToExport)
+                {
+                    i++;
+                    if (context == null)
+                    {
+                        usd.exporter.revit.log.warning("View does not exist.");
+                        return Result.Cancelled;
+                    }
+
+                    // Check if export was cancelled
+                    if (Exporter.IsCancelled())
+                    {
+                        return Result.Cancelled;
+                    }
+
+                    context.ActiveView = viewName;
+                    context.ActiveViewNumber = i;
+                    context.DisplayMessage = "Opening View";
+                    Dialogs.UpdateProgress(context);
+
+                    View3D view = views.Where(v => v.Name == viewName).FirstOrDefault();
+                    if (view != null)
+                    {
+                        string cleanViewName = App.RemoveBadWindowsFilePathChars(view.Name);
+                        settings.File.OutputFolder = rootOutput + "/" + cleanViewName;
+                        settings.File.FileName = cleanViewName;
+
+                        string exportPath = settings.File.OutputFolder + settings.File.FileName + settings.File.Extension;
+                        if (!settings.File.CheckExtension())
+                        {
+                            message = $"This is not a usd file: {exportPath}";
+                            usd.exporter.revit.log.warning(message);
+                            continue;
+                        }
+                        try
+                        {
+                            r = Exporter.ExportView(commandData.Application, view, settings);
+                        }
+                        catch (Exception ex)
+                        {
+                            usd.exporter.revit.log.error($"Export of {viewName} failed: {ex.Message}");
+                            continue;
+                        }
+
+                        // Check if export was cancelled
+                        if (Exporter.IsCancelled())
+                        {
+                            return Result.Cancelled;
+                        }
+
+                        if (r == Result.Succeeded && string.IsNullOrEmpty(filePath))
+                        {
+                            filePath = settings.File.OutputFolder + settings.File.FileName + settings.File.Extension;
+                        }
+                    }
+                    else
+                    {
+                        usd.exporter.revit.log.warning($"Unable to find {viewName} for export...");
+                    }
+                }
+                r = Result.Succeeded;
+                App.SetLastExportPath(filePath);
+            }
+            usd.exporter.revit.log.info($"Export Completed: Thread ID: {Thread.CurrentThread.ManagedThreadId}, Timestamp: {DateTime.Now}");
+
+            return r;
         }
-        if (context != null)
+        finally
         {
-            context.State = ProgressContextState.Complete;
-            Dialogs.UpdateProgress(context);
+            Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
+            if (context != null)
+            {
+                context.State = ProgressContextState.Complete;
+                Dialogs.UpdateProgress(context);
+            }
         }
-
-        // Unsubscribe from dialog close event
-        Dialogs.ProgressDialogStatus -= OnProgressDialogClosed;
-        usd.exporter.revit.log.info($"Export Completed: Thread ID: {Thread.CurrentThread.ManagedThreadId}, Timestamp: {DateTime.Now}");
-
-        return r;
     }
 
     private static void OnProgressDialogClosed(object sender, ProgressContext context)
@@ -289,22 +286,24 @@ public class ExportBatchCommand : IExternalCommand
         ProgressContext context = new ProgressContext();
         context.State = ProgressContextState.Batch;
 
-        // Subscribe to dialog close event
-        Dialogs.ProgressDialogStatus += OnProgressDialogClosedBatch;
+        try
+        {
+            Exporter.InitiateProgressContext(context.ToProgressUpdate());
+            Dialogs.ProgressDialogStatus += OnProgressDialogClosedBatch;
 
-        Dialogs.Progress(handle, context);
-        Exporter.InitiateProgressContext(context.ToProgressUpdate());
-        Exporter.AddProgressUpdateCallback(App.Update_Progress);
+            Dialogs.Progress(handle, context);
+            Exporter.AddProgressUpdateCallback(App.Update_Progress);
 
-        Result r = Exporter.ExportBatch(commandData.Application, settings);
+            Result r = Exporter.ExportBatch(commandData.Application, settings);
 
-        context.State = ProgressContextState.Complete;
-        Dialogs.UpdateProgress(context);
-
-        // Unsubscribe from dialog close event
-        Dialogs.ProgressDialogStatus -= OnProgressDialogClosedBatch;
-
-        return r;
+            return r;
+        }
+        finally
+        {
+            Dialogs.ProgressDialogStatus -= OnProgressDialogClosedBatch;
+            context.State = ProgressContextState.Complete;
+            Dialogs.UpdateProgress(context);
+        }
     }
 
     private static void OnProgressDialogClosedBatch(object sender, ProgressContext context)

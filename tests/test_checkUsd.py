@@ -56,6 +56,16 @@ class CheckUsd:
             names.append(cPrim.GetName())
         return names
 
+    def get_attribute(self, primPath, attribute_name):
+        prim = self._stage.GetPrimAtPath(primPath)
+        if not prim.IsValid():
+            return None
+
+        attribute = prim.GetAttribute(attribute_name)
+        if not attribute.IsValid():
+            return None
+        return attribute.Get()
+
     def get_boundingBoxSize(self, primPath):
         prim = self._stage.GetPrimAtPath(primPath)
         if not prim.IsValid():

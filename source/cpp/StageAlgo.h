@@ -47,6 +47,13 @@ USD_EXPORTER_REVIT_API pxr::UsdStageRefPtr createStage(
 //! @param comment Optional save comment recorded in the log.
 USD_EXPORTER_REVIT_API void saveStage(pxr::UsdStagePtr stage, const char* comment = nullptr);
 
+//! Create a USDZ package from a root USD layer and its resolved dependencies.
+//!
+//! @param assetPath The local root USD layer to package.
+//! @param usdzFilePath The local USDZ output path.
+//! @return true if the package was created, false otherwise.
+USD_EXPORTER_REVIT_API bool createUsdzPackage(const std::string& assetPath, const std::string& usdzFilePath);
+
 //! Convert meters per unit for the given `UsdStage`
 //!
 //! Sets the metersPerUnit attribute for the stage and scales vertices, translations, and pivots
@@ -85,6 +92,14 @@ extern "C"
      * @param[in] comment      Optional save comment recorded in the log.
      */
     USD_EXPORTER_REVIT_API void usd_exporter_revit_core_saveStage(const long int stage_id, const char* commit);
+
+    /**
+     * Create a USDZ package from a root USD layer and its resolved dependencies.
+     * @param[in] assetPath      Local root USD layer to package.
+     * @param[in] usdzFilePath  Local USDZ output path.
+     * @return true if successful, false otherwise.
+     */
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createUsdzPackage(const char* assetPath, const char* usdzFilePath);
 
     /**
      * Convert meters per unit for the given stage.

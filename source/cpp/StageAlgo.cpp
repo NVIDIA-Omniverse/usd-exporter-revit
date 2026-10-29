@@ -9,10 +9,12 @@
 #include "XformAlgo.h"
 #include "client.h"
 
+#include <pxr/base/arch/fileSystem.h>
 #include <pxr/base/tf/stringUtils.h>
 #include <pxr/base/vt/array.h>
 #include <pxr/base/vt/value.h>
 #include <pxr/usd/ar/resolver.h>
+#include <pxr/usd/ar/resolverContextBinder.h>
 #include <pxr/usd/sdf/copyUtils.h>
 #include <pxr/usd/usd/primCompositionQuery.h>
 #include <pxr/usd/usd/primRange.h>
@@ -25,7 +27,13 @@
 #include <pxr/usd/usdGeom/xformCommonAPI.h>
 #include <pxr/usd/usdGeom/xformable.h>
 #include <pxr/usd/usdUtils/authoring.h>
+#include <pxr/usd/usdUtils/dependencies.h>
 #include <pxr/usd/usdUtils/stitch.h>
+
+#include <filesystem>
+#include <functional>
+#include <sstream>
+#include <system_error>
 
 
 using namespace pxr;
@@ -217,6 +225,239 @@ void saveStage(UsdStagePtr stage, const char* comment)
         }
         stage->Save();
     }
+}
+
+namespace
+{
+
+// Owns a directory created for USDZ packaging and removes it (and everything staged under it)
+// once packaging is done, on every return path.
+class TempStagingDirectory
+{
+public:
+
+    explicit TempStagingDirectory(std::filesystem::path path) : m_path(std::move(path))
+    {
+    }
+
+    ~TempStagingDirectory()
+    {
+        std::error_code ec;
+        std::filesystem::remove_all(m_path, ec);
+    }
+
+    TempStagingDirectory(const TempStagingDirectory&) = delete;
+    TempStagingDirectory& operator=(const TempStagingDirectory&) = delete;
+
+    const std::filesystem::path& path() const
+    {
+        return m_path;
+    }
+
+private:
+
+    std::filesystem::path m_path;
+};
+
+// Creates a fresh, uniquely-named directory under the system temp directory. Returns an empty
+// path on failure.
+std::filesystem::path createUniqueTempDirectory()
+{
+    const std::string dir = ArchMakeTmpSubdir(ArchGetTmpDir(), "usd_exporter_revit_usdz_");
+    return dir.empty() ? std::filesystem::path{} : std::filesystem::path(dir);
+}
+
+std::filesystem::path canonicalizePath(const std::string& originalPath)
+{
+    std::error_code ec;
+    std::filesystem::path absPath = std::filesystem::weakly_canonical(originalPath, ec);
+    if (ec || absPath.empty())
+    {
+        absPath = std::filesystem::absolute(originalPath, ec);
+    }
+    return absPath.lexically_normal();
+}
+
+// Maps a filesystem path into a unique location under `tempRoot`, preserving its structure
+// relative to `basePath` so relative asset references between staged files still resolve.
+// Staging relative to `basePath` rather than the full absolute path avoids exceeding Windows'
+// MAX_PATH limit, since the export already writes under a deep per-export temp folder. Paths
+// outside `basePath` are grouped into a short hashed bucket per source directory instead.
+std::filesystem::path mapPathUnderTempRoot(const std::filesystem::path& tempRoot, const std::filesystem::path& basePath, const std::string& originalPath)
+{
+    const std::filesystem::path absPath = canonicalizePath(originalPath);
+
+    const std::filesystem::path relative = absPath.lexically_relative(basePath);
+    if (!relative.empty() && *relative.begin() != "..")
+    {
+        return tempRoot / relative;
+    }
+
+    const size_t hash = std::hash<std::string>{}(absPath.parent_path().generic_string());
+    std::ostringstream bucket;
+    bucket << std::hex << hash;
+    return tempRoot / "ext" / bucket.str() / absPath.filename();
+}
+
+} // namespace
+
+bool createUsdzPackage(const std::string& assetPath, const std::string& usdzFilePath)
+{
+    if (!detail::isLocalUri(assetPath) || !detail::isLocalUri(usdzFilePath))
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("USDZ packaging requires local paths: source \"%s\", output \"%s\"", assetPath.c_str(), usdzFilePath.c_str());
+        return false;
+    }
+
+    if (assetPath.empty() || usdzFilePath.empty())
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("USDZ packaging requires non-empty source and output paths");
+        return false;
+    }
+
+    ArResolverContextBinder resolverContext(ArGetResolver().CreateDefaultContextForAsset(assetPath));
+    std::vector<SdfLayerRefPtr> layers;
+    std::vector<std::string> assets;
+    std::vector<std::string> unresolvedPaths;
+    if (!UsdUtilsComputeAllDependencies(SdfAssetPath(assetPath), &layers, &assets, &unresolvedPaths))
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("Failed to resolve the USDZ root layer \"%s\"", assetPath.c_str());
+        return false;
+    }
+
+    for (const std::string& path : unresolvedPaths)
+    {
+        if (!TfStringEndsWith(TfStringToLower(path), ".mdl"))
+        {
+            USD_EXPORTER_REVIT_LOG_ERROR("USDZ dependency could not be resolved: \"%s\"", path.c_str());
+            return false;
+        }
+    }
+
+    // `layers` may include the user's original USD assets (e.g. referenced via family mappings),
+    // not just layers produced for this export. Stage private copies under a temp directory and
+    // mutate/save only those, so MDL stripping never touches files the user still owns.
+    std::filesystem::path tempRoot = createUniqueTempDirectory();
+    if (tempRoot.empty())
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("Failed to create a temporary staging directory for USDZ packaging");
+        return false;
+    }
+    TempStagingDirectory tempStagingDirectory(tempRoot);
+
+    const std::string resolvedAssetPath = ArGetResolver().Resolve(assetPath);
+    const std::filesystem::path basePath = canonicalizePath(resolvedAssetPath).parent_path();
+    std::filesystem::path stagedAssetPath;
+
+    for (const SdfLayerRefPtr& layer : layers)
+    {
+        std::filesystem::path copyPath = mapPathUnderTempRoot(tempRoot, basePath, layer->GetRealPath());
+        if (layer->GetRealPath() == resolvedAssetPath)
+        {
+            stagedAssetPath = copyPath;
+        }
+
+        std::error_code ec;
+        std::filesystem::create_directories(copyPath.parent_path(), ec);
+
+        SdfLayerRefPtr copyLayer = SdfLayer::CreateNew(copyPath.generic_string());
+        if (!copyLayer)
+        {
+            USD_EXPORTER_REVIT_LOG_ERROR("Failed to stage a copy of \"%s\" for USDZ packaging", layer->GetIdentifier().c_str());
+            return false;
+        }
+        copyLayer->TransferContent(layer);
+
+        UsdUtilsModifyAssetPaths(
+            copyLayer,
+            [](const std::string& path)
+            {
+                return TfStringEndsWith(TfStringToLower(path), ".mdl") ? std::string() : path;
+            }
+        );
+
+        UsdStageRefPtr stage = UsdStage::Open(copyLayer);
+        if (stage == nullptr)
+        {
+            USD_EXPORTER_REVIT_LOG_ERROR("Failed to open staged copy of \"%s\" for USDZ packaging", layer->GetIdentifier().c_str());
+            return false;
+        }
+        SdfPathVector mdlShaderPaths;
+        for (UsdPrim prim : stage->TraverseAll())
+        {
+            bool isMdlShader = false;
+            for (const TfToken& propertyName : prim.GetPropertyNames())
+            {
+                if (TfStringStartsWith(propertyName.GetString(), "outputs:mdl:"))
+                {
+                    prim.RemoveProperty(propertyName);
+                }
+                else if (TfStringStartsWith(propertyName.GetString(), "info:mdl:"))
+                {
+                    // Identifies UsdShadeShader prims implementing the MDL render context (e.g. authored via
+                    // UsdShadeShader::SetSourceAsset(..., "mdl")), regardless of the prim's name.
+                    isMdlShader = true;
+                }
+            }
+
+            if (isMdlShader)
+            {
+                mdlShaderPaths.push_back(prim.GetPath());
+            }
+        }
+        for (const SdfPath& path : mdlShaderPaths)
+        {
+            stage->RemovePrim(path);
+        }
+
+        copyLayer->Save();
+    }
+
+    // Mirror non-layer dependencies (textures, etc.) alongside their staged layers so relative
+    // references from the copies still resolve when the package is authored below. MDL assets
+    // were stripped from the copies above, so they don't need to be staged.
+    for (const std::string& assetDependency : assets)
+    {
+        if (TfStringEndsWith(TfStringToLower(assetDependency), ".mdl"))
+        {
+            continue;
+        }
+
+        std::error_code ec;
+        if (!std::filesystem::is_regular_file(assetDependency, ec))
+        {
+            USD_EXPORTER_REVIT_LOG_WARN("Skipping USDZ dependency \"%s\": not a regular file (%s)", assetDependency.c_str(), ec.message().c_str());
+            continue;
+        }
+
+        std::filesystem::path copyPath = mapPathUnderTempRoot(tempRoot, basePath, assetDependency);
+        std::filesystem::create_directories(copyPath.parent_path(), ec);
+        if (ec)
+        {
+            USD_EXPORTER_REVIT_LOG_ERROR("Failed to stage dependency \"%s\" for USDZ packaging: %s", assetDependency.c_str(), ec.message().c_str());
+            return false;
+        }
+        std::filesystem::copy_file(assetDependency, copyPath, std::filesystem::copy_options::overwrite_existing, ec);
+        if (ec)
+        {
+            USD_EXPORTER_REVIT_LOG_ERROR("Failed to stage dependency \"%s\" for USDZ packaging: %s", assetDependency.c_str(), ec.message().c_str());
+            return false;
+        }
+    }
+
+    if (stagedAssetPath.empty())
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("Failed to locate the staged copy of the USDZ root layer \"%s\"", assetPath.c_str());
+        return false;
+    }
+
+    if (!UsdUtilsCreateNewUsdzPackage(SdfAssetPath(stagedAssetPath.generic_string()), usdzFilePath))
+    {
+        USD_EXPORTER_REVIT_LOG_ERROR("Failed to create USDZ package \"%s\" from \"%s\". Verify that every referenced asset exists and can be resolved.", usdzFilePath.c_str(), assetPath.c_str());
+        return false;
+    }
+
+    return true;
 }
 
 
@@ -418,6 +659,16 @@ extern "C"
         }
 
         usd::exporter::revit::core::saveStage(stage, commit);
+    }
+
+    USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_createUsdzPackage(const char* assetPath, const char* usdzFilePath)
+    {
+        if (assetPath == nullptr || usdzFilePath == nullptr)
+        {
+            return false;
+        }
+
+        return usd::exporter::revit::core::createUsdzPackage(assetPath, usdzFilePath);
     }
 
     USD_EXPORTER_REVIT_API bool usd_exporter_revit_core_convertMetersPerUnit(const long int stage_id, const double metersPerUnit)

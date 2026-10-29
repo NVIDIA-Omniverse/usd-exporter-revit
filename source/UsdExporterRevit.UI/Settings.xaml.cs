@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2024-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 //
-using UsdExporterRevitSdk;
+using UsdExporterRevitCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -321,6 +321,7 @@ public partial class Settings : Window
         combo_extension.Items.Add(".usdc");
         combo_extension.Items.Add(".usda");
         combo_extension.Items.Add(".usd");
+        combo_extension.Items.Add(".usdz");
 
         combo_instancing.Items.Add("Internal Classes");
         combo_instancing.Items.Add("External Assets");

@@ -84,6 +84,7 @@ internal class Program
                 minutes++;
                 harness.CheckConnection();
             }
+            Thread.Sleep(50);
         }
         session = harness.Session;
         session.TotalExportTime = session.Tests.Sum(s => s.Time);

@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using UsdExporterRevitSdk;
+using UsdExporterRevitCore;
 using System.IO;
 
 namespace UsdExporterRevit

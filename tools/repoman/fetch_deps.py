@@ -16,6 +16,7 @@ repoman.bootstrap()
 
 import omni.repo.man
 import packmanapi
+from omni.repo.build import pippull
 
 
 def fetch_dependencies(config: Dict, build_config: str) -> Dict:
@@ -45,6 +46,20 @@ def fetch_dependencies(config: Dict, build_config: str) -> Dict:
             continue
         result = packmanapi.pull(path, platform=platform, tokens=tokens, return_extra_info=True)
         pulled.update(result)
+
+    pip_config = dict(fetch_cfg.get("pip", {}))
+    pip_config["files_to_pull"] = [
+        omni.repo.man.resolve_tokens(path, extra_tokens=tokens) for path in pip_config.get("files_to_pull", [])
+    ]
+    if pip_config.get("gather_licenses_path"):
+        pip_config["gather_licenses_path"] = omni.repo.man.resolve_tokens(
+            pip_config["gather_licenses_path"], extra_tokens=tokens
+        )
+    pippull.pull_pip_dependencies(
+        omni.repo.man.get_repo_paths(),
+        pip_config,
+        tokens["platform_target"],
+    )
     return pulled
 
 

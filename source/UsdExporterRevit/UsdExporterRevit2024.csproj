@@ -38,7 +38,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsdExporterRevitSDK\UsdExporterRevitSDK2024.csproj">
+    <ProjectReference Include="..\UsdExporterRevitCore\UsdExporterRevitCore2024.csproj">
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>

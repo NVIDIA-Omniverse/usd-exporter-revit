@@ -39,8 +39,6 @@ if(NOT USD_EXPORTER_REVIT_VERSION)
 endif()
 message(STATUS "usd-exporter-revit: version ${USD_EXPORTER_REVIT_VERSION}")
 
-set(USD_EXPORTER_REVIT_FMT_ROOT "${USD_EXPORTER_REVIT_DEPS_ROOT}/fmt" CACHE PATH "fmt root")
-
 if(NOT USD_EXPORTER_REVIT_DOCTEST_INCLUDE_DIR)
     set(USD_EXPORTER_REVIT_DOCTEST_INCLUDE_DIR "${USD_EXPORTER_REVIT_DEPS_ROOT}/doctest/include" CACHE PATH "doctest include directory")
 endif()
@@ -67,19 +65,14 @@ set(USD_EXPORTER_REVIT_USD_LIBS
 
 # ---------------------------------------------------------------------------- usd_exporter_revit (shared library)
 file(GLOB USD_EXPORTER_REVIT_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/source/cpp/*.cpp")
-file(GLOB USD_EXPORTER_REVIT_FMT_SOURCES "${USD_EXPORTER_REVIT_FMT_ROOT}/src/*.cc")
 
 add_library(usd_exporter_revit SHARED
     ${USD_EXPORTER_REVIT_SOURCES}
-    ${USD_EXPORTER_REVIT_FMT_SOURCES}
 )
 
 target_include_directories(usd_exporter_revit PRIVATE
     "${CMAKE_SOURCE_DIR}/include"
     "${CMAKE_SOURCE_DIR}/source/cpp"
-)
-target_include_directories(usd_exporter_revit SYSTEM PRIVATE
-    "${USD_EXPORTER_REVIT_FMT_ROOT}/include"
 )
 
 target_compile_definitions(usd_exporter_revit PRIVATE

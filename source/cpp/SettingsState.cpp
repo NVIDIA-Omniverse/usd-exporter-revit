@@ -10,8 +10,6 @@
 
 #include <pxr/pxr.h>
 
-#include <fmt/format.h>
-
 #include <algorithm>
 #include <cctype>
 #include <cstdlib>
@@ -28,7 +26,6 @@ using StringMap = std::unordered_map<std::string, std::string>;
 static constexpr const char* g_sdkSettingsRelativePath = "config/usd.exporter.revit.core.toml";
 static constexpr const char* g_clientSettingsRelativePath = "config/usd.exporter.revit.client.toml";
 static constexpr const char* g_userConfigFileName = "user.config.json";
-static constexpr const char* g_folderPattern = "{0}/{1}-{2}/{3}-{4}";
 
 #ifdef USD_EXPORTER_REVIT_APP_VERSION
 static constexpr const char* g_builtAppVersion = USD_EXPORTER_REVIT_APP_VERSION;
@@ -605,7 +602,7 @@ bool parseJsonPreferencesFile(const std::filesystem::path& path, StringMap& valu
 
 std::string buildScopedFolder(const std::string& basePath, const std::string& appName, const std::string& appVersion, const std::string& clientName, const std::string& clientVersion)
 {
-    std::string folder = fmt::format(g_folderPattern, basePath, appName, appVersion, clientName, clientVersion);
+    std::string folder = basePath + "/" + appName + "-" + appVersion + "/" + clientName + "-" + clientVersion;
     std::replace(folder.begin(), folder.end(), '\\', '/');
     return folder;
 }
@@ -649,7 +646,7 @@ bool loadSettingsState(SettingsState& state, bool preserveStartTimestamp)
         }
     }
 
-    state.usdVersion = fmt::format("{0}.{1}.{2}", PXR_MAJOR_VERSION, PXR_MINOR_VERSION, PXR_PATCH_VERSION);
+    state.usdVersion = std::to_string(PXR_MAJOR_VERSION) + "." + std::to_string(PXR_MINOR_VERSION) + "." + std::to_string(PXR_PATCH_VERSION);
     state.buildConfig = isDebugBuild() ? "debug" : "release";
 
     StringMap preValidationTokens;

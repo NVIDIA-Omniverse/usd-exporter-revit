@@ -11,13 +11,13 @@ document is provided for attribution and license-compliance purposes.
 
 | Component | Version | License | Copyright / Notes |
 | --- | --- | --- | --- |
-| [OpenUSD (pxr)](https://openusd.org/) | 25.11 | Modified Apache 2.0 (Tomorrow Open Source Technology License 1.0) | Core USD runtime. Redistributed as `usd_*.dll`, the `usd/` plugin tree, and `pxr` Python bindings. Bundles open-source components — see [OpenUSD third-party components](#openusd-third-party-components) below. |
-| [CPython](https://www.python.org/) | 3.12.13 | PSF-2.0 | Python runtime (`python312.dll`, `python-runtime/`). Bundles open-source components — see [CPython third-party components](#cpython-third-party-components) below. |
-| [fmt](https://github.com/fmtlib/fmt) | 7.0.3 | MIT (with binary-redistribution exception) | Compiled into `usd_exporter_revit.dll`. |
+| [OpenUSD (pxr)](https://openusd.org/) | 26.08 | Modified Apache 2.0 (Tomorrow Open Source Technology License 1.0) | Core USD runtime. Redistributed as `usd_*.dll`, the `usd/` plugin tree, and `pxr` Python bindings. Bundles open-source components — see [OpenUSD third-party components](#openusd-third-party-components) below. |
+| [CPython](https://www.python.org/) | 3.12.16 | PSF-2.0 | Python runtime (`python312.dll`, `python-runtime/`). Bundles open-source components — see [CPython third-party components](#cpython-third-party-components) below. |
+| [USD Validation NVIDIA](https://github.com/NVIDIA-Omniverse/usd-validation-nvidia) | 1.21.0 | Apache-2.0 | Used during testing and CI. Not redistributed. |
 | [doctest](https://github.com/doctest/doctest) | 2.4.5 | MIT | Compiled into `usd_exporter_revit_tests.exe` (shipped in the release package `tests/` folder). |
-| [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) | 13.0.1 | MIT | Used by the C# plugin and SDK for settings serialization. Revit 2025/2026 builds consume the NuGet package; Revit 2024 builds reference the copy bundled with the Autodesk Revit SDK. |
-| [System.Drawing.Common](https://github.com/dotnet/runtime) | 8.0.3 | MIT | Used by the C# SDK (Revit 2025/2026 builds). |
-| [System.Windows.Extensions](https://github.com/dotnet/runtime) | 8.0.0 | MIT | Used by the C# SDK (Revit 2025/2026 builds). |
+| [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) | 13.0.1 | MIT | Used by the C# plugin and export core for settings serialization. Revit 2025/2026 builds consume the NuGet package; Revit 2024 builds reference the copy bundled with the Autodesk Revit SDK. |
+| [System.Drawing.Common](https://github.com/dotnet/runtime) | 8.0.3 | MIT | Used by the C# export core (Revit 2025/2026 builds). |
+| [System.Windows.Extensions](https://github.com/dotnet/runtime) | 8.0.0 | MIT | Used by the C# export core (Revit 2025/2026 builds). |
 
 ---
 
@@ -29,7 +29,7 @@ document is provided for attribution and license-compliance purposes.
 | [MaterialX](https://github.com/AcademySoftwareFoundation/MaterialX) | 1.39.3 |
 | [oneTBB](https://github.com/oneapi-src/oneTBB) | 2021.13.0 |
 | [PEGTL](https://github.com/taocpp/PEGTL) | 3.2.7 |
-| [pybind11](https://github.com/pybind/pybind11) | OpenUSD 25.11 |
+| [pybind11](https://github.com/pybind/pybind11) | OpenUSD 26.08 |
 
 ---
 
@@ -42,16 +42,16 @@ Versions were verified against `python-runtime/` in the shipped release package.
 | --- | --- |
 | [bzip2](https://sourceware.org/bzip2/) | 1.0.8 |
 | [CacheControl](https://github.com/ionrock/cachecontrol) | 0.14.4 |
-| [certifi](https://github.com/certifi/python-certifi) (python-certifi) | 2026.06.17 |
+| [certifi](https://github.com/certifi/python-certifi) (python-certifi) | 2026.10.19 |
 | [distlib](https://github.com/pypa/distlib) | 0.4.2 |
 | [distro](https://github.com/python-distro/distro) | 1.9.0 |
-| [expat](https://github.com/libexpat/libexpat) | 2.8.2 |
+| [expat](https://github.com/libexpat/libexpat) | 2.9.0 |
 | [idna](https://github.com/kjd/idna) | 3.18 |
 | [libffi](https://github.com/libffi/libffi) | 3.4.4 |
 | [msgpack-python](https://github.com/msgpack/msgpack-python) | 1.1.2 |
-| [OpenSSL](https://www.openssl.org/) | 3.5.7 |
+| [OpenSSL](https://www.openssl.org/) | 3.5.9 |
 | [packaging](https://github.com/pypa/packaging) | 26.2 |
-| [pip](https://github.com/pypa/pip) | 26.2.1 |
+| [pip](https://github.com/pypa/pip) | 26.2.2 |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.10.0 |
 | [Pygments](https://github.com/pygments/pygments) | 2.20.0 |
 | [pyproject-hooks](https://github.com/pypa/pyproject-hooks) | 1.2.0 |
@@ -69,7 +69,7 @@ Versions were verified against `python-runtime/` in the shipped release package.
 
 > The public OpenUSD package does not bundle OpenSSL, zlib, libffi, or xz/liblzma.
 > pip and its vendored components retain their exact license files under
-> `python-runtime/Lib/site-packages/pip-26.2.1.dist-info/licenses/`.
+> `python-runtime/Lib/site-packages/pip-26.2.2.dist-info/licenses/`.
 
 ---
 
@@ -101,49 +101,17 @@ maintained by Autodesk:
 
 ## usd-exporter-revit dependencies
 
-### OpenUSD (pxr) 25.11
+### OpenUSD (pxr) 26.08
 
 OpenUSD is licensed under the Modified Apache License 2.0 (Tomorrow Open
 Source Technology License 1.0). The full license text is maintained by the
 OpenUSD project at <https://openusd.org/release/license.html>.
 
-### CPython 3.12.13
+### CPython 3.12.16
 
 CPython is distributed under the Python Software Foundation License Version 2.
 The full license text is maintained by the Python project at
 <https://docs.python.org/3/license.html#psf-license>.
-
-### fmt 7.0.3
-
-```text
-Copyright (c) 2012 - present, Victor Zverovich
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
---- Optional exception to the license ---
-
-As an exception, if, as a result of your compiling your source code, portions
-of this Software are embedded into a machine-executable object form of such
-source code, you may redistribute such embedded portions in such object form
-without including the above copyright and permission notices.
-```
 
 ### Newtonsoft.Json 13.0.1
 
@@ -208,8 +176,8 @@ SOFTWARE.
 USD Validation NVIDIA is available at
 <https://github.com/NVIDIA-Omniverse/usd-validation-nvidia>.
 
-This project uses it via the `omni.asset_validator` packman dependency during
-testing and CI.
+This project uses `usd-validation-nvidia` 1.21.0 from PyPI during testing and
+CI.
 
 Copyright NVIDIA CORPORATION
 
@@ -400,20 +368,20 @@ linked into the OpenUSD or CPython libraries.
 | [Boost](https://www.boost.org/) | 1.82.0 | BSL-1.0 | `usd_boost.dll` |
 | [bzip2](https://sourceware.org/bzip2/) | 1.0.8 | bzip2-1.0.6 | `python-runtime/DLLs/_bz2.pyd` |
 | [CacheControl](https://github.com/ionrock/cachecontrol) | 0.14.4 | Apache-2.0 | vendored by pip |
-| [certifi](https://github.com/certifi/python-certifi) (python-certifi) | 2026.06.17 | MPL-2.0 | `python-runtime/Lib/site-packages/pip/_vendor/certifi/` |
+| [certifi](https://github.com/certifi/python-certifi) (python-certifi) | 2026.10.19 | MPL-2.0 | `python-runtime/Lib/site-packages/pip/_vendor/certifi/` |
 | [distlib](https://github.com/pypa/distlib) | 0.4.2 | PSF-2.0 | vendored by pip |
 | [distro](https://github.com/python-distro/distro) | 1.9.0 | Apache-2.0 | vendored by pip |
-| [expat](https://github.com/libexpat/libexpat) | 2.8.2 | MIT | linked by CPython |
+| [expat](https://github.com/libexpat/libexpat) | 2.9.0 | MIT | linked by CPython |
 | [idna](https://github.com/kjd/idna) | 3.18 | BSD-3-Clause | vendored by pip |
 | [libffi](https://github.com/libffi/libffi) | 3.4.4 | MIT | linked by CPython |
 | [MaterialX](https://github.com/AcademySoftwareFoundation/MaterialX) | 1.39.3 | Apache-2.0 | statically linked into `usd_usdMtlx.dll` |
 | [msgpack-python](https://github.com/msgpack/msgpack-python) | 1.1.2 | Apache-2.0 | vendored by pip |
 | [oneTBB](https://github.com/oneapi-src/oneTBB) | 2021.13.0 | Apache-2.0 | `tbb12.dll` |
-| [OpenSSL](https://www.openssl.org/) | 3.5.7 | Apache-2.0 | linked by CPython |
+| [OpenSSL](https://www.openssl.org/) | 3.5.9 | Apache-2.0 | linked by CPython |
 | [packaging](https://github.com/pypa/packaging) | 26.2 | Apache-2.0 or BSD-2-Clause | vendored by pip |
 | [PEGTL](https://github.com/taocpp/PEGTL) | 3.2.7 | MIT | `usd_pegtl.dll` |
-| [pybind11](https://github.com/pybind/pybind11) | OpenUSD 25.11 | BSD-3-Clause | compiled into the OpenUSD Python bindings |
-| [pip](https://github.com/pypa/pip) | 26.2.1 | MIT | `python-runtime/Lib/site-packages/pip/` |
+| [pybind11](https://github.com/pybind/pybind11) | OpenUSD 26.08 | BSD-3-Clause | compiled into the OpenUSD Python bindings |
+| [pip](https://github.com/pypa/pip) | 26.2.2 | MIT | `python-runtime/Lib/site-packages/pip/` |
 | [platformdirs](https://github.com/tox-dev/platformdirs) | 4.10.0 | MIT | vendored by pip |
 | [Pygments](https://github.com/pygments/pygments) | 2.20.0 | BSD-2-Clause | vendored by pip |
 | [pyproject-hooks](https://github.com/pypa/pyproject-hooks) | 1.2.0 | MIT | vendored by pip |
@@ -503,7 +471,7 @@ bzip2/libbzip2 version 1.0.8 of 13 July 2019
 --------------------------------------------------------------------------
 ```
 
-### certifi (python-certifi) 2026.06.17
+### certifi (python-certifi) 2026.10.19
 
 ```text
 This package contains a modified version of ca-bundle.crt:
@@ -527,7 +495,7 @@ one at http://mozilla.org/MPL/2.0/.
 ***** END LICENSE BLOCK *****
 ```
 
-### expat 2.8.2
+### expat 2.9.0
 
 ```text
 Copyright (c) 1998-2000 Thai Open Source Software Center Ltd and Clark Cooper
@@ -967,7 +935,7 @@ Apache License
    limitations under the License.
 ```
 
-### OpenSSL 3.5.7
+### OpenSSL 3.5.9
 
 ```text
 Apache License
@@ -1206,7 +1174,7 @@ Please also refer to the file .github/CONTRIBUTING.md, which clarifies licensing
 external contributions to this project including patches, pull requests, etc.
 ```
 
-### pip 26.2.1
+### pip 26.2.2
 
 ```text
 Copyright (c) 2008-present The pip developers (see AUTHORS.txt file)
@@ -1232,7 +1200,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 The complete license texts for pip's vendored components are redistributed at
-`python-runtime/Lib/site-packages/pip-26.2.1.dist-info/licenses/`.
+`python-runtime/Lib/site-packages/pip-26.2.2.dist-info/licenses/`.
 
 ### SQLite 3.53.4
 

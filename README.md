@@ -6,7 +6,7 @@ Export Autodesk Revit models to OpenUSD for use in NVIDIA Omniverse and other ap
 
 # Overview
 
-usd-exporter-revit adds OpenUSD export workflows to Autodesk Revit on Windows. It supports single-view and batch exports, preserves Revit geometry and BIM data, and exposes an SDK for custom Revit-to-OpenUSD workflows.
+usd-exporter-revit adds OpenUSD export workflows to Autodesk Revit on Windows. It supports single-view and batch exports, preserves Revit geometry and BIM data, and exposes an export API for custom Revit-to-OpenUSD workflows.
 
 Exports write to local folders selected through the standard Windows file picker.
 Treat exported USD, textures, and plugin logs as sensitive: they can contain proprietary
@@ -22,16 +22,16 @@ geometry, element names, and optional BIM parameters.
 - [External events](source/UsdExporterRevit/EventHandler.cs): Out-of-process Revit interaction used primarily by test automation.
 - [Storage](source/UsdExporterRevit/ExtensibleStorage.cs): Export settings persisted to external files or Revit Extensible Storage.
 
-### UsdExporterRevitSdk
+### UsdExporterRevitCore
 
-- [Exporter](source/UsdExporterRevitSDK/Exporter.cs): Entry point for single-view and batch exports.
-- [Settings](source/UsdExporterRevitSDK/UsdExporterRevitSettings.cs): Export and batch-export configuration.
-- [Export context](source/UsdExporterRevitSDK/ExportContext.cs): Revit `ExportContext` implementation that captures geometry and materials.
-- [USD](source/UsdExporterRevitSDK/Usd/): OpenUSD representation and authoring classes.
-- [Revit](source/UsdExporterRevitSDK/Revit/): Revit concepts and their OpenUSD mappings.
-- [Managers](source/UsdExporterRevitSDK/Managers/): Export and material management.
+- [Exporter](source/UsdExporterRevitCore/Exporter.cs): Entry point for single-view and batch exports.
+- [Settings](source/UsdExporterRevitCore/UsdExporterRevitSettings.cs): Export and batch-export configuration.
+- [Export context](source/UsdExporterRevitCore/ExportContext.cs): Revit `ExportContext` implementation that captures geometry and materials.
+- [USD](source/UsdExporterRevitCore/Usd/): OpenUSD representation and authoring classes.
+- [Revit](source/UsdExporterRevitCore/Revit/): Revit concepts and their OpenUSD mappings.
+- [Managers](source/UsdExporterRevitCore/Managers/): Export and material management.
 
-`UsdExporterRevitSdk` contains the reusable export API and OpenUSD authoring logic. Its [native bindings](source/bindings/) connect the Revit API in C# to [OpenUSD](https://openusd.org/release/index.html) in C++.
+`UsdExporterRevitCore` contains the reusable export API and OpenUSD authoring logic. Its [native bindings](source/bindings/) connect the Revit API in C# to [OpenUSD](https://openusd.org/release/index.html) in C++.
 
 ### UsdExporterRevitSetup
 
@@ -87,6 +87,32 @@ Do not commit machine-specific SDK paths. Revit 2025 and 2026 builds do not requ
 
 Per-model settings are stored in `%USERPROFILE%\Documents\Omniverse\UsdExporterRevit\<model name>\settings.json`, or inside Revit file when 1-Click Export is enabled.
 
+Supported output formats are `.usd`, `.usda`, `.usdc`, and `.usdz`.
+
+### USDZ support
+
+USDZ export creates a package from temporary USDC layers. The `.usd`, `.usda`, and `.usdc` export paths remain unchanged.
+
+USDZ preserves:
+
+- Geometry, hierarchy, transforms, metadata, material bindings, cameras, lights, and enabled export options.
+- Referenced USD layers, payload layers, image textures, and other resolved dependencies.
+- `UsdPreviewSurface` material networks, including supported colors, texture maps, opacity, roughness, metallic values, and normal maps.
+
+USDZ removes:
+
+- MDL shader prims.
+- `outputs:mdl:*` material connections.
+- `.mdl` asset paths.
+
+Standard USDZ tools do not support MDL. Revit-derived materials use their `UsdPreviewSurface` representation in the package.
+
+User-mapped MDL-only materials do not retain their appearance unless they also provide a `UsdPreviewSurface` representation.
+
+All non-MDL dependencies must resolve during packaging. A failure reports an error and does not replace an existing package.
+
+USDZ packages are read-only packages. Export to `.usd`, `.usda`, or `.usdc` when the downstream workflow requires editable layers or MDL.
+
 Plugin logs are stored in:
 
 ```text
@@ -96,7 +122,7 @@ Plugin logs are stored in:
 Logs may include full filesystem paths, document titles, and element names. Restrict access to this directory and share logs carefully.
 - User documentation: [Revit documentation](https://docs.omniverse.nvidia.com/connect/latest/revit.html)
 - OpenUSD documentation: [openusd.org](https://openusd.org/release/index.html)
-- SDK entry point: [Exporter.cs](source/UsdExporterRevitSDK/Exporter.cs)
+- Core entry point: [Exporter.cs](source/UsdExporterRevitCore/Exporter.cs)
 
 ## Releases & Roadmap
 

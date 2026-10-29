@@ -275,6 +275,9 @@ public class core
     [DllImport("usd_exporter_revit", EntryPoint = "usd_exporter_revit_core_saveStage", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
     public static extern void usd_exporter_revit_core_saveStage(long stage_id, byte[] commit);
 
+    [DllImport("usd_exporter_revit", EntryPoint = "usd_exporter_revit_core_createUsdzPackage", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
+    public static extern bool usd_exporter_revit_core_createUsdzPackage(byte[] assetPath, byte[] usdzFilePath);
+
     [DllImport("usd_exporter_revit", EntryPoint = "usd_exporter_revit_core_convertMetersPerUnit", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
     public static extern bool usd_exporter_revit_core_convertMetersPerUnit(long stage_id, double metersPerUnit);
 
@@ -614,6 +617,11 @@ public class core
     public static void saveStage(long stage_id, string commit = "")
     {
         usd_exporter_revit_core_saveStage(stage_id, Encoding.UTF8.GetBytes(commit));
+    }
+
+    public static bool createUsdzPackage(string assetPath, string usdzFilePath)
+    {
+        return usd_exporter_revit_core_createUsdzPackage(Encoding.UTF8.GetBytes(assetPath), Encoding.UTF8.GetBytes(usdzFilePath));
     }
 
     // XformAlgo.

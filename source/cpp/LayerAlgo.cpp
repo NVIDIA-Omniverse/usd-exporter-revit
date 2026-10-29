@@ -10,8 +10,6 @@
 
 #include <pxr/usd/usd/stage.h>
 
-#include <fmt/format.h>
-
 using namespace pxr;
 
 namespace usd::exporter::revit::core
@@ -40,7 +38,7 @@ void setLayerAuthoringMetadata(pxr::SdfLayerHandle layer)
     const std::string& clientVersion = settings.clientVersion;
 
     VtDictionary data = layer->GetCustomLayerData();
-    data[g_authoringKey] = fmt::format("{0} {1} via {2} {3}", appName, appVersion, clientName, clientVersion);
+    data[g_authoringKey] = appName + " " + appVersion + " via " + clientName + " " + clientVersion;
     layer->SetCustomLayerData(data);
 }
 

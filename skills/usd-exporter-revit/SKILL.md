@@ -14,7 +14,7 @@ tools: [Read, Edit, Shell]
 <!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved. -->
 <!-- SPDX-License-Identifier: Apache-2.0 AND CC-BY-4.0 -->
 
-The usd-exporter-revit is a Windows Revit add-in, reusable C# SDK, native OpenUSD bindings, installer, and test harness for exporting Autodesk Revit models to OpenUSD for Omniverse and other OpenUSD ecosystem applications.
+The usd-exporter-revit is a Windows Revit add-in, reusable C# export core, native OpenUSD bindings, installer, and test harness for exporting Autodesk Revit models to OpenUSD for Omniverse and other OpenUSD ecosystem applications.
 
 It supports single-view and batch exports, preserves Revit geometry and BIM data, and writes outputs to local folders selected through the Windows file picker. Treat exported USD and logs as sensitive (logs may contain full paths); prefer private local folders and keep Include BIM Data off unless needed.
 
@@ -29,15 +29,19 @@ Load the narrowest module that matches the user's task:
 ## Use This Skill For
 
 - Install, verify, build, or troubleshoot usd-exporter-revit.
-- Guide users to export Revit 2024/2025/2026 models to `.usd`, `.usda`, or `.usdc` through the USD Exporter ribbon in Revit, or document in-process `UsdExporterRevitSdk.Exporter` for custom Revit hosts.
+- Guide users to export Revit 2024/2025/2026 models to `.usd`, `.usda`, `.usdc`, or `.usdz` through the USD Exporter ribbon in Revit, or document in-process `UsdExporterRevitCore.Exporter` for custom Revit hosts.
 - Choose export settings for cameras, lights, rooms, spaces, drawings, BIM data, links, family instancing, materials, units, or coordinate systems.
 - Update code, docs, tests, packaging, or release behavior for Revit-to-OpenUSD workflows.
 
 ## Core Constraints
 
 1. Target host is Autodesk Revit on Windows only. Supported host versions are Revit 2024, 2025, and 2026.
-2. No product CLI or headless conversion. Export always runs inside a live Autodesk Revit session with the plugin (Omniverse ribbon) or another in-process Revit host calling `UsdExporterRevitSdk` (`Exporter.ExportView` / `ExportBatch` require `UIApplication`). Agents cannot convert `.rvt` files for the user; guide the user to export from Revit. `RevitTestHarness` launches `Revit.exe` over IPC for integration tests only — not an end-user conversion CLI.
+2. No product CLI or headless conversion. Export always runs inside a live Autodesk Revit session with the plugin (Omniverse ribbon) or another in-process Revit host calling `UsdExporterRevitCore` (`Exporter.ExportView` / `ExportBatch` require `UIApplication`). Agents cannot convert `.rvt` files for the user; guide the user to export from Revit. `RevitTestHarness` launches `Revit.exe` over IPC for integration tests only — not an end-user conversion CLI.
 3. Export is view-driven. Only elements visible in the selected 3D view are exported; Revit view visibility, section box, phase filter, detail level, and temporary view settings define the source set.
-4. Supported USD outputs are `.usd`, `.usda`, and `.usdc` only.
+4. Supported USD outputs are `.usd`, `.usda`, `.usdc`, and `.usdz`.
+   USDZ preserves resolved USD dependencies, image textures, material bindings, and `UsdPreviewSurface` networks.
+   USDZ removes MDL shader prims, MDL output connections, and `.mdl` asset paths.
+   User-mapped MDL-only materials require a `UsdPreviewSurface` representation to retain their appearance.
+   All other dependencies must resolve during packaging.
 5. Prefer product docs, `README.md`, and `docs/concept_mapping.md` when explaining mapping behavior. Keep README snippets, settings defaults, and tests aligned when export options or packaging change.
 6. Do not commit machine-specific RevitDevKit paths, build output, proprietary Revit models, or local environment files.

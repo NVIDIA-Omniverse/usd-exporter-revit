@@ -12,6 +12,8 @@ Use this reference for empty or incorrect USD export results after the plugin is
 | Wrong scale or units | `UnitType` mismatch with downstream expectation | Set `UnitType` to the requested linear unit; confirm stage `metersPerUnit`. |
 | Wrong world placement | `CoordinateSystem` mismatch | Choose Internal Origin, Project Base Point, Survey Point, or Shared Coordinates as needed. |
 | Missing or fallback materials | Unhandled appearance schema or mapping not set | Check `MaterialStyle`, `MaterialFolderName`, and `Mappings.Materials.UserMapped`; see `docs/concept_mapping.md`. |
+| Missing USDZ material appearance | Material is MDL-only or lacks a valid `UsdPreviewSurface` network | Add a `UsdPreviewSurface` representation, or use `.usd`, `.usda`, or `.usdc` when MDL is required. |
+| USDZ packaging failure | A referenced non-MDL asset cannot resolve | Check the exporter log for the unresolved path; restore the asset or update its mapping. |
 | Links missing | `IncludeLinks=false` or unloaded Revit links | Enable `IncludeLinks`; load links in Revit; inspect `Links/` sidecar stages and `RVT Links/` payloads. |
 | Family instances not shared | Instancing disabled or style not set | Set `InstanceFamilies` and `FamilyInstanceStyle` as requested. |
 | Export cancelled mid-run | User cancel or harness interrupt | Check progress UI/logs; re-run without cancel. |

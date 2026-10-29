@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from datetime import date
+from pathlib import Path
+import re
 
 import repoman
 
@@ -11,6 +13,24 @@ import omni.repo.man
 
 g_repo_folders = omni.repo.man.get_repo_paths()
 g_repo_root = g_repo_folders["root"]
+
+
+def update_version_file_from_changelog(version_file):
+    changelog_path = Path(g_repo_root) / "CHANGELOG.md"
+    version_path = Path(g_repo_root) / version_file
+    version_heading = re.compile(r"^#\s+(\d+\.\d+(?:\.\d+)?)\s*$")
+
+    with changelog_path.open("r", encoding="utf-8") as file:
+        for line in file:
+            match = version_heading.match(line)
+            if match:
+                version = match.group(1)
+                break
+        else:
+            raise ValueError(f"No release-version heading found in {changelog_path}")
+
+    print(f"Updating {version_path} to version {version}")
+    version_path.write_text(f"{version}\n", encoding="utf-8")
 
 
 def assembly_copyright() -> str:
@@ -42,17 +62,19 @@ def update_file_version(version, path):
 
 def update_assemblyinfo_cs_files(version):
     plugin_path = f"{g_repo_root}/source/UsdExporterRevit/Properties/AssemblyInfo.cs"
-    sdk_path = f"{g_repo_root}/source/UsdExporterRevitSDK/Properties/AssemblyInfo.cs"
+    core_path = f"{g_repo_root}/source/UsdExporterRevitCore/Properties/AssemblyInfo.cs"
     update_file_version(version=version, path=plugin_path)
-    update_file_version(version=version, path=sdk_path)
+    update_file_version(version=version, path=core_path)
 
 
 def setup_repo_tool(parser, config):
     parser.prog = "update_version"
-    parser.description = "Updates AssemblyInfo.cs files with the version number in VERSION.md"
+    parser.description = "Updates VERSION.md and AssemblyInfo.cs files with the latest version in CHANGELOG.md"
 
     def run_repo_tool(options, config):
-        package_version = omni.repo.man.build_number.generate_build_number_from_file(config["repo"]["folders"]["version_file"])
+        version_file = config["repo"]["folders"]["version_file"]
+        update_version_file_from_changelog(version_file)
+        package_version = omni.repo.man.build_number.generate_build_number_from_file(version_file)
         version = package_version.split("+")[0]
         print(f"VERSION.md: {version}")
         update_assemblyinfo_cs_files(version=version)

@@ -52,7 +52,7 @@ internal static class CodeIntegrity
 
         string[] files = {
             Path.Combine(pluginDir, $"UsdExporterRevit{RevitYear}.dll"),
-            Path.Combine(pluginDir, $"UsdExporterRevitSDK{RevitYear}.dll"),
+            Path.Combine(pluginDir, $"UsdExporterRevitCore{RevitYear}.dll"),
             Path.Combine(pluginDir, "usd_exporter_revit.dll"),
         };
 

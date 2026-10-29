@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using UsdExporterRevitSdk;
+using UsdExporterRevitCore;
 using System.Runtime.InteropServices;
 using UsdExporterRevit.Utilities;
 using System.Runtime.CompilerServices;

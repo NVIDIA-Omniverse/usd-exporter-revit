@@ -32,7 +32,7 @@ Before submitting a pull request:
 - Run native unit tests and relevant Revit integration tests.
 - Update `README.md`, `CHANGELOG.md`, or other documentation when behavior,
   requirements, settings, or supported versions change.
-- Keep public SDK APIs backwards compatible unless the pull request
+- Keep public export APIs backwards compatible unless the pull request
   intentionally proposes a breaking change.
 - Do not commit machine-specific SDK paths, build output, Revit models
   containing sensitive data, or local environment files.

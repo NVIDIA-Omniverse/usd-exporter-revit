@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2023-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 //
-using UsdExporterRevitSdk;
+using UsdExporterRevitCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
